@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "description": "figma_design_system_uno",
+  "display": "standalone",
+  "name": "figma_design_system_uno",
+  "short_name": "figma_design_system_uno",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "scope": "/"
+}

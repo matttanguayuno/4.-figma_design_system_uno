@@ -1,0 +1,402 @@
+# Figma Design System - Component Node IDs
+
+**File Key:** XCGoBNGlHZ4G1M0LKJqIZr
+
+## Icons (4039:13018 - 4049:13681)
+- Activity: 4039:13018
+- Airplay: 4039:13019
+- Alert circle: 4039:13020
+- Alert octagon: 4039:13021
+- Alert triangle: 4039:13022
+- Align center: 4039:13023
+- Align justify: 4039:13025
+- Align left: 4039:13024
+- Align right: 4039:13026
+- Anchor: 4039:13027
+- Aperture: 4039:13029
+- Archive: 4039:13028
+- Arrow down-circle: 4039:13031
+- Arrow down-left: 4039:13030
+- Arrow down-right: 4039:13033
+- Arrow down: 4039:13032
+- Arrow left-circle: 4039:13035
+- Arrow left: 4039:13034
+- Arrow right-circle: 4039:13037
+- Arrow right: 4039:13036
+- Arrow up-circle: 4039:13038
+- Arrow up-left: 4039:13039
+- Arrow up-right: 4039:13041
+- Arrow up: 4039:13040
+- At sign: 4039:13043
+- Award: 4039:13042
+- Bar chart-2: 4039:13045
+- Bar chart: 4039:13044
+- Battery charging: 4039:13046
+- Battery: 4039:13047
+- Bell off: 4039:13049
+- Bell: 4039:13048
+- Bluetooth: 4039:13051
+- Bold: 4039:13050
+- Book open: 4039:13053
+- Book: 4039:13052
+- Bookmark: 4039:13055
+- Box: 4039:13054
+- Briefcase: 4039:13057
+- Calendar: 4039:13056
+- Camera off: 4039:13059
+- Camera: 4039:13058
+- Cast: 4039:13061
+- Check circle: 4039:13060
+- Check square: 4039:13062
+- Check: 4039:13063
+- Chevron down: 4039:13072
+- Chevron left: 4039:13064
+- Chevron right: 4039:13165
+- Chevron up: 4039:13166
+- Chevrons down: 4039:13168
+- Chevrons left: 4039:13167
+- Chevrons right: 4039:13170
+- Chevrons up: 4039:13169
+- Chrome: 4039:13172
+- Circle: 4039:13171
+- Clipboard: 4039:13174
+- Clock: 4039:13173
+- Cloud drizzle: 4039:13176
+- Cloud lightning: 4039:13175
+- Cloud off: 4039:13178
+- Cloud rain: 4039:13177
+- Cloud snow: 4039:13180
+- Cloud: 4039:13179
+- Code: 4039:13182
+- Codepen: 4039:13181
+- Codesandbox: 4039:13184
+- Coffee: 4039:13183
+- Columns: 4039:13185
+- Command: 4039:13463
+- Compass: 4039:13465
+- Copy: 4039:13464
+- Corner down-left: 4039:13467
+- Corner down-right: 4039:13466
+- Corner left-down: 4039:13469
+- Corner left-up: 4039:13468
+- Corner right-down: 4039:13471
+- Corner right-up: 4039:13470
+- Corner up-left: 4039:13473
+- Corner up-right: 4039:13472
+- Cpu: 4039:13475
+- Credit card: 4039:13474
+- Crop: 4049:13477
+- Crosshair: 4049:13476
+- Database: 4049:13478
+- Delete: 4049:13479
+- Disc: 4049:13480
+- Divide circle: 4049:13481
+- Divide square: 4049:13483
+- Divide: 4049:13482
+- Dollar sign: 4049:13485
+- Download cloud: 4049:13484
+- Download: 4049:13487
+- Dribbble: 4049:13486
+- Droplet: 4049:13488
+- Edit 2: 4049:13489
+- Edit 3: 4049:13491
+- Edit: 4049:13490
+- External link: 4049:13493
+- Eye off: 4049:13492
+- Eye: 4049:13495
+- Facebook: 4049:13494
+- Fast forward: 4049:13497
+- Feather: 4049:13496
+- Figma: 4049:13498
+- File minus: 4049:13499
+- File plus: 4049:13501
+- File text: 4049:13500
+- File: 4049:13503
+- Film: 4049:13502
+- Filter: 4049:13505
+- Flag: 4049:13504
+- Folder minus: 4049:13507
+- Folder plus: 4049:13506
+- Folder: 4049:13509
+- Framer: 4049:13508
+- Frown: 4049:13511
+- Gift: 4049:13510
+- Git branch: 4049:13513
+- Git commit: 4049:13512
+- Git merge: 4049:13515
+- Git pull-request: 4049:13514
+- Github: 4049:13517
+- Gitlab: 4049:13516
+- Globe: 4049:13519
+- Grid: 4049:13518
+- Hard drive: 4049:13520
+- Hash: 4049:13521
+- Headphones: 4049:13523
+- Heart: 4049:13522
+- Help circle: 4049:13524
+- Hexagon: 4049:13525
+- Home: 4049:13527
+- Image: 4049:13526
+- Inbox: 4049:13529
+- Info: 4049:13528
+- Instagram: 4049:13531
+- Italic: 4049:13530
+- Key: 4049:13533
+- Layers: 4049:13532
+- Layout: 4049:13535
+- Life buoy: 4049:13534
+- Link 2: 4049:13537
+- Link: 4049:13536
+- Linkedin: 4049:13539
+- List: 4049:13538
+- Loader: 4049:13541
+- Lock: 4049:13540
+- Log in: 4049:13542
+- Log out: 4049:13543
+- Mail: 4049:13544
+- Map pin: 4049:13545
+- Map: 4049:13547
+- Maximize 2: 4049:13546
+- Maximize: 4049:13548
+- Meh: 4049:13549
+- Menu: 4049:13551
+- Message circle: 4049:13550
+- Message square: 4049:13553
+- Mic off: 4049:13552
+- Mic: 4049:13555
+- Minimize 2: 4049:13554
+- Minimize: 4049:13557
+- Minus circle: 4049:13556
+- Minus square: 4049:13559
+- Minus: 4049:13558
+- Monitor: 4049:13561
+- Moon: 4049:13560
+- More horizontal: 4049:13563
+- More vertical: 4049:13562
+- Mouse pointer: 4049:13565
+- Move: 4049:13564
+- Music: 4049:13567
+- Navigation 2: 4049:13566
+- Navigation: 4049:13568
+- Octagon: 4049:13569
+- Package: 4049:13571
+- Paperclip: 4049:13570
+- Pause circle: 4049:13574
+- Pause: 4049:13572
+- Pen tool: 4049:13576
+- Percent: 4049:13575
+- Phone call: 4049:13577
+- Phone forwarded: 4049:13578
+- Phone incoming: 4049:13580
+- Phone missed: 4049:13579
+- Phone off: 4049:13582
+- Phone outgoing: 4049:13581
+- Phone: 4049:13584
+- Pie chart: 4049:13583
+- Play circle: 4049:13585
+- Play: 4049:13586
+- Plus circle: 4049:13588
+- Plus square: 4049:13587
+- Plus: 4049:13590
+- Pocket: 4049:13589
+- Power: 4049:13592
+- Printer: 4049:13591
+- Radio: 4049:13594
+- Refresh ccw: 4049:13593
+- Refresh cw: 4049:13595
+- Repeat: 4049:13596
+- Rewind: 4049:13598
+- Rotate ccw: 4049:13597
+- Rotate cw: 4049:13600
+- Rss: 4049:13599
+- Save: 4049:13601
+- Scissors: 4049:13602
+- Search: 4049:13604
+- Send: 4049:13603
+- Server: 4049:13605
+- Settings: 4049:13606
+- Share 2: 4049:13608
+- Share: 4049:13607
+- Shield off: 4049:13610
+- Shield: 4049:13609
+- Shopping bag: 4049:13612
+- Shopping cart: 4049:13611
+- Shuffle: 4049:13614
+- Sidebar: 4049:13613
+- Skip back: 4049:13616
+- Skip forward: 4049:13615
+- Slack: 4049:13618
+- Slash: 4049:13617
+- Sliders: 4049:13620
+- Smartphone: 4049:13619
+- Smile: 4049:13622
+- Speaker: 4049:13621
+- Square: 4049:13624
+- Star: 4049:13623
+- Stop circle: 4049:13625
+- Sun: 4049:13626
+- Sunrise: 4049:13628
+- Sunset: 4049:13627
+- Table: 4049:13630
+- Tablet: 4049:13629
+- Tag: 4049:13632
+- Target: 4049:13631
+- Terminal: 4049:13634
+- Thermometer: 4049:13633
+- Thumbs down: 4049:13636
+- Thumbs up: 4049:13635
+- Toggle left: 4049:13638
+- Toggle right: 4049:13637
+- Tool: 4049:13640
+- Trash 2: 4049:13639
+- Trash: 4049:13642
+- Trello: 4049:13641
+- Trending down: 4049:13644
+- Trending up: 4049:13643
+- Triangle: 4049:13646
+- Truck: 4049:13645
+- Tv: 4049:13648
+- Twitch: 4049:13647
+- Twitter: 4049:13650
+- Type: 4049:13649
+- Umbrella: 4049:13652
+- Underline: 4049:13651
+- Unlock: 4049:13654
+- Upload cloud: 4049:13653
+- Upload: 4049:13656
+- User check: 4049:13655
+- User minus: 4049:13658
+- User plus: 4049:13657
+- User x: 4049:13660
+- User: 4049:13659
+- Users: 4049:13661
+- Video off: 4049:13662
+- Video: 4049:13664
+- Voicemail: 4049:13663
+- Volume 1: 4049:13666
+- Volume 2: 4049:13665
+- Volume x: 4049:13668
+- Volume: 4049:13667
+- Watch: 4049:13670
+- Wifi off: 4049:13669
+- Wifi: 4049:13672
+- Wind: 4049:13671
+- X circle: 4049:13674
+- X octagon: 4049:13673
+- X square: 4049:13676
+- X: 4049:13675
+- Youtube: 4049:13678
+- Zap off: 4049:13677
+- Zap: 4049:13680
+- Zoom in: 4049:13679
+- Zoom out: 4049:13681
+
+## Example Pages
+- Examples / Home Page: 562:8332
+- Examples/About: 562:9044
+- Examples/Contact Us: 562:9227
+- Examples/Pricing: 562:9558
+- Examples/Waitlist: 562:9701
+- Examples/Landing Page: 562:10124
+- Examples/Article: 562:10260
+- Examples/Shop: 562:10872
+- Examples/Product Detail Page: 562:11271
+- Examples/Portfolio: 562:11665
+
+## Components (Form Controls)
+- **Accordion Item**: 7753:4634
+- **Avatar**: 9762:1103 ✅ Implemented
+- **Avatar Group**: 56:15608
+- **Button**: 4185:3778 ✅ Implemented
+- **Icon Button**: 11:11508
+- **Button Group**: 2072:9432
+- **Button Danger**: 185:852
+- **Card**: 2142:11380
+- **Pricing Card**: 1444:11846
+- **Dialog Body**: 9762:696
+- **Radio Field**: 9762:1412 ✅ Implemented
+- **Checkbox Field**: 9762:1441 ✅ Implemented
+- **Switch Field**: 9762:1902 ✅ Implemented
+- **Select Field**: 2136:2336 ✅ Implemented
+- **Input Field**: 2136:2263 ✅ Implemented
+- **Textarea Field**: 9762:3088 ✅ Implemented
+- **Search**: 2236:14989
+- **Slider Field**: 589:17676
+
+## Navigation Components
+- **Menu Item**: 9762:743
+- **Navigation Button**: 515:5459
+- **Navigation Button List**: 524:503
+- **Navigation Pill List**: 2194:14984
+- **Navigation Pill**: 7768:19970
+- **Tab**: 3729:12963
+
+## Feedback Components
+- **Notification**: 124:8256
+- **Tooltip**: 315:32700
+- **Tag**: 56:8830
+- **Tag Toggle**: 157:10316
+
+## Pagination
+- **Pagination Next**: 9762:870
+- **Pagination Previous**: 9762:880
+- **Pagination Page**: 9762:890
+
+## Layout Components
+- **Card Grid Icon**: 348:13221
+- **Card Grid Image**: 348:14431
+- **Card Grid Content List**: 348:13407
+- **Card Grid Pricing**: 348:14983
+- **Card Grid Testimonials**: 348:13347
+- **Card Grid Reviews**: 348:15213
+- **Page Accordion**: 348:13173
+- **Page Product**: 348:15147
+- **Page Product Results**: 348:13517
+- **Page Newsletter**: 348:15133
+- **Panel Image Content**: 348:13474
+- **Panel Image Content Reverse**: 348:15101
+- **Panel Image**: 348:15098
+- **Panel Image Double**: 348:13470
+
+## Hero Sections
+- **Hero Basic**: 348:15896
+- **Hero Actions**: 348:15901
+- **Hero Newsletter**: 348:15919
+- **Hero Form**: 348:15933
+- **Hero Image**: 348:15970
+
+## Page Sections
+- **Footer**: 321:11357
+- **Header**: 2287:22651
+- **Header Auth**: 18:9389
+- **Text Content Heading**: 2153:7834
+- **Text Content Title**: 2153:7838
+- **Text Link List**: 322:9321
+- **Text List**: 480:6149
+- **Text Price**: 1443:10386
+
+## System Components
+- **_Component Annotation**: 4049:54746
+- **_Component Note**: 348:20838
+
+---
+
+## Implementation Status
+
+### Completed Components
+1. ✅ Buttons (4185:3778)
+2. ✅ Cards (2142:11380)
+3. ✅ Checkbox Field (9762:1441)
+4. ✅ Input Field (2136:2263)
+5. ✅ Switch Field (9762:1902)
+6. ✅ Radio Field (9762:1412)
+7. ✅ Select Field (2136:2336)
+8. ✅ Textarea Field (9762:3088)
+
+### Suggested Next Components
+- Search (2236:14989) - Search input variant
+- Slider Field (589:17676) - Range input control
+- Tab (3729:12963) - Navigation tabs
+- Tag (56:8830) - Badge/label component
+- Menu Item (9762:743) - Dropdown menu items
+- Navigation Pill (7768:19970) - Pills navigation

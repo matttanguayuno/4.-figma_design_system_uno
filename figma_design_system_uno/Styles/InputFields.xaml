@@ -1,0 +1,44 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <!-- TextBox color overrides -->
+  <ResourceDictionary.ThemeDictionaries>
+    <ResourceDictionary x:Key="Light">
+      <!-- Placeholder text color -->
+      <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundDisabled" Color="#b3b3b3" />
+      
+      <!-- Disabled background and border -->
+      <SolidColorBrush x:Key="TextControlBackgroundDisabled" Color="#d9d9d9" />
+      <SolidColorBrush x:Key="TextControlBorderBrushDisabled" Color="#b2b2b2" />
+    </ResourceDictionary>
+    
+    <ResourceDictionary x:Key="Dark">
+      <!-- Same for dark theme -->
+      <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundDisabled" Color="#b3b3b3" />
+      
+      <SolidColorBrush x:Key="TextControlBackgroundDisabled" Color="#d9d9d9" />
+      <SolidColorBrush x:Key="TextControlBorderBrushDisabled" Color="#b2b2b2" />
+    </ResourceDictionary>
+  </ResourceDictionary.ThemeDictionaries>
+
+  <!-- TextBox style for Input Fields to match Figma design -->
+  <Style x:Key="InputFieldTextBoxStyle" TargetType="TextBox">
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="Padding" Value="0" />
+    <Setter Property="FontFamily" Value="Inter" />
+    <Setter Property="FontSize" Value="16" />
+    <Setter Property="FontWeight" Value="Normal" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="HorizontalContentAlignment" Value="Left" />
+    <Setter Property="TextWrapping" Value="NoWrap" />
+    <Setter Property="PlaceholderForeground" Value="{ThemeResource TextControlPlaceholderForeground}" />
+  </Style>
+
+</ResourceDictionary>

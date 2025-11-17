@@ -1,0 +1,244 @@
+<Page x:Class="figma_design_system_uno.Presentation.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:figma_design_system_uno.Presentation"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      xmlns:uen="using:Uno.Extensions.Navigation.UI"
+      Background="{StaticResource DefaultBackgroundBrush}">
+
+  <ScrollViewer>
+    <utu:AutoLayout Orientation="Vertical"
+                    Padding="{StaticResource Spacing800}"
+                    Spacing="{StaticResource Space1200}"
+                    MaxWidth="1200"
+                    HorizontalAlignment="Center">
+
+      <!-- Hero Section -->
+      <utu:AutoLayout Orientation="Vertical" 
+                      Spacing="{StaticResource Space600}"
+                      HorizontalAlignment="Center"
+                      PrimaryAxisAlignment="Center">
+        <TextBlock Text="Design System"
+                   Style="{StaticResource TitleHeroTextBlockStyle}"
+                   HorizontalAlignment="Center"
+                   TextAlignment="Center" />
+        <TextBlock Text="Figma Design System implemented in Uno Platform"
+                   Style="{StaticResource SubtitleTextBlockStyle}"
+                   Foreground="{StaticResource SecondaryTextBrush}"
+                   HorizontalAlignment="Center"
+                   TextAlignment="Center" />
+      </utu:AutoLayout>
+
+      <!-- Component Cards Grid -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
+        <TextBlock Text="Components"
+                   Style="{StaticResource TitlePageTextBlockStyle}" />
+
+        <!-- Cards in Responsive Grid -->
+        <ItemsRepeater ItemsSource="{Binding ComponentCards}">
+          <ItemsRepeater.Layout>
+            <UniformGridLayout MinItemWidth="200"
+                               MinItemHeight="200"
+                               ItemsStretch="Fill"
+                               MinColumnSpacing="16"
+                               MinRowSpacing="16" />
+          </ItemsRepeater.Layout>
+          <ItemsRepeater.ItemTemplate>
+            <DataTemplate>
+              <Border CornerRadius="{StaticResource Radius200}"
+                      BorderThickness="2"
+                      VerticalAlignment="Stretch"
+                      HorizontalAlignment="Stretch"
+                      Translation="0,0,16">
+                <Border.BorderBrush>
+                  <SolidColorBrush Color="#DDDDDD" />
+                </Border.BorderBrush>
+                <Border.Background>
+                  <SolidColorBrush Color="#F5F5F5" />
+                </Border.Background>
+                <Border.Shadow>
+                  <ThemeShadow />
+                </Border.Shadow>
+                <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}"
+                                Padding="{StaticResource Spacing600}"
+                                PrimaryAxisAlignment="Center"
+                                VerticalAlignment="Stretch"
+                                HorizontalAlignment="Stretch">
+                  
+                  <!-- Icon and Name -->
+                  <StackPanel Orientation="Horizontal" Spacing="12"
+                              HorizontalAlignment="Center">
+                    <Border Width="48" Height="48"
+                            Background="{StaticResource BrandTertiaryBrush}"
+                            CornerRadius="{StaticResource Radius200}">
+                      <FontIcon Glyph="{Binding Icon}" 
+                                FontSize="24"
+                                Foreground="{StaticResource DefaultTextBrush}"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center" />
+                    </Border>
+
+                    <TextBlock Text="{Binding Title}"
+                               Foreground="Black"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               VerticalAlignment="Center" />
+                  </StackPanel>
+
+                  <!-- Navigation Button -->
+                  <Button Content="View"
+                          Style="{StaticResource NeutralMediumButtonStyle}"
+                          FontSize="12"
+                          HorizontalAlignment="Center"
+                          Command="{Binding NavigateCommand}" />
+                </utu:AutoLayout>
+              </Border>
+            </DataTemplate>
+          </ItemsRepeater.ItemTemplate>
+        </ItemsRepeater>
+      </utu:AutoLayout>
+
+      <!-- Design Tokens Section -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Design Tokens"
+                   Style="{StaticResource TitlePageTextBlockStyle}" />
+
+        <Border Background="{StaticResource DefaultSecondaryBackgroundBrush}"
+                Padding="{StaticResource Spacing600}"
+                CornerRadius="{StaticResource Radius200}">
+          <Grid ColumnSpacing="24" RowSpacing="24">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Colors -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}" Grid.Column="0" Grid.Row="0">
+              <TextBlock Text="Colors"
+                         Style="{StaticResource BodyStrongTextBlockStyle}" />
+              <StackPanel Orientation="Horizontal" Spacing="4">
+                <Border Width="32" Height="32" 
+                        Background="{StaticResource BrandDefaultBrush}"
+                        CornerRadius="4" />
+                <Border Width="32" Height="32" 
+                        Background="{StaticResource BrandSecondaryBrush}"
+                        CornerRadius="4" />
+                <Border Width="32" Height="32" 
+                        Background="{StaticResource BrandTertiaryBrush}"
+                        CornerRadius="4" />
+              </StackPanel>
+              <TextBlock Text="30+ colors"
+                         Style="{StaticResource BodyBaseTextBlockStyle}"
+                         FontSize="13"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+            </utu:AutoLayout>
+
+            <!-- Typography -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}" Grid.Column="1" Grid.Row="0">
+              <TextBlock Text="Typography"
+                         Style="{StaticResource BodyStrongTextBlockStyle}" />
+              <TextBlock Text="Aa"
+                         FontFamily="Inter"
+                         FontSize="32"
+                         FontWeight="SemiBold"
+                         LineHeight="32" />
+              <TextBlock Text="Inter • 400-700"
+                         Style="{StaticResource BodyBaseTextBlockStyle}"
+                         FontSize="13"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+            </utu:AutoLayout>
+
+            <!-- Spacing -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}" Grid.Column="2" Grid.Row="0">
+              <TextBlock Text="Spacing"
+                         Style="{StaticResource BodyStrongTextBlockStyle}" />
+              <StackPanel Orientation="Horizontal" Spacing="4">
+                <Border Width="4" Height="32" Background="{StaticResource BrandDefaultBrush}" />
+                <Border Width="8" Height="32" Background="{StaticResource BrandDefaultBrush}" />
+                <Border Width="12" Height="32" Background="{StaticResource BrandDefaultBrush}" />
+                <Border Width="16" Height="32" Background="{StaticResource BrandDefaultBrush}" />
+                <Border Width="24" Height="32" Background="{StaticResource BrandDefaultBrush}" />
+              </StackPanel>
+              <TextBlock Text="4-64px scale"
+                         Style="{StaticResource BodyBaseTextBlockStyle}"
+                         FontSize="13"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+            </utu:AutoLayout>
+
+            <!-- Radius -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}" Grid.Column="0" Grid.Row="1">
+              <TextBlock Text="Radius"
+                         Style="{StaticResource BodyStrongTextBlockStyle}" />
+              <StackPanel Orientation="Horizontal" Spacing="8">
+                <Border Width="32" Height="32" 
+                        Background="{StaticResource BrandTertiaryBrush}"
+                        CornerRadius="4" />
+                <Border Width="32" Height="32" 
+                        Background="{StaticResource BrandTertiaryBrush}"
+                        CornerRadius="8" />
+                <Border Width="32" Height="32" 
+                        Background="{StaticResource BrandTertiaryBrush}"
+                        CornerRadius="16" />
+              </StackPanel>
+              <TextBlock Text="0-24px radius"
+                         Style="{StaticResource BodyBaseTextBlockStyle}"
+                         FontSize="13"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+            </utu:AutoLayout>
+
+            <!-- Shadows -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}" Grid.Column="1" Grid.Row="1">
+              <TextBlock Text="Shadows"
+                         Style="{StaticResource BodyStrongTextBlockStyle}" />
+              <Border Width="64" Height="32" 
+                      Background="{StaticResource SurfaceBrush}"
+                      CornerRadius="4"
+                      Translation="0,0,16">
+                <Border.Shadow>
+                  <ThemeShadow />
+                </Border.Shadow>
+              </Border>
+              <TextBlock Text="Elevation system"
+                         Style="{StaticResource BodyBaseTextBlockStyle}"
+                         FontSize="13"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+            </utu:AutoLayout>
+
+            <!-- Components -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}" Grid.Column="2" Grid.Row="1">
+              <TextBlock Text="Components"
+                         Style="{StaticResource BodyStrongTextBlockStyle}" />
+              <StackPanel Orientation="Horizontal" Spacing="8">
+                <FontIcon Glyph="&#xE8A1;" FontSize="20" Foreground="{StaticResource BrandDefaultBrush}" />
+                <FontIcon Glyph="&#xE73A;" FontSize="20" Foreground="{StaticResource BrandDefaultBrush}" />
+                <FontIcon Glyph="&#xE70F;" FontSize="20" Foreground="{StaticResource BrandDefaultBrush}" />
+              </StackPanel>
+              <TextBlock Text="6 components"
+                         Style="{StaticResource BodyBaseTextBlockStyle}"
+                         FontSize="13"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+            </utu:AutoLayout>
+          </Grid>
+        </Border>
+      </utu:AutoLayout>
+
+      <!-- Footer -->
+      <Border BorderBrush="{StaticResource DefaultBorderBrush}"
+              BorderThickness="0,1,0,0"
+              Padding="0,24,0,0">
+        <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}"
+                   Foreground="{StaticResource SecondaryTextBrush}"
+                   HorizontalAlignment="Center">
+          <Run Text="Extracted from Figma • Built with Uno Platform" />
+        </TextBlock>
+      </Border>
+
+    </utu:AutoLayout>
+  </ScrollViewer>
+
+</Page>

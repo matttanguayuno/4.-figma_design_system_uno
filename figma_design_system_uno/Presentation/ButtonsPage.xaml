@@ -1,0 +1,364 @@
+<Page x:Class="figma_design_system_uno.Presentation.ButtonsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:figma_design_system_uno.Presentation"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+      Background="{StaticResource DefaultBackgroundBrush}">
+
+  <Page.Resources>
+    <local:ButtonsModel x:Key="ViewModel" />
+  </Page.Resources>
+
+  <ScrollViewer>
+    <utu:AutoLayout Orientation="Vertical"
+                    Padding="{StaticResource Spacing800}"
+                    Spacing="{StaticResource Space1200}"
+                    MaxWidth="1200"
+                    HorizontalAlignment="Center">
+
+      <!-- Page Header -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space400}">
+        <TextBlock Text="Button Component"
+                   Style="{StaticResource TitlePageTextBlockStyle}" />
+        <TextBlock Text="Showcasing all button variants, states, and sizes from the Figma design system"
+                   Style="{StaticResource BodyBaseTextBlockStyle}"
+                   Foreground="{StaticResource SecondaryTextBrush}" />
+      </utu:AutoLayout>
+
+      <!-- Primary Buttons Section -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Primary Buttons"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <!-- Primary Medium Size -->
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+          <TextBlock Text="Medium Size (40px height)"
+                     Style="{StaticResource BodyStrongTextBlockStyle}" />
+
+          <utu:AutoLayout Orientation="Horizontal" 
+                          Spacing="{StaticResource Space400}"
+                          PrimaryAxisAlignment="Start">
+            <Button Content="Default"
+                    Style="{StaticResource PrimaryMediumButtonStyle}"
+                    MinWidth="120" />
+            <Button Content="Hover Me"
+                    Style="{StaticResource PrimaryMediumButtonStyle}"
+                    MinWidth="120"
+                    ToolTipService.ToolTip="Hover to see the hover state" />
+            <Button Content="Disabled"
+                    Style="{StaticResource PrimaryMediumButtonStyle}"
+                    IsEnabled="False"
+                    MinWidth="120" />
+          </utu:AutoLayout>
+        </utu:AutoLayout>
+
+        <!-- Primary Small Size -->
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+          <TextBlock Text="Small Size (32px height)"
+                     Style="{StaticResource BodyStrongTextBlockStyle}" />
+
+          <utu:AutoLayout Orientation="Horizontal" 
+                          Spacing="{StaticResource Space400}"
+                          PrimaryAxisAlignment="Start">
+            <Button Content="Default"
+                    Style="{StaticResource PrimarySmallButtonStyle}"
+                    MinWidth="120" />
+            <Button Content="Hover Me"
+                    Style="{StaticResource PrimarySmallButtonStyle}"
+                    MinWidth="120"
+                    ToolTipService.ToolTip="Hover to see the hover state" />
+            <Button Content="Disabled"
+                    Style="{StaticResource PrimarySmallButtonStyle}"
+                    IsEnabled="False"
+                    MinWidth="120" />
+          </utu:AutoLayout>
+        </utu:AutoLayout>
+      </utu:AutoLayout>
+
+      <!-- Neutral Buttons Section -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Neutral Buttons"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <!-- Neutral Medium Size -->
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+          <TextBlock Text="Medium Size (40px height)"
+                     Style="{StaticResource BodyStrongTextBlockStyle}" />
+
+          <utu:AutoLayout Orientation="Horizontal" 
+                          Spacing="{StaticResource Space400}"
+                          PrimaryAxisAlignment="Start">
+            <Button Content="Default"
+                    Style="{StaticResource NeutralMediumButtonStyle}"
+                    MinWidth="120" />
+            <Button Content="Hover Me"
+                    Style="{StaticResource NeutralMediumButtonStyle}"
+                    MinWidth="120"
+                    ToolTipService.ToolTip="Hover to see the hover state" />
+            <Button Content="Disabled"
+                    Style="{StaticResource NeutralMediumButtonStyle}"
+                    IsEnabled="False"
+                    MinWidth="120" />
+          </utu:AutoLayout>
+        </utu:AutoLayout>
+
+        <!-- Neutral Small Size -->
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+          <TextBlock Text="Small Size (32px height)"
+                     Style="{StaticResource BodyStrongTextBlockStyle}" />
+
+          <utu:AutoLayout Orientation="Horizontal" 
+                          Spacing="{StaticResource Space400}"
+                          PrimaryAxisAlignment="Start">
+            <Button Content="Default"
+                    Style="{StaticResource NeutralSmallButtonStyle}"
+                    MinWidth="120" />
+            <Button Content="Hover Me"
+                    Style="{StaticResource NeutralSmallButtonStyle}"
+                    MinWidth="120"
+                    ToolTipService.ToolTip="Hover to see the hover state" />
+            <Button Content="Disabled"
+                    Style="{StaticResource NeutralSmallButtonStyle}"
+                    IsEnabled="False"
+                    MinWidth="120" />
+          </utu:AutoLayout>
+        </utu:AutoLayout>
+      </utu:AutoLayout>
+
+      <!-- Subtle Buttons Section -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Subtle Buttons"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <!-- Subtle Medium Size -->
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+          <TextBlock Text="Medium Size (40px height)"
+                     Style="{StaticResource BodyStrongTextBlockStyle}" />
+
+          <utu:AutoLayout Orientation="Horizontal" 
+                          Spacing="{StaticResource Space400}"
+                          PrimaryAxisAlignment="Start">
+            <Button Content="Default"
+                    Style="{StaticResource SubtleMediumButtonStyle}"
+                    MinWidth="120" />
+            <Button Content="Hover Me"
+                    Style="{StaticResource SubtleMediumButtonStyle}"
+                    MinWidth="120"
+                    ToolTipService.ToolTip="Hover to see the hover state" />
+            <Button Content="Disabled"
+                    Style="{StaticResource SubtleMediumButtonStyle}"
+                    IsEnabled="False"
+                    MinWidth="120" />
+          </utu:AutoLayout>
+        </utu:AutoLayout>
+
+        <!-- Subtle Small Size -->
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+          <TextBlock Text="Small Size (32px height)"
+                     Style="{StaticResource BodyStrongTextBlockStyle}" />
+
+          <utu:AutoLayout Orientation="Horizontal" 
+                          Spacing="{StaticResource Space400}"
+                          PrimaryAxisAlignment="Start">
+            <Button Content="Default"
+                    Style="{StaticResource SubtleSmallButtonStyle}"
+                    MinWidth="120" />
+            <Button Content="Hover Me"
+                    Style="{StaticResource SubtleSmallButtonStyle}"
+                    MinWidth="120"
+                    ToolTipService.ToolTip="Hover to see the hover state" />
+            <Button Content="Disabled"
+                    Style="{StaticResource SubtleSmallButtonStyle}"
+                    IsEnabled="False"
+                    MinWidth="120" />
+          </utu:AutoLayout>
+        </utu:AutoLayout>
+      </utu:AutoLayout>
+
+      <!-- All States Comparison -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="All States Comparison"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+        
+        <Border Background="{StaticResource DefaultSecondaryBackgroundBrush}"
+                Padding="{StaticResource Spacing600}"
+                CornerRadius="{StaticResource Radius200}">
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
+            
+            <!-- Primary Row -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space200}">
+              <TextBlock Text="Primary (Medium)"
+                         Style="{StaticResource BodyStrongTextBlockStyle}" />
+              <utu:AutoLayout Orientation="Horizontal" 
+                              Spacing="{StaticResource Space400}"
+                              PrimaryAxisAlignment="Start">
+                <StackPanel Spacing="4">
+                  <TextBlock Text="Default"
+                             Style="{StaticResource BodyBaseTextBlockStyle}"
+                             FontSize="12"
+                             Foreground="{StaticResource SecondaryTextBrush}"
+                             HorizontalAlignment="Center" />
+                  <Button Content="Button"
+                          Style="{StaticResource PrimaryMediumButtonStyle}"
+                          Width="120" />
+                </StackPanel>
+                <StackPanel Spacing="4">
+                  <TextBlock Text="Hover"
+                             Style="{StaticResource BodyBaseTextBlockStyle}"
+                             FontSize="12"
+                             Foreground="{StaticResource SecondaryTextBrush}"
+                             HorizontalAlignment="Center" />
+                  <Button Content="Button"
+                          Style="{StaticResource PrimaryMediumButtonStyle}"
+                          Width="120"
+                          Background="{StaticResource BrandHoverBrush}" />
+                </StackPanel>
+                <StackPanel Spacing="4">
+                  <TextBlock Text="Disabled"
+                             Style="{StaticResource BodyBaseTextBlockStyle}"
+                             FontSize="12"
+                             Foreground="{StaticResource SecondaryTextBrush}"
+                             HorizontalAlignment="Center" />
+                  <Button Content="Button"
+                          Style="{StaticResource PrimaryMediumButtonStyle}"
+                          IsEnabled="False"
+                          Width="120" />
+                </StackPanel>
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+
+            <!-- Neutral Row -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space200}">
+              <TextBlock Text="Neutral (Medium)"
+                         Style="{StaticResource BodyStrongTextBlockStyle}" />
+              <utu:AutoLayout Orientation="Horizontal" 
+                              Spacing="{StaticResource Space400}"
+                              PrimaryAxisAlignment="Start">
+                <StackPanel Spacing="4">
+                  <TextBlock Text="Default"
+                             Style="{StaticResource BodyBaseTextBlockStyle}"
+                             FontSize="12"
+                             Foreground="{StaticResource SecondaryTextBrush}"
+                             HorizontalAlignment="Center" />
+                  <Button Content="Button"
+                          Style="{StaticResource NeutralMediumButtonStyle}"
+                          Width="120" />
+                </StackPanel>
+                <StackPanel Spacing="4">
+                  <TextBlock Text="Hover"
+                             Style="{StaticResource BodyBaseTextBlockStyle}"
+                             FontSize="12"
+                             Foreground="{StaticResource SecondaryTextBrush}"
+                             HorizontalAlignment="Center" />
+                  <Button Content="Button"
+                          Style="{StaticResource NeutralMediumButtonStyle}"
+                          Width="120"
+                          Background="{StaticResource NeutralTertiaryHoverBrush}" />
+                </StackPanel>
+                <StackPanel Spacing="4">
+                  <TextBlock Text="Disabled"
+                             Style="{StaticResource BodyBaseTextBlockStyle}"
+                             FontSize="12"
+                             Foreground="{StaticResource SecondaryTextBrush}"
+                             HorizontalAlignment="Center" />
+                  <Button Content="Button"
+                          Style="{StaticResource NeutralMediumButtonStyle}"
+                          IsEnabled="False"
+                          Width="120" />
+                </StackPanel>
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+
+            <!-- Subtle Row -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space200}">
+              <TextBlock Text="Subtle (Medium)"
+                         Style="{StaticResource BodyStrongTextBlockStyle}" />
+              <utu:AutoLayout Orientation="Horizontal" 
+                              Spacing="{StaticResource Space400}"
+                              PrimaryAxisAlignment="Start">
+                <StackPanel Spacing="4">
+                  <TextBlock Text="Default"
+                             Style="{StaticResource BodyBaseTextBlockStyle}"
+                             FontSize="12"
+                             Foreground="{StaticResource SecondaryTextBrush}"
+                             HorizontalAlignment="Center" />
+                  <Button Content="Button"
+                          Style="{StaticResource SubtleMediumButtonStyle}"
+                          Width="120" />
+                </StackPanel>
+                <StackPanel Spacing="4">
+                  <TextBlock Text="Hover"
+                             Style="{StaticResource BodyBaseTextBlockStyle}"
+                             FontSize="12"
+                             Foreground="{StaticResource SecondaryTextBrush}"
+                             HorizontalAlignment="Center" />
+                  <Button Content="Button"
+                          Style="{StaticResource SubtleMediumButtonStyle}"
+                          Width="120"
+                          BorderBrush="{StaticResource DefaultBorderBrush}"
+                          Foreground="{StaticResource DefaultTextBrush}" />
+                </StackPanel>
+                <StackPanel Spacing="4">
+                  <TextBlock Text="Disabled"
+                             Style="{StaticResource BodyBaseTextBlockStyle}"
+                             FontSize="12"
+                             Foreground="{StaticResource SecondaryTextBrush}"
+                             HorizontalAlignment="Center" />
+                  <Button Content="Button"
+                          Style="{StaticResource SubtleMediumButtonStyle}"
+                          IsEnabled="False"
+                          Width="120" />
+                </StackPanel>
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+
+          </utu:AutoLayout>
+        </Border>
+      </utu:AutoLayout>
+
+      <!-- Design Tokens Info -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space400}">
+        <TextBlock Text="Design Tokens"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+        <Border Background="{StaticResource DefaultSecondaryBackgroundBrush}"
+                Padding="{StaticResource Spacing600}"
+                CornerRadius="{StaticResource Radius200}">
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Border Radius: " FontWeight="SemiBold" />
+              <Run Text="8px" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Border Width: " FontWeight="SemiBold" />
+              <Run Text="1px" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Medium Padding: " FontWeight="SemiBold" />
+              <Run Text="12px" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Small Padding: " FontWeight="SemiBold" />
+              <Run Text="8px" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Font Family: " FontWeight="SemiBold" />
+              <Run Text="Inter" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Font Size: " FontWeight="SemiBold" />
+              <Run Text="16px" />
+            </TextBlock>
+          </utu:AutoLayout>
+        </Border>
+      </utu:AutoLayout>
+
+      <!-- Source Code Viewer -->
+      <controls:SourceCodeViewer 
+          PageXamlPath="ms-appx:///Presentation/ButtonsPage.xaml"
+          StyleXamlPath="ms-appx:///Styles/Buttons.xaml" />
+
+    </utu:AutoLayout>
+  </ScrollViewer>
+
+</Page>

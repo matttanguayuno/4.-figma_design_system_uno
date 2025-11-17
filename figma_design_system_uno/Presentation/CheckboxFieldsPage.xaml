@@ -1,0 +1,538 @@
+<Page x:Class="figma_design_system_uno.Presentation.CheckboxFieldsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:figma_design_system_uno.Presentation"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+      Background="{StaticResource DefaultBackgroundBrush}">
+
+  <Page.Resources>
+    <local:CheckboxFieldsModel x:Key="ViewModel" />
+  </Page.Resources>
+
+  <ScrollViewer>
+    <utu:AutoLayout Orientation="Vertical"
+                    Padding="{StaticResource Spacing800}"
+                    Spacing="{StaticResource Space1200}"
+                    MaxWidth="1200"
+                    HorizontalAlignment="Center">
+
+      <!-- Page Header -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space400}">
+        <TextBlock Text="Checkbox Field Component"
+                   Style="{StaticResource TitlePageTextBlockStyle}" />
+        <TextBlock Text="Showcasing checkbox variants: Default and Disabled states with Unchecked, Checked, and Indeterminate values"
+                   Style="{StaticResource BodyBaseTextBlockStyle}"
+                   Foreground="{StaticResource SecondaryTextBrush}" />
+      </utu:AutoLayout>
+
+      <!-- All Variants -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
+        <TextBlock Text="All Checkbox Variants"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <!-- Default State Section -->
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+          <TextBlock Text="Default State"
+                     Style="{StaticResource SubHeadingTextBlockStyle}" />
+
+          <utu:AutoLayout Orientation="Horizontal" 
+                          Spacing="{StaticResource Space600}"
+                          PrimaryAxisAlignment="Start">
+            
+            <!-- Default - Unchecked -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="Unchecked"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <utu:AutoLayout Orientation="Horizontal" 
+                              Spacing="12"
+                              PrimaryAxisAlignment="Start"
+                              CounterAxisAlignment="Start"
+                              Width="240">
+                <CheckBox IsChecked="False" 
+                          VerticalContentAlignment="Top"
+                          Padding="0"/>
+                <utu:AutoLayout Orientation="Vertical" Spacing="0"
+                                utu:AutoLayout.CounterAlignment="Start">
+                  <TextBlock Text="Label"
+                             Style="{StaticResource BodyBaseTextBlockStyle}" />
+                  <TextBlock Text="Description"
+                             Style="{StaticResource BodyBaseTextBlockStyle}"
+                             Foreground="{StaticResource SecondaryTextBrush}" />
+                </utu:AutoLayout>
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+
+            <!-- Default - Checked -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="Checked"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <utu:AutoLayout Orientation="Horizontal" 
+                              Spacing="12"
+                              PrimaryAxisAlignment="Start"
+                              CounterAxisAlignment="Start"
+                              Width="240">
+                <CheckBox IsChecked="True" 
+                          VerticalContentAlignment="Top"
+                          Padding="0"/>
+                <utu:AutoLayout Orientation="Vertical" Spacing="0"
+                                utu:AutoLayout.CounterAlignment="Start">
+                  <TextBlock Text="Label"
+                             Style="{StaticResource BodyBaseTextBlockStyle}" />
+                  <TextBlock Text="Description"
+                             Style="{StaticResource BodyBaseTextBlockStyle}"
+                             Foreground="{StaticResource SecondaryTextBrush}" />
+                </utu:AutoLayout>
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+
+            <!-- Default - Indeterminate -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="Indeterminate"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <utu:AutoLayout Orientation="Horizontal" 
+                              Spacing="12"
+                              PrimaryAxisAlignment="Start"
+                              CounterAxisAlignment="Start"
+                              Width="240">
+                <CheckBox IsChecked="{x:Null}" 
+                          VerticalContentAlignment="Top"
+                          Padding="0"/>
+                <utu:AutoLayout Orientation="Vertical" Spacing="0"
+                                utu:AutoLayout.CounterAlignment="Start">
+                  <TextBlock Text="Label"
+                             Style="{StaticResource BodyBaseTextBlockStyle}" />
+                  <TextBlock Text="Description"
+                             Style="{StaticResource BodyBaseTextBlockStyle}"
+                             Foreground="{StaticResource SecondaryTextBrush}" />
+                </utu:AutoLayout>
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+
+          </utu:AutoLayout>
+        </utu:AutoLayout>
+
+        <!-- Disabled State Section -->
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+          <TextBlock Text="Disabled State"
+                     Style="{StaticResource SubHeadingTextBlockStyle}" />
+
+          <utu:AutoLayout Orientation="Horizontal" 
+                          Spacing="{StaticResource Space600}"
+                          PrimaryAxisAlignment="Start">
+            
+            <!-- Disabled - Unchecked -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="Unchecked"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <utu:AutoLayout Orientation="Horizontal" 
+                              Spacing="12"
+                              PrimaryAxisAlignment="Start"
+                              CounterAxisAlignment="Start"
+                              Width="240">
+                <CheckBox IsChecked="False" IsEnabled="False" 
+                          VerticalContentAlignment="Top"
+                          Padding="0"/>
+                <utu:AutoLayout Orientation="Vertical" Spacing="0"
+                                utu:AutoLayout.CounterAlignment="Start">
+                  <TextBlock Text="Label"
+                             Style="{StaticResource BodyBaseTextBlockStyle}" />
+                  <TextBlock Text="Description"
+                             Style="{StaticResource BodyBaseTextBlockStyle}"
+                             Foreground="{StaticResource SecondaryTextBrush}"
+                             Opacity="0.5" />
+                </utu:AutoLayout>
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+
+            <!-- Disabled - Checked -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="Checked"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <utu:AutoLayout Orientation="Horizontal" 
+                              Spacing="12"
+                              PrimaryAxisAlignment="Start"
+                              CounterAxisAlignment="Start"
+                              Width="240">
+                <CheckBox IsChecked="True" IsEnabled="False" 
+                          VerticalContentAlignment="Top"
+                          Padding="0"/>
+                <utu:AutoLayout Orientation="Vertical" Spacing="0"
+                                utu:AutoLayout.CounterAlignment="Start">
+                  <TextBlock Text="Label"
+                             Style="{StaticResource BodyBaseTextBlockStyle}" />
+                  <TextBlock Text="Description"
+                             Style="{StaticResource BodyBaseTextBlockStyle}"
+                             Foreground="{StaticResource SecondaryTextBrush}"
+                             Opacity="0.5" />
+                </utu:AutoLayout>
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+
+            <!-- Disabled - Indeterminate -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="Indeterminate"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <utu:AutoLayout Orientation="Horizontal" 
+                              Spacing="12"
+                              PrimaryAxisAlignment="Start"
+                              CounterAxisAlignment="Start"
+                              Width="240">
+                <CheckBox IsChecked="{x:Null}" IsEnabled="False" 
+                          VerticalContentAlignment="Top"
+                          Padding="0"/>
+                <utu:AutoLayout Orientation="Vertical" Spacing="0"
+                                utu:AutoLayout.CounterAlignment="Start">
+                  <TextBlock Text="Label"
+                             Style="{StaticResource BodyBaseTextBlockStyle}" />
+                  <TextBlock Text="Description"
+                             Style="{StaticResource BodyBaseTextBlockStyle}"
+                             Foreground="{StaticResource SecondaryTextBrush}"
+                             Opacity="0.5" />
+                </utu:AutoLayout>
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+
+          </utu:AutoLayout>
+        </utu:AutoLayout>
+
+      </utu:AutoLayout>
+
+      <!-- Design Tokens Info -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space400}">
+        <TextBlock Text="Design Tokens"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+        <Border Background="{StaticResource DefaultSecondaryBackgroundBrush}"
+                Padding="{StaticResource Spacing600}"
+                CornerRadius="{StaticResource Radius200}">
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• States: " FontWeight="SemiBold" />
+              <Run Text="Default, Disabled" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Value Types: " FontWeight="SemiBold" />
+              <Run Text="Unchecked, Checked, Indeterminate" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Checkbox Size: " FontWeight="SemiBold" />
+              <Run Text="16×16px" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Border Radius: " FontWeight="SemiBold" />
+              <Run Text="4px" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Gap: " FontWeight="SemiBold" />
+              <Run Text="12px between checkbox and label" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Width: " FontWeight="SemiBold" />
+              <Run Text="240px" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Typography: " FontWeight="SemiBold" />
+              <Run Text="Label: 16px Regular #1e1e1e, Description: 16px Regular #757575" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Colors: " FontWeight="SemiBold" />
+              <Run Text="Checked: #2c2c2c, Unchecked border: #757575, Disabled: #d9d9d9 bg / #b2b2b2 border" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Features: " FontWeight="SemiBold" />
+              <Run Text="Optional description, Indeterminate state (three-state checkbox)" />
+            </TextBlock>
+          </utu:AutoLayout>
+        </Border>
+      </utu:AutoLayout>
+
+
+
+      <!-- Source Code Viewer -->
+      <controls:SourceCodeViewer 
+          PageXamlPath="ms-appx:///Presentation/CheckboxFieldsPage.xaml"
+          StyleXamlPath="ms-appx:///Styles/CheckBox.xaml" />
+
+    </utu:AutoLayout>
+  </ScrollViewer>
+
+</Page>
+
+  </Page.Resources>
+
+  <ScrollViewer>
+    <utu:AutoLayout Orientation="Vertical"
+                    Padding="{StaticResource Spacing800}"
+                    Spacing="{StaticResource Space1200}">
+
+      <!-- Page Header -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space400}">
+        <TextBlock Text="Text Field Component"
+                   Style="{StaticResource TitlePageTextBlockStyle}" />
+        <TextBlock Text="Showcasing text input field variants: Filled and Outlined styles with different states"
+                   Style="{StaticResource BodyBaseTextBlockStyle}"
+                   Foreground="{StaticResource SecondaryTextBrush}" />
+      </utu:AutoLayout>
+
+      <!-- All Variants -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
+        <TextBlock Text="All Text Field Variants"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <!-- Filled Style Section -->
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+          <TextBlock Text="Filled Style"
+                     Style="{StaticResource SubHeadingTextBlockStyle}" />
+
+          <utu:AutoLayout Orientation="Horizontal" 
+                          Spacing="{StaticResource Space600}"
+                          PrimaryAxisAlignment="Start">
+            
+            <!-- Filled - Default State -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="Default"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <TextBox Style="{StaticResource FilledTextBoxStyle}"
+                       PlaceholderText="Enter text"
+                       Width="320" />
+            </utu:AutoLayout>
+
+            <!-- Filled - With Value -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="With Value"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <TextBox Style="{StaticResource FilledTextBoxStyle}"
+                       Text="Sample text"
+                       Width="320" />
+            </utu:AutoLayout>
+
+            <!-- Filled - Disabled -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="Disabled"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <TextBox Style="{StaticResource FilledTextBoxStyle}"
+                       PlaceholderText="Disabled"
+                       IsEnabled="False"
+                       Width="320" />
+            </utu:AutoLayout>
+
+          </utu:AutoLayout>
+
+          <!-- Filled - With Header -->
+          <utu:AutoLayout Orientation="Horizontal" 
+                          Spacing="{StaticResource Space600}"
+                          PrimaryAxisAlignment="Start">
+            
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="With Header"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <TextBox Style="{StaticResource FilledTextBoxStyle}"
+                       Header="Label"
+                       PlaceholderText="Enter text"
+                       Width="320" />
+            </utu:AutoLayout>
+
+            <!-- Filled - With Icon -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="With Description"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <TextBox Style="{StaticResource FilledTextBoxStyle}"
+                       Header="Email"
+                       PlaceholderText="Enter email address"
+                       Description="We'll never share your email"
+                       Width="320" />
+            </utu:AutoLayout>
+
+            <!-- Filled - Multiline -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="Multiline"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <TextBox Style="{StaticResource FilledTextBoxStyle}"
+                       PlaceholderText="Enter description"
+                       AcceptsReturn="True"
+                       TextWrapping="Wrap"
+                       Height="120"
+                       Width="320" />
+            </utu:AutoLayout>
+
+          </utu:AutoLayout>
+        </utu:AutoLayout>
+
+        <!-- Outlined Style Section -->
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+          <TextBlock Text="Outlined Style"
+                     Style="{StaticResource SubHeadingTextBlockStyle}" />
+
+          <utu:AutoLayout Orientation="Horizontal" 
+                          Spacing="{StaticResource Space600}"
+                          PrimaryAxisAlignment="Start">
+            
+            <!-- Outlined - Default State -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="Default"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <TextBox Style="{StaticResource OutlinedTextBoxStyle}"
+                       PlaceholderText="Enter text"
+                       Width="320" />
+            </utu:AutoLayout>
+
+            <!-- Outlined - With Value -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="With Value"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <TextBox Style="{StaticResource OutlinedTextBoxStyle}"
+                       Text="Sample text"
+                       Width="320" />
+            </utu:AutoLayout>
+
+            <!-- Outlined - Disabled -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="Disabled"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <TextBox Style="{StaticResource OutlinedTextBoxStyle}"
+                       PlaceholderText="Disabled"
+                       IsEnabled="False"
+                       Width="320" />
+            </utu:AutoLayout>
+
+          </utu:AutoLayout>
+
+          <!-- Outlined - With Header -->
+          <utu:AutoLayout Orientation="Horizontal" 
+                          Spacing="{StaticResource Space600}"
+                          PrimaryAxisAlignment="Start">
+            
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="With Header"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <TextBox Style="{StaticResource OutlinedTextBoxStyle}"
+                       Header="Label"
+                       PlaceholderText="Enter text"
+                       Width="320" />
+            </utu:AutoLayout>
+
+            <!-- Outlined - With Icon -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="With Description"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <TextBox Style="{StaticResource OutlinedTextBoxStyle}"
+                       Header="Email"
+                       PlaceholderText="Enter email address"
+                       Description="We'll never share your email"
+                       Width="320" />
+            </utu:AutoLayout>
+
+            <!-- Outlined - Multiline -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="Multiline"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <TextBox Style="{StaticResource OutlinedTextBoxStyle}"
+                       PlaceholderText="Enter description"
+                       AcceptsReturn="True"
+                       TextWrapping="Wrap"
+                       Height="120"
+                       Width="320" />
+            </utu:AutoLayout>
+
+          </utu:AutoLayout>
+        </utu:AutoLayout>
+
+        <!-- Password Fields -->
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+          <TextBlock Text="Password Fields"
+                     Style="{StaticResource SubHeadingTextBlockStyle}" />
+
+          <utu:AutoLayout Orientation="Horizontal" 
+                          Spacing="{StaticResource Space600}"
+                          PrimaryAxisAlignment="Start">
+            
+            <!-- Password - Filled -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="Filled"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <PasswordBox Style="{StaticResource FilledPasswordBoxStyle}"
+                           PlaceholderText="Password"
+                           Width="320" />
+            </utu:AutoLayout>
+
+            <!-- Password - Outlined -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+              <TextBlock Text="Outlined"
+                         Style="{StaticResource BodyStrongTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+              <PasswordBox Style="{StaticResource OutlinedPasswordBoxStyle}"
+                           PlaceholderText="Password"
+                           Width="320" />
+            </utu:AutoLayout>
+
+          </utu:AutoLayout>
+        </utu:AutoLayout>
+
+      </utu:AutoLayout>
+
+      <!-- Design Tokens Info -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space400}">
+        <TextBlock Text="Design Tokens"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+        <Border Background="{StaticResource DefaultSecondaryBackgroundBrush}"
+                Padding="{StaticResource Spacing600}"
+                CornerRadius="{StaticResource Radius200}">
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Styles: " FontWeight="SemiBold" />
+              <Run Text="Filled (default), Outlined" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• States: " FontWeight="SemiBold" />
+              <Run Text="Default, Focused, Disabled, With Value" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Width: " FontWeight="SemiBold" />
+              <Run Text="320px" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Height: " FontWeight="SemiBold" />
+              <Run Text="56px (single line), 120px (multiline)" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Border Radius: " FontWeight="SemiBold" />
+              <Run Text="4px top (Filled), 4px all (Outlined)" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Features: " FontWeight="SemiBold" />
+              <Run Text="Headers, Descriptions, Multiline, Password reveal" />
+            </TextBlock>
+          </utu:AutoLayout>
+        </Border>
+      </utu:AutoLayout>
+
+
+
+      <!-- Source Code Viewer -->
+      <controls:SourceCodeViewer 
+          PageXamlPath="ms-appx:///Presentation/CheckboxFieldsPage.xaml"
+          StyleXamlPath="ms-appx:///Styles/CheckBox.xaml" />
+
+    </utu:AutoLayout>
+  </ScrollViewer>
+
+</Page>

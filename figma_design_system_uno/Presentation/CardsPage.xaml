@@ -1,0 +1,423 @@
+<Page x:Class="figma_design_system_uno.Presentation.CardsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:figma_design_system_uno.Presentation"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+      xmlns:uen="using:Uno.Extensions.Navigation.UI"
+      Background="{StaticResource DefaultBackgroundBrush}">
+
+  <Page.Resources>
+    <local:CardsModel x:Key="ViewModel" />
+  </Page.Resources>
+
+  <ScrollViewer>
+    <utu:AutoLayout Orientation="Vertical"
+                    Padding="{StaticResource Spacing800}"
+                    Spacing="{StaticResource Space1200}"
+                    MaxWidth="1200"
+                    HorizontalAlignment="Center">
+
+      <!-- Page Header -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space400}">
+        <TextBlock Text="Card Component"
+                   Style="{StaticResource TitlePageTextBlockStyle}" />
+        <TextBlock Text="Showcasing all card variants: Icon/Image assets × Stroke/Default borders × Horizontal/Vertical layouts"
+                   Style="{StaticResource BodyBaseTextBlockStyle}"
+                   Foreground="{StaticResource SecondaryTextBrush}" />
+      </utu:AutoLayout>
+
+      <!-- All 8 Variants Grid -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
+        <TextBlock Text="All Card Variants"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <!-- Row 1: Icon Horizontal Stroke, Icon Horizontal Default -->
+        <utu:AutoLayout Orientation="Horizontal" 
+                        Spacing="{StaticResource Space600}"
+                        PrimaryAxisAlignment="Start">
+          
+          <!-- Icon + Stroke + Horizontal -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <TextBlock Text="Icon · Stroke · Horizontal"
+                       Style="{StaticResource BodyStrongTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" />
+            <utu:CardContentControl Style="{StaticResource OutlinedCardContentControlStyle}"
+                                    Width="440"
+                                    Translation="0,0,8">
+              <utu:CardContentControl.Shadow>
+                <ThemeShadow />
+              </utu:CardContentControl.Shadow>
+              <utu:AutoLayout Orientation="Horizontal" 
+                              Spacing="{StaticResource Space600}"
+                              Padding="{StaticResource Spacing600}"
+                              PrimaryAxisAlignment="Start">
+                <Border Width="32" Height="32"
+                        Background="{StaticResource BrandTertiaryBrush}"
+                        CornerRadius="{StaticResource Radius200}">
+                  <FontIcon Glyph="&#xE946;" 
+                            FontSize="20"
+                            Foreground="{StaticResource DefaultTextBrush}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                </Border>
+                <utu:AutoLayout Orientation="Vertical" 
+                                Spacing="{StaticResource Space400}">
+                  <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space200}">
+                    <TextBlock Text="Title"
+                               Style="{StaticResource CardHeadingTextBlockStyle}" />
+                    <TextBlock Text="Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+                               Style="{StaticResource CardBodyTextBlockStyle}"
+                               TextWrapping="Wrap" />
+                  </utu:AutoLayout>
+                  <Button Content="Button"
+                          Style="{StaticResource NeutralMediumButtonStyle}"
+                          utu:AutoLayout.CounterAlignment="Start" />
+                </utu:AutoLayout>
+              </utu:AutoLayout>
+            </utu:CardContentControl>
+          </utu:AutoLayout>
+
+          <!-- Icon + Default + Horizontal -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <TextBlock Text="Icon · Default · Horizontal"
+                       Style="{StaticResource BodyStrongTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" />
+            <ContentControl Width="440">
+              <utu:AutoLayout Orientation="Horizontal" 
+                              Spacing="{StaticResource Space600}"
+                              PrimaryAxisAlignment="Start">
+                <Border Width="32" Height="32"
+                        Background="{StaticResource BrandTertiaryBrush}"
+                        CornerRadius="{StaticResource Radius200}">
+                  <FontIcon Glyph="&#xE946;" 
+                            FontSize="20"
+                            Foreground="{StaticResource DefaultTextBrush}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                </Border>
+                <utu:AutoLayout Orientation="Vertical" 
+                                Spacing="{StaticResource Space400}"
+                                MaxWidth="372">
+                  <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space200}">
+                    <TextBlock Text="Title"
+                               Style="{StaticResource CardHeadingTextBlockStyle}" />
+                    <TextBlock Text="Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+                               Style="{StaticResource CardBodyTextBlockStyle}"
+                               TextWrapping="Wrap" />
+                  </utu:AutoLayout>
+                  <Button Content="Button"
+                          Style="{StaticResource NeutralMediumButtonStyle}"
+                          utu:AutoLayout.CounterAlignment="Start" />
+                </utu:AutoLayout>
+              </utu:AutoLayout>
+            </ContentControl>
+          </utu:AutoLayout>
+
+        </utu:AutoLayout>
+
+        <!-- Row 2: Image Horizontal Stroke, Image Horizontal Default -->
+        <utu:AutoLayout Orientation="Horizontal" 
+                        Spacing="{StaticResource Space600}"
+                        PrimaryAxisAlignment="Start">
+          
+          <!-- Image + Stroke + Horizontal -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <TextBlock Text="Image · Stroke · Horizontal"
+                       Style="{StaticResource BodyStrongTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" />
+            <utu:CardContentControl Style="{StaticResource OutlinedCardContentControlStyle}"
+                                    Width="440"
+                                    Translation="0,0,8">
+              <utu:CardContentControl.Shadow>
+                <ThemeShadow />
+              </utu:CardContentControl.Shadow>
+              <utu:AutoLayout Orientation="Horizontal" 
+                              Spacing="{StaticResource Space600}"
+                              Padding="{StaticResource Spacing600}"
+                              PrimaryAxisAlignment="Start">
+                <Border Width="160" Height="160"
+                        Background="{StaticResource NeutralTertiaryBrush}"
+                        CornerRadius="{StaticResource Radius200}">
+                  <FontIcon Glyph="&#xEB9F;" 
+                            FontSize="48"
+                            Foreground="{StaticResource SecondaryTextBrush}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                </Border>
+                <utu:AutoLayout Orientation="Vertical" 
+                                Spacing="{StaticResource Space400}"
+                                MaxWidth="192">
+                  <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space200}">
+                    <TextBlock Text="Title"
+                               Style="{StaticResource CardHeadingTextBlockStyle}" />
+                    <TextBlock Text="Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+                               Style="{StaticResource CardBodyTextBlockStyle}"
+                               TextWrapping="Wrap" />
+                  </utu:AutoLayout>
+                  <Button Content="Button"
+                          Style="{StaticResource NeutralMediumButtonStyle}"
+                          utu:AutoLayout.CounterAlignment="Start" />
+                </utu:AutoLayout>
+              </utu:AutoLayout>
+            </utu:CardContentControl>
+          </utu:AutoLayout>
+
+          <!-- Image + Default + Horizontal -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <TextBlock Text="Image · Default · Horizontal"
+                       Style="{StaticResource BodyStrongTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" />
+            <ContentControl Width="440">
+              <utu:AutoLayout Orientation="Horizontal" 
+                              Spacing="{StaticResource Space600}"
+                              PrimaryAxisAlignment="Start">
+                <Border Width="160" Height="160"
+                        Background="{StaticResource NeutralTertiaryBrush}"
+                        CornerRadius="{StaticResource Radius200}">
+                  <FontIcon Glyph="&#xEB9F;" 
+                            FontSize="48"
+                            Foreground="{StaticResource SecondaryTextBrush}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                </Border>
+                <utu:AutoLayout Orientation="Vertical" 
+                                Spacing="{StaticResource Space400}"
+                                MaxWidth="244">
+                  <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space200}">
+                    <TextBlock Text="Title"
+                               Style="{StaticResource CardHeadingTextBlockStyle}" />
+                    <TextBlock Text="Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+                               Style="{StaticResource CardBodyTextBlockStyle}"
+                               TextWrapping="Wrap" />
+                  </utu:AutoLayout>
+                  <Button Content="Button"
+                          Style="{StaticResource NeutralMediumButtonStyle}"
+                          utu:AutoLayout.CounterAlignment="Start" />
+                </utu:AutoLayout>
+              </utu:AutoLayout>
+            </ContentControl>
+          </utu:AutoLayout>
+
+        </utu:AutoLayout>
+
+        <!-- Row 3: Icon Vertical Stroke, Icon Vertical Default -->
+        <utu:AutoLayout Orientation="Horizontal" 
+                        Spacing="{StaticResource Space600}"
+                        PrimaryAxisAlignment="Start">
+          
+          <!-- Icon + Stroke + Vertical -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <TextBlock Text="Icon · Stroke · Vertical"
+                       Style="{StaticResource BodyStrongTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" />
+            <utu:CardContentControl Style="{StaticResource OutlinedCardContentControlStyle}"
+                                    Width="440"
+                                    Translation="0,0,8">
+              <utu:CardContentControl.Shadow>
+                <ThemeShadow />
+              </utu:CardContentControl.Shadow>
+              <utu:AutoLayout Orientation="Vertical" 
+                              Spacing="{StaticResource Space600}"
+                              Padding="{StaticResource Spacing600}">
+                <Border Width="32" Height="32"
+                        Background="{StaticResource BrandTertiaryBrush}"
+                        CornerRadius="{StaticResource Radius200}"
+                        HorizontalAlignment="Left">
+                  <FontIcon Glyph="&#xE946;" 
+                            FontSize="20"
+                            Foreground="{StaticResource DefaultTextBrush}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                </Border>
+                <utu:AutoLayout Orientation="Vertical" 
+                                Spacing="{StaticResource Space400}">
+                  <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space200}">
+                    <TextBlock Text="Title"
+                               Style="{StaticResource CardHeadingTextBlockStyle}" />
+                    <TextBlock Text="Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+                               Style="{StaticResource CardBodyTextBlockStyle}"
+                               TextWrapping="Wrap" />
+                  </utu:AutoLayout>
+                  <Button Content="Button"
+                          Style="{StaticResource NeutralMediumButtonStyle}"
+                          utu:AutoLayout.CounterAlignment="Start" />
+                </utu:AutoLayout>
+              </utu:AutoLayout>
+            </utu:CardContentControl>
+          </utu:AutoLayout>
+
+          <!-- Icon + Default + Vertical -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <TextBlock Text="Icon · Default · Vertical"
+                       Style="{StaticResource BodyStrongTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" />
+            <ContentControl Width="440">
+              <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+                <Border Width="32" Height="32"
+                        Background="{StaticResource BrandTertiaryBrush}"
+                        CornerRadius="{StaticResource Radius200}"
+                        HorizontalAlignment="Left">
+                  <FontIcon Glyph="&#xE946;" 
+                            FontSize="20"
+                            Foreground="{StaticResource DefaultTextBrush}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                </Border>
+                <utu:AutoLayout Orientation="Vertical" 
+                                Spacing="{StaticResource Space400}">
+                  <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space200}">
+                    <TextBlock Text="Title"
+                               Style="{StaticResource CardHeadingTextBlockStyle}" />
+                    <TextBlock Text="Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+                               Style="{StaticResource CardBodyTextBlockStyle}"
+                               TextWrapping="Wrap" />
+                  </utu:AutoLayout>
+                  <Button Content="Button"
+                          Style="{StaticResource NeutralMediumButtonStyle}"
+                          utu:AutoLayout.CounterAlignment="Start" />
+                </utu:AutoLayout>
+              </utu:AutoLayout>
+            </ContentControl>
+          </utu:AutoLayout>
+
+        </utu:AutoLayout>
+
+        <!-- Row 4: Image Vertical Stroke, Image Vertical Default -->
+        <utu:AutoLayout Orientation="Horizontal" 
+                        Spacing="{StaticResource Space600}"
+                        PrimaryAxisAlignment="Start">
+          
+          <!-- Image + Stroke + Vertical -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <TextBlock Text="Image · Stroke · Vertical"
+                       Style="{StaticResource BodyStrongTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" />
+            <utu:CardContentControl Style="{StaticResource OutlinedCardContentControlStyle}"
+                                    Width="440"
+                                    Translation="0,0,8">
+              <utu:CardContentControl.Shadow>
+                <ThemeShadow />
+              </utu:CardContentControl.Shadow>
+              <utu:AutoLayout Orientation="Vertical" 
+                              Spacing="{StaticResource Space600}"
+                              Padding="{StaticResource Spacing600}">
+                <Border Width="160" Height="160"
+                        Background="{StaticResource NeutralTertiaryBrush}"
+                        CornerRadius="{StaticResource Radius200}"
+                        HorizontalAlignment="Left">
+                  <FontIcon Glyph="&#xEB9F;" 
+                            FontSize="48"
+                            Foreground="{StaticResource SecondaryTextBrush}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                </Border>
+                <utu:AutoLayout Orientation="Vertical" 
+                                Spacing="{StaticResource Space400}">
+                  <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space200}">
+                    <TextBlock Text="Title"
+                               Style="{StaticResource CardHeadingTextBlockStyle}" />
+                    <TextBlock Text="Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+                               Style="{StaticResource CardBodyTextBlockStyle}"
+                               TextWrapping="Wrap" />
+                  </utu:AutoLayout>
+                  <Button Content="Button"
+                          Style="{StaticResource NeutralMediumButtonStyle}"
+                          utu:AutoLayout.CounterAlignment="Start" />
+                </utu:AutoLayout>
+              </utu:AutoLayout>
+            </utu:CardContentControl>
+          </utu:AutoLayout>
+
+          <!-- Image + Default + Vertical -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <TextBlock Text="Image · Default · Vertical"
+                       Style="{StaticResource BodyStrongTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" />
+            <ContentControl Width="440">
+              <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+                <Border Width="160" Height="160"
+                        Background="{StaticResource NeutralTertiaryBrush}"
+                        CornerRadius="{StaticResource Radius200}"
+                        HorizontalAlignment="Left">
+                  <FontIcon Glyph="&#xEB9F;" 
+                            FontSize="48"
+                            Foreground="{StaticResource SecondaryTextBrush}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                </Border>
+                <utu:AutoLayout Orientation="Vertical" 
+                                Spacing="{StaticResource Space400}">
+                  <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space200}">
+                    <TextBlock Text="Title"
+                               Style="{StaticResource CardHeadingTextBlockStyle}" />
+                    <TextBlock Text="Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+                               Style="{StaticResource CardBodyTextBlockStyle}"
+                               TextWrapping="Wrap" />
+                  </utu:AutoLayout>
+                  <Button Content="Button"
+                          Style="{StaticResource NeutralMediumButtonStyle}"
+                          utu:AutoLayout.CounterAlignment="Start" />
+                </utu:AutoLayout>
+              </utu:AutoLayout>
+            </ContentControl>
+          </utu:AutoLayout>
+
+        </utu:AutoLayout>
+      </utu:AutoLayout>
+
+      <!-- Design Tokens Info -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space400}">
+        <TextBlock Text="Design Tokens"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+        <Border Background="{StaticResource DefaultSecondaryBackgroundBrush}"
+                Padding="{StaticResource Spacing600}"
+                CornerRadius="{StaticResource Radius200}">
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Variants: " FontWeight="SemiBold" />
+              <Run Text="2 Asset Types (Icon, Image) × 2 Border Styles (Stroke, Default) × 2 Layouts (Horizontal, Vertical) = 8 total" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Border Radius: " FontWeight="SemiBold" />
+              <Run Text="8px" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Border Width: " FontWeight="SemiBold" />
+              <Run Text="1px (Stroke variant only)" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Padding: " FontWeight="SemiBold" />
+              <Run Text="24px (Stroke variant)" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Gap: " FontWeight="SemiBold" />
+              <Run Text="24px between sections, 16px within" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Icon Size: " FontWeight="SemiBold" />
+              <Run Text="32×32px" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Image Size: " FontWeight="SemiBold" />
+              <Run Text="160×160px" />
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
+              <Run Text="• Card Width: " FontWeight="SemiBold" />
+              <Run Text="440px" />
+            </TextBlock>
+          </utu:AutoLayout>
+        </Border>
+      </utu:AutoLayout>
+
+
+
+      <!-- Source Code Viewer -->
+      <controls:SourceCodeViewer 
+          PageXamlPath="ms-appx:///Presentation/CardsPage.xaml"
+          StyleXamlPath="ms-appx:///Styles/Cards.xaml" />
+
+    </utu:AutoLayout>
+  </ScrollViewer>
+
+</Page>

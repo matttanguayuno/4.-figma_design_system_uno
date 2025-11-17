@@ -1,0 +1,10 @@
+<linker>
+  <assembly fullname="figma_design_system_uno" />
+
+  <!--
+  Uncomment this section when using JSON.NET
+  <assembly fullname="System.Core">
+    <type fullname="System.Linq.Expressions*" />
+  </assembly>
+   -->
+</linker>

@@ -1,0 +1,111 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <ResourceDictionary.ThemeDictionaries>
+    <ResourceDictionary x:Key="Light">
+      <!-- Checked state colors -->
+      <SolidColorBrush x:Key="ToggleSwitchFillOn" Color="#2c2c2c" />
+      <SolidColorBrush x:Key="ToggleSwitchStrokeOn" Color="#2c2c2c" />
+      <SolidColorBrush x:Key="ToggleSwitchKnobFillOn" Color="White" />
+      
+      <!-- Unchecked state colors -->
+      <SolidColorBrush x:Key="ToggleSwitchFillOff" Color="White" />
+      <SolidColorBrush x:Key="ToggleSwitchStrokeOff" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="ToggleSwitchKnobFillOff" Color="#b3b3b3" />
+      
+      <!-- Disabled state colors (same for both checked and unchecked) -->
+      <SolidColorBrush x:Key="ToggleSwitchFillOnDisabled" Color="#d9d9d9" />
+      <SolidColorBrush x:Key="ToggleSwitchStrokeOnDisabled" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="ToggleSwitchFillOffDisabled" Color="#d9d9d9" />
+      <SolidColorBrush x:Key="ToggleSwitchStrokeOffDisabled" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="ToggleSwitchKnobFillDisabled" Color="#757575" />
+    </ResourceDictionary>
+    
+    <ResourceDictionary x:Key="Dark">
+      <!-- Same colors for dark theme -->
+      <SolidColorBrush x:Key="ToggleSwitchFillOn" Color="#2c2c2c" />
+      <SolidColorBrush x:Key="ToggleSwitchStrokeOn" Color="#2c2c2c" />
+      <SolidColorBrush x:Key="ToggleSwitchKnobFillOn" Color="White" />
+      
+      <SolidColorBrush x:Key="ToggleSwitchFillOff" Color="#e0e0e0" />
+      <SolidColorBrush x:Key="ToggleSwitchStrokeOff" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="ToggleSwitchKnobFillOff" Color="White" />
+      
+      <SolidColorBrush x:Key="ToggleSwitchFillOnDisabled" Color="#d9d9d9" />
+      <SolidColorBrush x:Key="ToggleSwitchStrokeOnDisabled" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="ToggleSwitchFillOffDisabled" Color="#d9d9d9" />
+      <SolidColorBrush x:Key="ToggleSwitchStrokeOffDisabled" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="ToggleSwitchKnobFillDisabled" Color="White" />
+    </ResourceDictionary>
+  </ResourceDictionary.ThemeDictionaries>
+
+  <Style x:Key="SwitchFieldToggleSwitchStyle" TargetType="ToggleSwitch">
+    <Setter Property="MinWidth" Value="40" />
+    <Setter Property="MinHeight" Value="24" />
+    <Setter Property="Width" Value="40" />
+    <Setter Property="Height" Value="24" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="ToggleSwitch">
+          <Grid>
+            <VisualStateManager.VisualStateGroups>
+              <VisualStateGroup x:Name="CommonStates">
+                <VisualState x:Name="Normal" />
+                <VisualState x:Name="Disabled">
+                  <VisualState.Setters>
+                    <Setter Target="SwitchTrack.Fill" Value="{ThemeResource ToggleSwitchFillOffDisabled}" />
+                    <Setter Target="SwitchTrack.Stroke" Value="{ThemeResource ToggleSwitchStrokeOffDisabled}" />
+                    <Setter Target="SwitchKnob.Fill" Value="{ThemeResource ToggleSwitchKnobFillDisabled}" />
+                  </VisualState.Setters>
+                </VisualState>
+              </VisualStateGroup>
+              <VisualStateGroup x:Name="ToggleStates">
+                <VisualState x:Name="Off">
+                  <VisualState.Setters>
+                    <Setter Target="SwitchTrack.Fill" Value="{ThemeResource ToggleSwitchFillOff}" />
+                    <Setter Target="SwitchTrack.Stroke" Value="{ThemeResource ToggleSwitchStrokeOff}" />
+                    <Setter Target="SwitchKnob.Fill" Value="{ThemeResource ToggleSwitchKnobFillOff}" />
+                    <Setter Target="KnobTranslate.X" Value="0" />
+                  </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="On">
+                  <VisualState.Setters>
+                    <Setter Target="SwitchTrack.Fill" Value="{ThemeResource ToggleSwitchFillOn}" />
+                    <Setter Target="SwitchTrack.Stroke" Value="{ThemeResource ToggleSwitchStrokeOn}" />
+                    <Setter Target="SwitchKnob.Fill" Value="{ThemeResource ToggleSwitchKnobFillOn}" />
+                    <Setter Target="KnobTranslate.X" Value="16" />
+                  </VisualState.Setters>
+                </VisualState>
+              </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+
+            <!-- Switch Track -->
+            <Rectangle x:Name="SwitchTrack"
+                       Width="40"
+                       Height="24"
+                       RadiusX="12"
+                       RadiusY="12"
+                       Fill="{ThemeResource ToggleSwitchFillOff}"
+                       Stroke="{ThemeResource ToggleSwitchStrokeOff}"
+                       StrokeThickness="1" />
+
+            <!-- Switch Knob -->
+            <Ellipse x:Name="SwitchKnob"
+                     Width="20"
+                     Height="20"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Center"
+                     Margin="2,0,0,0"
+                     Fill="{ThemeResource ToggleSwitchKnobFillOff}">
+              <Ellipse.RenderTransform>
+                <TranslateTransform x:Name="KnobTranslate" X="0" />
+              </Ellipse.RenderTransform>
+            </Ellipse>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+</ResourceDictionary>

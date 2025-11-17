@@ -1,0 +1,60 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <!-- ComboBox color overrides for Select Field -->
+  <ResourceDictionary.ThemeDictionaries>
+    <ResourceDictionary x:Key="Light">
+      <!-- Default state -->
+      <SolidColorBrush x:Key="ComboBoxBackground" Color="#ffffff" />
+      <SolidColorBrush x:Key="ComboBoxBorderBrush" Color="#d9d9d9" />
+      <SolidColorBrush x:Key="ComboBoxForeground" Color="#000000" />
+      
+      <!-- Disabled state -->
+      <SolidColorBrush x:Key="ComboBoxBackgroundDisabled" Color="#d9d9d9" />
+      <SolidColorBrush x:Key="ComboBoxBorderBrushDisabled" Color="#b2b2b2" />
+      <SolidColorBrush x:Key="ComboBoxForegroundDisabled" Color="#b3b3b3" />
+      
+      <!-- Error state (custom) -->
+      <SolidColorBrush x:Key="ComboBoxErrorBorderBrush" Color="#900b09" />
+    </ResourceDictionary>
+    
+    <ResourceDictionary x:Key="Dark">
+      <!-- Same for dark theme -->
+      <SolidColorBrush x:Key="ComboBoxBackground" Color="#ffffff" />
+      <SolidColorBrush x:Key="ComboBoxBorderBrush" Color="#d9d9d9" />
+      <SolidColorBrush x:Key="ComboBoxForeground" Color="#000000" />
+      
+      <SolidColorBrush x:Key="ComboBoxBackgroundDisabled" Color="#d9d9d9" />
+      <SolidColorBrush x:Key="ComboBoxBorderBrushDisabled" Color="#b2b2b2" />
+      <SolidColorBrush x:Key="ComboBoxForegroundDisabled" Color="#b3b3b3" />
+      
+      <SolidColorBrush x:Key="ComboBoxErrorBorderBrush" Color="#900b09" />
+    </ResourceDictionary>
+  </ResourceDictionary.ThemeDictionaries>
+
+  <!-- Base ComboBox style for Select Field -->
+  <Style x:Key="SelectFieldComboBoxStyle" TargetType="ComboBox">
+    <Setter Property="Background" Value="{ThemeResource ComboBoxBackground}" />
+    <Setter Property="BorderBrush" Value="{ThemeResource ComboBoxBorderBrush}" />
+    <Setter Property="Foreground" Value="{ThemeResource ComboBoxForeground}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="MinHeight" Value="40" />
+    <Setter Property="Padding" Value="16,12,12,12" />
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+  </Style>
+
+  <!-- Disabled ComboBox style -->
+  <Style x:Key="DisabledSelectFieldComboBoxStyle" TargetType="ComboBox" BasedOn="{StaticResource SelectFieldComboBoxStyle}">
+    <Setter Property="Background" Value="{ThemeResource ComboBoxBackgroundDisabled}" />
+    <Setter Property="BorderBrush" Value="{ThemeResource ComboBoxBorderBrushDisabled}" />
+    <Setter Property="Foreground" Value="{ThemeResource ComboBoxForegroundDisabled}" />
+    <Setter Property="IsHitTestVisible" Value="False" />
+    <Setter Property="IsTabStop" Value="False" />
+  </Style>
+
+  <!-- Error state ComboBox style -->
+  <Style x:Key="ErrorSelectFieldComboBoxStyle" TargetType="ComboBox" BasedOn="{StaticResource SelectFieldComboBoxStyle}">
+    <Setter Property="BorderBrush" Value="{ThemeResource ComboBoxErrorBorderBrush}" />
+  </Style>
+
+</ResourceDictionary>

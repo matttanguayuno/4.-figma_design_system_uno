@@ -1,0 +1,31 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="using:figma_design_system_uno.Presentation">
+    <Style TargetType="local:TagDemoTag" BasedOn="{StaticResource DefaultTagDemoTagStyle}" />
+    <Style x:Key="DefaultTagDemoTagStyle" TargetType="local:TagDemoTag">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:TagDemoTag">
+                    <Border Background="{TemplateBinding BackgroundBrush}"
+                            CornerRadius="8"
+                            Padding="8,0"
+                            MinWidth="80"
+                            Height="32">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="8">
+                            <TextBlock Text="Tag"
+                                       Foreground="{TemplateBinding ForegroundBrush}"
+                                       FontSize="16"
+                                       VerticalAlignment="Center"
+                                       Margin="0,0,0,0" />
+                            <Viewbox Width="16" Height="16" VerticalAlignment="Center" Visibility="{TemplateBinding ShowClose, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                <Canvas Width="16" Height="16">
+                                    <Path Data="M4,4 L12,12 M12,4 L4,12" Stroke="{TemplateBinding ForegroundBrush}" StrokeThickness="2" />
+                                </Canvas>
+                            </Viewbox>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

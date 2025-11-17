@@ -1,0 +1,269 @@
+
+<Page x:Class="figma_design_system_uno.Presentation.TagPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:figma_design_system_uno.Presentation"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+      Background="{StaticResource DefaultBackgroundBrush}">
+
+  <Page.Resources>
+    <local:TagModel x:Key="ViewModel" />
+  </Page.Resources>
+
+
+  <ScrollViewer>
+    <utu:AutoLayout Orientation="Vertical"
+                  Padding="{StaticResource Spacing800}"
+                  Spacing="{StaticResource Space1200}"
+                  MaxWidth="1200"
+                  HorizontalAlignment="Center">
+
+      <!-- Page Header -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space400}">
+        <TextBlock Text="Tag Component"
+                   Style="{StaticResource TitlePageTextBlockStyle}" />
+        <TextBlock Text="All Tag variants, states, and color schemes from Figma (node 56:8830)"
+                   Style="{StaticResource BodyBaseTextBlockStyle}"
+                   Foreground="{StaticResource SecondaryTextBrush}" />
+      </utu:AutoLayout>
+
+      <!-- Tag Grid Section -->
+      <TextBlock Text="All States Comparison" Style="{StaticResource HeadingTextBlockStyle}" />
+      <Border Background="{StaticResource DefaultSecondaryBackgroundBrush}"
+              Padding="{StaticResource Spacing600}"
+              CornerRadius="{StaticResource Radius200}">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" /> <!-- Row header widened for test -->
+            <ColumnDefinition Width="160" />
+            <ColumnDefinition Width="160" />
+            <ColumnDefinition Width="160" />
+            <ColumnDefinition Width="160" />
+            <ColumnDefinition Width="160" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" /> <!-- Header -->
+            <RowDefinition Height="Auto" /> <!-- Primary/Default -->
+            <RowDefinition Height="Auto" /> <!-- Primary/Hover -->
+            <RowDefinition Height="Auto" /> <!-- Secondary/Default -->
+            <RowDefinition Height="Auto" /> <!-- Secondary/Hover -->
+          </Grid.RowDefinitions>
+
+          <!-- Header Row -->
+          <TextBlock Grid.Row="0" Grid.Column="1" Text="Brand" Style="{StaticResource BodyStrongTextBlockStyle}" HorizontalAlignment="Center" />
+          <TextBlock Grid.Row="0" Grid.Column="2" Text="Danger" Style="{StaticResource BodyStrongTextBlockStyle}" HorizontalAlignment="Center" />
+          <TextBlock Grid.Row="0" Grid.Column="3" Text="Positive" Style="{StaticResource BodyStrongTextBlockStyle}" HorizontalAlignment="Center" />
+          <TextBlock Grid.Row="0" Grid.Column="4" Text="Warning" Style="{StaticResource BodyStrongTextBlockStyle}" HorizontalAlignment="Center" />
+          <TextBlock Grid.Row="0" Grid.Column="5" Text="Neutral" Style="{StaticResource BodyStrongTextBlockStyle}" HorizontalAlignment="Center" />
+
+          <!-- Primary/Default Row -->
+          <TextBlock Grid.Row="1" Grid.Column="0" Text="Primary - Default" Style="{StaticResource BodyBaseTextBlockStyle}" VerticalAlignment="Center" TextWrapping="NoWrap" />
+          <local:TagDemoTag Grid.Row="1" Grid.Column="1" Margin="0,0,12,12" BackgroundBrush="{StaticResource TagBrandPrimaryBackground}" ForegroundBrush="{StaticResource TagBrandPrimaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="1" Grid.Column="2" Margin="0,0,12,12" BackgroundBrush="{StaticResource TagDangerPrimaryBackground}" ForegroundBrush="{StaticResource TagDangerPrimaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="1" Grid.Column="3" Margin="0,0,12,12" BackgroundBrush="{StaticResource TagPositivePrimaryBackground}" ForegroundBrush="{StaticResource TagPositivePrimaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="1" Grid.Column="4" Margin="0,0,12,12" BackgroundBrush="{StaticResource TagWarningPrimaryBackground}" ForegroundBrush="{StaticResource TagWarningPrimaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="1" Grid.Column="5" Margin="0,0,0,12" BackgroundBrush="{StaticResource TagNeutralPrimaryBackground}" ForegroundBrush="{StaticResource TagNeutralPrimaryForeground}" ShowClose="True" />
+
+          <!-- Primary/Hover Row -->
+          <TextBlock Grid.Row="2" Grid.Column="0" Text="Primary - Hover" Style="{StaticResource BodyBaseTextBlockStyle}" VerticalAlignment="Center" TextWrapping="NoWrap" />
+          <local:TagDemoTag Grid.Row="2" Grid.Column="1" Margin="0,0,12,12" BackgroundBrush="{StaticResource TagBrandPrimaryBackgroundHover}" ForegroundBrush="{StaticResource TagBrandPrimaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="2" Grid.Column="2" Margin="0,0,12,12" BackgroundBrush="{StaticResource TagDangerPrimaryBackgroundHover}" ForegroundBrush="{StaticResource TagDangerPrimaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="2" Grid.Column="3" Margin="0,0,12,12" BackgroundBrush="{StaticResource TagPositivePrimaryBackgroundHover}" ForegroundBrush="{StaticResource TagPositivePrimaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="2" Grid.Column="4" Margin="0,0,12,12" BackgroundBrush="{StaticResource TagWarningPrimaryBackgroundHover}" ForegroundBrush="{StaticResource TagWarningPrimaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="2" Grid.Column="5" Margin="0,0,0,12" BackgroundBrush="{StaticResource TagNeutralPrimaryBackgroundHover}" ForegroundBrush="{StaticResource TagNeutralPrimaryForeground}" ShowClose="True" />
+
+          <!-- Secondary/Default Row -->
+          <TextBlock Grid.Row="3" Grid.Column="0" Text="Secondary - Default" Style="{StaticResource BodyBaseTextBlockStyle}" VerticalAlignment="Center" TextWrapping="NoWrap" />
+          <local:TagDemoTag Grid.Row="3" Grid.Column="1" Margin="0,0,12,12" BackgroundBrush="{StaticResource TagBrandSecondaryBackground}" ForegroundBrush="{StaticResource TagBrandSecondaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="3" Grid.Column="2" Margin="0,0,12,12" BackgroundBrush="{StaticResource TagDangerSecondaryBackground}" ForegroundBrush="{StaticResource TagDangerSecondaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="3" Grid.Column="3" Margin="0,0,12,12" BackgroundBrush="{StaticResource TagPositiveSecondaryBackground}" ForegroundBrush="{StaticResource TagPositiveSecondaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="3" Grid.Column="4" Margin="0,0,12,12" BackgroundBrush="{StaticResource TagWarningSecondaryBackground}" ForegroundBrush="{StaticResource TagWarningSecondaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="3" Grid.Column="5" Margin="0,0,0,12" BackgroundBrush="{StaticResource TagNeutralSecondaryBackground}" ForegroundBrush="{StaticResource TagNeutralSecondaryForeground}" ShowClose="True" />
+
+          <!-- Secondary/Hover Row -->
+          <TextBlock Grid.Row="4" Grid.Column="0" Text="Secondary - Hover" Style="{StaticResource BodyBaseTextBlockStyle}" VerticalAlignment="Center" TextWrapping="NoWrap" />
+          <local:TagDemoTag Grid.Row="4" Grid.Column="1" Margin="0,0,12,0" BackgroundBrush="{StaticResource TagBrandSecondaryBackgroundHover}" ForegroundBrush="{StaticResource TagBrandSecondaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="4" Grid.Column="2" Margin="0,0,12,0" BackgroundBrush="{StaticResource TagDangerSecondaryBackgroundHover}" ForegroundBrush="{StaticResource TagDangerSecondaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="4" Grid.Column="3" Margin="0,0,12,0" BackgroundBrush="{StaticResource TagPositiveSecondaryBackgroundHover}" ForegroundBrush="{StaticResource TagPositiveSecondaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="4" Grid.Column="4" Margin="0,0,12,0" BackgroundBrush="{StaticResource TagWarningSecondaryBackgroundHover}" ForegroundBrush="{StaticResource TagWarningSecondaryForeground}" ShowClose="True" />
+          <local:TagDemoTag Grid.Row="4" Grid.Column="5" Margin="0,0,0,0" BackgroundBrush="{StaticResource TagNeutralSecondaryBackgroundHover}" ForegroundBrush="{StaticResource TagNeutralSecondaryForeground}" ShowClose="True" />
+
+        </Grid>
+      </Border>
+
+      <!-- Uno.Toolkit.UI Chip Comparison Section -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="24" Margin="0,48,0,0">
+        <TextBlock Text="Uno.Toolkit.UI Chip Comparison" Style="{StaticResource HeadingTextBlockStyle}" />
+        <Border Background="{StaticResource DefaultSecondaryBackgroundBrush}"
+                Padding="{StaticResource Spacing600}"
+                CornerRadius="{StaticResource Radius200}">
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="200" />
+              <ColumnDefinition Width="160" />
+              <ColumnDefinition Width="160" />
+              <ColumnDefinition Width="160" />
+              <ColumnDefinition Width="160" />
+              <ColumnDefinition Width="160" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Header Row -->
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Brand" Style="{StaticResource BodyStrongTextBlockStyle}" HorizontalAlignment="Center" />
+            <TextBlock Grid.Row="0" Grid.Column="2" Text="Danger" Style="{StaticResource BodyStrongTextBlockStyle}" HorizontalAlignment="Center" />
+            <TextBlock Grid.Row="0" Grid.Column="3" Text="Positive" Style="{StaticResource BodyStrongTextBlockStyle}" HorizontalAlignment="Center" />
+            <TextBlock Grid.Row="0" Grid.Column="4" Text="Warning" Style="{StaticResource BodyStrongTextBlockStyle}" HorizontalAlignment="Center" />
+            <TextBlock Grid.Row="0" Grid.Column="5" Text="Neutral" Style="{StaticResource BodyStrongTextBlockStyle}" HorizontalAlignment="Center" />
+
+            <!-- Primary/Default Row -->
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Primary - Default" Style="{StaticResource BodyBaseTextBlockStyle}" VerticalAlignment="Center" TextWrapping="NoWrap" />
+            <utu:Chip Grid.Row="1" Grid.Column="1" Margin="0,0,12,12" Background="{StaticResource TagBrandPrimaryBackground}" Foreground="{StaticResource TagBrandPrimaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="White" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="1" Grid.Column="2" Margin="0,0,12,12" Background="{StaticResource TagDangerPrimaryBackground}" Foreground="{StaticResource TagDangerPrimaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="White" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="1" Grid.Column="3" Margin="0,0,12,12" Background="{StaticResource TagPositivePrimaryBackground}" Foreground="{StaticResource TagPositivePrimaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="White" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="1" Grid.Column="4" Margin="0,0,12,12" Background="{StaticResource TagWarningPrimaryBackground}" Foreground="{StaticResource TagWarningPrimaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="1" Grid.Column="5" Margin="0,0,0,12" Background="{StaticResource TagNeutralPrimaryBackground}" Foreground="{StaticResource TagNeutralPrimaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+
+            <!-- Primary/Hover Row -->
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Primary - Hover" Style="{StaticResource BodyBaseTextBlockStyle}" VerticalAlignment="Center" TextWrapping="NoWrap" />
+            <utu:Chip Grid.Row="2" Grid.Column="1" Margin="0,0,12,12" Background="{StaticResource TagBrandPrimaryBackgroundHover}" Foreground="{StaticResource TagBrandPrimaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="White" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="2" Grid.Column="2" Margin="0,0,12,12" Background="{StaticResource TagDangerPrimaryBackgroundHover}" Foreground="{StaticResource TagDangerPrimaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="White" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="2" Grid.Column="3" Margin="0,0,12,12" Background="{StaticResource TagPositivePrimaryBackgroundHover}" Foreground="{StaticResource TagPositivePrimaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="White" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="2" Grid.Column="4" Margin="0,0,12,12" Background="{StaticResource TagWarningPrimaryBackgroundHover}" Foreground="{StaticResource TagWarningPrimaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="2" Grid.Column="5" Margin="0,0,0,12" Background="{StaticResource TagNeutralPrimaryBackgroundHover}" Foreground="{StaticResource TagNeutralPrimaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+
+            <!-- Secondary/Default Row -->
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Secondary - Default" Style="{StaticResource BodyBaseTextBlockStyle}" VerticalAlignment="Center" TextWrapping="NoWrap" />
+            <utu:Chip Grid.Row="3" Grid.Column="1" Margin="0,0,12,12" Background="{StaticResource TagBrandSecondaryBackground}" Foreground="{StaticResource TagBrandSecondaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="3" Grid.Column="2" Margin="0,0,12,12" Background="{StaticResource TagDangerSecondaryBackground}" Foreground="{StaticResource TagDangerSecondaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="3" Grid.Column="3" Margin="0,0,12,12" Background="{StaticResource TagPositiveSecondaryBackground}" Foreground="{StaticResource TagPositiveSecondaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="3" Grid.Column="4" Margin="0,0,12,12" Background="{StaticResource TagWarningSecondaryBackground}" Foreground="{StaticResource TagWarningSecondaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="3" Grid.Column="5" Margin="0,0,0,12" Background="{StaticResource TagNeutralSecondaryBackground}" Foreground="{StaticResource TagNeutralSecondaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+
+            <!-- Secondary/Hover Row -->
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Secondary - Hover" Style="{StaticResource BodyBaseTextBlockStyle}" VerticalAlignment="Center" TextWrapping="NoWrap" />
+            <utu:Chip Grid.Row="4" Grid.Column="1" Margin="0,0,12,0" Background="{StaticResource TagBrandSecondaryBackgroundHover}" Foreground="{StaticResource TagBrandSecondaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="4" Grid.Column="2" Margin="0,0,12,0" Background="{StaticResource TagDangerSecondaryBackgroundHover}" Foreground="{StaticResource TagDangerSecondaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="4" Grid.Column="3" Margin="0,0,12,0" Background="{StaticResource TagPositiveSecondaryBackgroundHover}" Foreground="{StaticResource TagPositiveSecondaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="4" Grid.Column="4" Margin="0,0,12,0" Background="{StaticResource TagWarningSecondaryBackgroundHover}" Foreground="{StaticResource TagWarningSecondaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+            <utu:Chip Grid.Row="4" Grid.Column="5" Margin="0,0,0,0" Background="{StaticResource TagNeutralSecondaryBackgroundHover}" Foreground="{StaticResource TagNeutralSecondaryForeground}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tag" VerticalAlignment="Center" />
+                <FontIcon Glyph="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Margin="8,0,0,0" FontSize="18" VerticalAlignment="Center" />
+              </StackPanel>
+            </utu:Chip>
+          </Grid>
+        </Border>
+      </utu:AutoLayout>
+
+
+      <!-- Source Code Viewer -->
+      <controls:SourceCodeViewer 
+          PageXamlPath="ms-appx:///Presentation/TagPage.xaml"
+          StyleXamlPath="ms-appx:///Styles/Tag.xaml" />
+
+    </utu:AutoLayout>
+  </ScrollViewer>
+
+</Page>

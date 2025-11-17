@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Component Extractor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f5f5f5;
+            padding: 32px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #1e1e1e;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #303030;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d9d9d9;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: 'Monaco', 'Courier New', monospace;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #2c2c2c;
+        }
+        button {
+            background: #2c2c2c;
+            color: #f5f5f5;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #1e1e1e;
+        }
+        button:disabled {
+            background: #d9d9d9;
+            color: #b3b3b3;
+            cursor: not-allowed;
+        }
+        .results {
+            margin-top: 24px;
+            padding: 16px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            display: none;
+        }
+        .results.show {
+            display: block;
+        }
+        .component-item {
+            padding: 12px;
+            margin-bottom: 8px;
+            background: white;
+            border: 1px solid #d9d9d9;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+        }
+        .component-name {
+            font-weight: 600;
+            color: #1e1e1e;
+            margin-bottom: 4px;
+        }
+        .component-id {
+            color: #757575;
+        }
+        .error {
+            color: #b3261e;
+            padding: 12px;
+            background: #f9dedc;
+            border-radius: 8px;
+            margin-top: 16px;
+        }
+        .info {
+            font-size: 14px;
+            color: #757575;
+            margin-top: 8px;
+        }
+        .copy-btn {
+            background: #e3e3e3;
+            color: #1e1e1e;
+            border: 1px solid #767676;
+            padding: 4px 8px;
+            font-size: 12px;
+            margin-left: 8px;
+        }
+        .copy-btn:hover {
+            background: #cdcdcd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Figma Component Extractor</h1>
+        
+        <div class="form-group">
+            <label for="fileKey">Figma File Key</label>
+            <input type="text" id="fileKey" placeholder="XCGoBNGlHZ4G1M0LKJqIZr" value="XCGoBNGlHZ4G1M0LKJqIZr">
+            <div class="info">Get this from your Figma URL: figma.com/design/<strong>FILE_KEY</strong>/...</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="accessToken">Figma Access Token</label>
+            <input type="text" id="accessToken" placeholder="figd_...">
+            <div class="info">Generate at: <a href="https://www.figma.com/developers/api#access-tokens" target="_blank">figma.com/developers/api</a></div>
+        </div>
+        
+        <button id="extractBtn" onclick="extractComponents()">Extract Component Sets</button>
+        
+        <div id="results" class="results"></div>
+    </div>
+
+    <script>
+        async function extractComponents() {
+            const fileKey = document.getElementById('fileKey').value.trim();
+            const accessToken = document.getElementById('accessToken').value.trim();
+            const resultsDiv = document.getElementById('results');
+            const btn = document.getElementById('extractBtn');
+            
+            if (!fileKey || !accessToken) {
+                resultsDiv.innerHTML = '<div class="error">Please provide both File Key and Access Token</div>';
+                resultsDiv.classList.add('show');
+                return;
+            }
+            
+            btn.disabled = true;
+            btn.textContent = 'Extracting...';
+            resultsDiv.innerHTML = '';
+            resultsDiv.classList.remove('show');
+            
+            try {
+                const response = await fetch(`https://api.figma.com/v1/files/${fileKey}`, {
+                    headers: {
+                        'X-Figma-Token': accessToken
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`API Error: ${response.status} ${response.statusText}`);
+                }
+                
+                const data = await response.json();
+                const components = findComponentSets(data.document);
+                
+                if (components.length === 0) {
+                    resultsDiv.innerHTML = '<div class="info">No component sets found in this file</div>';
+                } else {
+                    const componentListText = components.map(c => `- ${c.name}: ${c.id}`).join('\n');
+                    let html = `
+                        <h3 style="margin-bottom: 16px; color: #1e1e1e;">Found ${components.length} Component Sets</h3>
+                        <button class="copy-btn" style="margin-bottom: 16px; padding: 8px 16px;" onclick="copyToClipboard(\`${componentListText}\`)">📋 Copy All Component List</button>
+                    `;
+                    components.forEach(comp => {
+                        html += `
+                            <div class="component-item">
+                                <div class="component-name">
+                                    ${comp.name}
+                                    <button class="copy-btn" onclick="copyToClipboard('${comp.id}')">Copy ID</button>
+                                    <button class="copy-btn" onclick="copyToClipboard('https://www.figma.com/design/${fileKey}?node-id=${comp.id.replace(':', '-')}')">Copy URL</button>
+                                </div>
+                                <div class="component-id">Node ID: ${comp.id}</div>
+                            </div>
+                        `;
+                    });
+                    resultsDiv.innerHTML = html;
+                }
+                
+                resultsDiv.classList.add('show');
+            } catch (error) {
+                resultsDiv.innerHTML = `<div class="error">Error: ${error.message}</div>`;
+                resultsDiv.classList.add('show');
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Extract Component Sets';
+            }
+        }
+        
+        function findComponentSets(node, results = []) {
+            if (node.type === 'COMPONENT_SET') {
+                results.push({
+                    id: node.id,
+                    name: node.name
+                });
+            }
+            
+            if (node.children) {
+                node.children.forEach(child => findComponentSets(child, results));
+            }
+            
+            return results;
+        }
+        
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                // Visual feedback could be added here
+                console.log('Copied:', text);
+            });
+        }
+    </script>
+</body>
+</html>

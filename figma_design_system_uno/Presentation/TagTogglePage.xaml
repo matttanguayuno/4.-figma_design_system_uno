@@ -1,0 +1,58 @@
+<Page
+    x:Class="figma_design_system_uno.Presentation.TagTogglePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:utu="using:Uno.Toolkit.UI"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+    Background="{StaticResource DefaultBackgroundBrush}">
+
+    <Page.Resources>
+        <!-- Add any TagToggle-specific resources here -->
+    </Page.Resources>
+
+    <ScrollViewer>
+        <utu:AutoLayout Orientation="Vertical"
+                        Padding="{StaticResource Spacing800}"
+                        Spacing="{StaticResource Space1200}"
+                        MaxWidth="1200"
+                        HorizontalAlignment="Center">
+
+
+            <!-- Page Header -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space400}">
+                <TextBlock Text="Tag Toggle Component"
+                           Style="{StaticResource TitlePageTextBlockStyle}" />
+                <TextBlock Text="Toggleable tag with check icon and label, matching Figma node 157:10316"
+                           Style="{StaticResource BodyBaseTextBlockStyle}"
+                           Foreground="{StaticResource SecondaryTextBrush}" />
+            </utu:AutoLayout>
+
+            <!-- Tag Toggle States -->
+            <TextBlock Text="States" Style="{StaticResource HeadingTextBlockStyle}" />
+            <utu:AutoLayout Orientation="Vertical" Spacing="16">
+                <!-- Active Row -->
+                <utu:AutoLayout Orientation="Horizontal" Spacing="16" VerticalAlignment="Center">
+                    <TextBlock Text="Active" Width="80" VerticalAlignment="Center" Style="{StaticResource BodyBaseTextBlockStyle}" />
+                    <Border Style="{StaticResource TagToggleContainerStyle}">
+                        <StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+                            <FontIcon Glyph="&#xE001;" FontFamily="Segoe MDL2 Assets" Style="{StaticResource TagToggleIconStyle}" />
+                            <TextBlock Text="Label" Style="{StaticResource TagToggleLabelStyle}" />
+                        </StackPanel>
+                    </Border>
+                </utu:AutoLayout>
+                <!-- Inactive Row -->
+                <utu:AutoLayout Orientation="Horizontal" Spacing="16" VerticalAlignment="Center">
+                    <TextBlock Text="Inactive" Width="80" VerticalAlignment="Center" Style="{StaticResource BodyBaseTextBlockStyle}" />
+                    <TextBlock Text="Label" VerticalAlignment="Center" FontSize="16" Foreground="#757575" FontWeight="Normal" />
+                </utu:AutoLayout>
+            </utu:AutoLayout>
+    
+
+      <!-- Source Code Viewer -->
+      <controls:SourceCodeViewer 
+          PageXamlPath="ms-appx:///Presentation/TagTogglePage.xaml"
+          StyleXamlPath="ms-appx:///Styles/TagToggle.xaml" />
+
+    </utu:AutoLayout>
+    </ScrollViewer>
+</Page>
