@@ -65,6 +65,7 @@
                              FontSize="12"
                              Padding="12"
                              Background="#F5F5F5"
+                             Foreground="#1A1A1A"
                              BorderThickness="1"
                              BorderBrush="{StaticResource DividerBrush}"
                              AcceptsReturn="True" />
@@ -100,6 +101,7 @@
                              FontSize="12"
                              Padding="12"
                              Background="#F5F5F5"
+                             Foreground="#1A1A1A"
                              BorderThickness="1"
                              BorderBrush="{StaticResource DividerBrush}"
                              AcceptsReturn="True" />
