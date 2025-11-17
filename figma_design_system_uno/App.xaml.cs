@@ -75,15 +75,7 @@ public partial class App : Application
                     // TODO: Register your services
                     //services.AddSingleton<IMyService, MyService>();
                 })
-                .UseNavigation(ReactiveViewModelMappings.ViewModelMappings, RegisterRoutes, 
-                    configure: config =>
-                    {
-#if __WASM__
-                        // Enable address bar updates for WebAssembly
-                        config.AddressBarUpdateEnabled = true;
-#endif
-                        return config;
-                    })
+                .UseNavigation(ReactiveViewModelMappings.ViewModelMappings, RegisterRoutes)
             );
         MainWindow = builder.Window;
 
