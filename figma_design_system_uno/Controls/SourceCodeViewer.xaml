@@ -69,8 +69,12 @@
                              Foreground="#1A1A1A"
                              BorderThickness="1"
                              BorderBrush="{StaticResource DividerBrush}"
-                             AcceptsReturn="True"
-                             IsEnabled="False" />
+                             AcceptsReturn="True">
+                        <TextBox.Resources>
+                            <SolidColorBrush x:Key="TextControlBackgroundPointerOver">#F5F5F5</SolidColorBrush>
+                            <SolidColorBrush x:Key="TextControlForegroundPointerOver">#1A1A1A</SolidColorBrush>
+                        </TextBox.Resources>
+                    </TextBox>
                 </ScrollViewer>
             </utu:AutoLayout>
         </Expander>
@@ -107,8 +111,12 @@
                              Foreground="#1A1A1A"
                              BorderThickness="1"
                              BorderBrush="{StaticResource DividerBrush}"
-                             AcceptsReturn="True"
-                             IsEnabled="False" />
+                             AcceptsReturn="True">
+                        <TextBox.Resources>
+                            <SolidColorBrush x:Key="TextControlBackgroundPointerOver">#F5F5F5</SolidColorBrush>
+                            <SolidColorBrush x:Key="TextControlForegroundPointerOver">#1A1A1A</SolidColorBrush>
+                        </TextBox.Resources>
+                    </TextBox>
                 </ScrollViewer>
             </utu:AutoLayout>
         </Expander>

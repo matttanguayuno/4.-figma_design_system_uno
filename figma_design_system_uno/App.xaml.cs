@@ -75,7 +75,14 @@ public partial class App : Application
                     // TODO: Register your services
                     //services.AddSingleton<IMyService, MyService>();
                 })
-                .UseNavigation(ReactiveViewModelMappings.ViewModelMappings, RegisterRoutes)
+                .UseNavigation(ReactiveViewModelMappings.ViewModelMappings, RegisterRoutes, 
+                    configure: config =>
+                    {
+#if __WASM__
+                        // Use hash-based routing for WebAssembly to preserve base path
+                        config.AddressBarUpdateEnabled(true);
+#endif
+                    })
             );
         MainWindow = builder.Window;
 
