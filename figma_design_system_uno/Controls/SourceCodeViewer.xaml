@@ -59,22 +59,16 @@
                 <ScrollViewer MaxHeight="400" 
                               HorizontalScrollBarVisibility="Auto"
                               VerticalScrollBarVisibility="Auto">
-                    <TextBox x:Name="PageXamlTextBox"
-                             IsReadOnly="True"
-                             TextWrapping="NoWrap"
-                             FontFamily="Consolas, Courier New, monospace"
-                             FontSize="12"
-                             Padding="12"
-                             Background="#F5F5F5"
-                             Foreground="#1A1A1A"
-                             BorderThickness="1"
-                             BorderBrush="{StaticResource DividerBrush}"
-                             AcceptsReturn="True">
-                        <TextBox.Resources>
-                            <SolidColorBrush x:Key="TextControlBackgroundPointerOver">#F5F5F5</SolidColorBrush>
-                            <SolidColorBrush x:Key="TextControlForegroundPointerOver">#1A1A1A</SolidColorBrush>
-                        </TextBox.Resources>
-                    </TextBox>
+                    <Border Background="#F5F5F5"
+                            BorderThickness="1"
+                            BorderBrush="{StaticResource DividerBrush}"
+                            Padding="12">
+                        <SelectableTextBlock x:Name="PageXamlTextBox"
+                                           TextWrapping="NoWrap"
+                                           FontFamily="Consolas, Courier New, monospace"
+                                           FontSize="12"
+                                           Foreground="#1A1A1A" />
+                    </Border>
                 </ScrollViewer>
             </utu:AutoLayout>
         </Expander>
@@ -101,22 +95,16 @@
                 <ScrollViewer MaxHeight="400"
                               HorizontalScrollBarVisibility="Auto"
                               VerticalScrollBarVisibility="Auto">
-                    <TextBox x:Name="StyleXamlTextBox"
-                             IsReadOnly="True"
-                             TextWrapping="NoWrap"
-                             FontFamily="Consolas, Courier New, monospace"
-                             FontSize="12"
-                             Padding="12"
-                             Background="#F5F5F5"
-                             Foreground="#1A1A1A"
-                             BorderThickness="1"
-                             BorderBrush="{StaticResource DividerBrush}"
-                             AcceptsReturn="True">
-                        <TextBox.Resources>
-                            <SolidColorBrush x:Key="TextControlBackgroundPointerOver">#F5F5F5</SolidColorBrush>
-                            <SolidColorBrush x:Key="TextControlForegroundPointerOver">#1A1A1A</SolidColorBrush>
-                        </TextBox.Resources>
-                    </TextBox>
+                    <Border Background="#F5F5F5"
+                            BorderThickness="1"
+                            BorderBrush="{StaticResource DividerBrush}"
+                            Padding="12">
+                        <SelectableTextBlock x:Name="StyleXamlTextBox"
+                                           TextWrapping="NoWrap"
+                                           FontFamily="Consolas, Courier New, monospace"
+                                           FontSize="12"
+                                           Foreground="#1A1A1A" />
+                    </Border>
                 </ScrollViewer>
             </utu:AutoLayout>
         </Expander>
