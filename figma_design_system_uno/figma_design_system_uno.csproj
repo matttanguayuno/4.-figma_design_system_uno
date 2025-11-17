@@ -17,6 +17,9 @@
     <!-- Package Description -->
     <Description>figma_design_system_uno powered by Uno Platform.</Description>
 
+    <!-- GitHub Pages base path -->
+    <WasmShellWebAppBasePath>/4.-figma_design_system_uno/</WasmShellWebAppBasePath>
+
     <!--
       UnoFeatures let's you quickly add and manage implicit package references based on the features you want to use.
       https://aka.platform.uno/singleproject-features
