@@ -63,11 +63,12 @@
                             BorderThickness="1"
                             BorderBrush="{StaticResource DividerBrush}"
                             Padding="12">
-                        <SelectableTextBlock x:Name="PageXamlTextBox"
-                                           TextWrapping="NoWrap"
-                                           FontFamily="Consolas, Courier New, monospace"
-                                           FontSize="12"
-                                           Foreground="#1A1A1A" />
+                        <TextBlock x:Name="PageXamlTextBox"
+                                   TextWrapping="NoWrap"
+                                   FontFamily="Consolas, Courier New, monospace"
+                                   FontSize="12"
+                                   Foreground="#1A1A1A"
+                                   IsTextSelectionEnabled="True" />
                     </Border>
                 </ScrollViewer>
             </utu:AutoLayout>
@@ -99,11 +100,12 @@
                             BorderThickness="1"
                             BorderBrush="{StaticResource DividerBrush}"
                             Padding="12">
-                        <SelectableTextBlock x:Name="StyleXamlTextBox"
-                                           TextWrapping="NoWrap"
-                                           FontFamily="Consolas, Courier New, monospace"
-                                           FontSize="12"
-                                           Foreground="#1A1A1A" />
+                        <TextBlock x:Name="StyleXamlTextBox"
+                                   TextWrapping="NoWrap"
+                                   FontFamily="Consolas, Courier New, monospace"
+                                   FontSize="12"
+                                   Foreground="#1A1A1A"
+                                   IsTextSelectionEnabled="True" />
                     </Border>
                 </ScrollViewer>
             </utu:AutoLayout>
