@@ -40,6 +40,7 @@
         <!-- Page XAML Section -->
         <Expander x:Name="PageXamlExpander"
                   Header="Page XAML"
+                  Foreground="#1A1A1A"
                   HorizontalAlignment="Stretch"
                   HorizontalContentAlignment="Stretch">
             <utu:AutoLayout Orientation="Vertical" Spacing="12" Padding="12">
@@ -68,7 +69,8 @@
                              Foreground="#1A1A1A"
                              BorderThickness="1"
                              BorderBrush="{StaticResource DividerBrush}"
-                             AcceptsReturn="True" />
+                             AcceptsReturn="True"
+                             IsEnabled="False" />
                 </ScrollViewer>
             </utu:AutoLayout>
         </Expander>
@@ -76,6 +78,7 @@
         <!-- Style XAML Section -->
         <Expander x:Name="StyleXamlExpander"
                   Header="Style XAML"
+                  Foreground="#1A1A1A"
                   HorizontalAlignment="Stretch"
                   HorizontalContentAlignment="Stretch">
             <utu:AutoLayout Orientation="Vertical" Spacing="12" Padding="12">
@@ -104,7 +107,8 @@
                              Foreground="#1A1A1A"
                              BorderThickness="1"
                              BorderBrush="{StaticResource DividerBrush}"
-                             AcceptsReturn="True" />
+                             AcceptsReturn="True"
+                             IsEnabled="False" />
                 </ScrollViewer>
             </utu:AutoLayout>
         </Expander>
