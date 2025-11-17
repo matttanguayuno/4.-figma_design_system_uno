@@ -80,7 +80,9 @@ public partial class App : Application
                     {
 #if __WASM__
                         // Use hash-based routing for WebAssembly to preserve base path
-                        config.AddressBarUpdateEnabled(true);
+                        return config.AddressBarUpdateEnabled(true);
+#else
+                        return config;
 #endif
                     })
             );
