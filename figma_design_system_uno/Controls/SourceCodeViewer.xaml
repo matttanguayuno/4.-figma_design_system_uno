@@ -39,10 +39,11 @@
 
         <!-- Page XAML Section -->
         <Expander x:Name="PageXamlExpander"
-                  Header="Page XAML"
-                  Foreground="#1A1A1A"
                   HorizontalAlignment="Stretch"
                   HorizontalContentAlignment="Stretch">
+            <Expander.Header>
+                <TextBlock Text="Page XAML" Foreground="#1A1A1A" FontWeight="SemiBold" />
+            </Expander.Header>
             <utu:AutoLayout Orientation="Vertical" Spacing="12" Padding="12">
                 <utu:AutoLayout Orientation="Horizontal" Spacing="12">
                     <Button x:Name="CopyPageXamlButton"
@@ -76,10 +77,11 @@
 
         <!-- Style XAML Section -->
         <Expander x:Name="StyleXamlExpander"
-                  Header="Style XAML"
-                  Foreground="#1A1A1A"
                   HorizontalAlignment="Stretch"
                   HorizontalContentAlignment="Stretch">
+            <Expander.Header>
+                <TextBlock Text="Style XAML" Foreground="#1A1A1A" FontWeight="SemiBold" />
+            </Expander.Header>
             <utu:AutoLayout Orientation="Vertical" Spacing="12" Padding="12">
                 <utu:AutoLayout Orientation="Horizontal" Spacing="12">
                     <Button x:Name="CopyStyleXamlButton"
