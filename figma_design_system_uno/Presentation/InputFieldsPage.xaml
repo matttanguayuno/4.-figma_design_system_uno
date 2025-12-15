@@ -26,6 +26,13 @@
                     Padding="{StaticResource Spacing600}"
                     MaxWidth="1200">
 
+      <!-- Back Navigation -->
+      <Button Content="← Back to Home"
+              Style="{StaticResource TextButtonStyle}"
+              utu:NavigationExtensions.Request="!/"
+              HorizontalAlignment="Left"
+              Margin="0,0,0,16" />
+
       <!-- Page Header -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space400}">
         <TextBlock Text="Input Fields"

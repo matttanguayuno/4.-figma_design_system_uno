@@ -21,6 +21,13 @@
                     MaxWidth="1200"
                     HorizontalAlignment="Center">
 
+      <!-- Back Navigation -->
+      <Button Content="← Back to Home"
+              Style="{StaticResource TextButtonStyle}"
+              utu:NavigationExtensions.Request="!/"
+              HorizontalAlignment="Left"
+              Margin="0,0,0,16" />
+
       <!-- Page Title -->
       <TextBlock Text="Select Field"
                  Style="{StaticResource TitlePageTextBlockStyle}" />
