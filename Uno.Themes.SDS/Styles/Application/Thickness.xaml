@@ -7,7 +7,7 @@
     -->
 
     <!-- Corner Radius -->
-    <CornerRadius x:Key="MaterialButtonCornerRadius">8</CornerRadius>
+    <CornerRadius x:Key="MaterialButtonCornerRadius">9999</CornerRadius>
     <CornerRadius x:Key="MaterialTextBoxCornerRadius">8</CornerRadius>
     <CornerRadius x:Key="MaterialCheckBoxCornerRadius">4</CornerRadius>
     <CornerRadius x:Key="MaterialRadioButtonCornerRadius">9999</CornerRadius>
