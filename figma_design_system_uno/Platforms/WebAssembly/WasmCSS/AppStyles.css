@@ -1,0 +1,15 @@
+/* Force light mode color scheme */
+:root {
+    color-scheme: light only;
+}
+
+/* Ensure white background for the entire app */
+html, body {
+    background-color: #ffffff !important;
+    color-scheme: light !important;
+}
+
+/* Force light mode for all elements */
+* {
+    color-scheme: light !important;
+}
