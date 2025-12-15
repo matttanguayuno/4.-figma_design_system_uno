@@ -64,4 +64,12 @@
     <SolidColorBrush x:Key="SDSBorderNeutralBrush" Color="{StaticResource SDSBorderNeutralColor}" />
     <SolidColorBrush x:Key="SDSTextNeutralBrush" Color="{StaticResource SDSTextNeutralColor}" />
 
+    <!-- Aliased Brush Names for Page Layouts -->
+    <SolidColorBrush x:Key="DefaultBackgroundBrush" Color="{StaticResource MaterialBackgroundColor}" />
+    <SolidColorBrush x:Key="DefaultTextBrush" Color="{StaticResource MaterialOnSurfaceColor}" />
+    <SolidColorBrush x:Key="SecondaryTextBrush" Color="{StaticResource MaterialOnSurfaceMediumColor}" />
+    <SolidColorBrush x:Key="TertiaryTextBrush" Color="{StaticResource MaterialOnSurfaceLowColor}" />
+    <SolidColorBrush x:Key="BrandTertiaryBrush" Color="{StaticResource MaterialPrimaryVariantLightColor}" />
+    <SolidColorBrush x:Key="NeutralTertiaryBrush" Color="{StaticResource SDSNeutralTertiaryColor}" />
+
 </ResourceDictionary>
