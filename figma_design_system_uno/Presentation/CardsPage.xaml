@@ -21,7 +21,7 @@
       <!-- Back Navigation -->
       <Button Content="← Back to Home"
               Style="{StaticResource TextButtonStyle}"
-              utu:NavigationExtensions.Request="!/"
+              Click="BackButton_Click"
               HorizontalAlignment="Left"
               Margin="0,0,0,16" />
 

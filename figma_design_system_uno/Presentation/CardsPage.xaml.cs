@@ -6,4 +6,9 @@ public sealed partial class CardsPage : Page
     {
         this.InitializeComponent();
     }
+
+    private void BackButton_Click(object sender, RoutedEventArgs e)
+    {
+        Frame.GoBack();
+    }
 }

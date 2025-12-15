@@ -8,5 +8,10 @@ namespace figma_design_system_uno.Presentation
         {
             this.InitializeComponent();
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.GoBack();
+        }
     }
 }

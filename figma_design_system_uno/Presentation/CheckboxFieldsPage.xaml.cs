@@ -6,4 +6,9 @@ public sealed partial class CheckboxFieldsPage : Page
     {
         this.InitializeComponent();
     }
+
+    private void BackButton_Click(object sender, RoutedEventArgs e)
+    {
+        Frame.GoBack();
+    }
 }
