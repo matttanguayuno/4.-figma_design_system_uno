@@ -1,4 +1,5 @@
 using Uno.Resizetizer;
+using Uno.Extensions.Navigation.Regions;
 
 namespace figma_design_system_uno;
 

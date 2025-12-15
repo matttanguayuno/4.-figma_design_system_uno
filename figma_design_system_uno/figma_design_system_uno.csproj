@@ -43,6 +43,9 @@
       ThemeService;
       SkiaRenderer;
     </UnoFeatures>
+    
+    <!-- Inject redirect handler script into index.html -->
+    <WasmShellAdditionalScripts>redirect-handler.js</WasmShellAdditionalScripts>
   </PropertyGroup>
 
   <ItemGroup>
