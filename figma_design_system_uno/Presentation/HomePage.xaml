@@ -18,7 +18,7 @@
                       Spacing="{StaticResource Space600}"
                       HorizontalAlignment="Center"
                       PrimaryAxisAlignment="Center">
-        <TextBlock Text="Design System"
+        <TextBlock Text="Uno Design System"
                    Style="{StaticResource TitleHeroTextBlockStyle}"
                    HorizontalAlignment="Center"
                    TextAlignment="Center" />
