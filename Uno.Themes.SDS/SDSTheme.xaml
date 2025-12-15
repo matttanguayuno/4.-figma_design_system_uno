@@ -1,0 +1,46 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- 
+    Simple Design System (SDS) Theme for Uno Platform
+    
+    This theme provides Material-compatible styling based on the Figma Simple Design System.
+    It uses the same resource keys as Uno.Themes.Material, making it a drop-in replacement.
+    
+    Usage in App.xaml:
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/SDSTheme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+    -->
+
+    <ResourceDictionary.MergedDictionaries>
+        
+        <!-- Application Resources (Colors, Brushes, Thickness) -->
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Application/Colors.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Application/Brushes.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Application/Thickness.xaml" />
+        
+        <!-- Typography -->
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/Typography.xaml" />
+        
+        <!-- Control Styles -->
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/Avatar.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/Button.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/Card.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/CheckBox.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/ComboBox.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/RadioButton.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/Search.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/Tag.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/TagToggle.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/TextArea.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/TextBox.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/ToggleSwitch.xaml" />
+        
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

@@ -16,10 +16,14 @@
     <ApplicationPublisher>figma_design_system_uno</ApplicationPublisher>
     <!-- Package Description -->
     <Description>figma_design_system_uno powered by Uno Platform.</Description>
+  </PropertyGroup>
 
-    <!-- GitHub Pages base path -->
+  <!-- GitHub Pages base path - Only enabled for Release builds -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <WasmShellWebAppBasePath>/4.-figma_design_system_uno/</WasmShellWebAppBasePath>
+  </PropertyGroup>
 
+  <PropertyGroup>
     <!--
       UnoFeatures let's you quickly add and manage implicit package references based on the features you want to use.
       https://aka.platform.uno/singleproject-features
@@ -45,6 +49,9 @@
     <!-- Embed XAML files for source code viewer -->
     <EmbeddedResource Include="Presentation\**\*.xaml" />
     <EmbeddedResource Include="Styles\**\*.xaml" />
+    
+    <!-- Reference the SDS theme library -->
+    <ProjectReference Include="..\Uno.Themes.SDS\Uno.Themes.SDS.csproj" />
   </ItemGroup>
 
 </Project>

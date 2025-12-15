@@ -1,0 +1,67 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Application/Colors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- 
+    SDS Brush Resources mapped to Material naming conventions
+    -->
+
+    <!-- Primary Brushes -->
+    <SolidColorBrush x:Key="MaterialPrimaryBrush" Color="{StaticResource MaterialPrimaryColor}" />
+    <SolidColorBrush x:Key="MaterialPrimaryVariantDarkBrush" Color="{StaticResource MaterialPrimaryVariantDarkColor}" />
+    <SolidColorBrush x:Key="MaterialPrimaryVariantLightBrush" Color="{StaticResource MaterialPrimaryVariantLightColor}" />
+    
+    <!-- On Primary Brushes -->
+    <SolidColorBrush x:Key="MaterialOnPrimaryBrush" Color="{StaticResource MaterialOnPrimaryColor}" />
+    <SolidColorBrush x:Key="MaterialOnPrimaryMediumBrush" Color="{StaticResource MaterialOnPrimaryMediumColor}" />
+    <SolidColorBrush x:Key="MaterialOnPrimaryLowBrush" Color="{StaticResource MaterialOnPrimaryLowColor}" />
+
+    <!-- Surface Brushes -->
+    <SolidColorBrush x:Key="MaterialSurfaceBrush" Color="{StaticResource MaterialSurfaceColor}" />
+    <SolidColorBrush x:Key="MaterialSurfaceVariantBrush" Color="{StaticResource MaterialSurfaceVariantColor}" />
+    
+    <!-- Background Brushes -->
+    <SolidColorBrush x:Key="MaterialBackgroundBrush" Color="{StaticResource MaterialBackgroundColor}" />
+    <SolidColorBrush x:Key="MaterialBackgroundSecondaryBrush" Color="{StaticResource MaterialBackgroundSecondaryColor}" />
+    <SolidColorBrush x:Key="MaterialBackgroundTertiaryBrush" Color="{StaticResource MaterialBackgroundTertiaryColor}" />
+
+    <!-- On Surface Brushes -->
+    <SolidColorBrush x:Key="MaterialOnSurfaceBrush" Color="{StaticResource MaterialOnSurfaceColor}" />
+    <SolidColorBrush x:Key="MaterialOnSurfaceMediumBrush" Color="{StaticResource MaterialOnSurfaceMediumColor}" />
+    <SolidColorBrush x:Key="MaterialOnSurfaceLowBrush" Color="{StaticResource MaterialOnSurfaceLowColor}" />
+    
+    <!-- On Background Brushes -->
+    <SolidColorBrush x:Key="MaterialOnBackgroundBrush" Color="{StaticResource MaterialOnBackgroundColor}" />
+    <SolidColorBrush x:Key="MaterialOnBackgroundMediumBrush" Color="{StaticResource MaterialOnBackgroundMediumColor}" />
+    <SolidColorBrush x:Key="MaterialOnBackgroundLowBrush" Color="{StaticResource MaterialOnBackgroundLowColor}" />
+
+    <!-- Outline Brushes -->
+    <SolidColorBrush x:Key="MaterialOutlineBrush" Color="{StaticResource MaterialOutlineColor}" />
+    <SolidColorBrush x:Key="MaterialOutlineVariantBrush" Color="{StaticResource MaterialOutlineVariantColor}" />
+    
+    <!-- Error Brushes -->
+    <SolidColorBrush x:Key="MaterialErrorBrush" Color="{StaticResource MaterialErrorColor}" />
+    <SolidColorBrush x:Key="MaterialOnErrorBrush" Color="{StaticResource MaterialOnErrorColor}" />
+
+    <!-- Disabled Brushes -->
+    <SolidColorBrush x:Key="MaterialDisabledBrush" Color="{StaticResource MaterialDisabledColor}" />
+    <SolidColorBrush x:Key="MaterialOnDisabledBrush" Color="{StaticResource MaterialOnDisabledColor}" />
+    
+    <!-- Overlay Brushes -->
+    <SolidColorBrush x:Key="MaterialOverlayBrush" Color="{StaticResource MaterialOverlayColor}" />
+    
+    <!-- Transparent Brush -->
+    <SolidColorBrush x:Key="MaterialTransparentBrush" Color="{StaticResource MaterialTransparentColor}" />
+
+    <!-- Additional SDS Brushes -->
+    <SolidColorBrush x:Key="SDSBrandDefaultBrush" Color="{StaticResource SDSBrandDefaultColor}" />
+    <SolidColorBrush x:Key="SDSBrandHoverBrush" Color="{StaticResource SDSBrandHoverColor}" />
+    <SolidColorBrush x:Key="SDSNeutralTertiaryBrush" Color="{StaticResource SDSNeutralTertiaryColor}" />
+    <SolidColorBrush x:Key="SDSNeutralTertiaryHoverBrush" Color="{StaticResource SDSNeutralTertiaryHoverColor}" />
+    <SolidColorBrush x:Key="SDSBorderNeutralBrush" Color="{StaticResource SDSBorderNeutralColor}" />
+    <SolidColorBrush x:Key="SDSTextNeutralBrush" Color="{StaticResource SDSTextNeutralColor}" />
+
+</ResourceDictionary>

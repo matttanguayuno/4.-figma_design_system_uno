@@ -1,0 +1,65 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <!-- TextBox color overrides for Textarea Field (multi-line) -->
+  <ResourceDictionary.ThemeDictionaries>
+    <ResourceDictionary x:Key="Light">
+      <!-- Default state -->
+      <SolidColorBrush x:Key="TextAreaBackground" Color="#ffffff" />
+      <SolidColorBrush x:Key="TextAreaBorderBrush" Color="#d9d9d9" />
+      <SolidColorBrush x:Key="TextAreaForeground" Color="#1e1e1e" />
+      <SolidColorBrush x:Key="TextAreaPlaceholderForeground" Color="#b3b3b3" />
+      
+      <!-- Disabled state -->
+      <SolidColorBrush x:Key="TextAreaBackgroundDisabled" Color="#d9d9d9" />
+      <SolidColorBrush x:Key="TextAreaBorderBrushDisabled" Color="#b2b2b2" />
+      <SolidColorBrush x:Key="TextAreaForegroundDisabled" Color="#b3b3b3" />
+      
+      <!-- Error state -->
+      <SolidColorBrush x:Key="TextAreaErrorBorderBrush" Color="#900b09" />
+    </ResourceDictionary>
+    
+    <ResourceDictionary x:Key="Dark">
+      <!-- Same for dark theme -->
+      <SolidColorBrush x:Key="TextAreaBackground" Color="#ffffff" />
+      <SolidColorBrush x:Key="TextAreaBorderBrush" Color="#d9d9d9" />
+      <SolidColorBrush x:Key="TextAreaForeground" Color="#1e1e1e" />
+      <SolidColorBrush x:Key="TextAreaPlaceholderForeground" Color="#b3b3b3" />
+      
+      <SolidColorBrush x:Key="TextAreaBackgroundDisabled" Color="#d9d9d9" />
+      <SolidColorBrush x:Key="TextAreaBorderBrushDisabled" Color="#b2b2b2" />
+      <SolidColorBrush x:Key="TextAreaForegroundDisabled" Color="#b3b3b3" />
+      
+      <SolidColorBrush x:Key="TextAreaErrorBorderBrush" Color="#900b09" />
+    </ResourceDictionary>
+  </ResourceDictionary.ThemeDictionaries>
+
+  <!-- Base TextBox style for Textarea Field -->
+  <Style x:Key="TextareaFieldTextBoxStyle" TargetType="TextBox">
+    <Setter Property="Background" Value="{ThemeResource TextAreaBackground}" />
+    <Setter Property="BorderBrush" Value="{ThemeResource TextAreaBorderBrush}" />
+    <Setter Property="Foreground" Value="{ThemeResource TextAreaForeground}" />
+    <Setter Property="PlaceholderForeground" Value="{ThemeResource TextAreaPlaceholderForeground}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="MinHeight" Value="80" />
+    <Setter Property="Padding" Value="16,12,12,12" />
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="AcceptsReturn" Value="True" />
+    <Setter Property="TextWrapping" Value="Wrap" />
+  </Style>
+
+  <!-- Disabled TextBox style -->
+  <Style x:Key="DisabledTextareaFieldTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource TextareaFieldTextBoxStyle}">
+    <Setter Property="Background" Value="{ThemeResource TextAreaBackgroundDisabled}" />
+    <Setter Property="BorderBrush" Value="{ThemeResource TextAreaBorderBrushDisabled}" />
+    <Setter Property="Foreground" Value="{ThemeResource TextAreaForegroundDisabled}" />
+    <Setter Property="IsHitTestVisible" Value="False" />
+    <Setter Property="IsTabStop" Value="False" />
+  </Style>
+
+  <!-- Error state TextBox style -->
+  <Style x:Key="ErrorTextareaFieldTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource TextareaFieldTextBoxStyle}">
+    <Setter Property="BorderBrush" Value="{ThemeResource TextAreaErrorBorderBrush}" />
+  </Style>
+
+</ResourceDictionary>

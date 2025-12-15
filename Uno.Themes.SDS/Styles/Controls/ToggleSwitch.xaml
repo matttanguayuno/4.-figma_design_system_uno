@@ -1,0 +1,60 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Application/Colors.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Application/Brushes.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- 
+    ToggleSwitch Theme Resources
+    Overrides Uno's default ToggleSwitch colors to match SDS design
+    -->
+
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Light">
+            <!-- On/Checked state -->
+            <SolidColorBrush x:Key="ToggleSwitchFillOn" Color="{StaticResource MaterialPrimaryColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOn" Color="{StaticResource MaterialPrimaryColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOn" Color="{StaticResource MaterialSurfaceColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOnPointerOver" Color="{StaticResource MaterialSurfaceColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOnPressed" Color="{StaticResource MaterialSurfaceColor}" />
+            
+            <!-- Off/Unchecked state -->
+            <SolidColorBrush x:Key="ToggleSwitchFillOff" Color="{StaticResource MaterialSurfaceColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOff" Color="{StaticResource MaterialOnSurfaceLowColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOff" Color="{StaticResource MaterialOnSurfaceLowColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOffPointerOver" Color="{StaticResource MaterialOnSurfaceLowColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOffPressed" Color="{StaticResource MaterialOnSurfaceLowColor}" />
+            
+            <!-- Disabled state -->
+            <SolidColorBrush x:Key="ToggleSwitchFillOnDisabled" Color="{StaticResource MaterialDisabledColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOnDisabled" Color="{StaticResource MaterialDisabledColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchFillOffDisabled" Color="{StaticResource MaterialDisabledColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOffDisabled" Color="{StaticResource MaterialDisabledColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillDisabled" Color="{StaticResource MaterialOnSurfaceMediumColor}" />
+        </ResourceDictionary>
+
+        <ResourceDictionary x:Key="Dark">
+            <!-- Same for dark theme -->
+            <SolidColorBrush x:Key="ToggleSwitchFillOn" Color="{StaticResource MaterialPrimaryColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOn" Color="{StaticResource MaterialPrimaryColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOn" Color="{StaticResource MaterialSurfaceColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOnPointerOver" Color="{StaticResource MaterialSurfaceColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOnPressed" Color="{StaticResource MaterialSurfaceColor}" />
+            
+            <SolidColorBrush x:Key="ToggleSwitchFillOff" Color="{StaticResource MaterialSurfaceColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOff" Color="{StaticResource MaterialOnSurfaceLowColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOff" Color="{StaticResource MaterialOnSurfaceLowColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOffPointerOver" Color="{StaticResource MaterialOnSurfaceLowColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOffPressed" Color="{StaticResource MaterialOnSurfaceLowColor}" />
+            
+            <SolidColorBrush x:Key="ToggleSwitchFillOnDisabled" Color="{StaticResource MaterialDisabledColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOnDisabled" Color="{StaticResource MaterialDisabledColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchFillOffDisabled" Color="{StaticResource MaterialDisabledColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOffDisabled" Color="{StaticResource MaterialDisabledColor}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillDisabled" Color="{StaticResource MaterialOnSurfaceMediumColor}" />
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+
+</ResourceDictionary>

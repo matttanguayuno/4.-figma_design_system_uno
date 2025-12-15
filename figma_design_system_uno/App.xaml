@@ -8,35 +8,17 @@
       <ResourceDictionary.MergedDictionaries>
         <!-- Load WinUI resources -->
         <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+        
+        <!-- SDS Theme Library (replaces individual style files) -->
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/SDSTheme.xaml" />
+        
+        <!-- Material Toolkit Theme with Color Overrides -->
         <utum:MaterialToolkitTheme
           ColorOverrideSource="ms-appx:///Styles/ColorPaletteOverride.xaml">
-          <!-- NOTE: You can override the default Roboto font by providing your font assets here. -->
-          <!-- <utum:MaterialToolkitTheme.FontOverrideDictionary>
-            <ResourceDictionary>
-              <FontFamily x:Key="MaterialLightFontFamily">ms-appx:///Uno.Fonts.Roboto/Fonts/Roboto-Light.ttf#Roboto</FontFamily>
-              <FontFamily x:Key="MaterialMediumFontFamily">ms-appx:///Uno.Fonts.Roboto/Fonts/Roboto-Medium.ttf#Roboto</FontFamily>
-              <FontFamily x:Key="MaterialRegularFontFamily">ms-appx:///Uno.Fonts.Roboto/Fonts/Roboto-Regular.ttf#Roboto</FontFamily>
-            </ResourceDictionary>
-          </utum:MaterialToolkitTheme.FontOverrideDictionary> -->
         </utum:MaterialToolkitTheme>
         
-        <!-- Design System Resources -->
-        <ResourceDictionary Source="ms-appx:///Styles/Colors.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/Typography.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/Spacing.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/Buttons.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/Cards.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/CheckBox.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/InputFields.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/ToggleSwitch.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/RadioButton.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/SelectField.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/TextareaField.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/Search.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/Tag.xaml" />
+        <!-- Demo-specific resources -->
         <ResourceDictionary Source="ms-appx:///Themes/TagDemoTag.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/TagToggle.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/Avatar.xaml" />
       </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
   </Application.Resources>

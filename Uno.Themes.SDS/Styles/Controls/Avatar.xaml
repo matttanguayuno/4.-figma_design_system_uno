@@ -1,0 +1,104 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- Avatar Container Base -->
+    <Style x:Key="AvatarContainerBaseStyle" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource MaterialPrimaryBrush}" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    
+    <!-- Avatar Large Circle -->
+    <Style x:Key="AvatarLargeCircleStyle" TargetType="Border" BasedOn="{StaticResource AvatarContainerBaseStyle}">
+        <Setter Property="Width" Value="40" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="CornerRadius" Value="20" />
+    </Style>
+    
+    <!-- Avatar Medium Circle -->
+    <Style x:Key="AvatarMediumCircleStyle" TargetType="Border" BasedOn="{StaticResource AvatarContainerBaseStyle}">
+        <Setter Property="Width" Value="32" />
+        <Setter Property="Height" Value="32" />
+        <Setter Property="CornerRadius" Value="16" />
+    </Style>
+    
+    <!-- Avatar Small Circle -->
+    <Style x:Key="AvatarSmallCircleStyle" TargetType="Border" BasedOn="{StaticResource AvatarContainerBaseStyle}">
+        <Setter Property="Width" Value="24" />
+        <Setter Property="Height" Value="24" />
+        <Setter Property="CornerRadius" Value="12" />
+    </Style>
+    
+    <!-- Avatar Large Square -->
+    <Style x:Key="AvatarLargeSquareStyle" TargetType="Border" BasedOn="{StaticResource AvatarContainerBaseStyle}">
+        <Setter Property="Width" Value="40" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="CornerRadius" Value="8" />
+    </Style>
+    
+    <!-- Avatar Medium Square -->
+    <Style x:Key="AvatarMediumSquareStyle" TargetType="Border" BasedOn="{StaticResource AvatarContainerBaseStyle}">
+        <Setter Property="Width" Value="32" />
+        <Setter Property="Height" Value="32" />
+        <Setter Property="CornerRadius" Value="8" />
+    </Style>
+    
+    <!-- Avatar Small Square -->
+    <Style x:Key="AvatarSmallSquareStyle" TargetType="Border" BasedOn="{StaticResource AvatarContainerBaseStyle}">
+        <Setter Property="Width" Value="24" />
+        <Setter Property="Height" Value="24" />
+        <Setter Property="CornerRadius" Value="4" />
+    </Style>
+    
+    <!-- Avatar Image Large -->
+    <Style x:Key="AvatarImageLargeStyle" TargetType="Image">
+        <Setter Property="Width" Value="40" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Stretch" Value="UniformToFill" />
+    </Style>
+    
+    <!-- Avatar Image Medium -->
+    <Style x:Key="AvatarImageMediumStyle" TargetType="Image">
+        <Setter Property="Width" Value="32" />
+        <Setter Property="Height" Value="32" />
+        <Setter Property="Stretch" Value="UniformToFill" />
+    </Style>
+    
+    <!-- Avatar Image Small -->
+    <Style x:Key="AvatarImageSmallStyle" TargetType="Image">
+        <Setter Property="Width" Value="24" />
+        <Setter Property="Height" Value="24" />
+        <Setter Property="Stretch" Value="UniformToFill" />
+    </Style>
+    
+    <!-- Avatar Initials Large -->
+    <Style x:Key="AvatarInitialsLargeStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Foreground" Value="{StaticResource MaterialOnPrimaryBrush}" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+    
+    <!-- Avatar Initials Medium -->
+    <Style x:Key="AvatarInitialsMediumStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Foreground" Value="{StaticResource MaterialOnPrimaryBrush}" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+    
+    <!-- Avatar Initials Small -->
+    <Style x:Key="AvatarInitialsSmallStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Foreground" Value="{StaticResource MaterialOnPrimaryBrush}" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+    
+</ResourceDictionary>

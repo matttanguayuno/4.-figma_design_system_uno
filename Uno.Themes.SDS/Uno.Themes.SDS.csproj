@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net9.0;net9.0-ios;net9.0-android;net9.0-maccatalyst</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    
+    <!-- Package Information -->
+    <PackageId>Uno.Themes.SDS</PackageId>
+    <Version>1.0.0-dev</Version>
+    <Authors>Uno Platform</Authors>
+    <Description>Simple Design System (SDS) theme for Uno Platform applications</Description>
+    <PackageTags>uno;uno-platform;theme;sds;design-system</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Uno.WinUI" />
+    <PackageReference Include="Uno.Toolkit.WinUI" />
+  </ItemGroup>
+
+  <!-- Include XAML files as embedded resources and content -->
+  <ItemGroup>
+    <Page Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
+  </ItemGroup>
+
+</Project>
