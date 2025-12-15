@@ -25,10 +25,8 @@ jobs:
         with:
           dotnet-version: '9.0.x'
           
-      - name: Install workloads
-        run: |
-          dotnet workload install wasm-tools-net9
-          dotnet workload install android ios maccatalyst
+      - name: Install workload
+        run: dotnet workload install wasm-tools-net9
         
       - name: Publish
         run: dotnet publish figma_design_system_uno/figma_design_system_uno.csproj -c Release -f net9.0-browserwasm -o output
