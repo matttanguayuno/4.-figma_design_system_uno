@@ -7,7 +7,7 @@
     -->
 
     <!-- Corner Radius -->
-    <CornerRadius x:Key="MaterialButtonCornerRadius">9999</CornerRadius>
+    <CornerRadius x:Key="MaterialButtonCornerRadius">8</CornerRadius>
     <CornerRadius x:Key="MaterialTextBoxCornerRadius">8</CornerRadius>
     <CornerRadius x:Key="MaterialCheckBoxCornerRadius">4</CornerRadius>
     <CornerRadius x:Key="MaterialRadioButtonCornerRadius">9999</CornerRadius>
@@ -28,9 +28,9 @@
     <Thickness x:Key="MaterialTextBoxBorderThickness">1</Thickness>
     
     <!-- Padding - Buttons -->
-    <Thickness x:Key="MaterialButtonPadding">16,12,16,12</Thickness>
-    <Thickness x:Key="MaterialButtonPaddingSmall">12,8,12,8</Thickness>
-    <Thickness x:Key="MaterialButtonPaddingLarge">24,16,24,16</Thickness>
+    <Thickness x:Key="MaterialButtonPadding">12,12,12,12</Thickness>
+    <Thickness x:Key="MaterialButtonPaddingSmall">8,8,8,8</Thickness>
+    <Thickness x:Key="MaterialButtonPaddingLarge">20,16,20,16</Thickness>
     
     <!-- Padding - TextBox/Input -->
     <Thickness x:Key="MaterialTextBoxPadding">12,12,12,12</Thickness>

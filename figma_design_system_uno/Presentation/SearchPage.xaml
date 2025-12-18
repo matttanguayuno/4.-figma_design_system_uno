@@ -4,7 +4,7 @@
       xmlns:local="using:figma_design_system_uno.Presentation"
       xmlns:utu="using:Uno.Toolkit.UI"
       xmlns:controls="using:figma_design_system_uno.Controls"
-      Background="{ThemeResource DefaultBackgroundBrush}">
+      Background="Transparent">
 
     <Page.DataContext>
         <local:SearchModel />
@@ -13,20 +13,24 @@
     <ScrollViewer>
         <utu:AutoLayout Orientation="Vertical"
                         Spacing="{StaticResource Spacing800}"
-                        Padding="{StaticResource Space1200}"
-                        MaxWidth="1200"
-                        HorizontalAlignment="Center">
-
-      <!-- Back Navigation -->
-      <Button Content="← Back to Home"
-              Style="{StaticResource TextButtonStyle}"
-              Click="BackButton_Click"
-              HorizontalAlignment="Left"
-              Margin="0,0,0,16" />
+                        Padding="{StaticResource Spacing800}">
 
             <!-- Title -->
-            <TextBlock Text="{Binding Title}"
-                       Style="{StaticResource TitlePageTextBlockStyle}" />
+            <utu:NavigationBar Content="{Binding Title}"
+                               HorizontalContentAlignment="Left"
+                               VerticalAlignment="Bottom">
+              <utu:NavigationBar.MainCommand>
+                <AppBarButton Icon="Back" Click="OnBackClick" />
+              </utu:NavigationBar.MainCommand>
+              <utu:NavigationBar.ContentTemplate>
+                <DataTemplate>
+                  <TextBlock Text="{Binding}"
+                             FontSize="48"
+                             FontWeight="Bold"
+                             VerticalAlignment="Bottom" />
+                </DataTemplate>
+              </utu:NavigationBar.ContentTemplate>
+            </utu:NavigationBar>
 
         <!-- Search Component Grid -->
         <Grid ColumnSpacing="64">

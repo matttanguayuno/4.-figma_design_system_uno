@@ -16,9 +16,9 @@
 
   <!-- Primary Button Style -->
   <Style x:Key="PrimaryButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
-    <Setter Property="Background" Value="{StaticResource BrandDefaultBrush}" />
-    <Setter Property="Foreground" Value="{StaticResource BrandOnBrandBrush}" />
-    <Setter Property="BorderBrush" Value="{StaticResource BrandDefaultBrush}" />
+    <Setter Property="Background" Value="{StaticResource PrimaryBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource OnPrimaryBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}" />
     <Setter Property="BorderThickness" Value="{StaticResource StrokeBorder}" />
     <Setter Property="CornerRadius" Value="{StaticResource Radius200}" />
     <Setter Property="Padding" Value="{StaticResource Spacing300}" />
@@ -36,20 +36,22 @@
                 <VisualState x:Name="Normal" />
                 <VisualState x:Name="PointerOver">
                   <VisualState.Setters>
-                    <Setter Target="RootGrid.Background" Value="{StaticResource BrandHoverBrush}" />
+                    <Setter Target="RootGrid.Background" Value="{StaticResource SDSBrandHoverBrush}" />
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource PrimaryBrush}" />
+                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource OnPrimaryBrush}" />
                   </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Pressed">
                   <VisualState.Setters>
-                    <Setter Target="RootGrid.Background" Value="{StaticResource BrandHoverBrush}" />
+                    <Setter Target="RootGrid.Background" Value="{StaticResource SDSBrandHoverBrush}" />
                     <Setter Target="RootGrid.Opacity" Value="0.8" />
                   </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Disabled">
                   <VisualState.Setters>
-                    <Setter Target="RootGrid.Background" Value="{StaticResource DisabledBackgroundBrush}" />
-                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource DisabledBorderBrush}" />
-                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource DisabledTextBrush}" />
+                    <Setter Target="RootGrid.Background" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource OnDisabledBrush}" />
                   </VisualState.Setters>
                 </VisualState>
               </VisualStateGroup>
@@ -81,9 +83,9 @@
 
   <!-- Neutral Button Style -->
   <Style x:Key="NeutralButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
-    <Setter Property="Background" Value="{StaticResource NeutralTertiaryBrush}" />
-    <Setter Property="Foreground" Value="{StaticResource DefaultTextBrush}" />
-    <Setter Property="BorderBrush" Value="{StaticResource NeutralSecondaryBorderBrush}" />
+    <Setter Property="Background" Value="{StaticResource BackgroundTertiaryBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource OnSurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource OutlineVariantBrush}" />
     <Setter Property="BorderThickness" Value="{StaticResource StrokeBorder}" />
     <Setter Property="CornerRadius" Value="{StaticResource Radius200}" />
     <Setter Property="Padding" Value="{StaticResource Spacing300}" />
@@ -101,20 +103,20 @@
                 <VisualState x:Name="Normal" />
                 <VisualState x:Name="PointerOver">
                   <VisualState.Setters>
-                    <Setter Target="RootGrid.Background" Value="{StaticResource NeutralTertiaryHoverBrush}" />
+                    <Setter Target="RootGrid.Background" Value="{StaticResource SDSNeutralTertiaryHoverBrush}" />
                   </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Pressed">
                   <VisualState.Setters>
-                    <Setter Target="RootGrid.Background" Value="{StaticResource NeutralTertiaryHoverBrush}" />
+                    <Setter Target="RootGrid.Background" Value="{StaticResource SDSNeutralTertiaryHoverBrush}" />
                     <Setter Target="RootGrid.Opacity" Value="0.8" />
                   </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Disabled">
                   <VisualState.Setters>
-                    <Setter Target="RootGrid.Background" Value="{StaticResource DisabledBackgroundBrush}" />
-                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource DisabledBorderBrush}" />
-                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource DisabledTextBrush}" />
+                    <Setter Target="RootGrid.Background" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource OnDisabledBrush}" />
                   </VisualState.Setters>
                 </VisualState>
               </VisualStateGroup>
@@ -147,7 +149,7 @@
   <!-- Subtle Button Style -->
   <Style x:Key="SubtleButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
     <Setter Property="Background" Value="Transparent" />
-    <Setter Property="Foreground" Value="{StaticResource NeutralTextBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource OnSurfaceBrush}" />
     <Setter Property="BorderBrush" Value="Transparent" />
     <Setter Property="BorderThickness" Value="{StaticResource StrokeBorder}" />
     <Setter Property="CornerRadius" Value="{StaticResource Radius200}" />
@@ -166,21 +168,21 @@
                 <VisualState x:Name="Normal" />
                 <VisualState x:Name="PointerOver">
                   <VisualState.Setters>
-                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource DefaultBorderBrush}" />
-                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource DefaultTextBrush}" />
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource OutlineBrush}" />
+                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource OnSurfaceBrush}" />
                   </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Pressed">
                   <VisualState.Setters>
-                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource DefaultBorderBrush}" />
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource OutlineBrush}" />
                     <Setter Target="RootGrid.Opacity" Value="0.8" />
                   </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Disabled">
                   <VisualState.Setters>
-                    <Setter Target="RootGrid.Background" Value="{StaticResource DisabledBackgroundBrush}" />
-                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource DisabledBorderBrush}" />
-                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource DisabledTextBrush}" />
+                    <Setter Target="RootGrid.Background" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource OnDisabledBrush}" />
                   </VisualState.Setters>
                 </VisualState>
               </VisualStateGroup>
@@ -208,6 +210,308 @@
   <Style x:Key="SubtleSmallButtonStyle" TargetType="Button" BasedOn="{StaticResource SubtleButtonStyle}">
     <Setter Property="Padding" Value="{StaticResource Spacing200}" />
     <Setter Property="MinHeight" Value="32" />
+  </Style>
+
+  <!-- Danger Primary Button Style -->
+  <Style x:Key="DangerPrimaryButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+    <Setter Property="Background" Value="{StaticResource ErrorBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource OnErrorBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource ErrorBrush}" />
+    <Setter Property="BorderThickness" Value="{StaticResource StrokeBorder}" />
+    <Setter Property="CornerRadius" Value="{StaticResource Radius200}" />
+    <Setter Property="Padding" Value="{StaticResource Spacing300}" />
+    <Setter Property="MinHeight" Value="40" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="Button">
+          <Grid x:Name="RootGrid"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="{TemplateBinding CornerRadius}">
+            <VisualStateManager.VisualStateGroups>
+              <VisualStateGroup x:Name="CommonStates">
+                <VisualState x:Name="Normal" />
+                <VisualState x:Name="PointerOver">
+                  <VisualState.Setters>
+                    <Setter Target="RootGrid.Background" Value="{StaticResource SDSDangerPrimaryHoverBrush}" />
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource ErrorBrush}" />
+                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource OnErrorBrush}" />
+                  </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Pressed">
+                  <VisualState.Setters>
+                    <Setter Target="RootGrid.Background" Value="{StaticResource SDSDangerPrimaryHoverBrush}" />
+                    <Setter Target="RootGrid.Opacity" Value="0.8" />
+                  </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Disabled">
+                  <VisualState.Setters>
+                    <Setter Target="RootGrid.Background" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource OnDisabledBrush}" />
+                  </VisualState.Setters>
+                </VisualState>
+              </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <ContentPresenter x:Name="ContentPresenter"
+                              Content="{TemplateBinding Content}"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              Padding="{TemplateBinding Padding}"
+                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                              AutomationProperties.AccessibilityView="Raw" />
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <!-- Danger Primary Button Medium (default) -->
+  <Style x:Key="DangerPrimaryMediumButtonStyle" TargetType="Button" BasedOn="{StaticResource DangerPrimaryButtonStyle}">
+    <Setter Property="Padding" Value="{StaticResource Spacing300}" />
+    <Setter Property="MinHeight" Value="40" />
+  </Style>
+
+  <!-- Danger Primary Button Small -->
+  <Style x:Key="DangerPrimarySmallButtonStyle" TargetType="Button" BasedOn="{StaticResource DangerPrimaryButtonStyle}">
+    <Setter Property="Padding" Value="{StaticResource Spacing200}" />
+    <Setter Property="MinHeight" Value="32" />
+  </Style>
+
+  <!-- Danger Subtle Button Style -->
+  <Style x:Key="DangerSubtleButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="Foreground" Value="{StaticResource SDSDangerSubtleTextBrush}" />
+    <Setter Property="BorderBrush" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="{StaticResource StrokeBorder}" />
+    <Setter Property="CornerRadius" Value="{StaticResource Radius200}" />
+    <Setter Property="Padding" Value="{StaticResource Spacing300}" />
+    <Setter Property="MinHeight" Value="40" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="Button">
+          <Grid x:Name="RootGrid"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="{TemplateBinding CornerRadius}">
+            <VisualStateManager.VisualStateGroups>
+              <VisualStateGroup x:Name="CommonStates">
+                <VisualState x:Name="Normal" />
+                <VisualState x:Name="PointerOver">
+                  <VisualState.Setters>
+                    <Setter Target="RootGrid.Background" Value="{StaticResource SDSDangerSubtleHoverBackgroundBrush}" />
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource ErrorBrush}" />
+                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource SDSDangerSubtleTextBrush}" />
+                  </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Pressed">
+                  <VisualState.Setters>
+                    <Setter Target="RootGrid.Background" Value="{StaticResource SDSDangerSubtleHoverBackgroundBrush}" />
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource ErrorBrush}" />
+                    <Setter Target="RootGrid.Opacity" Value="0.8" />
+                  </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Disabled">
+                  <VisualState.Setters>
+                    <Setter Target="RootGrid.Background" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource OnDisabledBrush}" />
+                  </VisualState.Setters>
+                </VisualState>
+              </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <ContentPresenter x:Name="ContentPresenter"
+                              Content="{TemplateBinding Content}"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              Padding="{TemplateBinding Padding}"
+                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                              AutomationProperties.AccessibilityView="Raw" />
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <!-- Danger Subtle Button Medium (default) -->
+  <Style x:Key="DangerSubtleMediumButtonStyle" TargetType="Button" BasedOn="{StaticResource DangerSubtleButtonStyle}">
+    <Setter Property="Padding" Value="{StaticResource Spacing300}" />
+    <Setter Property="MinHeight" Value="40" />
+  </Style>
+
+  <!-- Danger Subtle Button Small -->
+  <Style x:Key="DangerSubtleSmallButtonStyle" TargetType="Button" BasedOn="{StaticResource DangerSubtleButtonStyle}">
+    <Setter Property="Padding" Value="{StaticResource Spacing200}" />
+    <Setter Property="MinHeight" Value="32" />
+  </Style>
+
+  <!-- Icon Button Styles (using same colors as regular buttons) -->
+  
+  <!-- Primary Icon Button Style -->
+  <Style x:Key="PrimaryIconButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+    <Setter Property="Background" Value="{StaticResource PrimaryBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource OnPrimaryBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}" />
+    <Setter Property="BorderThickness" Value="{StaticResource StrokeBorder}" />
+    <Setter Property="CornerRadius" Value="{StaticResource Radius200}" />
+    <Setter Property="Padding" Value="{StaticResource Spacing200}" />
+    <Setter Property="MinWidth" Value="40" />
+    <Setter Property="MinHeight" Value="40" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="Button">
+          <Grid x:Name="RootGrid"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="{TemplateBinding CornerRadius}">
+            <VisualStateManager.VisualStateGroups>
+              <VisualStateGroup x:Name="CommonStates">
+                <VisualState x:Name="Normal" />
+                <VisualState x:Name="PointerOver">
+                  <VisualState.Setters>
+                    <Setter Target="RootGrid.Background" Value="{StaticResource SDSBrandHoverBrush}" />
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource PrimaryBrush}" />
+                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource OnPrimaryBrush}" />
+                  </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Pressed">
+                  <VisualState.Setters>
+                    <Setter Target="RootGrid.Background" Value="{StaticResource SDSBrandHoverBrush}" />
+                    <Setter Target="RootGrid.Opacity" Value="0.8" />
+                  </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Disabled">
+                  <VisualState.Setters>
+                    <Setter Target="RootGrid.Background" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource OnDisabledBrush}" />
+                  </VisualState.Setters>
+                </VisualState>
+              </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <ContentPresenter x:Name="ContentPresenter"
+                              Content="{TemplateBinding Content}"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              Padding="{TemplateBinding Padding}"
+                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                              AutomationProperties.AccessibilityView="Raw" />
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <!-- Neutral Icon Button Style -->
+  <Style x:Key="NeutralIconButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+    <Setter Property="Background" Value="{StaticResource BackgroundTertiaryBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource OnSurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource OutlineVariantBrush}" />
+    <Setter Property="BorderThickness" Value="{StaticResource StrokeBorder}" />
+    <Setter Property="CornerRadius" Value="{StaticResource Radius200}" />
+    <Setter Property="Padding" Value="{StaticResource Spacing200}" />
+    <Setter Property="MinWidth" Value="40" />
+    <Setter Property="MinHeight" Value="40" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="Button">
+          <Grid x:Name="RootGrid"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="{TemplateBinding CornerRadius}">
+            <VisualStateManager.VisualStateGroups>
+              <VisualStateGroup x:Name="CommonStates">
+                <VisualState x:Name="Normal" />
+                <VisualState x:Name="PointerOver">
+                  <VisualState.Setters>
+                    <Setter Target="RootGrid.Background" Value="{StaticResource SDSNeutralTertiaryHoverBrush}" />
+                  </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Pressed">
+                  <VisualState.Setters>
+                    <Setter Target="RootGrid.Background" Value="{StaticResource SDSNeutralTertiaryHoverBrush}" />
+                    <Setter Target="RootGrid.Opacity" Value="0.8" />
+                  </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Disabled">
+                  <VisualState.Setters>
+                    <Setter Target="RootGrid.Background" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource OnDisabledBrush}" />
+                  </VisualState.Setters>
+                </VisualState>
+              </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <ContentPresenter x:Name="ContentPresenter"
+                              Content="{TemplateBinding Content}"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              Padding="{TemplateBinding Padding}"
+                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                              AutomationProperties.AccessibilityView="Raw" />
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <!-- Subtle Icon Button Style -->
+  <Style x:Key="SubtleIconButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="Foreground" Value="{StaticResource OnSurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="{StaticResource StrokeBorder}" />
+    <Setter Property="CornerRadius" Value="{StaticResource Radius200}" />
+    <Setter Property="Padding" Value="{StaticResource Spacing200}" />
+    <Setter Property="MinWidth" Value="40" />
+    <Setter Property="MinHeight" Value="40" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="Button">
+          <Grid x:Name="RootGrid"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="{TemplateBinding CornerRadius}">
+            <VisualStateManager.VisualStateGroups>
+              <VisualStateGroup x:Name="CommonStates">
+                <VisualState x:Name="Normal" />
+                <VisualState x:Name="PointerOver">
+                  <VisualState.Setters>
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource OutlineBrush}" />
+                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource OnSurfaceBrush}" />
+                  </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Pressed">
+                  <VisualState.Setters>
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource OutlineBrush}" />
+                    <Setter Target="RootGrid.Opacity" Value="0.8" />
+                  </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Disabled">
+                  <VisualState.Setters>
+                    <Setter Target="RootGrid.Background" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="RootGrid.BorderBrush" Value="{StaticResource DisabledBrush}" />
+                    <Setter Target="ContentPresenter.Foreground" Value="{StaticResource OnDisabledBrush}" />
+                  </VisualState.Setters>
+                </VisualState>
+              </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <ContentPresenter x:Name="ContentPresenter"
+                              Content="{TemplateBinding Content}"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              Padding="{TemplateBinding Padding}"
+                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                              AutomationProperties.AccessibilityView="Raw" />
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
   </Style>
 
 </ResourceDictionary>

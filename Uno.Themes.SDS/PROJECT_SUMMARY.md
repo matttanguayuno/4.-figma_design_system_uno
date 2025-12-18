@@ -2,7 +2,27 @@
 
 ## What We've Built
 
-Successfully created a **theme library** for Uno Platform that implements the Figma Simple Design System with Material-compatible naming conventions.
+Successfully created a **theme library** for Uno Platform that implements the Figma Simple Design System as a **drop-in replacement** for Uno.Themes.Material.
+
+## Critical Requirements
+
+### ⚠️ NO "Material" Prefix in Resource Names
+
+**MUST** use the EXACT same resource keys as [Uno.Themes.Material](https://platform.uno/docs/articles/external/uno.themes/doc/material-colors.html):
+
+✅ **CORRECT:**
+- `SurfaceBrush`, `OutlineBrush`, `OnSurfaceBrush`
+- `PrimaryBrush`, `BackgroundBrush`, `ErrorBrush`
+
+❌ **WRONG:**
+- `MaterialSurfaceBrush`, `MaterialOutlineBrush`
+- Any resource with "Material" prefix
+
+### Style Naming
+**MUST** use the EXACT same style names as [Material Control Styles](https://platform.uno/docs/articles/external/uno.themes/doc/material-controls-styles.html):
+- `FilledButtonStyle`, `OutlinedButtonStyle`, `TextButtonStyle`
+- `OutlinedTextBoxStyle`, `FilledPasswordBoxStyle`
+- `BodyMedium`, `HeadlineSmall`, `TitleLarge`
 
 ## Project Structure
 
@@ -11,11 +31,11 @@ Uno.Themes.SDS/
 ├── SDSTheme.xaml                    # Main theme entry point
 ├── Styles/
 │   ├── Application/
-│   │   ├── Colors.xaml              # Color resources (Material naming)
-│   │   ├── Brushes.xaml             # Brush resources (Material naming)
+│   │   ├── Colors.xaml              # Color resources (NO Material prefix!)
+│   │   ├── Brushes.xaml             # Brush resources (NO Material prefix!)
 │   │   └── Thickness.xaml           # Sizing & spacing resources
 │   └── Controls/
-│       └── Button.xaml              # Button styles
+│       └── Button.xaml              # Button styles (Material-compatible names)
 └── README.md                        # Documentation
 ```
 
@@ -23,15 +43,15 @@ Uno.Themes.SDS/
 
 ### 1. Material-Compatible Resource Keys ✅
 
-All resources use Material naming conventions, making it a **drop-in replacement** for Uno.Themes.Material:
+All resources use the same naming as Uno.Themes.Material (WITHOUT "Material" prefix):
 
 ```xml
-<!-- These work exactly like Material -->
-<SolidColorBrush x:Key="MaterialPrimaryBrush" Color="#2c2c2c" />
-<SolidColorBrush x:Key="MaterialOnPrimaryBrush" Color="#f5f5f5" />
-<SolidColorBrush x:Key="MaterialSurfaceBrush" Color="#ffffff" />
-<SolidColorBrush x:Key="MaterialOutlineBrush" Color="#d9d9d9" />
-<SolidColorBrush x:Key="MaterialErrorBrush" Color="#900b09" />
+<!-- These match Uno.Themes.Material exactly -->
+<SolidColorBrush x:Key="PrimaryBrush" Color="#2c2c2c" />
+<SolidColorBrush x:Key="OnPrimaryBrush" Color="#f5f5f5" />
+<SolidColorBrush x:Key="SurfaceBrush" Color="#ffffff" />
+<SolidColorBrush x:Key="OutlineBrush" Color="#d9d9d9" />
+<SolidColorBrush x:Key="ErrorBrush" Color="#900b09" />
 <!-- etc. -->
 ```
 

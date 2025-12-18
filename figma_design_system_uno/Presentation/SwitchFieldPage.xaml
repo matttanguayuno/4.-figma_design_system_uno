@@ -4,7 +4,7 @@
       xmlns:local="using:figma_design_system_uno.Presentation"
       xmlns:utu="using:Uno.Toolkit.UI"
       xmlns:controls="using:figma_design_system_uno.Controls"
-      Background="{StaticResource DefaultBackgroundBrush}">
+      Background="Transparent">
 
   <Page.Resources>
     <local:SwitchFieldModel x:Key="ViewModel" />
@@ -13,20 +13,24 @@
   <ScrollViewer>
     <utu:AutoLayout Orientation="Vertical"
                     Padding="{StaticResource Spacing800}"
-                    Spacing="{StaticResource Space1200}"
-                    MaxWidth="1200"
-                    HorizontalAlignment="Center">
-
-      <!-- Back Navigation -->
-      <Button Content="← Back to Home"
-              Style="{StaticResource TextButtonStyle}"
-              Click="BackButton_Click"
-              HorizontalAlignment="Left"
-              Margin="0,0,0,16" />
+                    Spacing="{StaticResource Space1200}">
 
       <!-- Page Title -->
-      <TextBlock Text="Switch Field"
-                 Style="{StaticResource TitlePageTextBlockStyle}" />
+      <utu:NavigationBar Content="Switch Component"
+                         HorizontalContentAlignment="Left"
+                         VerticalAlignment="Bottom">
+        <utu:NavigationBar.MainCommand>
+          <AppBarButton Icon="Back" Click="OnBackClick" />
+        </utu:NavigationBar.MainCommand>
+        <utu:NavigationBar.ContentTemplate>
+          <DataTemplate>
+            <TextBlock Text="{Binding}"
+                       FontSize="48"
+                       FontWeight="Bold"
+                       VerticalAlignment="Bottom" />
+          </DataTemplate>
+        </utu:NavigationBar.ContentTemplate>
+      </utu:NavigationBar>
 
       <!-- Default State -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">

@@ -2,63 +2,76 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <!-- 
-    SDS Color Resources mapped to Material naming conventions
+    SDS Color Resources using Uno.Themes.Material-compatible naming
     Based on Figma Simple Design System
+    
+    These colors use the EXACT same key names as Uno.Themes.Material,
+    making this a drop-in replacement.
+    
+    Reference: https://platform.uno/docs/articles/external/uno.themes/doc/material-colors.html
     -->
 
     <!-- Primary/Brand Colors -->
-    <Color x:Key="MaterialPrimaryColor">#2c2c2c</Color>
-    <Color x:Key="MaterialPrimaryVariantDarkColor">#1e1e1e</Color>
-    <Color x:Key="MaterialPrimaryVariantLightColor">#f5f5f5</Color>
+    <Color x:Key="PrimaryColor">#2c2c2c</Color>
+    <Color x:Key="PrimaryVariantDarkColor">#1e1e1e</Color>
+    <Color x:Key="PrimaryVariantLightColor">#f5f5f5</Color>
     
     <!-- On Primary (text/icons on primary background) -->
-    <Color x:Key="MaterialOnPrimaryColor">#f5f5f5</Color>
-    <Color x:Key="MaterialOnPrimaryMediumColor">#e3e3e3</Color>
-    <Color x:Key="MaterialOnPrimaryLowColor">#d9d9d9</Color>
+    <Color x:Key="OnPrimaryColor">#f5f5f5</Color>
+    <Color x:Key="OnPrimaryMediumColor">#e3e3e3</Color>
+    <Color x:Key="OnPrimaryLowColor">#d9d9d9</Color>
 
     <!-- Surface Colors -->
-    <Color x:Key="MaterialSurfaceColor">#ffffff</Color>
-    <Color x:Key="MaterialSurfaceVariantColor">#f5f5f5</Color>
+    <Color x:Key="SurfaceColor">#ffffff</Color>
+    <Color x:Key="SurfaceVariantColor">#f5f5f5</Color>
     
     <!-- Background Colors -->
-    <Color x:Key="MaterialBackgroundColor">#ffffff</Color>
-    <Color x:Key="MaterialBackgroundSecondaryColor">#f5f5f5</Color>
-    <Color x:Key="MaterialBackgroundTertiaryColor">#e3e3e3</Color>
+    <Color x:Key="BackgroundColor">#f5f5f5</Color>
+    <Color x:Key="BackgroundSecondaryColor">#f5f5f5</Color>
+    <Color x:Key="BackgroundTertiaryColor">#e3e3e3</Color>
 
     <!-- On Surface (text/icons on surface) -->
-    <Color x:Key="MaterialOnSurfaceColor">#1e1e1e</Color>
-    <Color x:Key="MaterialOnSurfaceMediumColor">#757575</Color>
-    <Color x:Key="MaterialOnSurfaceLowColor">#b3b3b3</Color>
+    <Color x:Key="OnSurfaceColor">#1e1e1e</Color>
+    <Color x:Key="OnSurfaceMediumColor">#757575</Color>
+    <Color x:Key="OnSurfaceLowColor">#b3b3b3</Color>
     
     <!-- On Background -->
-    <Color x:Key="MaterialOnBackgroundColor">#1e1e1e</Color>
-    <Color x:Key="MaterialOnBackgroundMediumColor">#757575</Color>
-    <Color x:Key="MaterialOnBackgroundLowColor">#b3b3b3</Color>
+    <Color x:Key="OnBackgroundColor">#1e1e1e</Color>
+    <Color x:Key="OnBackgroundMediumColor">#757575</Color>
+    <Color x:Key="OnBackgroundLowColor">#b3b3b3</Color>
 
     <!-- Outline/Border Colors -->
-    <Color x:Key="MaterialOutlineColor">#d9d9d9</Color>
-    <Color x:Key="MaterialOutlineVariantColor">#767676</Color>
+    <Color x:Key="OutlineColor">#d9d9d9</Color>
+    <Color x:Key="OutlineVariantColor">#767676</Color>
     
     <!-- Error Colors -->
-    <Color x:Key="MaterialErrorColor">#900b09</Color>
-    <Color x:Key="MaterialOnErrorColor">#ffffff</Color>
+    <Color x:Key="ErrorColor">#900b09</Color>
+    <Color x:Key="OnErrorColor">#ffffff</Color>
 
     <!-- Disabled State -->
-    <Color x:Key="MaterialDisabledColor">#b3b3b3</Color>
-    <Color x:Key="MaterialOnDisabledColor">#b3b3b3</Color>
+    <Color x:Key="DisabledColor">#d9d9d9</Color>
+    <Color x:Key="OnDisabledColor">#b3b3b3</Color>
     
     <!-- Overlay/Shadow -->
-    <Color x:Key="MaterialOverlayColor">#000000</Color>
+    <Color x:Key="OverlayColor">#000000</Color>
     
     <!-- Transparent -->
-    <Color x:Key="MaterialTransparentColor">Transparent</Color>
+    <Color x:Key="TransparentColor">Transparent</Color>
 
-    <!-- Additional SDS-specific colors -->
+    <!-- Additional SDS-specific colors (custom extensions) -->
     <Color x:Key="SDSBrandDefaultColor">#2c2c2c</Color>
     <Color x:Key="SDSBrandHoverColor">#1e1e1e</Color>
     <Color x:Key="SDSNeutralTertiaryColor">#e3e3e3</Color>
     <Color x:Key="SDSNeutralTertiaryHoverColor">#cdcdcd</Color>
+    <Color x:Key="SDSNeutralTertiaryDarkerColor">#d5d5d5</Color>
     <Color x:Key="SDSBorderNeutralColor">#303030</Color>
+    <Color x:Key="SDSBorderNeutralDarkerColor">#b3b3b3</Color>
     <Color x:Key="SDSTextNeutralColor">#303030</Color>
+    
+    <!-- Button Danger Colors (from Figma SDS) -->
+    <Color x:Key="SDSDangerPrimaryColor">#900b09</Color>
+    <Color x:Key="SDSDangerPrimaryHoverColor">#7a0906</Color>
+    <Color x:Key="SDSDangerSubtleTextColor">#900b09</Color>
+    <Color x:Key="SDSDangerSubtleHoverBackgroundColor">#ffe6e5</Color>
 
 </ResourceDictionary>

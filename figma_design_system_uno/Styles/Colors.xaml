@@ -10,6 +10,7 @@
 
   <!-- Default/Neutral Colors -->
   <Color x:Key="DefaultBackgroundColor">#ffffff</Color>
+  <Color x:Key="ContentBackgroundColor">#f5f5f5</Color>
   <Color x:Key="DefaultSecondaryBackgroundColor">#f5f5f5</Color>
   <Color x:Key="NeutralTertiaryColor">#e3e3e3</Color>
   <Color x:Key="NeutralTertiaryHoverColor">#cdcdcd</Color>
@@ -43,6 +44,7 @@
   <SolidColorBrush x:Key="BrandOnBrandSecondaryBrush" Color="{StaticResource BrandOnBrandSecondaryColor}" />
 
   <SolidColorBrush x:Key="DefaultBackgroundBrush" Color="{StaticResource DefaultBackgroundColor}" />
+  <SolidColorBrush x:Key="ContentBackgroundBrush" Color="{StaticResource ContentBackgroundColor}" />
   <SolidColorBrush x:Key="DefaultSecondaryBackgroundBrush" Color="{StaticResource DefaultSecondaryBackgroundColor}" />
   <SolidColorBrush x:Key="NeutralTertiaryBrush" Color="{StaticResource NeutralTertiaryColor}" />
   <SolidColorBrush x:Key="NeutralTertiaryHoverBrush" Color="{StaticResource NeutralTertiaryHoverColor}" />

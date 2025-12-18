@@ -4,7 +4,7 @@
 
   <!-- Card Base Style using Uno Toolkit Card -->
   <Style x:Key="BaseCardStyle" TargetType="utu:Card">
-    <Setter Property="Background" Value="{StaticResource DefaultBackgroundBrush}" />
+    <Setter Property="Background" Value="{StaticResource SurfaceBrush}" />
     <Setter Property="Padding" Value="{StaticResource Spacing600}" />
     <Setter Property="CornerRadius" Value="{StaticResource Radius200}" />
     <Setter Property="MinWidth" Value="240" />
@@ -15,7 +15,7 @@
 
   <!-- Card with Border (Stroke Variant) -->
   <Style x:Key="StrokeCardStyle" TargetType="utu:Card" BasedOn="{StaticResource BaseCardStyle}">
-    <Setter Property="BorderBrush" Value="{StaticResource DefaultBorderBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource OutlineBrush}" />
     <Setter Property="BorderThickness" Value="{StaticResource StrokeBorder}" />
   </Style>
 
@@ -56,13 +56,14 @@
 
   <!-- Card Heading Style -->
   <Style x:Key="CardHeadingTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BodyStrongTextBlockStyle}">
-    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="FontSize" Value="22" />
+    <Setter Property="FontWeight" Value="Bold" />
     <Setter Property="TextWrapping" Value="Wrap" />
   </Style>
 
   <!-- Card Body Style -->
   <Style x:Key="CardBodyTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BodyBaseTextBlockStyle}">
-    <Setter Property="Foreground" Value="{StaticResource SecondaryTextBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource OnSurfaceMediumBrush}" />
     <Setter Property="TextWrapping" Value="Wrap" />
   </Style>
 

@@ -6,7 +6,6 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:uen="using:Uno.Extensions.Navigation.UI"
       xmlns:utu="using:Uno.Toolkit.UI"
-      xmlns:um="using:Uno.Material"
       Background="{ThemeResource BackgroundBrush}">
 
   <Grid utu:SafeArea.Insets="VisibleBounds">

@@ -4,15 +4,26 @@ Simple Design System (SDS) theme for Uno Platform applications.
 
 ## Overview
 
-Uno.Themes.SDS is a theme library that implements the **Figma Simple Design System** for Uno Platform apps. It provides Material-compatible styling, using the same resource keys and style names as `Uno.Themes.Material`, making it a **drop-in replacement**.
+Uno.Themes.SDS is a theme library that implements the **Figma Simple Design System** for Uno Platform apps. It provides **drop-in replacement** for `Uno.Themes.Material`, using the exact same resource keys and style names.
 
 ## Features
 
-- ✅ **Material-compatible naming** - Uses same resource keys as Uno.Themes.Material
-- ✅ **Based on Figma SDS** - Implements the Simple Design System specification
-- ✅ **Swappable** - Switch between Material and SDS themes without code changes
+- ✅ **Material-compatible naming** - Uses EXACT same resource keys as Uno.Themes.Material (without "Material" prefix)
+- ✅ **Based on Figma SDS** - Implements the Simple Design System specification  
+- ✅ **Swappable** - True drop-in replacement - switch between Material and SDS themes without code changes
 - ✅ **Comprehensive** - Colors, brushes, thickness, and control styles
 - ✅ **Multi-platform** - Supports all Uno Platform targets
+
+## Key Principles
+
+### Resource Naming
+- Uses **EXACT same keys** as [Uno.Themes.Material](https://platform.uno/docs/articles/external/uno.themes/doc/material-colors.html)
+- **NO "Material" prefix** in resource names
+- Examples: `SurfaceBrush`, `OutlineBrush`, `OnSurfaceBrush` (NOT `MaterialSurfaceBrush`)
+
+### Style Naming  
+- Uses **EXACT same style names** as [Material Control Styles](https://platform.uno/docs/articles/external/uno.themes/doc/material-controls-styles.html)
+- Examples: `FilledButtonStyle`, `OutlinedTextBoxStyle`, `BodyMedium`
 
 ## Installation
 

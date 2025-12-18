@@ -4,7 +4,6 @@
       xmlns:local="using:figma_design_system_uno.Presentation"
       xmlns:uen="using:Uno.Extensions.Navigation.UI"
       xmlns:utu="using:Uno.Toolkit.UI"
-      xmlns:um="using:Uno.Material"
       NavigationCacheMode="Required"
       Background="{ThemeResource BackgroundBrush}">
   <ScrollViewer IsTabStop="True">

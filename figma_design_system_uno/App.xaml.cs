@@ -85,6 +85,17 @@ public partial class App : Application
 #endif
                 MainWindow.SetWindowIcon();
 
+        // Set window to maximized (full screen) on desktop
+        var appWindow = MainWindow.AppWindow;
+        if (appWindow is not null)
+        {
+            var presenter = appWindow.Presenter as Microsoft.UI.Windowing.OverlappedPresenter;
+            if (presenter is not null)
+            {
+                presenter.Maximize();
+            }
+        }
+
         Host = await builder.NavigateAsync<Shell>();
     }
 
@@ -94,14 +105,19 @@ public partial class App : Application
         views.Register(
             new ViewMap(ViewModel: typeof(ShellModel)),
             new ViewMap<HomePage, HomeModel>(),
+            new ViewMap<AccordionPage, AccordionModel>(),
+            new ViewMap<AvatarPage, AvatarModel>(),
             new ViewMap<ButtonsPage, ButtonsModel>(),
             new ViewMap<CardsPage, CardsModel>(),
-            new ViewMap<CheckboxFieldsPage, CheckboxFieldsModel>(),
+            new ViewMap<DialogPage, DialogModel>(),
             new ViewMap<InputFieldsPage, InputFieldsModel>(),
-            new ViewMap<SwitchFieldPage, SwitchFieldModel>(),
             new ViewMap<RadioFieldPage, RadioFieldModel>(),
+            new ViewMap<SearchPage, SearchModel>(),
+            new ViewMap<SelectFieldPage, SelectFieldModel>(),
+            new ViewMap<SwitchFieldPage, SwitchFieldModel>(),
             new ViewMap<TagPage, TagModel>(),
-            new ViewMap<TagTogglePage, TagToggleModel>()
+            new ViewMap<TagTogglePage, TagToggleModel>(),
+            new ViewMap<TextareaFieldPage, TextareaFieldModel>()
         );
 
         routes.Register(
@@ -109,14 +125,19 @@ public partial class App : Application
                 Nested:
                 [
                     new ("Home", View: views.FindByViewModel<HomeModel>(), IsDefault:true),
+                    new ("Accordion", View: views.FindByViewModel<AccordionModel>()),
+                    new ("Avatar", View: views.FindByViewModel<AvatarModel>()),
                     new ("Buttons", View: views.FindByViewModel<ButtonsModel>()),
                     new ("Cards", View: views.FindByViewModel<CardsModel>()),
-                    new ("CheckboxFields", View: views.FindByViewModel<CheckboxFieldsModel>()),
+                    new ("Dialog", View: views.FindByViewModel<DialogModel>()),
                     new ("InputFields", View: views.FindByViewModel<InputFieldsModel>()),
-                    new ("SwitchFields", View: views.FindByViewModel<SwitchFieldModel>()),
                     new ("RadioFields", View: views.FindByViewModel<RadioFieldModel>()),
+                    new ("Search", View: views.FindByViewModel<SearchModel>()),
+                    new ("SelectField", View: views.FindByViewModel<SelectFieldModel>()),
+                    new ("SwitchFields", View: views.FindByViewModel<SwitchFieldModel>()),
                     new ("Tag", View: views.FindByViewModel<TagModel>()),
-                    new ("TagToggle", View: views.FindByViewModel<TagToggleModel>())
+                    new ("TagToggle", View: views.FindByViewModel<TagToggleModel>()),
+                    new ("TextareaField", View: views.FindByViewModel<TextareaFieldModel>())
                 ]
             )
         );

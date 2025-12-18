@@ -1,3 +1,6 @@
+using Uno.Extensions.Navigation;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace figma_design_system_uno.Presentation;
 
 public sealed partial class TagPage : Page
@@ -7,8 +10,12 @@ public sealed partial class TagPage : Page
         this.InitializeComponent();
     }
 
-    private void BackButton_Click(object sender, RoutedEventArgs e)
+    private async void OnBackClick(object sender, RoutedEventArgs e)
     {
-        Frame.GoBack();
+        var navigator = (this.XamlRoot?.Content as FrameworkElement)?.GetServiceProvider()?.GetService<INavigator>();
+        if (navigator != null)
+        {
+            await navigator.NavigateRouteAsync(this, "");
+        }
     }
 }

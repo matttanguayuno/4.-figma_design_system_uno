@@ -6,70 +6,82 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!-- 
-    SDS Brush Resources mapped to Material naming conventions
+    SDS Brush Resources using Uno.Themes.Material-compatible naming
+    
+    These brushes use the EXACT same key names as Uno.Themes.Material,
+    making this a drop-in replacement.
+    
+    Reference: https://platform.uno/docs/articles/external/uno.themes/doc/material-colors.html
     -->
 
     <!-- Primary Brushes -->
-    <SolidColorBrush x:Key="MaterialPrimaryBrush" Color="{StaticResource MaterialPrimaryColor}" />
-    <SolidColorBrush x:Key="MaterialPrimaryVariantDarkBrush" Color="{StaticResource MaterialPrimaryVariantDarkColor}" />
-    <SolidColorBrush x:Key="MaterialPrimaryVariantLightBrush" Color="{StaticResource MaterialPrimaryVariantLightColor}" />
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}" />
+    <SolidColorBrush x:Key="PrimaryVariantDarkBrush" Color="{StaticResource PrimaryVariantDarkColor}" />
+    <SolidColorBrush x:Key="PrimaryVariantLightBrush" Color="{StaticResource PrimaryVariantLightColor}" />
     
     <!-- On Primary Brushes -->
-    <SolidColorBrush x:Key="MaterialOnPrimaryBrush" Color="{StaticResource MaterialOnPrimaryColor}" />
-    <SolidColorBrush x:Key="MaterialOnPrimaryMediumBrush" Color="{StaticResource MaterialOnPrimaryMediumColor}" />
-    <SolidColorBrush x:Key="MaterialOnPrimaryLowBrush" Color="{StaticResource MaterialOnPrimaryLowColor}" />
+    <SolidColorBrush x:Key="OnPrimaryBrush" Color="{StaticResource OnPrimaryColor}" />
+    <SolidColorBrush x:Key="OnPrimaryMediumBrush" Color="{StaticResource OnPrimaryMediumColor}" />
+    <SolidColorBrush x:Key="OnPrimaryLowBrush" Color="{StaticResource OnPrimaryLowColor}" />
 
     <!-- Surface Brushes -->
-    <SolidColorBrush x:Key="MaterialSurfaceBrush" Color="{StaticResource MaterialSurfaceColor}" />
-    <SolidColorBrush x:Key="MaterialSurfaceVariantBrush" Color="{StaticResource MaterialSurfaceVariantColor}" />
+    <SolidColorBrush x:Key="SurfaceBrush" Color="{StaticResource SurfaceColor}" />
+    <SolidColorBrush x:Key="SurfaceVariantBrush" Color="{StaticResource SurfaceVariantColor}" />
     
     <!-- Background Brushes -->
-    <SolidColorBrush x:Key="MaterialBackgroundBrush" Color="{StaticResource MaterialBackgroundColor}" />
-    <SolidColorBrush x:Key="MaterialBackgroundSecondaryBrush" Color="{StaticResource MaterialBackgroundSecondaryColor}" />
-    <SolidColorBrush x:Key="MaterialBackgroundTertiaryBrush" Color="{StaticResource MaterialBackgroundTertiaryColor}" />
+    <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}" />
+    <SolidColorBrush x:Key="BackgroundSecondaryBrush" Color="{StaticResource BackgroundSecondaryColor}" />
+    <SolidColorBrush x:Key="BackgroundTertiaryBrush" Color="{StaticResource BackgroundTertiaryColor}" />
 
     <!-- On Surface Brushes -->
-    <SolidColorBrush x:Key="MaterialOnSurfaceBrush" Color="{StaticResource MaterialOnSurfaceColor}" />
-    <SolidColorBrush x:Key="MaterialOnSurfaceMediumBrush" Color="{StaticResource MaterialOnSurfaceMediumColor}" />
-    <SolidColorBrush x:Key="MaterialOnSurfaceLowBrush" Color="{StaticResource MaterialOnSurfaceLowColor}" />
+    <SolidColorBrush x:Key="OnSurfaceBrush" Color="{StaticResource OnSurfaceColor}" />
+    <SolidColorBrush x:Key="OnSurfaceMediumBrush" Color="{StaticResource OnSurfaceMediumColor}" />
+    <SolidColorBrush x:Key="OnSurfaceLowBrush" Color="{StaticResource OnSurfaceLowColor}" />
     
     <!-- On Background Brushes -->
-    <SolidColorBrush x:Key="MaterialOnBackgroundBrush" Color="{StaticResource MaterialOnBackgroundColor}" />
-    <SolidColorBrush x:Key="MaterialOnBackgroundMediumBrush" Color="{StaticResource MaterialOnBackgroundMediumColor}" />
-    <SolidColorBrush x:Key="MaterialOnBackgroundLowBrush" Color="{StaticResource MaterialOnBackgroundLowColor}" />
+    <SolidColorBrush x:Key="OnBackgroundBrush" Color="{StaticResource OnBackgroundColor}" />
+    <SolidColorBrush x:Key="OnBackgroundMediumBrush" Color="{StaticResource OnBackgroundMediumColor}" />
+    <SolidColorBrush x:Key="OnBackgroundLowBrush" Color="{StaticResource OnBackgroundLowColor}" />
 
     <!-- Outline Brushes -->
-    <SolidColorBrush x:Key="MaterialOutlineBrush" Color="{StaticResource MaterialOutlineColor}" />
-    <SolidColorBrush x:Key="MaterialOutlineVariantBrush" Color="{StaticResource MaterialOutlineVariantColor}" />
+    <SolidColorBrush x:Key="OutlineBrush" Color="{StaticResource OutlineColor}" />
+    <SolidColorBrush x:Key="OutlineVariantBrush" Color="{StaticResource OutlineVariantColor}" />
     
     <!-- Error Brushes -->
-    <SolidColorBrush x:Key="MaterialErrorBrush" Color="{StaticResource MaterialErrorColor}" />
-    <SolidColorBrush x:Key="MaterialOnErrorBrush" Color="{StaticResource MaterialOnErrorColor}" />
+    <SolidColorBrush x:Key="ErrorBrush" Color="{StaticResource ErrorColor}" />
+    <SolidColorBrush x:Key="OnErrorBrush" Color="{StaticResource OnErrorColor}" />
 
     <!-- Disabled Brushes -->
-    <SolidColorBrush x:Key="MaterialDisabledBrush" Color="{StaticResource MaterialDisabledColor}" />
-    <SolidColorBrush x:Key="MaterialOnDisabledBrush" Color="{StaticResource MaterialOnDisabledColor}" />
+    <SolidColorBrush x:Key="DisabledBrush" Color="{StaticResource DisabledColor}" />
+    <SolidColorBrush x:Key="OnDisabledBrush" Color="{StaticResource OnDisabledColor}" />
     
     <!-- Overlay Brushes -->
-    <SolidColorBrush x:Key="MaterialOverlayBrush" Color="{StaticResource MaterialOverlayColor}" />
+    <SolidColorBrush x:Key="OverlayBrush" Color="{StaticResource OverlayColor}" />
     
     <!-- Transparent Brush -->
-    <SolidColorBrush x:Key="MaterialTransparentBrush" Color="{StaticResource MaterialTransparentColor}" />
+    <SolidColorBrush x:Key="TransparentBrush" Color="{StaticResource TransparentColor}" />
 
-    <!-- Additional SDS Brushes -->
+    <!-- Additional SDS Brushes (custom extensions beyond standard Material) -->
     <SolidColorBrush x:Key="SDSBrandDefaultBrush" Color="{StaticResource SDSBrandDefaultColor}" />
     <SolidColorBrush x:Key="SDSBrandHoverBrush" Color="{StaticResource SDSBrandHoverColor}" />
     <SolidColorBrush x:Key="SDSNeutralTertiaryBrush" Color="{StaticResource SDSNeutralTertiaryColor}" />
     <SolidColorBrush x:Key="SDSNeutralTertiaryHoverBrush" Color="{StaticResource SDSNeutralTertiaryHoverColor}" />
+    <SolidColorBrush x:Key="SDSNeutralTertiaryDarkerBrush" Color="{StaticResource SDSNeutralTertiaryDarkerColor}" />
     <SolidColorBrush x:Key="SDSBorderNeutralBrush" Color="{StaticResource SDSBorderNeutralColor}" />
+    <SolidColorBrush x:Key="SDSBorderNeutralDarkerBrush" Color="{StaticResource SDSBorderNeutralDarkerColor}" />
     <SolidColorBrush x:Key="SDSTextNeutralBrush" Color="{StaticResource SDSTextNeutralColor}" />
+    <SolidColorBrush x:Key="SDSDangerPrimaryBrush" Color="{StaticResource SDSDangerPrimaryColor}" />
+    <SolidColorBrush x:Key="SDSDangerPrimaryHoverBrush" Color="{StaticResource SDSDangerPrimaryHoverColor}" />
+    <SolidColorBrush x:Key="SDSDangerSubtleTextBrush" Color="{StaticResource SDSDangerSubtleTextColor}" />
+    <SolidColorBrush x:Key="SDSDangerSubtleHoverBackgroundBrush" Color="{StaticResource SDSDangerSubtleHoverBackgroundColor}" />
 
-    <!-- Aliased Brush Names for Page Layouts -->
-    <SolidColorBrush x:Key="DefaultBackgroundBrush" Color="{StaticResource MaterialBackgroundColor}" />
-    <SolidColorBrush x:Key="DefaultTextBrush" Color="{StaticResource MaterialOnSurfaceColor}" />
-    <SolidColorBrush x:Key="SecondaryTextBrush" Color="{StaticResource MaterialOnSurfaceMediumColor}" />
-    <SolidColorBrush x:Key="TertiaryTextBrush" Color="{StaticResource MaterialOnSurfaceLowColor}" />
-    <SolidColorBrush x:Key="BrandTertiaryBrush" Color="{StaticResource MaterialPrimaryVariantLightColor}" />
+    <!-- Convenience Aliases (backward compatibility / common usage) -->
+    <SolidColorBrush x:Key="DefaultBackgroundBrush" Color="{StaticResource BackgroundColor}" />
+    <SolidColorBrush x:Key="ContentBackgroundBrush" Color="{StaticResource BackgroundColor}" />
+    <SolidColorBrush x:Key="DefaultTextBrush" Color="{StaticResource OnSurfaceColor}" />
+    <SolidColorBrush x:Key="SecondaryTextBrush" Color="{StaticResource OnSurfaceMediumColor}" />
+    <SolidColorBrush x:Key="TertiaryTextBrush" Color="{StaticResource OnSurfaceLowColor}" />
+    <SolidColorBrush x:Key="BrandTertiaryBrush" Color="{StaticResource PrimaryVariantLightColor}" />
     <SolidColorBrush x:Key="NeutralTertiaryBrush" Color="{StaticResource SDSNeutralTertiaryColor}" />
 
 </ResourceDictionary>

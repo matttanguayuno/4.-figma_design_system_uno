@@ -5,14 +5,11 @@
       xmlns:utu="using:Uno.Toolkit.UI"
       xmlns:controls="using:figma_design_system_uno.Controls"
       NavigationCacheMode="Required"
-      Background="{ThemeResource DefaultBackgroundBrush}">
+      Background="Transparent">
 
   <Page.Resources>
-    <!-- Error text brush -->
     <SolidColorBrush x:Key="ErrorTextBrush" Color="#900b09" />
     <SolidColorBrush x:Key="ErrorBorderBrush" Color="#900b09" />
-    
-    <!-- Input Field specific brushes -->
     <SolidColorBrush x:Key="InputBackgroundBrush" Color="#ffffff" />
     <SolidColorBrush x:Key="InputBorderBrush" Color="#d9d9d9" />
     <SolidColorBrush x:Key="InputDisabledBackgroundBrush" Color="#d9d9d9" />
@@ -22,288 +19,927 @@
 
   <ScrollViewer>
     <utu:AutoLayout Orientation="Vertical"
-                    Spacing="{StaticResource Space800}"
-                    Padding="{StaticResource Spacing600}"
-                    MaxWidth="1200">
-
-      <!-- Back Navigation -->
-      <Button Content="← Back to Home"
-              Style="{StaticResource TextButtonStyle}"
-              Click="BackButton_Click"
-              HorizontalAlignment="Left"
-              Margin="0,0,0,16" />
+                    Spacing="{StaticResource Space1200}"
+                    Padding="{StaticResource Spacing800}">
 
       <!-- Page Header -->
-      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space400}">
-        <TextBlock Text="Input Fields"
-                   Style="{StaticResource TitlePageTextBlockStyle}" />
-        <TextBlock Text="Text input fields with Default, Error, and Disabled states supporting placeholder and filled values."
-                   Style="{StaticResource BodyBaseTextBlockStyle}"
-                   Foreground="{StaticResource SecondaryTextBrush}"
-                   TextWrapping="Wrap" />
-      </utu:AutoLayout>
+      <utu:NavigationBar Content="Inputs"
+                         HorizontalContentAlignment="Left"
+                         VerticalAlignment="Bottom">
+        <utu:NavigationBar.MainCommand>
+          <AppBarButton Icon="Back" Click="OnBackClick" />
+        </utu:NavigationBar.MainCommand>
+        <utu:NavigationBar.ContentTemplate>
+          <DataTemplate>
+            <TextBlock Text="{Binding}"
+                       FontSize="48"
+                       FontWeight="Bold"
+                       VerticalAlignment="Bottom" />
+          </DataTemplate>
+        </utu:NavigationBar.ContentTemplate>
+      </utu:NavigationBar>
 
-      <!-- Input Field Variants -->
+      <!-- 1. Checkbox Field -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Checkbox Field"
+                   Style="{StaticResource BodyStrongTextBlockStyle}" />
         
-        <!-- Default State -->
-        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
-          <TextBlock Text="Default"
-                     Style="{StaticResource BodyStrongTextBlockStyle}" />
-          <Grid ColumnSpacing="24">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="Auto" />
-              <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-              <RowDefinition Height="Auto" />
-              <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            
-            <!-- Column Headers -->
-            <TextBlock Grid.Row="0" Grid.Column="0"
-                       Text="Default"
-                       Style="{StaticResource BodyBaseTextBlockStyle}"
-                       Foreground="{StaticResource SecondaryTextBrush}"
-                       Margin="0,0,0,8" />
-            <TextBlock Grid.Row="0" Grid.Column="1"
-                       Text="Placeholder"
-                       Style="{StaticResource BodyBaseTextBlockStyle}"
-                       Foreground="{StaticResource SecondaryTextBrush}"
-                       Margin="0,0,0,8" />
-            
-            <!-- Default Value (black text) -->
-            <utu:AutoLayout Grid.Row="1" Grid.Column="0"
-                            Orientation="Vertical" 
-                            Spacing="8"
-                            Width="240">
-              <TextBlock Text="Label"
-                         Style="{StaticResource BodyBaseTextBlockStyle}" />
-              <Border Background="{StaticResource InputBackgroundBrush}"
-                      BorderBrush="{StaticResource InputBorderBrush}"
-                      BorderThickness="1"
-                      CornerRadius="{StaticResource Radius200}"
-                      MinWidth="240">
-                <TextBox Text="Value"
-                         BorderThickness="0"
-                         Background="Transparent"
-                         Padding="16,12"
-                         FontSize="16"
-                         Style="{StaticResource InputFieldTextBoxStyle}" />
-              </Border>
-            </utu:AutoLayout>
-
-            <!-- Placeholder (gray text) -->
-            <utu:AutoLayout Grid.Row="1" Grid.Column="1"
-                            Orientation="Vertical" 
-                            Spacing="8"
-                            Width="240">
-              <TextBlock Text="Label"
-                         Style="{StaticResource BodyBaseTextBlockStyle}" />
-              <Border Background="{StaticResource InputBackgroundBrush}"
-                      BorderBrush="{StaticResource InputBorderBrush}"
-                      BorderThickness="1"
-                      CornerRadius="{StaticResource Radius200}"
-                      MinWidth="240">
-                <TextBox Text=""
-                         PlaceholderText="Value"
-                         BorderThickness="0"
-                         Background="Transparent"
-                         Padding="16,12"
-                         FontSize="16"
-                         Style="{StaticResource InputFieldTextBoxStyle}" />
-              </Border>
-            </utu:AutoLayout>
-          </Grid>
-        </utu:AutoLayout>
-
-        <!-- Disabled State -->
-        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
-          <TextBlock Text="Disabled"
-                     Style="{StaticResource BodyStrongTextBlockStyle}" />
-          <Grid ColumnSpacing="24">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="Auto" />
-              <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-              <RowDefinition Height="Auto" />
-              <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            
-            <!-- Column Headers -->
-            <TextBlock Grid.Row="0" Grid.Column="0"
-                       Text="Default"
-                       Style="{StaticResource BodyBaseTextBlockStyle}"
-                       Foreground="{StaticResource SecondaryTextBrush}"
-                       Margin="0,0,0,8" />
-            <TextBlock Grid.Row="0" Grid.Column="1"
-                       Text="Placeholder"
-                       Style="{StaticResource BodyBaseTextBlockStyle}"
-                       Foreground="{StaticResource SecondaryTextBrush}"
-                       Margin="0,0,0,8" />
-            
-            <!-- Default Value (disabled gray text) -->
-            <utu:AutoLayout Grid.Row="1" Grid.Column="0"
-                            Orientation="Vertical" 
-                            Spacing="8"
-                            Width="240">
-              <TextBlock Text="Label"
-                         Style="{StaticResource BodyBaseTextBlockStyle}"
-                         Foreground="#b3b3b3" />
-              <Border Background="#d9d9d9"
-                      BorderBrush="#b2b2b2"
-                      BorderThickness="1"
-                      CornerRadius="{StaticResource Radius200}"
-                      MinWidth="240">
-                <TextBox Text="Value"
-                         IsEnabled="False"
-                         BorderThickness="0"
-                         Background="Transparent"
-                         Foreground="#b3b3b3"
-                         Padding="16,12"
-                         FontSize="16"
-                         Style="{StaticResource InputFieldTextBoxStyle}" />
-              </Border>
-            </utu:AutoLayout>
-
-            <!-- Placeholder (disabled gray placeholder) -->
-            <utu:AutoLayout Grid.Row="1" Grid.Column="1"
-                            Orientation="Vertical" 
-                            Spacing="8"
-                            Width="240">
-              <TextBlock Text="Label"
-                         Style="{StaticResource BodyBaseTextBlockStyle}"
-                         Foreground="#b3b3b3" />
-              <Border Background="#d9d9d9"
-                      BorderBrush="#b2b2b2"
-                      BorderThickness="1"
-                      CornerRadius="{StaticResource Radius200}"
-                      MinWidth="240">
-                <TextBox Text=""
-                         PlaceholderText="Value"
-                         IsEnabled="False"
-                         BorderThickness="0"
-                         Background="Transparent"
-                         Foreground="#b3b3b3"
-                         Padding="16,12"
-                         FontSize="16"
-                         Style="{StaticResource InputFieldTextBoxStyle}" />
-              </Border>
-            </utu:AutoLayout>
-          </Grid>
-        </utu:AutoLayout>
-
-        <!-- Error State -->
-        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
-          <TextBlock Text="Error"
-                     Style="{StaticResource BodyStrongTextBlockStyle}" />
-          <Grid ColumnSpacing="24">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="Auto" />
-              <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-              <RowDefinition Height="Auto" />
-              <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            
-            <!-- Column Headers -->
-            <TextBlock Grid.Row="0" Grid.Column="0"
-                       Text="Default"
-                       Style="{StaticResource BodyBaseTextBlockStyle}"
-                       Foreground="{StaticResource SecondaryTextBrush}"
-                       Margin="0,0,0,8" />
-            <TextBlock Grid.Row="0" Grid.Column="1"
-                       Text="Placeholder"
-                       Style="{StaticResource BodyBaseTextBlockStyle}"
-                       Foreground="{StaticResource SecondaryTextBrush}"
-                       Margin="0,0,0,8" />
-            
-            <!-- Default Value (black text) -->
-            <utu:AutoLayout Grid.Row="1" Grid.Column="0"
-                            Orientation="Vertical" 
-                            Spacing="8"
-                            Width="240">
-              <TextBlock Text="Label"
-                         Style="{StaticResource BodyBaseTextBlockStyle}" />
-              <Border Background="{StaticResource InputBackgroundBrush}"
-                      BorderBrush="{StaticResource ErrorBorderBrush}"
-                      BorderThickness="1"
-                      CornerRadius="{StaticResource Radius200}"
-                      MinWidth="240">
-                <TextBox Text="Value"
-                         BorderThickness="0"
-                         Background="Transparent"
-                         Padding="16,12"
-                         FontSize="16"
-                         Style="{StaticResource InputFieldTextBoxStyle}" />
-              </Border>
-            </utu:AutoLayout>
-
-            <!-- Placeholder (gray text) -->
-            <utu:AutoLayout Grid.Row="1" Grid.Column="1"
-                            Orientation="Vertical" 
-                            Spacing="8"
-                            Width="240">
-              <TextBlock Text="Label"
-                         Style="{StaticResource BodyBaseTextBlockStyle}" />
-              <Border Background="{StaticResource InputBackgroundBrush}"
-                      BorderBrush="{StaticResource ErrorBorderBrush}"
-                      BorderThickness="1"
-                      CornerRadius="{StaticResource Radius200}"
-                      MinWidth="240">
-                <TextBox Text=""
-                         PlaceholderText="Value"
-                         BorderThickness="0"
-                         Background="Transparent"
-                         Padding="16,12"
-                         FontSize="16"
-                         Style="{StaticResource InputFieldTextBoxStyle}" />
-              </Border>
-            </utu:AutoLayout>
-          </Grid>
-        </utu:AutoLayout>
-
-      </utu:AutoLayout>
-
-      <!-- Design Tokens Info -->
-      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space400}">
-        <TextBlock Text="Design Tokens"
-                   Style="{StaticResource HeadingTextBlockStyle}" />
-        <Border Background="{StaticResource DefaultSecondaryBackgroundBrush}"
-                Padding="{StaticResource Spacing600}"
-                CornerRadius="{StaticResource Radius200}">
-          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
-            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
-              <Run Text=" States: " FontWeight="SemiBold" />
-              <Run Text="Default, Error, Disabled" />
-            </TextBlock>
-            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
-              <Run Text=" Value Types: " FontWeight="SemiBold" />
-              <Run Text="Placeholder, Filled" />
-            </TextBlock>
-            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
-              <Run Text=" Border: " FontWeight="SemiBold" />
-              <Run Text="1px solid, 8px radius" />
-            </TextBlock>
-            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
-              <Run Text=" Padding: " FontWeight="SemiBold" />
-              <Run Text="12px vertical, 16px horizontal" />
-            </TextBlock>
-            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
-              <Run Text=" Colors: " FontWeight="SemiBold" />
-              <Run Text="Default border #d9d9d9, Error #900b09, Disabled bg #d9d9d9" />
-            </TextBlock>
-            <TextBlock Style="{StaticResource BodyBaseTextBlockStyle}">
-              <Run Text=" Typography: " FontWeight="SemiBold" />
-              <Run Text="16px Regular for all text elements" />
-            </TextBlock>
+        <!-- Test with different negative margins -->
+        <utu:AutoLayout Orientation="Horizontal" Spacing="12" 
+                        PrimaryAxisAlignment="Start" CounterAxisAlignment="Start">
+          <CheckBox IsChecked="True" VerticalContentAlignment="Top" Padding="0" />
+          <utu:AutoLayout Orientation="Vertical" Spacing="0" Margin="-70,0,0,0">
+            <TextBlock Text="Test -70" Style="{StaticResource BodyBaseTextBlockStyle}" />
+            <TextBlock Text="Description" Style="{StaticResource BodyBaseTextBlockStyle}" Foreground="{StaticResource SecondaryTextBrush}" />
           </utu:AutoLayout>
-        </Border>
+        </utu:AutoLayout>
+        
+        <Grid ColumnSpacing="64">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+
+          <TextBlock Grid.Row="0" Grid.Column="1" Text="Checked"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,16" />
+          <TextBlock Grid.Row="0" Grid.Column="2" Text="Unchecked"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,16" />
+          <TextBlock Grid.Row="0" Grid.Column="3" Text="Indeterminate"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,16" />
+
+          <TextBlock Grid.Row="1" Grid.Column="0" Text="Default"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+          <TextBlock Grid.Row="2" Grid.Column="0" Text="Disabled"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+
+          <!-- Default Checked -->
+          <utu:AutoLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal"
+                          Spacing="12" Width="240" Margin="0,0,0,24"
+                          PrimaryAxisAlignment="Start" CounterAxisAlignment="Start">
+            <CheckBox IsChecked="True" VerticalContentAlignment="Top" Padding="0" />
+            <utu:AutoLayout Orientation="Vertical" Spacing="0" utu:AutoLayout.CounterAlignment="Start" Margin="-50,0,0,0">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+              <TextBlock Text="Description" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+
+          <!-- Default Unchecked -->
+          <utu:AutoLayout Grid.Row="1" Grid.Column="2" Orientation="Horizontal"
+                          Spacing="12" Width="240" Margin="0,0,0,24"
+                          PrimaryAxisAlignment="Start" CounterAxisAlignment="Start">
+            <CheckBox IsChecked="False" VerticalContentAlignment="Top" Padding="0" />
+            <utu:AutoLayout Orientation="Vertical" Spacing="0" utu:AutoLayout.CounterAlignment="Start" Margin="-50,0,0,0">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+              <TextBlock Text="Description" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+
+          <!-- Default Indeterminate -->
+          <utu:AutoLayout Grid.Row="1" Grid.Column="3" Orientation="Horizontal"
+                          Spacing="12" Width="240" Margin="0,0,0,24"
+                          PrimaryAxisAlignment="Start" CounterAxisAlignment="Start">
+            <CheckBox IsChecked="{x:Null}" VerticalContentAlignment="Top" Padding="0" />
+            <utu:AutoLayout Orientation="Vertical" Spacing="0" utu:AutoLayout.CounterAlignment="Start" Margin="-50,0,0,0">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+              <TextBlock Text="Description" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+
+          <!-- Disabled Checked -->
+          <utu:AutoLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal"
+                          Spacing="12" Width="240"
+                          PrimaryAxisAlignment="Start" CounterAxisAlignment="Start">
+            <CheckBox IsChecked="True" IsEnabled="False" VerticalContentAlignment="Top" Padding="0" />
+            <utu:AutoLayout Orientation="Vertical" Spacing="0" utu:AutoLayout.CounterAlignment="Start" Margin="-50,0,0,0">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+              <TextBlock Text="Description" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" Opacity="0.5" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+
+          <!-- Disabled Unchecked -->
+          <utu:AutoLayout Grid.Row="2" Grid.Column="2" Orientation="Horizontal"
+                          Spacing="12" Width="240"
+                          PrimaryAxisAlignment="Start" CounterAxisAlignment="Start">
+            <CheckBox IsChecked="False" IsEnabled="False" VerticalContentAlignment="Top" Padding="0" />
+            <utu:AutoLayout Orientation="Vertical" Spacing="0" utu:AutoLayout.CounterAlignment="Start" Margin="-50,0,0,0">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+              <TextBlock Text="Description" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" Opacity="0.5" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+
+          <!-- Disabled Indeterminate -->
+          <utu:AutoLayout Grid.Row="2" Grid.Column="3" Orientation="Horizontal"
+                          Spacing="12" Width="240"
+                          PrimaryAxisAlignment="Start" CounterAxisAlignment="Start">
+            <CheckBox IsChecked="{x:Null}" IsEnabled="False" VerticalContentAlignment="Top" Padding="0" />
+            <utu:AutoLayout Orientation="Vertical" Spacing="0" utu:AutoLayout.CounterAlignment="Start" Margin="-50,0,0,0">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+              <TextBlock Text="Description" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" Opacity="0.5" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+        </Grid>
       </utu:AutoLayout>
 
+      <!-- 2. Radio Field -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Radio Field"
+                   Style="{StaticResource BodyStrongTextBlockStyle}" />
+        
+        <Grid ColumnSpacing="64">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
 
+          <TextBlock Grid.Row="0" Grid.Column="1" Text="Checked"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,16" />
+          <TextBlock Grid.Row="0" Grid.Column="2" Text="Unchecked"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,16" />
+
+          <TextBlock Grid.Row="1" Grid.Column="0" Text="Default"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+          <TextBlock Grid.Row="2" Grid.Column="0" Text="Disabled"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+
+          <utu:AutoLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical"
+                          Spacing="{StaticResource Space300}" Width="240" Margin="0,0,0,24">
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <RadioButton GroupName="Group1" IsChecked="True" VerticalAlignment="Center" />
+              <TextBlock Text="Label" Style="{StaticResource BodyTextBlockStyle}" VerticalAlignment="Center" />
+            </utu:AutoLayout>
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <Border Width="16" Height="16" />
+              <TextBlock Text="Description" Style="{StaticResource BodyTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" TextWrapping="Wrap" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+
+          <utu:AutoLayout Grid.Row="1" Grid.Column="2" Orientation="Vertical"
+                          Spacing="{StaticResource Space300}" Width="240" Margin="0,0,0,24">
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <RadioButton GroupName="Group2" IsChecked="False" VerticalAlignment="Center" />
+              <TextBlock Text="Label" Style="{StaticResource BodyTextBlockStyle}" VerticalAlignment="Center" />
+            </utu:AutoLayout>
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <Border Width="16" Height="16" />
+              <TextBlock Text="Description" Style="{StaticResource BodyTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" TextWrapping="Wrap" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+
+          <utu:AutoLayout Grid.Row="2" Grid.Column="1" Orientation="Vertical"
+                          Spacing="{StaticResource Space300}" Width="240">
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <RadioButton GroupName="Group3" IsChecked="True" IsEnabled="False" VerticalAlignment="Center" />
+              <TextBlock Text="Label" Style="{StaticResource BodyTextBlockStyle}"
+                         Foreground="{StaticResource InputDisabledTextBrush}" VerticalAlignment="Center" />
+            </utu:AutoLayout>
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <Border Width="16" Height="16" />
+              <TextBlock Text="Description" Style="{StaticResource BodyTextBlockStyle}"
+                         Foreground="{StaticResource InputDisabledTextBrush}" TextWrapping="Wrap" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+
+          <utu:AutoLayout Grid.Row="2" Grid.Column="2" Orientation="Vertical"
+                          Spacing="{StaticResource Space300}" Width="240">
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <RadioButton GroupName="Group4" IsChecked="False" IsEnabled="False" VerticalAlignment="Center" />
+              <TextBlock Text="Label" Style="{StaticResource BodyTextBlockStyle}"
+                         Foreground="{StaticResource InputDisabledTextBrush}" VerticalAlignment="Center" />
+            </utu:AutoLayout>
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <Border Width="16" Height="16" />
+              <TextBlock Text="Description" Style="{StaticResource BodyTextBlockStyle}"
+                         Foreground="{StaticResource InputDisabledTextBrush}" TextWrapping="Wrap" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+        </Grid>
+      </utu:AutoLayout>
+
+      <!-- 3. Switch Field -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Switch Field"
+                   Style="{StaticResource BodyStrongTextBlockStyle}" />
+        
+        <Grid ColumnSpacing="64">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+
+          <TextBlock Grid.Row="0" Grid.Column="1" Text="Checked"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,16" />
+          <TextBlock Grid.Row="0" Grid.Column="2" Text="Unchecked"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,16" />
+
+          <TextBlock Grid.Row="1" Grid.Column="0" Text="Default"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+          <TextBlock Grid.Row="2" Grid.Column="0" Text="Disabled"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+
+          <Grid Grid.Row="1" Grid.Column="1" Width="340" Margin="0,0,0,24">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <utu:AutoLayout Grid.Column="0" Orientation="Vertical" Spacing="0" VerticalAlignment="Center">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+              <TextBlock Text="Description" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+            </utu:AutoLayout>
+            <ToggleSwitch Grid.Column="1" IsOn="True"
+                          Style="{StaticResource SwitchFieldToggleSwitchStyle}"
+                          VerticalAlignment="Center" Margin="12,0,0,0" />
+          </Grid>
+
+          <Grid Grid.Row="1" Grid.Column="2" Width="340" Margin="0,0,0,24">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <utu:AutoLayout Grid.Column="0" Orientation="Vertical" Spacing="0" VerticalAlignment="Center">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+              <TextBlock Text="Description" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+            </utu:AutoLayout>
+            <ToggleSwitch Grid.Column="1" IsOn="False"
+                          Style="{StaticResource SwitchFieldToggleSwitchStyle}"
+                          VerticalAlignment="Center" Margin="12,0,0,0" />
+          </Grid>
+
+          <Grid Grid.Row="2" Grid.Column="1" Width="340">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <utu:AutoLayout Grid.Column="0" Orientation="Vertical" Spacing="0" VerticalAlignment="Center">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource InputDisabledTextBrush}" />
+              <TextBlock Text="Description" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource InputDisabledTextBrush}" />
+            </utu:AutoLayout>
+            <ToggleSwitch Grid.Column="1" IsOn="True" IsEnabled="False"
+                          Style="{StaticResource SwitchFieldToggleSwitchStyle}"
+                          VerticalAlignment="Center" Margin="12,0,0,0" />
+          </Grid>
+
+          <Grid Grid.Row="2" Grid.Column="2" Width="340">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <utu:AutoLayout Grid.Column="0" Orientation="Vertical" Spacing="0" VerticalAlignment="Center">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource InputDisabledTextBrush}" />
+              <TextBlock Text="Description" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource InputDisabledTextBrush}" />
+            </utu:AutoLayout>
+            <ToggleSwitch Grid.Column="1" IsOn="False" IsEnabled="False"
+                          Style="{StaticResource SwitchFieldToggleSwitchStyle}"
+                          VerticalAlignment="Center" Margin="12,0,0,0" />
+          </Grid>
+        </Grid>
+      </utu:AutoLayout>
+
+      <!-- 4. Input Field -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Input Field"
+                   Style="{StaticResource BodyStrongTextBlockStyle}" />
+        
+        <!-- Default -->
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+          <TextBlock Text="Default" Style="{StaticResource BodyStrongTextBlockStyle}" />
+          <Grid ColumnSpacing="24">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Default"
+                       Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,8" />
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Placeholder"
+                       Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,8" />
+
+            <utu:AutoLayout Grid.Row="1" Grid.Column="0" Orientation="Vertical" Spacing="8" Width="240">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+              <Border Background="{StaticResource InputBackgroundBrush}"
+                      BorderBrush="{StaticResource InputBorderBrush}"
+                      BorderThickness="1" CornerRadius="{StaticResource Radius200}" MinWidth="240">
+                <TextBox Text="Value" BorderThickness="0" Background="Transparent"
+                         Padding="16,12" FontSize="16" Style="{StaticResource InputFieldTextBoxStyle}" />
+              </Border>
+            </utu:AutoLayout>
+
+            <utu:AutoLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical" Spacing="8" Width="240">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+              <Border Background="{StaticResource InputBackgroundBrush}"
+                      BorderBrush="{StaticResource InputBorderBrush}"
+                      BorderThickness="1" CornerRadius="{StaticResource Radius200}" MinWidth="240">
+                <TextBox Text="" PlaceholderText="Value" BorderThickness="0" Background="Transparent"
+                         Padding="16,12" FontSize="16" Style="{StaticResource InputFieldTextBoxStyle}" />
+              </Border>
+            </utu:AutoLayout>
+          </Grid>
+        </utu:AutoLayout>
+
+        <!-- Disabled -->
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+          <TextBlock Text="Disabled" Style="{StaticResource BodyStrongTextBlockStyle}" />
+          <Grid ColumnSpacing="24">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Default"
+                       Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,8" />
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Placeholder"
+                       Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,8" />
+
+            <utu:AutoLayout Grid.Row="1" Grid.Column="0" Orientation="Vertical" Spacing="8" Width="240">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource InputDisabledTextBrush}" />
+              <Border Background="{StaticResource InputDisabledBackgroundBrush}"
+                      BorderBrush="{StaticResource InputDisabledBorderBrush}"
+                      BorderThickness="1" CornerRadius="{StaticResource Radius200}" MinWidth="240">
+                <TextBox Text="Value" IsEnabled="False" BorderThickness="0" Background="Transparent"
+                         Foreground="{StaticResource InputDisabledTextBrush}"
+                         Padding="16,12" FontSize="16" Style="{StaticResource InputFieldTextBoxStyle}" />
+              </Border>
+            </utu:AutoLayout>
+
+            <utu:AutoLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical" Spacing="8" Width="240">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource InputDisabledTextBrush}" />
+              <Border Background="{StaticResource InputDisabledBackgroundBrush}"
+                      BorderBrush="{StaticResource InputDisabledBorderBrush}"
+                      BorderThickness="1" CornerRadius="{StaticResource Radius200}" MinWidth="240">
+                <TextBox Text="" PlaceholderText="Value" IsEnabled="False" BorderThickness="0"
+                         Background="Transparent" Foreground="{StaticResource InputDisabledTextBrush}"
+                         Padding="16,12" FontSize="16" Style="{StaticResource InputFieldTextBoxStyle}" />
+              </Border>
+            </utu:AutoLayout>
+          </Grid>
+        </utu:AutoLayout>
+
+        <!-- Error -->
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+          <TextBlock Text="Error" Style="{StaticResource BodyStrongTextBlockStyle}" />
+          <Grid ColumnSpacing="24">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Default"
+                       Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,8" />
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Placeholder"
+                       Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,8" />
+
+            <utu:AutoLayout Grid.Row="1" Grid.Column="0" Orientation="Vertical" Spacing="8" Width="240">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+              <Border Background="{StaticResource InputBackgroundBrush}"
+                      BorderBrush="{StaticResource ErrorBorderBrush}"
+                      BorderThickness="1" CornerRadius="{StaticResource Radius200}" MinWidth="240">
+                <TextBox Text="Value" BorderThickness="0" Background="Transparent"
+                         Padding="16,12" FontSize="16" Style="{StaticResource InputFieldTextBoxStyle}" />
+              </Border>
+            </utu:AutoLayout>
+
+            <utu:AutoLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical" Spacing="8" Width="240">
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+              <Border Background="{StaticResource InputBackgroundBrush}"
+                      BorderBrush="{StaticResource ErrorBorderBrush}"
+                      BorderThickness="1" CornerRadius="{StaticResource Radius200}" MinWidth="240">
+                <TextBox Text="" PlaceholderText="Value" BorderThickness="0" Background="Transparent"
+                         Padding="16,12" FontSize="16" Style="{StaticResource InputFieldTextBoxStyle}" />
+              </Border>
+            </utu:AutoLayout>
+          </Grid>
+        </utu:AutoLayout>
+      </utu:AutoLayout>
+
+      <!-- 5. Select Field -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Select Field"
+                   Style="{StaticResource BodyStrongTextBlockStyle}" />
+        
+        <Grid ColumnSpacing="64">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+
+          <TextBlock Grid.Row="0" Grid.Column="1" Text="Placeholder"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,16" />
+          <TextBlock Grid.Row="0" Grid.Column="2" Text="Value"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,16" />
+
+          <TextBlock Grid.Row="1" Grid.Column="0" Text="Default"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+          <TextBlock Grid.Row="2" Grid.Column="0" Text="Error"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+          <TextBlock Grid.Row="3" Grid.Column="0" Text="Disabled"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+
+          <utu:AutoLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}" Margin="0,0,0,24">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+            <ComboBox SelectedIndex="0" Style="{StaticResource SelectFieldComboBoxStyle}"
+                      CornerRadius="{StaticResource Radius200}" MinWidth="240">
+              <ComboBoxItem Content="Value" />
+              <ComboBoxItem Content="Option 2" />
+            </ComboBox>
+          </utu:AutoLayout>
+
+          <utu:AutoLayout Grid.Row="1" Grid.Column="2" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}" Margin="0,0,0,24">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+            <ComboBox SelectedIndex="0" Style="{StaticResource SelectFieldComboBoxStyle}"
+                      CornerRadius="{StaticResource Radius200}" MinWidth="240">
+              <ComboBoxItem Content="Value" />
+              <ComboBoxItem Content="Option 2" />
+            </ComboBox>
+          </utu:AutoLayout>
+
+          <!-- Error state -->
+          <utu:AutoLayout Grid.Row="2" Grid.Column="1" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}" Margin="0,0,0,24">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+            <ComboBox SelectedIndex="0" Style="{StaticResource SelectFieldComboBoxStyle}"
+                      BorderBrush="{StaticResource ErrorBorderBrush}"
+                      CornerRadius="{StaticResource Radius200}" MinWidth="240">
+              <ComboBoxItem Content="Value" />
+            </ComboBox>
+          </utu:AutoLayout>
+
+          <utu:AutoLayout Grid.Row="2" Grid.Column="2" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}" Margin="0,0,0,24">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+            <ComboBox SelectedIndex="0" Style="{StaticResource SelectFieldComboBoxStyle}"
+                      BorderBrush="{StaticResource ErrorBorderBrush}"
+                      CornerRadius="{StaticResource Radius200}" MinWidth="240">
+              <ComboBoxItem Content="Value" />
+            </ComboBox>
+          </utu:AutoLayout>
+
+          <!-- Disabled state -->
+          <utu:AutoLayout Grid.Row="3" Grid.Column="1" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource InputDisabledTextBrush}" />
+            <ComboBox SelectedIndex="0" IsEnabled="False" Style="{StaticResource SelectFieldComboBoxStyle}"
+                      CornerRadius="{StaticResource Radius200}" MinWidth="240">
+              <ComboBoxItem Content="Value" />
+            </ComboBox>
+          </utu:AutoLayout>
+
+          <utu:AutoLayout Grid.Row="3" Grid.Column="2" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource InputDisabledTextBrush}" />
+            <ComboBox SelectedIndex="0" IsEnabled="False" Style="{StaticResource SelectFieldComboBoxStyle}"
+                      CornerRadius="{StaticResource Radius200}" MinWidth="240">
+              <ComboBoxItem Content="Value" />
+            </ComboBox>
+          </utu:AutoLayout>
+        </Grid>
+      </utu:AutoLayout>
+
+      <!-- 6. Search -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Search"
+                   Style="{StaticResource BodyStrongTextBlockStyle}" />
+        
+        <Grid ColumnSpacing="64">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+
+          <TextBlock Grid.Row="0" Grid.Column="1" Text="Default"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,16" />
+          <TextBlock Grid.Row="0" Grid.Column="2" Text="Placeholder"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,16" />
+
+          <TextBlock Grid.Row="1" Grid.Column="0" Text="Default"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+          <TextBlock Grid.Row="2" Grid.Column="0" Text="Disabled"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+
+          <utu:AutoLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}" Margin="0,0,0,24">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" />
+            <Border Background="#ffffff" BorderBrush="#d9d9d9" BorderThickness="1"
+                    CornerRadius="20" Width="180" Height="40">
+              <Grid Padding="16,12,12,12">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Value" Grid.Column="0" Foreground="#1e1e1e"
+                           FontSize="16" VerticalAlignment="Center" />
+                <FontIcon Grid.Column="1" Glyph="&#xE711;" FontSize="12"
+                          Foreground="#1e1e1e" VerticalAlignment="Center" />
+              </Grid>
+            </Border>
+          </utu:AutoLayout>
+
+          <utu:AutoLayout Grid.Row="1" Grid.Column="2" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}" Margin="0,0,0,24">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" />
+            <Border Background="#ffffff" BorderBrush="#d9d9d9" BorderThickness="1"
+                    CornerRadius="20" Width="180" Height="40">
+              <Grid Padding="16,12,12,12">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Value" Grid.Column="0" Foreground="#b3b3b3"
+                           FontSize="16" VerticalAlignment="Center" />
+                <FontIcon Grid.Column="1" Glyph="&#xE711;" FontSize="12"
+                          Foreground="#1e1e1e" VerticalAlignment="Center" />
+              </Grid>
+            </Border>
+          </utu:AutoLayout>
+
+          <utu:AutoLayout Grid.Row="2" Grid.Column="1" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" />
+            <Border Background="#d9d9d9" BorderBrush="#b2b2b2" BorderThickness="1"
+                    CornerRadius="20" Width="180" Height="40">
+              <Grid Padding="16,12,12,12">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Value" Grid.Column="0" Foreground="#b3b3b3"
+                           FontSize="16" VerticalAlignment="Center" />
+                <FontIcon Grid.Column="1" Glyph="&#xE711;" FontSize="12"
+                          Foreground="#b3b3b3" VerticalAlignment="Center" />
+              </Grid>
+            </Border>
+          </utu:AutoLayout>
+
+          <utu:AutoLayout Grid.Row="2" Grid.Column="2" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" />
+            <Border Background="#d9d9d9" BorderBrush="#b2b2b2" BorderThickness="1"
+                    CornerRadius="20" Width="180" Height="40">
+              <Grid Padding="16,12,12,12">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Value" Grid.Column="0" Foreground="#b3b3b3"
+                           FontSize="16" VerticalAlignment="Center" />
+                <FontIcon Grid.Column="1" Glyph="&#xE711;" FontSize="12"
+                          Foreground="#b3b3b3" VerticalAlignment="Center" />
+              </Grid>
+            </Border>
+          </utu:AutoLayout>
+        </Grid>
+      </utu:AutoLayout>
+
+      <!-- 7. Slider Field -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Slider Field"
+                   Style="{StaticResource BodyStrongTextBlockStyle}" />
+        
+        <Grid ColumnSpacing="64">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+
+          <TextBlock Grid.Row="0" Grid.Column="1" Text="Default"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,16" />
+
+          <TextBlock Grid.Row="1" Grid.Column="0" Text="Default"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+          <TextBlock Grid.Row="2" Grid.Column="0" Text="Disabled"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+
+          <utu:AutoLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical"
+                          Spacing="{StaticResource Space300}" Width="240" Margin="0,0,0,24">
+            <Grid>
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         HorizontalAlignment="Left" />
+              <TextBlock Text="$0-100" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         FontSize="14" HorizontalAlignment="Right" />
+            </Grid>
+            <Slider Minimum="0" Maximum="100" Value="50" />
+            <TextBlock Text="Description" Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}" />
+          </utu:AutoLayout>
+
+          <utu:AutoLayout Grid.Row="2" Grid.Column="1" Orientation="Vertical"
+                          Spacing="{StaticResource Space300}" Width="240">
+            <Grid>
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource InputDisabledTextBrush}"
+                         HorizontalAlignment="Left" />
+              <TextBlock Text="$0-100" Style="{StaticResource BodyBaseTextBlockStyle}"
+                         Foreground="{StaticResource InputDisabledTextBrush}"
+                         FontSize="14" HorizontalAlignment="Right" />
+            </Grid>
+            <Slider Minimum="0" Maximum="100" Value="50" IsEnabled="False" />
+            <TextBlock Text="Description" Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource InputDisabledTextBrush}" />
+          </utu:AutoLayout>
+        </Grid>
+      </utu:AutoLayout>
+
+      <!-- 8. Textarea -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Textarea"
+                   Style="{StaticResource BodyStrongTextBlockStyle}" />
+        
+        <Grid ColumnSpacing="64">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+
+          <TextBlock Grid.Row="0" Grid.Column="1" Text="Default"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,16" />
+          <TextBlock Grid.Row="0" Grid.Column="2" Text="Placeholder"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}" Margin="0,0,0,16" />
+
+          <TextBlock Grid.Row="1" Grid.Column="0" Text="Default"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+          <TextBlock Grid.Row="2" Grid.Column="0" Text="Disabled"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+          <TextBlock Grid.Row="3" Grid.Column="0" Text="Error"
+                     Style="{StaticResource BodyStrongTextBlockStyle}"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     VerticalAlignment="Center" Margin="0,0,24,0" />
+
+          <utu:AutoLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}" Margin="0,0,0,24">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+            <TextBox Text="Value" Style="{StaticResource TextareaFieldTextBoxStyle}"
+                     AcceptsReturn="True" TextWrapping="Wrap"
+                     CornerRadius="{StaticResource Radius200}" MinWidth="240" Height="80" />
+          </utu:AutoLayout>
+
+          <utu:AutoLayout Grid.Row="1" Grid.Column="2" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}" Margin="0,0,0,24">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+            <TextBox Text="" PlaceholderText="Value" Style="{StaticResource TextareaFieldTextBoxStyle}"
+                     AcceptsReturn="True" TextWrapping="Wrap"
+                     CornerRadius="{StaticResource Radius200}" MinWidth="240" Height="80" />
+          </utu:AutoLayout>
+
+          <utu:AutoLayout Grid.Row="2" Grid.Column="1" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}" Margin="0,0,0,24">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource InputDisabledTextBrush}" />
+            <TextBox Text="Value" IsEnabled="False" Style="{StaticResource TextareaFieldTextBoxStyle}"
+                     AcceptsReturn="True" TextWrapping="Wrap"
+                     CornerRadius="{StaticResource Radius200}" MinWidth="240" Height="80" />
+          </utu:AutoLayout>
+
+          <utu:AutoLayout Grid.Row="2" Grid.Column="2" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}" Margin="0,0,0,24">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
+                       Foreground="{StaticResource InputDisabledTextBrush}" />
+            <TextBox Text="" PlaceholderText="Value" IsEnabled="False"
+                     Style="{StaticResource TextareaFieldTextBoxStyle}"
+                     AcceptsReturn="True" TextWrapping="Wrap"
+                     CornerRadius="{StaticResource Radius200}" MinWidth="240" Height="80" />
+          </utu:AutoLayout>
+
+          <utu:AutoLayout Grid.Row="3" Grid.Column="1" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+            <TextBox Text="Value" Style="{StaticResource TextareaFieldTextBoxStyle}"
+                     BorderBrush="{StaticResource ErrorBorderBrush}"
+                     AcceptsReturn="True" TextWrapping="Wrap"
+                     CornerRadius="{StaticResource Radius200}" MinWidth="240" Height="80" />
+          </utu:AutoLayout>
+
+          <utu:AutoLayout Grid.Row="3" Grid.Column="2" Orientation="Vertical"
+                          Spacing="{StaticResource Space200}">
+            <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" />
+            <TextBox Text="" PlaceholderText="Value" Style="{StaticResource TextareaFieldTextBoxStyle}"
+                     BorderBrush="{StaticResource ErrorBorderBrush}"
+                     AcceptsReturn="True" TextWrapping="Wrap"
+                     CornerRadius="{StaticResource Radius200}" MinWidth="240" Height="80" />
+          </utu:AutoLayout>
+        </Grid>
+      </utu:AutoLayout>
+
+      <!-- 9. Checkbox Group -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Checkbox Group"
+                   Style="{StaticResource BodyStrongTextBlockStyle}" />
+        
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}" Width="240">
+          <!-- Checkbox 1 -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <CheckBox IsChecked="True" VerticalAlignment="Center" />
+              <TextBlock Text="Label" Style="{StaticResource BodyTextBlockStyle}" VerticalAlignment="Center" />
+            </utu:AutoLayout>
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <Border Width="16" Height="16" />
+              <TextBlock Text="Description" Style="{StaticResource BodyTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" TextWrapping="Wrap" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+
+          <!-- Checkbox 2 -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <CheckBox IsChecked="True" VerticalAlignment="Center" />
+              <TextBlock Text="Label" Style="{StaticResource BodyTextBlockStyle}" VerticalAlignment="Center" />
+            </utu:AutoLayout>
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <Border Width="16" Height="16" />
+              <TextBlock Text="Description" Style="{StaticResource BodyTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" TextWrapping="Wrap" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+
+          <!-- Checkbox 3 -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <CheckBox IsChecked="True" VerticalAlignment="Center" />
+              <TextBlock Text="Label" Style="{StaticResource BodyTextBlockStyle}" VerticalAlignment="Center" />
+            </utu:AutoLayout>
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <Border Width="16" Height="16" />
+              <TextBlock Text="Description" Style="{StaticResource BodyTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" TextWrapping="Wrap" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+        </utu:AutoLayout>
+      </utu:AutoLayout>
+
+      <!-- 10. Radio Group -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Radio Group"
+                   Style="{StaticResource BodyStrongTextBlockStyle}" />
+        
+        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}" Width="240">
+          <!-- Radio 1 -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <RadioButton GroupName="RadioGroupExample" IsChecked="True" VerticalAlignment="Center" />
+              <TextBlock Text="Label" Style="{StaticResource BodyTextBlockStyle}" VerticalAlignment="Center" />
+            </utu:AutoLayout>
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <Border Width="16" Height="16" />
+              <TextBlock Text="Description" Style="{StaticResource BodyTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" TextWrapping="Wrap" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+
+          <!-- Radio 2 -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <RadioButton GroupName="RadioGroupExample" IsChecked="False" VerticalAlignment="Center" />
+              <TextBlock Text="Label" Style="{StaticResource BodyTextBlockStyle}" VerticalAlignment="Center" />
+            </utu:AutoLayout>
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <Border Width="16" Height="16" />
+              <TextBlock Text="Description" Style="{StaticResource BodyTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" TextWrapping="Wrap" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+
+          <!-- Radio 3 -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}">
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <RadioButton GroupName="RadioGroupExample" IsChecked="False" VerticalAlignment="Center" />
+              <TextBlock Text="Label" Style="{StaticResource BodyTextBlockStyle}" VerticalAlignment="Center" />
+            </utu:AutoLayout>
+            <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space300}">
+              <Border Width="16" Height="16" />
+              <TextBlock Text="Description" Style="{StaticResource BodyTextBlockStyle}"
+                         Foreground="{StaticResource SecondaryTextBrush}" TextWrapping="Wrap" />
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+        </utu:AutoLayout>
+      </utu:AutoLayout>
 
       <!-- Source Code Viewer -->
       <controls:SourceCodeViewer 

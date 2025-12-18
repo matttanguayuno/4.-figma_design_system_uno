@@ -1,0 +1,22 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <!-- 
+    Accordion styles using Uno Material-compatible brush names
+    Maps Figma SDS colors to Uno Material theme resources
+  -->
+
+  <!-- Accordion Colors (using Uno Material brush references) -->
+  <StaticResource x:Key="AccordionExpandedBackgroundBrush" ResourceKey="SurfaceBrush" />
+  <StaticResource x:Key="AccordionCollapsedBackgroundBrush" ResourceKey="SurfaceVariantBrush" />
+  <StaticResource x:Key="AccordionBorderBrush" ResourceKey="OutlineBrush" />
+  <StaticResource x:Key="AccordionTextBrush" ResourceKey="OnSurfaceBrush" />
+  <StaticResource x:Key="AccordionIconBrush" ResourceKey="OnSurfaceBrush" />
+
+  <!-- Accordion Dimensions -->
+  <CornerRadius x:Key="AccordionCornerRadius">8</CornerRadius>
+  <Thickness x:Key="AccordionBorderThickness">1</Thickness>
+  <Thickness x:Key="AccordionPadding">16</Thickness>
+
+</ResourceDictionary>
