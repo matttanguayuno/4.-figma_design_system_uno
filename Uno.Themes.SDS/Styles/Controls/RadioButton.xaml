@@ -14,33 +14,33 @@
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Light">
             <!-- These are custom resources - RadioButton doesn't have built-in theme resources like CheckBox -->
-            <SolidColorBrush x:Key="RadioButtonOuterRingFill" Color="{StaticResource MaterialSurfaceColor}" />
-            <SolidColorBrush x:Key="RadioButtonOuterRingStroke" Color="{StaticResource MaterialOnSurfaceMediumColor}" />
-            <SolidColorBrush x:Key="RadioButtonInnerCircleFill" Color="{StaticResource MaterialPrimaryColor}" />
+            <SolidColorBrush x:Key="RadioButtonOuterRingFill" Color="{StaticResource SurfaceColor}" />
+            <SolidColorBrush x:Key="RadioButtonOuterRingStroke" Color="{StaticResource OnSurfaceMediumColor}" />
+            <SolidColorBrush x:Key="RadioButtonInnerCircleFill" Color="{StaticResource PrimaryColor}" />
             
             <!-- Checked state with light background -->
             <SolidColorBrush x:Key="RadioButtonOuterRingFillChecked" Color="#e6e6e6" />
-            <SolidColorBrush x:Key="RadioButtonOuterRingStrokeChecked" Color="{StaticResource MaterialPrimaryColor}" />
-            <SolidColorBrush x:Key="RadioButtonInnerCircleFillChecked" Color="{StaticResource MaterialPrimaryColor}" />
+            <SolidColorBrush x:Key="RadioButtonOuterRingStrokeChecked" Color="{StaticResource PrimaryColor}" />
+            <SolidColorBrush x:Key="RadioButtonInnerCircleFillChecked" Color="{StaticResource PrimaryColor}" />
             
             <!-- Disabled -->
-            <SolidColorBrush x:Key="RadioButtonOuterRingFillDisabled" Color="{StaticResource MaterialDisabledColor}" />
-            <SolidColorBrush x:Key="RadioButtonOuterRingStrokeDisabled" Color="{StaticResource MaterialDisabledColor}" />
-            <SolidColorBrush x:Key="RadioButtonInnerCircleFillDisabled" Color="{StaticResource MaterialDisabledColor}" />
+            <SolidColorBrush x:Key="RadioButtonOuterRingFillDisabled" Color="#b3b3b3" />
+            <SolidColorBrush x:Key="RadioButtonOuterRingStrokeDisabled" Color="#b3b3b3" />
+            <SolidColorBrush x:Key="RadioButtonInnerCircleFillDisabled" Color="#b3b3b3" />
         </ResourceDictionary>
 
         <ResourceDictionary x:Key="Dark">
-            <SolidColorBrush x:Key="RadioButtonOuterRingFill" Color="{StaticResource MaterialSurfaceColor}" />
-            <SolidColorBrush x:Key="RadioButtonOuterRingStroke" Color="{StaticResource MaterialOnSurfaceMediumColor}" />
-            <SolidColorBrush x:Key="RadioButtonInnerCircleFill" Color="{StaticResource MaterialPrimaryColor}" />
+            <SolidColorBrush x:Key="RadioButtonOuterRingFill" Color="{StaticResource SurfaceColor}" />
+            <SolidColorBrush x:Key="RadioButtonOuterRingStroke" Color="{StaticResource OnSurfaceMediumColor}" />
+            <SolidColorBrush x:Key="RadioButtonInnerCircleFill" Color="{StaticResource PrimaryColor}" />
             
             <SolidColorBrush x:Key="RadioButtonOuterRingFillChecked" Color="#e6e6e6" />
-            <SolidColorBrush x:Key="RadioButtonOuterRingStrokeChecked" Color="{StaticResource MaterialPrimaryColor}" />
-            <SolidColorBrush x:Key="RadioButtonInnerCircleFillChecked" Color="{StaticResource MaterialPrimaryColor}" />
+            <SolidColorBrush x:Key="RadioButtonOuterRingStrokeChecked" Color="{StaticResource PrimaryColor}" />
+            <SolidColorBrush x:Key="RadioButtonInnerCircleFillChecked" Color="{StaticResource PrimaryColor}" />
             
-            <SolidColorBrush x:Key="RadioButtonOuterRingFillDisabled" Color="{StaticResource MaterialDisabledColor}" />
-            <SolidColorBrush x:Key="RadioButtonOuterRingStrokeDisabled" Color="{StaticResource MaterialDisabledColor}" />
-            <SolidColorBrush x:Key="RadioButtonInnerCircleFillDisabled" Color="{StaticResource MaterialDisabledColor}" />
+            <SolidColorBrush x:Key="RadioButtonOuterRingFillDisabled" Color="#b3b3b3" />
+            <SolidColorBrush x:Key="RadioButtonOuterRingStrokeDisabled" Color="#b3b3b3" />
+            <SolidColorBrush x:Key="RadioButtonInnerCircleFillDisabled" Color="#b3b3b3" />
         </ResourceDictionary>
     </ResourceDictionary.ThemeDictionaries>
 
