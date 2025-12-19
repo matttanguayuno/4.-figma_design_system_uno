@@ -12,12 +12,6 @@ public partial class PricingCard : Control
 		DefaultStyleKey = typeof(PricingCard);
 	}
 
-	protected override void OnApplyTemplate()
-	{
-		base.OnApplyTemplate();
-		UpdateVisualStates();
-	}
-
 	public static readonly DependencyProperty TitleProperty = DependencyProperty.Register(
 		nameof(Title),
 		typeof(string),
@@ -78,30 +72,6 @@ public partial class PricingCard : Control
 		set => SetValue(ButtonTextProperty, value);
 	}
 
-	public static readonly DependencyProperty IsBrandedProperty = DependencyProperty.Register(
-		nameof(IsBranded),
-		typeof(bool),
-		typeof(PricingCard),
-		new PropertyMetadata(false, OnVisualStatePropertyChanged));
-
-	public bool IsBranded
-	{
-		get => (bool)GetValue(IsBrandedProperty);
-		set => SetValue(IsBrandedProperty, value);
-	}
-
-	public static readonly DependencyProperty LayoutVariantProperty = DependencyProperty.Register(
-		nameof(LayoutVariant),
-		typeof(PricingCardLayout),
-		typeof(PricingCard),
-		new PropertyMetadata(PricingCardLayout.Desktop, OnVisualStatePropertyChanged));
-
-	public PricingCardLayout LayoutVariant
-	{
-		get => (PricingCardLayout)GetValue(LayoutVariantProperty);
-		set => SetValue(LayoutVariantProperty, value);
-	}
-
 	public static readonly DependencyProperty ButtonBackgroundProperty = DependencyProperty.Register(
 		nameof(ButtonBackground),
 		typeof(Brush),
@@ -137,24 +107,4 @@ public partial class PricingCard : Control
 		get => (Brush)GetValue(ButtonBorderBrushProperty);
 		set => SetValue(ButtonBorderBrushProperty, value);
 	}
-
-	private static void OnVisualStatePropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-	{
-		if (d is PricingCard card)
-		{
-			card.UpdateVisualStates();
-		}
-	}
-
-	private void UpdateVisualStates()
-	{
-		VisualStateManager.GoToState(this, LayoutVariant == PricingCardLayout.Desktop ? "Desktop" : "Mobile", true);
-		VisualStateManager.GoToState(this, IsBranded ? "Branded" : "Light", true);
-	}
-}
-
-public enum PricingCardLayout
-{
-	Desktop,
-	Mobile
 }

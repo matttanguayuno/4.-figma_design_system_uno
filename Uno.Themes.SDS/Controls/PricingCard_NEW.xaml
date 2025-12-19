@@ -14,72 +14,81 @@
                   BorderBrush="{TemplateBinding BorderBrush}"
                   BorderThickness="{TemplateBinding BorderThickness}"
                   CornerRadius="{StaticResource Radius200}">
-            <StackPanel Orientation="Vertical" 
-                        Padding="{StaticResource Spacing800}">
+            <utu:AutoLayout Orientation="Vertical" 
+                            Spacing="{StaticResource Space600}"
+                            Padding="{StaticResource Spacing800}">
 
-              <StackPanel Orientation="Vertical" Spacing="16" HorizontalAlignment="Stretch" Margin="0,0,0,24">
-                <TextBlock Text="{TemplateBinding Title}"
+              <!-- Title -->
+              <TextBlock Text="{TemplateBinding Title}"
+                         FontSize="24"
+                         FontWeight="SemiBold"
+                         HorizontalAlignment="Center"
+                         TextAlignment="Center"
+                         Foreground="{TemplateBinding Foreground}" />
+            
+              <!-- Price Display -->
+              <Grid HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="Auto"/>
+                  <ColumnDefinition Width="Auto"/>
+                  <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0"
+                           Text="$"
                            FontSize="24"
-                           FontWeight="SemiBold"
+                           FontWeight="Bold"
+                           CharacterSpacing="-20"
                            Foreground="{TemplateBinding Foreground}"
-                           HorizontalAlignment="Center"
-                           TextAlignment="Center" />
-                
-                <Grid HorizontalAlignment="Center">
-                  <StackPanel Orientation="Horizontal" Spacing="2">
-                    <TextBlock Text="$"
-                               FontSize="24"
-                               FontWeight="Bold"
-                               CharacterSpacing="-20"
-                               Foreground="{TemplateBinding Foreground}"
-                               VerticalAlignment="Top"
-                               Margin="0,8,0,0" />
-                    <TextBlock Text="{TemplateBinding Price}"
-                               FontSize="48"
-                               FontWeight="Bold"
-                               CharacterSpacing="-20"
-                               Foreground="{TemplateBinding Foreground}" />
-                    <TextBlock Text="{TemplateBinding Period}"
-                               FontSize="14"
-                               Foreground="{TemplateBinding Foreground}"
-                               VerticalAlignment="Bottom"
-                               Margin="0,0,0,10" />
-                  </StackPanel>
-                </Grid>
-              </StackPanel>
+                           VerticalAlignment="Top"
+                           Margin="0,8,0,0" />
+                <TextBlock Grid.Column="1"
+                           Text="{TemplateBinding Price}"
+                           FontSize="48"
+                           FontWeight="Bold"
+                           CharacterSpacing="-20"
+                           Foreground="{TemplateBinding Foreground}" />
+                <TextBlock Grid.Column="2"
+                           Text="{TemplateBinding Period}"
+                           FontSize="14"
+                           Foreground="{TemplateBinding Foreground}"
+                           VerticalAlignment="Bottom"
+                           Margin="0,0,0,10" />
+              </Grid>
 
               <!-- List Items -->
-              <ItemsControl x:Name="FeaturesList" ItemsSource="{TemplateBinding Features}" Margin="0,0,0,24">
-                  <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                      <StackPanel Orientation="Vertical" Spacing="12" />
-                    </ItemsPanelTemplate>
-                  </ItemsControl.ItemsPanel>
-                  <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                    <TextBlock TextWrapping="Wrap">
-                        <Run Text="•" FontSize="16" />
-                        <Run Text="  " />
-                        <Run Text="{Binding}" FontSize="16" />
-                      </TextBlock>
-                    </DataTemplate>
-                  </ItemsControl.ItemTemplate>
-                </ItemsControl>
+              <ItemsControl ItemsSource="{TemplateBinding Features}">
+                <ItemsControl.ItemsPanel>
+                  <ItemsPanelTemplate>
+                    <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space300}" />
+                  </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                  <DataTemplate>
+                    <TextBlock TextWrapping="Wrap" Foreground="{TemplateBinding Foreground}">
+                      <Run Text="•" FontSize="16" />
+                      <Run Text="  " />
+                      <Run Text="{Binding}" FontSize="16" />
+                    </TextBlock>
+                  </DataTemplate>
+                </ItemsControl.ItemTemplate>
+              </ItemsControl>
 
-              <Button Style="{StaticResource FilledButtonStyle}"
-                      Content="{TemplateBinding ButtonText}"
-                      Background="{TemplateBinding ButtonBackground}"
-                      Foreground="{TemplateBinding ButtonForeground}"
-                      BorderBrush="{TemplateBinding ButtonBorderBrush}"
-                      HorizontalAlignment="Stretch" />
-            </StackPanel>
+              <Grid>
+                <Button Style="{StaticResource FilledButtonStyle}"
+                        Content="{TemplateBinding ButtonText}"
+                        Background="{TemplateBinding ButtonBackground}"
+                        Foreground="{TemplateBinding ButtonForeground}"
+                        BorderBrush="{TemplateBinding ButtonBorderBrush}"
+                        HorizontalAlignment="Stretch" />
+              </Grid>
+            </utu:AutoLayout>
           </Border>
         </ControlTemplate>
       </Setter.Value>
     </Setter>
   </Style>
 
-  <!-- Row 2 Cards Style: Title and Price side-by-side -->
+  <!-- Row 2 Cards: Title and Price side-by-side -->
   <Style x:Key="PricingCardRow2Style" TargetType="controls:PricingCard">
     <Setter Property="Width" Value="300" />
     <Setter Property="HorizontalAlignment" Value="Left" />
@@ -96,37 +105,46 @@
 
               <!-- Title and Price Row -->
               <Grid>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                
+                <TextBlock Grid.Column="0"
+                           Text="{TemplateBinding Title}"
+                           FontSize="24"
+                           FontWeight="SemiBold"
+                           Foreground="{TemplateBinding Foreground}"
+                           VerticalAlignment="Top" />
+                
+                <Grid Grid.Column="1">
                   <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
                   </Grid.ColumnDefinitions>
-                  
                   <TextBlock Grid.Column="0"
-                             Text="{TemplateBinding Title}"
+                             Text="$"
+                             FontSize="16"
+                             FontWeight="SemiBold"
+                             CharacterSpacing="-20"
+                             Foreground="{TemplateBinding Foreground}"
+                             VerticalAlignment="Top"
+                             Margin="0,4,0,0" />
+                  <TextBlock Grid.Column="1"
+                             Text="{TemplateBinding Price}"
                              FontSize="24"
                              FontWeight="SemiBold"
+                             CharacterSpacing="-20"
+                             Foreground="{TemplateBinding Foreground}" />
+                  <TextBlock Grid.Column="2"
+                             Text="{TemplateBinding Period}"
+                             FontSize="14"
                              Foreground="{TemplateBinding Foreground}"
-                             VerticalAlignment="Center" />
-                  
-                  <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="2">
-                    <TextBlock Text="$"
-                               FontSize="16"
-                               FontWeight="SemiBold"
-                               Foreground="{TemplateBinding Foreground}"
-                               VerticalAlignment="Top"
-                               Margin="0,4,0,0" />
-                    <TextBlock Text="{TemplateBinding Price}"
-                               FontSize="24"
-                               FontWeight="SemiBold"
-                               Foreground="{TemplateBinding Foreground}"
-                               VerticalAlignment="Center" />
-                    <TextBlock Text="{TemplateBinding Period}"
-                               FontSize="14"
-                               Foreground="{TemplateBinding Foreground}"
-                               VerticalAlignment="Bottom"
-                               Margin="0,0,0,2" />
-                  </StackPanel>
+                             VerticalAlignment="Bottom"
+                             Margin="0,0,0,4" />
                 </Grid>
+              </Grid>
 
               <!-- List Items -->
               <ItemsControl ItemsSource="{TemplateBinding Features}">
@@ -137,7 +155,7 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                   <DataTemplate>
-                    <TextBlock TextWrapping="Wrap">
+                    <TextBlock TextWrapping="Wrap" Foreground="{TemplateBinding Foreground}">
                       <Run Text="•" FontSize="16" />
                       <Run Text="  " />
                       <Run Text="{Binding}" FontSize="16" />

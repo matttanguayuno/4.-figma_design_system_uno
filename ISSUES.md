@@ -55,6 +55,17 @@ Path.Fill shows #F5F5F5 (OnPrimaryColor) instead of #B3B3B3 when using ThemeReso
 - Check if placeholder color resource is using correct color value
 - Consider inline TextBox template with hardcoded PlaceholderForeground as workaround
 
+### Button Hover Effects Not Visible (White on White)
+**Location:** Various buttons throughout the application
+
+**Issue:** Button hover effects disappear - white content on white background when hovering.
+
+**Investigation Needed:**
+- Check hover state visual state definitions in button styles
+- Verify ThemeResource bindings for hover state colors
+- May be related to same ThemeResource binding issue affecting other controls
+- Test with hardcoded hover colors as diagnostic
+
 *(Additional issues to be added)*
 
 ---
