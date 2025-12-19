@@ -1,5 +1,8 @@
 ﻿namespace figma_design_system_uno.Presentation;
 
+using Microsoft.UI.Xaml.Navigation;
+using Windows.UI.Core;
+
 public sealed partial class Shell : UserControl, IContentControlProvider
 {
     private readonly Dictionary<string, Type> _pages = new()
@@ -21,11 +24,50 @@ public sealed partial class Shell : UserControl, IContentControlProvider
     };
 
     private string _currentPage = "Home";
+    private bool _isNavigatingProgrammatically = false;
 
     public Shell()
     {
         this.InitializeComponent();
         this.Loaded += Shell_Loaded;
+        
+        // Enable browser back button integration
+        ContentFrame.Navigated += ContentFrame_Navigated;
+        
+        // Enable browser navigation integration
+        SystemNavigationManager.GetForCurrentView().BackRequested += Shell_BackRequested;
+    }
+    
+    private void Shell_BackRequested(object sender, BackRequestedEventArgs e)
+    {
+        if (ContentFrame.CanGoBack)
+        {
+            e.Handled = true;
+            ContentFrame.GoBack();
+        }
+    }
+
+    private void ContentFrame_Navigated(object sender, Microsoft.UI.Xaml.Navigation.NavigationEventArgs e)
+    {
+        // Update button states when navigation occurs
+        var pageType = e.SourcePageType;
+        var pageTag = _pages.FirstOrDefault(p => p.Value == pageType).Key;
+        if (!string.IsNullOrEmpty(pageTag))
+        {
+            UpdateButtonStates(pageTag);
+        }
+        
+        // Update browser history for WASM (only if not already navigating via browser back)
+        #if __WASM__
+        if (!_isNavigatingProgrammatically && !string.IsNullOrEmpty(pageTag))
+        {
+            var url = pageTag == "Home" ? "/" : $"#{pageTag}";
+            Uno.Foundation.WebAssemblyRuntime.InvokeJS(
+                $"if (window.location.hash !== '#{pageTag}') {{ history.pushState({{page: '{pageTag}'}}, '', '{url}'); }}"
+            );
+        }
+        _isNavigatingProgrammatically = false;
+        #endif
     }
 
     private void Shell_Loaded(object sender, RoutedEventArgs e)

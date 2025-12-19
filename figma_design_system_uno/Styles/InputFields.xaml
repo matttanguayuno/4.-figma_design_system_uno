@@ -4,10 +4,10 @@
   <!-- TextBox color overrides -->
   <ResourceDictionary.ThemeDictionaries>
     <ResourceDictionary x:Key="Light">
-      <!-- Placeholder text color -->
-      <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="#b3b3b3" />
-      <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="#b3b3b3" />
-      <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="#b3b3b3" />
+      <!-- Placeholder text color - lighter gray for visibility on white background -->
+      <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="#757575" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="#757575" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="#757575" />
       <SolidColorBrush x:Key="TextControlPlaceholderForegroundDisabled" Color="#b3b3b3" />
       
       <!-- Disabled background and border -->
@@ -17,9 +17,9 @@
     
     <ResourceDictionary x:Key="Dark">
       <!-- Same for dark theme -->
-      <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="#b3b3b3" />
-      <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="#b3b3b3" />
-      <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="#757575" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="#757575" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="#757575" />
       <SolidColorBrush x:Key="TextControlPlaceholderForegroundDisabled" Color="#b3b3b3" />
       
       <SolidColorBrush x:Key="TextControlBackgroundDisabled" Color="#d9d9d9" />
@@ -35,6 +35,7 @@
     <Setter Property="FontFamily" Value="Inter" />
     <Setter Property="FontSize" Value="16" />
     <Setter Property="FontWeight" Value="Normal" />
+    <Setter Property="Foreground" Value="#1e1e1e" />
     <Setter Property="VerticalContentAlignment" Value="Center" />
     <Setter Property="HorizontalContentAlignment" Value="Left" />
     <Setter Property="TextWrapping" Value="NoWrap" />

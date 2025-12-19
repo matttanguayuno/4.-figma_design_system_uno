@@ -112,4 +112,179 @@
         </ResourceDictionary>
     </ResourceDictionary.ThemeDictionaries>
 
+    <!-- Glyph Path Data - Material-compatible resource keys for CheckBox glyphs -->
+    <x:String x:Key="CheckBoxCheckGlyphPathData">M28.718018,0L32,3.2819897 10.666016,24.616999 0,13.951997 3.2810059,10.670007 10.666016,18.055033z</x:String>
+    <x:String x:Key="CheckBoxHyphenGlyphPathData">M0,0L32,0 32,5.3 0,5.3z</x:String>
+
+    <!-- Disabled Glyph Colors (outside ThemeDictionaries for reliable visual state access) -->
+    <SolidColorBrush x:Key="CheckBoxGlyphForegroundCheckedDisabled" Color="#B3B3B3" />
+    <SolidColorBrush x:Key="CheckBoxGlyphForegroundIndeterminateDisabled" Color="#B3B3B3" />
+
+    <!-- CheckBox Style with Material-compatible ControlTemplate -->
+    <Style x:Key="CheckBoxStyle" TargetType="CheckBox">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{ThemeResource OnSurfaceVariantBrush}" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Top" />
+        <Setter Property="MinWidth" Value="120" />
+        <Setter Property="MinHeight" Value="32" />
+        <Setter Property="UseSystemFocusVisuals" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="CheckBox">
+                    <Grid x:Name="RootGrid"
+                          Background="{TemplateBinding Background}"
+                          BorderBrush="{TemplateBinding BorderBrush}"
+                          BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid x:Name="CheckBoxContainer" Grid.Column="0" Width="18" Height="18" VerticalAlignment="Top">
+                            <!-- CheckBox Background Rectangle -->
+                            <Rectangle x:Name="NormalRectangle"
+                                       Fill="{ThemeResource CheckBoxCheckBackgroundFillUnchecked}"
+                                       Stroke="{ThemeResource CheckBoxCheckBackgroundStrokeUnchecked}"
+                                       StrokeThickness="2"
+                                       RadiusX="2"
+                                       RadiusY="2" />
+
+                            <!-- Checkmark Glyph (Checked State) -->
+                            <Path x:Name="CheckGlyph"
+                                  Data="{StaticResource CheckBoxCheckGlyphPathData}"
+                                  Fill="{ThemeResource CheckBoxGlyphForegroundChecked}"
+                                  Stretch="Uniform"
+                                  Width="12"
+                                  Height="12"
+                                  Opacity="0" />
+
+                            <!-- Dash Glyph (Indeterminate State) -->
+                            <Path x:Name="IndeterminateGlyph"
+                                  Data="{StaticResource CheckBoxHyphenGlyphPathData}"
+                                  Fill="{ThemeResource CheckBoxGlyphForegroundIndeterminate}"
+                                  Stretch="Uniform"
+                                  Width="10"
+                                  Height="10"
+                                  Opacity="0" />
+                        </Grid>
+
+                        <ContentPresenter x:Name="ContentPresenter"
+                                          Grid.Column="1"
+                                          Margin="8,0,0,0"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          ContentTransitions="{TemplateBinding ContentTransitions}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          AutomationProperties.AccessibilityView="Raw"
+                                          TextWrapping="Wrap" />
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CombinedStates">
+                                <!-- Unchecked States -->
+                                <VisualState x:Name="UncheckedNormal" />
+                                
+                                <VisualState x:Name="UncheckedPointerOver">
+                                    <VisualState.Setters>
+                                        <Setter Target="NormalRectangle.Fill" Value="{ThemeResource CheckBoxCheckBackgroundFillUncheckedPointerOver}" />
+                                        <Setter Target="NormalRectangle.Stroke" Value="{ThemeResource CheckBoxCheckBackgroundStrokeUncheckedPointerOver}" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="UncheckedPressed">
+                                    <VisualState.Setters>
+                                        <Setter Target="NormalRectangle.Fill" Value="{ThemeResource CheckBoxCheckBackgroundFillUncheckedPressed}" />
+                                        <Setter Target="NormalRectangle.Stroke" Value="{ThemeResource CheckBoxCheckBackgroundStrokeUncheckedPressed}" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="UncheckedDisabled">
+                                    <VisualState.Setters>
+                                        <Setter Target="NormalRectangle.Fill" Value="{ThemeResource CheckBoxCheckBackgroundFillUncheckedDisabled}" />
+                                        <Setter Target="NormalRectangle.Stroke" Value="{ThemeResource CheckBoxCheckBackgroundStrokeUncheckedDisabled}" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <!-- Checked States -->
+                                <VisualState x:Name="CheckedNormal">
+                                    <VisualState.Setters>
+                                        <Setter Target="NormalRectangle.Fill" Value="{ThemeResource CheckBoxCheckBackgroundFillChecked}" />
+                                        <Setter Target="NormalRectangle.Stroke" Value="{ThemeResource CheckBoxCheckBackgroundStrokeChecked}" />
+                                        <Setter Target="CheckGlyph.Opacity" Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="CheckedPointerOver">
+                                    <VisualState.Setters>
+                                        <Setter Target="NormalRectangle.Fill" Value="{ThemeResource CheckBoxCheckBackgroundFillCheckedPointerOver}" />
+                                        <Setter Target="NormalRectangle.Stroke" Value="{ThemeResource CheckBoxCheckBackgroundStrokeCheckedPointerOver}" />
+                                        <Setter Target="CheckGlyph.Opacity" Value="1" />
+                                        <Setter Target="CheckGlyph.Fill" Value="{ThemeResource CheckBoxGlyphForegroundCheckedPointerOver}" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="CheckedPressed">
+                                    <VisualState.Setters>
+                                        <Setter Target="NormalRectangle.Fill" Value="{ThemeResource CheckBoxCheckBackgroundFillCheckedPressed}" />
+                                        <Setter Target="NormalRectangle.Stroke" Value="{ThemeResource CheckBoxCheckBackgroundStrokeCheckedPressed}" />
+                                        <Setter Target="CheckGlyph.Opacity" Value="1" />
+                                        <Setter Target="CheckGlyph.Fill" Value="{ThemeResource CheckBoxGlyphForegroundCheckedPressed}" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="CheckedDisabled">
+                                    <VisualState.Setters>
+                                        <Setter Target="NormalRectangle.Fill" Value="{ThemeResource CheckBoxCheckBackgroundFillCheckedDisabled}" />
+                                        <Setter Target="NormalRectangle.Stroke" Value="{ThemeResource CheckBoxCheckBackgroundStrokeCheckedDisabled}" />
+                                        <Setter Target="CheckGlyph.Opacity" Value="1" />
+                                        <Setter Target="CheckGlyph.Fill" Value="{ThemeResource CheckBoxGlyphForegroundCheckedDisabled}" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <!-- Indeterminate States -->
+                                <VisualState x:Name="IndeterminateNormal">
+                                    <VisualState.Setters>
+                                        <Setter Target="NormalRectangle.Fill" Value="{ThemeResource CheckBoxCheckBackgroundFillIndeterminate}" />
+                                        <Setter Target="NormalRectangle.Stroke" Value="{ThemeResource CheckBoxCheckBackgroundStrokeIndeterminate}" />
+                                        <Setter Target="IndeterminateGlyph.Opacity" Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="IndeterminatePointerOver">
+                                    <VisualState.Setters>
+                                        <Setter Target="NormalRectangle.Fill" Value="{ThemeResource CheckBoxCheckBackgroundFillIndeterminatePointerOver}" />
+                                        <Setter Target="NormalRectangle.Stroke" Value="{ThemeResource CheckBoxCheckBackgroundStrokeIndeterminatePointerOver}" />
+                                        <Setter Target="IndeterminateGlyph.Opacity" Value="1" />
+                                        <Setter Target="IndeterminateGlyph.Fill" Value="{ThemeResource CheckBoxGlyphForegroundIndeterminatePointerOver}" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="IndeterminatePressed">
+                                    <VisualState.Setters>
+                                        <Setter Target="NormalRectangle.Fill" Value="{ThemeResource CheckBoxCheckBackgroundFillIndeterminatePressed}" />
+                                        <Setter Target="NormalRectangle.Stroke" Value="{ThemeResource CheckBoxCheckBackgroundStrokeIndeterminatePressed}" />
+                                        <Setter Target="IndeterminateGlyph.Opacity" Value="1" />
+                                        <Setter Target="IndeterminateGlyph.Fill" Value="{ThemeResource CheckBoxGlyphForegroundIndeterminatePressed}" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="IndeterminateDisabled">
+                                    <VisualState.Setters>
+                                        <Setter Target="NormalRectangle.Fill" Value="{ThemeResource CheckBoxCheckBackgroundFillIndeterminateDisabled}" />
+                                        <Setter Target="NormalRectangle.Stroke" Value="{ThemeResource CheckBoxCheckBackgroundStrokeIndeterminateDisabled}" />
+                                        <Setter Target="IndeterminateGlyph.Opacity" Value="1" />
+                                        <Setter Target="IndeterminateGlyph.Fill" Value="{ThemeResource CheckBoxGlyphForegroundIndeterminateDisabled}" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

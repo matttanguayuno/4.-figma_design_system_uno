@@ -6,10 +6,9 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!-- 
-    SDS Brush Resources using Uno.Themes.Material-compatible naming
+    SDS Brush Resources using Material-compatible naming
     
-    These brushes use the EXACT same key names as Uno.Themes.Material,
-    making this a drop-in replacement.
+    These brushes use the same key names as Uno.Themes.Material for drop-in compatibility.
     
     Reference: https://platform.uno/docs/articles/external/uno.themes/doc/material-colors.html
     -->
@@ -61,7 +60,7 @@
     <!-- Transparent Brush -->
     <SolidColorBrush x:Key="TransparentBrush" Color="{StaticResource TransparentColor}" />
 
-    <!-- Additional SDS Brushes (custom extensions beyond standard Material) -->
+    <!-- Additional SDS Brushes (custom extensions) -->
     <SolidColorBrush x:Key="SDSBrandDefaultBrush" Color="{StaticResource SDSBrandDefaultColor}" />
     <SolidColorBrush x:Key="SDSBrandHoverBrush" Color="{StaticResource SDSBrandHoverColor}" />
     <SolidColorBrush x:Key="SDSNeutralTertiaryBrush" Color="{StaticResource SDSNeutralTertiaryColor}" />

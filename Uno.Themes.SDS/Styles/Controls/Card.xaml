@@ -4,7 +4,7 @@
 
   <!-- Card Base Style using Uno Toolkit Card -->
   <Style x:Key="BaseCardStyle" TargetType="utu:Card">
-    <Setter Property="Background" Value="{StaticResource MaterialSurfaceBrush}" />
+    <Setter Property="Background" Value="{StaticResource SurfaceBrush}" />
     <Setter Property="Padding" Value="24" />
     <Setter Property="CornerRadius" Value="8" />
     <Setter Property="MinWidth" Value="240" />
@@ -15,7 +15,7 @@
 
   <!-- Card with Border (Stroke Variant) -->
   <Style x:Key="StrokeCardStyle" TargetType="utu:Card" BasedOn="{StaticResource BaseCardStyle}">
-    <Setter Property="BorderBrush" Value="{StaticResource MaterialOutlineBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource OutlineBrush}" />
     <Setter Property="BorderThickness" Value="1" />
   </Style>
 
@@ -27,7 +27,7 @@
 
   <!-- Card Image Placeholder Style -->
   <Style x:Key="CardImageStyle" TargetType="Border">
-    <Setter Property="Background" Value="{StaticResource MaterialSurfaceVariantBrush}" />
+    <Setter Property="Background" Value="{StaticResource SurfaceVariantBrush}" />
     <Setter Property="Width" Value="160" />
     <Setter Property="Height" Value="160" />
     <Setter Property="CornerRadius" Value="8" />
@@ -62,7 +62,7 @@
 
   <!-- Card Body Style -->
   <Style x:Key="CardBodyTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BodyBaseTextBlockStyle}">
-    <Setter Property="Foreground" Value="{StaticResource MaterialOnSurfaceVariantBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource OnSurfaceVariantBrush}" />
     <Setter Property="TextWrapping" Value="Wrap" />
   </Style>
 

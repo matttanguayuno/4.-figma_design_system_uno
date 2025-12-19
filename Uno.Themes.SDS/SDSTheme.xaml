@@ -5,7 +5,7 @@
     Simple Design System (SDS) Theme for Uno Platform
     
     This theme provides Material-compatible styling based on the Figma Simple Design System.
-    It uses the same resource keys as Uno.Themes.Material, making it a drop-in replacement.
+    It uses the same resource key names as Uno.Themes.Material for drop-in compatibility.
     
     Usage in App.xaml:
     <Application.Resources>
@@ -40,6 +40,13 @@
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/TextArea.xaml" />
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/TextBox.xaml" />
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/ToggleSwitch.xaml" />
+
+        <!-- Card Components -->
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Controls/PricingCard.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Controls/ProductInfoCard.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Controls/ReviewCard.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Controls/StatsCard.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Controls/TestimonialCard.xaml" />
         
     </ResourceDictionary.MergedDictionaries>
 

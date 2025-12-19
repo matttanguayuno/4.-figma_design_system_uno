@@ -11,8 +11,9 @@ Uno.Themes.SDS is a theme library that implements the **Figma Simple Design Syst
 - ✅ **Material-compatible naming** - Uses EXACT same resource keys as Uno.Themes.Material (without "Material" prefix)
 - ✅ **Based on Figma SDS** - Implements the Simple Design System specification  
 - ✅ **Swappable** - True drop-in replacement - switch between Material and SDS themes without code changes
-- ✅ **Comprehensive** - Colors, brushes, thickness, and control styles
+- ✅ **Comprehensive** - Colors, brushes, thickness, control styles, and **reusable components**
 - ✅ **Multi-platform** - Supports all Uno Platform targets
+- ✅ **Reusable Components** - Pre-built card components (Pricing, Product, Review, Stats, Testimonial) ready to use
 
 ## Key Principles
 
@@ -79,7 +80,70 @@ dotnet add reference path/to/Uno.Themes.SDS/Uno.Themes.SDS.csproj
 <Button Content="Large" Style="{StaticResource FilledButtonLargeStyle}" />
 ```
 
+### 4. Reusable Card Components
+
+The library includes pre-built, customizable card components:
+
+```xaml
+<!-- Add namespace -->
+xmlns:sds="using:Uno.Themes.SDS.Controls"
+
+<!-- Pricing Card (Desktop Layout, Light Style) -->
+<sds:PricingCard Title="Pro Plan"
+                 Price="50"
+                 Period=" / mo"
+                 Features="{x:Bind FeaturesList}"
+                 ButtonText="Subscribe"
+                 Style="{StaticResource LightDesktopPricingCardStyle}" />
+
+<!-- Pricing Card (Mobile Layout, Branded Style) -->
+<sds:PricingCard Title="Enterprise"
+                 Price="199"
+                 Features="{x:Bind FeaturesList}"
+                 Style="{StaticResource BrandedMobilePricingCardStyle}" />
+
+<!-- Product Info Card -->
+<sds:ProductInfoCard ProductName="Product Name"
+                     Price="$99"
+                     Description="Product description"
+                     ImageSource="https://..." />
+
+<!-- Review Card -->
+<sds:ReviewCard Rating="5"
+                ReviewTitle="Great Product!"
+                ReviewBody="I love this product..."
+                ReviewerName="John Doe"
+                ReviewDate="Dec 2025"
+                ReviewerImage="https://..." />
+
+<!-- Stats Card -->
+<sds:StatsCard IconGlyph="&#xE823;"
+               Value="1,234"
+               Label="Total Users" />
+
+<!-- Testimonial Card -->
+<sds:TestimonialCard Quote="&quot;This changed everything!&quot;"
+                     AuthorName="Jane Smith"
+                     AuthorTitle="CEO, Company"
+                     AuthorImage="https://..." />
+```
+
 ## Available Styles
+
+### Reusable Components
+
+#### Card Components
+- `PricingCard` - Pricing plans with features list
+  - Styles: `LightDesktopPricingCardStyle`, `BrandedDesktopPricingCardStyle`, `LightMobilePricingCardStyle`, `BrandedMobilePricingCardStyle`
+  - Properties: `Title`, `Price`, `Period`, `Features` (IList<string>), `ButtonText`, `IsBranded`, `LayoutVariant`
+- `ProductInfoCard` - Product display with image, name, price, description
+  - Properties: `ProductName`, `Price`, `Description`, `ImageSource`
+- `ReviewCard` - Customer reviews with star rating and reviewer info
+  - Properties: `Rating` (1-5), `ReviewTitle`, `ReviewBody`, `ReviewerName`, `ReviewDate`, `ReviewerImage`
+- `StatsCard` - Statistics display with icon, value, and label
+  - Properties: `IconGlyph`, `Value`, `Label`
+- `TestimonialCard` - Customer testimonials with quote and author
+  - Properties: `Quote`, `AuthorName`, `AuthorTitle`, `AuthorImage`
 
 ### Button Styles
 - `FilledButtonStyle` - Filled background (Primary in SDS)
@@ -141,6 +205,7 @@ Based on Figma Simple Design System:
 
 ## Roadmap
 
+- [x] **Reusable Card Components** (PricingCard, ProductInfoCard, ReviewCard, StatsCard, TestimonialCard)
 ✅ **Complete** - All SDS components implemented:
 - [x] Colors and Brushes (Material-compatible)
 - [x] Typography (All text styles)

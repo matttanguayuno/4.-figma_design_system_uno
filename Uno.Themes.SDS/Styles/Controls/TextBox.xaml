@@ -14,65 +14,63 @@
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Light">
             <!-- Placeholder text -->
-            <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="{StaticResource MaterialOnSurfaceLowColor}" />
-            <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="{StaticResource MaterialOnSurfaceLowColor}" />
-            <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="{StaticResource MaterialOnSurfaceLowColor}" />
-            <SolidColorBrush x:Key="TextControlPlaceholderForegroundDisabled" Color="{StaticResource MaterialOnSurfaceLowColor}" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="{StaticResource OnSurfaceLowColor}" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="{StaticResource OnSurfaceLowColor}" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="{StaticResource OnSurfaceLowColor}" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForegroundDisabled" Color="{StaticResource OnSurfaceLowColor}" />
             
             <!-- Disabled state -->
-            <SolidColorBrush x:Key="TextControlBackgroundDisabled" Color="{StaticResource MaterialDisabledColor}" />
-            <SolidColorBrush x:Key="TextControlBorderBrushDisabled" Color="{StaticResource MaterialDisabledColor}" />
+            <SolidColorBrush x:Key="TextControlBackgroundDisabled" Color="{StaticResource DisabledColor}" />
+            <SolidColorBrush x:Key="TextControlBorderBrushDisabled" Color="{StaticResource DisabledColor}" />
             
             <!-- Normal/Focused states -->
-            <SolidColorBrush x:Key="TextControlBackground" Color="{StaticResource MaterialSurfaceColor}" />
-            <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="{StaticResource MaterialSurfaceColor}" />
-            <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="{StaticResource MaterialSurfaceColor}" />
+            <SolidColorBrush x:Key="TextControlBackground" Color="{StaticResource SurfaceColor}" />
+            <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="{StaticResource SurfaceColor}" />
+            <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="{StaticResource SurfaceColor}" />
             
-            <SolidColorBrush x:Key="TextControlBorderBrush" Color="{StaticResource MaterialOutlineColor}" />
-            <SolidColorBrush x:Key="TextControlBorderBrushPointerOver" Color="{StaticResource MaterialOutlineVariantColor}" />
-            <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="{StaticResource MaterialPrimaryColor}" />
+            <SolidColorBrush x:Key="TextControlBorderBrush" Color="{StaticResource OutlineColor}" />
+            <SolidColorBrush x:Key="TextControlBorderBrushPointerOver" Color="{StaticResource OutlineVariantColor}" />
+            <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="{StaticResource PrimaryColor}" />
             
-            <SolidColorBrush x:Key="TextControlForeground" Color="{StaticResource MaterialOnSurfaceColor}" />
-            <SolidColorBrush x:Key="TextControlForegroundPointerOver" Color="{StaticResource MaterialOnSurfaceColor}" />
-            <SolidColorBrush x:Key="TextControlForegroundFocused" Color="{StaticResource MaterialOnSurfaceColor}" />
-            <SolidColorBrush x:Key="TextControlForegroundDisabled" Color="{StaticResource MaterialOnDisabledColor}" />
+            <SolidColorBrush x:Key="TextControlForeground" Color="{StaticResource OnSurfaceColor}" />
+            <SolidColorBrush x:Key="TextControlForegroundPointerOver" Color="{StaticResource OnSurfaceColor}" />
+            <SolidColorBrush x:Key="TextControlForegroundFocused" Color="{StaticResource OnSurfaceColor}" />
+            <SolidColorBrush x:Key="TextControlForegroundDisabled" Color="{StaticResource OnDisabledColor}" />
         </ResourceDictionary>
 
         <ResourceDictionary x:Key="Dark">
             <!-- Same for dark theme -->
-            <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="{StaticResource MaterialOnSurfaceLowColor}" />
-            <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="{StaticResource MaterialOnSurfaceLowColor}" />
-            <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="{StaticResource MaterialOnSurfaceLowColor}" />
-            <SolidColorBrush x:Key="TextControlPlaceholderForegroundDisabled" Color="{StaticResource MaterialOnSurfaceLowColor}" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="{StaticResource OnSurfaceLowColor}" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="{StaticResource OnSurfaceLowColor}" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="{StaticResource OnSurfaceLowColor}" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForegroundDisabled" Color="{StaticResource OnSurfaceLowColor}" />
             
-            <SolidColorBrush x:Key="TextControlBackgroundDisabled" Color="{StaticResource MaterialDisabledColor}" />
-            <SolidColorBrush x:Key="TextControlBorderBrushDisabled" Color="{StaticResource MaterialDisabledColor}" />
+            <SolidColorBrush x:Key="TextControlBackgroundDisabled" Color="{StaticResource DisabledColor}" />
+            <SolidColorBrush x:Key="TextControlBorderBrushDisabled" Color="{StaticResource DisabledColor}" />
             
-            <SolidColorBrush x:Key="TextControlBackground" Color="{StaticResource MaterialSurfaceColor}" />
-            <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="{StaticResource MaterialSurfaceColor}" />
-            <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="{StaticResource MaterialSurfaceColor}" />
+            <SolidColorBrush x:Key="TextControlBackground" Color="{StaticResource SurfaceColor}" />
+            <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="{StaticResource SurfaceColor}" />
+            <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="{StaticResource SurfaceColor}" />
             
-            <SolidColorBrush x:Key="TextControlBorderBrush" Color="{StaticResource MaterialOutlineColor}" />
-            <SolidColorBrush x:Key="TextControlBorderBrushPointerOver" Color="{StaticResource MaterialOutlineVariantColor}" />
-            <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="{StaticResource MaterialPrimaryColor}" />
+            <SolidColorBrush x:Key="TextControlBorderBrush" Color="{StaticResource OutlineColor}" />
+            <SolidColorBrush x:Key="TextControlBorderBrushPointerOver" Color="{StaticResource OutlineVariantColor}" />
+            <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="{StaticResource PrimaryColor}" />
             
-            <SolidColorBrush x:Key="TextControlForeground" Color="{StaticResource MaterialOnSurfaceColor}" />
-            <SolidColorBrush x:Key="TextControlForegroundPointerOver" Color="{StaticResource MaterialOnSurfaceColor}" />
-            <SolidColorBrush x:Key="TextControlForegroundFocused" Color="{StaticResource MaterialOnSurfaceColor}" />
-            <SolidColorBrush x:Key="TextControlForegroundDisabled" Color="{StaticResource MaterialOnDisabledColor}" />
+            <SolidColorBrush x:Key="TextControlForeground" Color="{StaticResource OnSurfaceColor}" />
+            <SolidColorBrush x:Key="TextControlForegroundPointerOver" Color="{StaticResource OnSurfaceColor}" />
+            <SolidColorBrush x:Key="TextControlForegroundFocused" Color="{StaticResource OnSurfaceColor}" />
+            <SolidColorBrush x:Key="TextControlForegroundDisabled" Color="{StaticResource OnDisabledColor}" />
         </ResourceDictionary>
     </ResourceDictionary.ThemeDictionaries>
 
-    <!-- Material-style TextBox Styles -->
-    
     <!-- FilledTextBoxStyle - Default filled input -->
     <Style x:Key="FilledTextBoxStyle" TargetType="TextBox">
         <Setter Property="Background" Value="{ThemeResource TextControlBackground}" />
         <Setter Property="BorderBrush" Value="{ThemeResource TextControlBorderBrush}" />
-        <Setter Property="BorderThickness" Value="{StaticResource MaterialTextBoxBorderThickness}" />
-        <Setter Property="CornerRadius" Value="{StaticResource MaterialTextBoxCornerRadius}" />
-        <Setter Property="Padding" Value="{StaticResource MaterialTextBoxPadding}" />
-        <Setter Property="Height" Value="{StaticResource MaterialTextBoxHeight}" />
+        <Setter Property="BorderThickness" Value="{StaticResource TextBoxBorderThickness}" />
+        <Setter Property="CornerRadius" Value="{StaticResource TextBoxCornerRadius}" />
+        <Setter Property="Padding" Value="{StaticResource TextBoxPadding}" />
+        <Setter Property="Height" Value="{StaticResource TextBoxHeight}" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="FontWeight" Value="Normal" />
         <Setter Property="PlaceholderForeground" Value="{ThemeResource TextControlPlaceholderForeground}" />

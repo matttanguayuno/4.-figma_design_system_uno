@@ -9,14 +9,14 @@
 
     <!--
     ==================================================================================
-    SDS (Simple Design System) Button Styles with Material Design Naming Facade
+    SDS (Simple Design System) Button Styles with Material-compatible Naming Facade
     ==================================================================================
     
-    This file implements button styles following Material Design naming conventions
+    This file implements button styles following Material-compatible naming conventions
     while using Figma Simple Design System (SDS) visual appearance.
     
     ARCHITECTURE PATTERN:
-    - Material naming = The interface/facade (FilledButton, OutlinedButton, TextButton)
+    - Material-compatible naming = The interface/facade (FilledButton, OutlinedButton, TextButton)
     - SDS visual style = The implementation (corner radii, colors, states from Figma SDS)
     
     This allows Uno users to switch between Material, Fluent, or SDS themes while
@@ -38,7 +38,7 @@
     -->
 
     <!-- 
-    Button Styles following Material naming conventions
+    Button Styles following Material-compatible naming conventions
     Implementation based on Figma Simple Design System (SDS)
     -->
 
@@ -93,13 +93,13 @@
 
     <!-- FilledButtonStyle - Primary/Filled variant (like SDS Primary) -->
     <Style x:Key="FilledButtonStyle" TargetType="Button">
-        <Setter Property="Background" Value="{StaticResource MaterialPrimaryBrush}" />
-        <Setter Property="Foreground" Value="{StaticResource MaterialOnPrimaryBrush}" />
-        <Setter Property="BorderBrush" Value="{StaticResource MaterialPrimaryBrush}" />
-        <Setter Property="BorderThickness" Value="{StaticResource MaterialButtonBorderThickness}" />
-        <Setter Property="CornerRadius" Value="{StaticResource MaterialButtonCornerRadius}" />
-        <Setter Property="Padding" Value="{StaticResource MaterialButtonPadding}" />
-        <Setter Property="Height" Value="{StaticResource MaterialButtonHeight}" />
+        <Setter Property="Background" Value="{StaticResource PrimaryBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource OnPrimaryBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonBorderThickness}" />
+        <Setter Property="CornerRadius" Value="{StaticResource ButtonCornerRadius}" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Height" Value="{StaticResource ButtonHeight}" />
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -110,7 +110,7 @@
         <Setter Property="FocusVisualMargin" Value="-3" />
         <Setter Property="Tag">
             <Setter.Value>
-                <x:String>HoverBackground={StaticResource MaterialPrimaryVariantDarkBrush};HoverBorder={StaticResource MaterialPrimaryVariantDarkBrush}</x:String>
+                <x:String>HoverBackground={StaticResource PrimaryVariantDarkBrush};HoverBorder={StaticResource PrimaryVariantDarkBrush}</x:String>
             </Setter.Value>
         </Setter>
         <Setter Property="Template" Value="{StaticResource SDSButtonTemplate}" />
@@ -118,13 +118,13 @@
 
     <!-- OutlinedButtonStyle - Neutral variant (like SDS Neutral) -->
     <Style x:Key="OutlinedButtonStyle" TargetType="Button">
-        <Setter Property="Background" Value="{StaticResource MaterialBackgroundTertiaryBrush}" />
-        <Setter Property="Foreground" Value="{StaticResource MaterialOnSurfaceBrush}" />
+        <Setter Property="Background" Value="{StaticResource BackgroundTertiaryBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource OnSurfaceBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource NeutralTertiaryHoverBrush}" />
-        <Setter Property="BorderThickness" Value="{StaticResource MaterialButtonBorderThickness}" />
-        <Setter Property="CornerRadius" Value="{StaticResource MaterialButtonCornerRadius}" />
-        <Setter Property="Padding" Value="{StaticResource MaterialButtonPadding}" />
-        <Setter Property="Height" Value="{StaticResource MaterialButtonHeight}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonBorderThickness}" />
+        <Setter Property="CornerRadius" Value="{StaticResource ButtonCornerRadius}" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Height" Value="{StaticResource ButtonHeight}" />
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -184,13 +184,13 @@
 
     <!-- TextButtonStyle - Text-only variant (like SDS Subtle) -->
     <Style x:Key="TextButtonStyle" TargetType="Button">
-        <Setter Property="Background" Value="{StaticResource MaterialTransparentBrush}" />
+        <Setter Property="Background" Value="{StaticResource TransparentBrush}" />
         <Setter Property="Foreground" Value="{StaticResource SDSTextNeutralBrush}" />
-        <Setter Property="BorderBrush" Value="{StaticResource MaterialTransparentBrush}" />
-        <Setter Property="BorderThickness" Value="{StaticResource MaterialButtonBorderThickness}" />
-        <Setter Property="CornerRadius" Value="{StaticResource MaterialButtonCornerRadius}" />
-        <Setter Property="Padding" Value="{StaticResource MaterialButtonPadding}" />
-        <Setter Property="Height" Value="{StaticResource MaterialButtonHeight}" />
+        <Setter Property="BorderBrush" Value="{StaticResource TransparentBrush}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonBorderThickness}" />
+        <Setter Property="CornerRadius" Value="{StaticResource ButtonCornerRadius}" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Height" Value="{StaticResource ButtonHeight}" />
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -214,13 +214,13 @@
                                 
                                 <VisualState x:Name="PointerOver">
                                     <VisualState.Setters>
-                                        <Setter Target="RootGrid.BorderBrush" Value="{StaticResource MaterialOutlineBrush}" />
+                                        <Setter Target="RootGrid.BorderBrush" Value="{StaticResource OutlineBrush}" />
                                     </VisualState.Setters>
                                 </VisualState>
                                 
                                 <VisualState x:Name="Pressed">
                                     <VisualState.Setters>
-                                        <Setter Target="RootGrid.BorderBrush" Value="{StaticResource MaterialOutlineBrush}" />
+                                        <Setter Target="RootGrid.BorderBrush" Value="{StaticResource OutlineBrush}" />
                                         <Setter Target="RootGrid.Opacity" Value="0.8" />
                                     </VisualState.Setters>
                                 </VisualState>
@@ -250,37 +250,37 @@
 
     <!-- Small Size Variants -->
     <Style x:Key="FilledButtonSmallStyle" TargetType="Button" BasedOn="{StaticResource FilledButtonStyle}">
-        <Setter Property="Padding" Value="{StaticResource MaterialButtonPaddingSmall}" />
-        <Setter Property="Height" Value="{StaticResource MaterialButtonHeightSmall}" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPaddingSmall}" />
+        <Setter Property="Height" Value="{StaticResource ButtonHeightSmall}" />
     </Style>
 
     <Style x:Key="OutlinedButtonSmallStyle" TargetType="Button" BasedOn="{StaticResource OutlinedButtonStyle}">
-        <Setter Property="Padding" Value="{StaticResource MaterialButtonPaddingSmall}" />
-        <Setter Property="Height" Value="{StaticResource MaterialButtonHeightSmall}" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPaddingSmall}" />
+        <Setter Property="Height" Value="{StaticResource ButtonHeightSmall}" />
     </Style>
 
     <Style x:Key="TextButtonSmallStyle" TargetType="Button" BasedOn="{StaticResource TextButtonStyle}">
-        <Setter Property="Padding" Value="{StaticResource MaterialButtonPaddingSmall}" />
-        <Setter Property="Height" Value="{StaticResource MaterialButtonHeightSmall}" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPaddingSmall}" />
+        <Setter Property="Height" Value="{StaticResource ButtonHeightSmall}" />
     </Style>
 
     <!-- Large Size Variants -->
     <Style x:Key="FilledButtonLargeStyle" TargetType="Button" BasedOn="{StaticResource FilledButtonStyle}">
-        <Setter Property="Padding" Value="{StaticResource MaterialButtonPaddingLarge}" />
-        <Setter Property="Height" Value="{StaticResource MaterialButtonHeightLarge}" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPaddingLarge}" />
+        <Setter Property="Height" Value="{StaticResource ButtonHeightLarge}" />
     </Style>
 
     <Style x:Key="OutlinedButtonLargeStyle" TargetType="Button" BasedOn="{StaticResource OutlinedButtonStyle}">
-        <Setter Property="Padding" Value="{StaticResource MaterialButtonPaddingLarge}" />
-        <Setter Property="Height" Value="{StaticResource MaterialButtonHeightLarge}" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPaddingLarge}" />
+        <Setter Property="Height" Value="{StaticResource ButtonHeightLarge}" />
     </Style>
 
     <Style x:Key="TextButtonLargeStyle" TargetType="Button" BasedOn="{StaticResource TextButtonStyle}">
-        <Setter Property="Padding" Value="{StaticResource MaterialButtonPaddingLarge}" />
-        <Setter Property="Height" Value="{StaticResource MaterialButtonHeightLarge}" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPaddingLarge}" />
+        <Setter Property="Height" Value="{StaticResource ButtonHeightLarge}" />
     </Style>
 
-    <!-- Error/Danger Button Styles (Material naming with SDS error colors) -->
+    <!-- Error/Danger Button Styles (Material-compatible naming with SDS error colors) -->
     <Style x:Key="FilledErrorButtonStyle" TargetType="Button" BasedOn="{StaticResource FilledButtonStyle}">
         <Setter Property="Background" Value="{StaticResource SDSDangerPrimaryBrush}" />
         <Setter Property="Foreground" Value="White" />
@@ -337,8 +337,8 @@
     </Style>
 
     <Style x:Key="FilledErrorButtonSmallStyle" TargetType="Button" BasedOn="{StaticResource FilledErrorButtonStyle}">
-        <Setter Property="Padding" Value="{StaticResource MaterialButtonPaddingSmall}" />
-        <Setter Property="Height" Value="{StaticResource MaterialButtonHeightSmall}" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPaddingSmall}" />
+        <Setter Property="Height" Value="{StaticResource ButtonHeightSmall}" />
     </Style>
 
     <Style x:Key="TextErrorButtonStyle" TargetType="Button" BasedOn="{StaticResource TextButtonStyle}">
@@ -395,11 +395,103 @@
     </Style>
 
     <Style x:Key="TextErrorButtonSmallStyle" TargetType="Button" BasedOn="{StaticResource TextErrorButtonStyle}">
-        <Setter Property="Padding" Value="{StaticResource MaterialButtonPaddingSmall}" />
-        <Setter Property="Height" Value="{StaticResource MaterialButtonHeightSmall}" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPaddingSmall}" />
+        <Setter Property="Height" Value="{StaticResource ButtonHeightSmall}" />
     </Style>
 
-    <!-- Default Button Style - All buttons use Filled style by default (Material convention) -->
+    <!-- Light Pricing Card Button Style - #2C2C2C background/border, #F5F5F5 text -->
+    <Style x:Key="LightPricingCardButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource PrimaryBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryVariantLightBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonBorderThickness}" />
+        <Setter Property="CornerRadius" Value="{StaticResource ButtonCornerRadius}" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Height" Value="{StaticResource ButtonHeight}" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="UseSystemFocusVisuals" Value="True" />
+        <Setter Property="FocusVisualMargin" Value="-3" />
+        <Setter Property="Tag">
+            <Setter.Value>
+                <x:String>HoverBackground={StaticResource PrimaryBrush};HoverBorder={StaticResource PrimaryBrush}</x:String>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template" Value="{StaticResource SDSButtonTemplate}" />
+    </Style>
+
+    <!-- Branded/Dark Pricing Card Button Style - Light gray background (#E3E3E3), dark text (#1E1E1E), gray border (#767676) -->
+    <Style x:Key="BrandedPricingCardButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource OnPrimaryMediumBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryVariantDarkBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource OutlineVariantBrush}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonBorderThickness}" />
+        <Setter Property="CornerRadius" Value="{StaticResource ButtonCornerRadius}" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Height" Value="{StaticResource ButtonHeight}" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="UseSystemFocusVisuals" Value="True" />
+        <Setter Property="FocusVisualMargin" Value="-3" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid x:Name="RootGrid"
+                          Background="{TemplateBinding Background}"
+                          BorderBrush="{TemplateBinding BorderBrush}"
+                          BorderThickness="{TemplateBinding BorderThickness}"
+                          CornerRadius="{TemplateBinding CornerRadius}">
+                        
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                
+                                <VisualState x:Name="PointerOver">
+                                    <VisualState.Setters>
+                                        <Setter Target="RootGrid.Opacity" Value="0.9" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Target="RootGrid.Opacity" Value="0.8" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                
+                                <VisualState x:Name="Disabled">
+                                    <VisualState.Setters>
+                                        <Setter Target="RootGrid.Background" Value="#D9D9D9" />
+                                        <Setter Target="RootGrid.BorderBrush" Value="#B3B3B3" />
+                                        <Setter Target="ContentPresenter.Foreground" Value="#B3B3B3" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        
+                        <ContentPresenter x:Name="ContentPresenter"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          Padding="{TemplateBinding Padding}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          HorizontalContentAlignment="Center"
+                                          VerticalContentAlignment="Center"
+                                          AutomationProperties.AccessibilityView="Raw" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Default Button Style - All buttons use Filled style by default (Material-compatible convention) -->
     <Style TargetType="Button" BasedOn="{StaticResource FilledButtonStyle}" />
 
 </ResourceDictionary>

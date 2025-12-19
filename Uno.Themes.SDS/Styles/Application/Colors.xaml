@@ -2,11 +2,10 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <!-- 
-    SDS Color Resources using Uno.Themes.Material-compatible naming
+    SDS Color Resources using Material-compatible naming
     Based on Figma Simple Design System
     
-    These colors use the EXACT same key names as Uno.Themes.Material,
-    making this a drop-in replacement.
+    These colors use the same key names as Uno.Themes.Material for drop-in compatibility.
     
     Reference: https://platform.uno/docs/articles/external/uno.themes/doc/material-colors.html
     -->
