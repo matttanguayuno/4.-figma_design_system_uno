@@ -48,6 +48,10 @@
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Controls/StatsCard.xaml" />
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Controls/TestimonialCard.xaml" />
         
+        <!-- Menu Components -->
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Controls/MenuItem.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Controls/Navigation.xaml" />
+        
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

@@ -21,14 +21,11 @@ public partial record HomeModel
             new ComponentCard("\uE8A1", "Buttons", "Primary, neutral, subtle button variants with medium (40px) and small (32px) sizes. Includes danger buttons and icon-only buttons.", new AsyncRelayCommand(GoToButtons)),
             new ComponentCard("\uE8D4", "Cards", "Basic card components with title, description, actions, and visual content support.", new AsyncRelayCommand(GoToCards)),
             new ComponentCard("\uE8A7", "Dialog", "Modal dialog components with card and sheet variants, including heading, body text, action buttons, and dismissible close icon.", new AsyncRelayCommand(GoToDialog)),
-            new ComponentCard("\uE70F", "Input", "Text input fields with default and disabled states, placeholder text, and optional labels/descriptions.", new AsyncRelayCommand(GoToInputFields)),
-            new ComponentCard("\uE7E8", "Radio", "Single-selection radio buttons with default and disabled states, including labels and descriptions.", new AsyncRelayCommand(GoToRadioFields)),
-            new ComponentCard("\uE721", "Search", "Dedicated search input field with search icon and clear functionality.", new AsyncRelayCommand(GoToSearch)),
-            new ComponentCard("\uE8F1", "Select", "Dropdown selection field with placeholder state and option selection support.", new AsyncRelayCommand(GoToSelectField)),
-            new ComponentCard("\uE8AB", "Switch", "Toggle switches with on/off states, default and disabled variants, including labels and descriptions.", new AsyncRelayCommand(GoToSwitchFields)),
+            new ComponentCard("\uE70F", "Input", "Input field components including text inputs, checkboxes, radio buttons, select fields, search, sliders, textareas, and switches.", new AsyncRelayCommand(GoToInputFields)),
+            new ComponentCard("\uE734", "Menu", "Menu components with headers, items, separators, headings, and keyboard shortcuts for contextual navigation.", new AsyncRelayCommand(GoToMenu)),
+            new ComponentCard("\uE700", "Navigation", "Navigation button and pill components with column/row layouts, default, hover, and active states for app navigation.", new AsyncRelayCommand(GoToNavigation)),
             new ComponentCard("\uE8EC", "Tag", "Label tags for categorization with close/dismiss functionality.", new AsyncRelayCommand(GoToTag)),
             new ComponentCard("\uE8A6", "Tag Toggle", "Selectable tags that toggle between selected and unselected states for filtering or multi-selection.", new AsyncRelayCommand(GoToTagToggle)),
-            new ComponentCard("\uE70E", "Textarea", "Multi-line text input field with default and disabled states, placeholder text, and optional labels/descriptions.", new AsyncRelayCommand(GoToTextareaField)),
         };
     }
 
@@ -38,11 +35,8 @@ public partial record HomeModel
     public async Task GoToCards() { _frame.Navigate(typeof(CardsPage)); await Task.CompletedTask; }
     public async Task GoToDialog() { _frame.Navigate(typeof(DialogPage)); await Task.CompletedTask; }
     public async Task GoToInputFields() { _frame.Navigate(typeof(InputFieldsPage)); await Task.CompletedTask; }
-    public async Task GoToRadioFields() { _frame.Navigate(typeof(RadioFieldPage)); await Task.CompletedTask; }
-    public async Task GoToSearch() { _frame.Navigate(typeof(SearchPage)); await Task.CompletedTask; }
-    public async Task GoToSelectField() { _frame.Navigate(typeof(SelectFieldPage)); await Task.CompletedTask; }
-    public async Task GoToSwitchFields() { _frame.Navigate(typeof(SwitchFieldPage)); await Task.CompletedTask; }
+    public async Task GoToMenu() { _frame.Navigate(typeof(MenuPage)); await Task.CompletedTask; }
+    public async Task GoToNavigation() { _frame.Navigate(typeof(NavigationPage)); await Task.CompletedTask; }
     public async Task GoToTag() { _frame.Navigate(typeof(TagPage)); await Task.CompletedTask; }
     public async Task GoToTagToggle() { _frame.Navigate(typeof(TagTogglePage)); await Task.CompletedTask; }
-    public async Task GoToTextareaField() { _frame.Navigate(typeof(TextareaFieldPage)); await Task.CompletedTask; }
 }

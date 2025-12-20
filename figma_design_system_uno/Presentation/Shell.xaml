@@ -34,7 +34,7 @@
           <Button Content="Home" 
                   Click="Navigate_Click"
                   Tag="Home"
-                  Style="{StaticResource OutlinedButtonStyle}"
+                  Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
                   HorizontalContentAlignment="Left" />
 
@@ -82,6 +82,20 @@
           <Button Content="Inputs" 
                   Click="Navigate_Click"
                   Tag="InputFields"
+                  Style="{StaticResource TextButtonStyle}"
+                  HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Left" />
+
+          <Button Content="Menu" 
+                  Click="Navigate_Click"
+                  Tag="Menu"
+                  Style="{StaticResource TextButtonStyle}"
+                  HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Left" />
+
+          <Button Content="Navigation" 
+                  Click="Navigate_Click"
+                  Tag="Navigation"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
                   HorizontalContentAlignment="Left" />

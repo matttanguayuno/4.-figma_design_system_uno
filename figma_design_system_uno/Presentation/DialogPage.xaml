@@ -45,6 +45,7 @@
       <!-- Section 1: Dialog Body -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
         <TextBlock Text="Dialog Body"
+                   FontWeight="Bold"
                    Style="{StaticResource HeadingTextBlockStyle}" />
 
         <!-- Matrix Layout with Row Labels -->
@@ -231,6 +232,7 @@
       <!-- Section 2: Dialog (with scrim/backdrop) -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
         <TextBlock Text="Dialog"
+                   FontWeight="Bold"
                    Style="{StaticResource HeadingTextBlockStyle}" />
 
         <!-- Dialog with Scrim Background -->
@@ -335,3 +337,4 @@
     </utu:AutoLayout>
   </ScrollViewer>
 </Page>
+

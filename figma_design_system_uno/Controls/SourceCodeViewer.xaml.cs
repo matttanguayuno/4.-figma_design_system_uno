@@ -130,12 +130,20 @@ public sealed partial class SourceCodeViewer : UserControl
 
     private void CopyPageXaml_Click(object sender, RoutedEventArgs e)
     {
-        CopyToClipboard(_pageXamlContent, PageXamlCopyStatus);
+        var statusTextBlock = this.FindName("PageXamlCopyStatus") as TextBlock;
+        if (statusTextBlock != null)
+        {
+            CopyToClipboard(_pageXamlContent, statusTextBlock);
+        }
     }
 
     private void CopyStyleXaml_Click(object sender, RoutedEventArgs e)
     {
-        CopyToClipboard(_styleXamlContent, StyleXamlCopyStatus);
+        var statusTextBlock = this.FindName("StyleXamlCopyStatus") as TextBlock;
+        if (statusTextBlock != null)
+        {
+            CopyToClipboard(_styleXamlContent, statusTextBlock);
+        }
     }
 
     private void CopyToClipboard(string content, TextBlock statusTextBlock)

@@ -1,0 +1,377 @@
+<Page x:Class="figma_design_system_uno.Presentation.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:figma_design_system_uno.Presentation"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+      Background="Transparent">
+
+  <ScrollViewer>
+    <utu:AutoLayout Orientation="Vertical"
+                    Padding="{StaticResource Spacing800}"
+                    Spacing="{StaticResource Space1200}">
+
+      <!-- Page Header -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <utu:NavigationBar Content="Menu Component"
+                           HorizontalContentAlignment="Left"
+                           VerticalAlignment="Bottom">
+          <utu:NavigationBar.MainCommand>
+            <AppBarButton Icon="Back" Click="OnBackClick" />
+          </utu:NavigationBar.MainCommand>
+          <utu:NavigationBar.ContentTemplate>
+            <DataTemplate>
+              <TextBlock Text="{Binding}"
+                         FontSize="48"
+                         FontWeight="Bold"
+                         VerticalAlignment="Bottom" />
+            </DataTemplate>
+          </utu:NavigationBar.ContentTemplate>
+        </utu:NavigationBar>
+      </utu:AutoLayout>
+
+      <!-- 1. Menu -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Menu"
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <!-- Full Menu Example -->
+        <Border Style="{StaticResource SDSMenuContainerStyle}" Width="301" HorizontalAlignment="Left">
+          <Border.Shadow>
+            <ThemeShadow />
+          </Border.Shadow>
+          
+          <utu:AutoLayout Orientation="Vertical" Spacing="0">
+            <!-- Menu Header -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="0"
+                            Padding="16,8,16,4">
+              <TextBlock Text="Heading" FontSize="14"
+                         Foreground="{StaticResource SDSMenuHeaderSecondaryBrush}"
+                         Style="{StaticResource BodyBaseTextBlockStyle}" />
+              <TextBlock Text="Heading" FontSize="16" FontWeight="SemiBold"
+                         Foreground="{StaticResource OnSurfaceBrush}"
+                         Style="{StaticResource BodyBaseTextBlockStyle}" />
+            </utu:AutoLayout>
+
+            <!-- Separator -->
+            <Rectangle Height="1" Fill="#d9d9d9" Margin="0,8" HorizontalAlignment="Stretch" />
+
+            <!-- Menu Section 1 -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="0">
+              <!-- Menu Item 1 -->
+              <Border Background="Transparent" CornerRadius="8" Padding="16,12">
+                <utu:AutoLayout Orientation="Horizontal" Spacing="12">
+                  <FontIcon Glyph="&#xE734;" FontSize="20" FontWeight="Black"
+                            Foreground="{StaticResource OnSurfaceBrush}"
+                            VerticalAlignment="Top" Margin="0,-28,0,0" />
+                  <utu:AutoLayout Orientation="Vertical" Spacing="4" utu:AutoLayout.PrimaryAlignment="Stretch">
+                    <Grid>
+                      <TextBlock Text="Menu Label" FontSize="16"
+                                 Foreground="{StaticResource OnSurfaceBrush}" HorizontalAlignment="Left"
+                                 Style="{StaticResource BodyBaseTextBlockStyle}" />
+                      <StackPanel Orientation="Horizontal" Spacing="2" HorizontalAlignment="Right">
+                        <FontIcon Glyph="&#xE74A;" FontSize="14" Foreground="{StaticResource OnSurfaceBrush}" />
+                        <TextBlock Text="A" FontSize="16" Foreground="{StaticResource OnSurfaceBrush}" />
+                      </StackPanel>
+                    </Grid>
+                    <TextBlock Text="Menu description." FontSize="14"
+                               Foreground="{StaticResource SDSMenuHeaderSecondaryBrush}" TextWrapping="Wrap"
+                               Style="{StaticResource BodyBaseTextBlockStyle}" />
+                  </utu:AutoLayout>
+                </utu:AutoLayout>
+              </Border>
+
+              <!-- Menu Item 2 -->
+              <Border Background="Transparent" CornerRadius="8" Padding="16,12">
+                <utu:AutoLayout Orientation="Horizontal" Spacing="12">
+                  <FontIcon Glyph="&#xE734;" FontSize="20" FontWeight="Black"
+                            Foreground="{StaticResource OnSurfaceBrush}"
+                            VerticalAlignment="Top" Margin="0,-28,0,0" />
+                  <utu:AutoLayout Orientation="Vertical" Spacing="4" utu:AutoLayout.PrimaryAlignment="Stretch">
+                    <Grid>
+                      <TextBlock Text="Menu Label" FontSize="16"
+                                 Foreground="{StaticResource OnSurfaceBrush}" HorizontalAlignment="Left"
+                                 Style="{StaticResource BodyBaseTextBlockStyle}" />
+                      <StackPanel Orientation="Horizontal" Spacing="2" HorizontalAlignment="Right">
+                        <FontIcon Glyph="&#xE74A;" FontSize="14" Foreground="{StaticResource OnSurfaceBrush}" />
+                        <TextBlock Text="A" FontSize="16" Foreground="{StaticResource OnSurfaceBrush}" />
+                      </StackPanel>
+                    </Grid>
+                    <TextBlock Text="Menu description." FontSize="14"
+                               Foreground="{StaticResource SDSMenuHeaderSecondaryBrush}" TextWrapping="Wrap"
+                               Style="{StaticResource BodyBaseTextBlockStyle}" />
+                  </utu:AutoLayout>
+                </utu:AutoLayout>
+              </Border>
+
+              <!-- Menu Item 3 -->
+              <Border Background="Transparent" CornerRadius="8" Padding="16,12">
+                <utu:AutoLayout Orientation="Horizontal" Spacing="12">
+                  <FontIcon Glyph="&#xE734;" FontSize="20" FontWeight="Black"
+                            Foreground="{StaticResource OnSurfaceBrush}"
+                            VerticalAlignment="Top" Margin="0,-28,0,0" />
+                  <utu:AutoLayout Orientation="Vertical" Spacing="4" utu:AutoLayout.PrimaryAlignment="Stretch">
+                    <Grid>
+                      <TextBlock Text="Menu Label" FontSize="16"
+                                 Foreground="{StaticResource OnSurfaceBrush}" HorizontalAlignment="Left"
+                                 Style="{StaticResource BodyBaseTextBlockStyle}" />
+                      <StackPanel Orientation="Horizontal" Spacing="2" HorizontalAlignment="Right">
+                        <FontIcon Glyph="&#xE74A;" FontSize="14" Foreground="{StaticResource OnSurfaceBrush}" />
+                        <TextBlock Text="A" FontSize="16" Foreground="{StaticResource OnSurfaceBrush}" />
+                      </StackPanel>
+                    </Grid>
+                    <TextBlock Text="Menu description." FontSize="14"
+                               Foreground="{StaticResource SDSMenuHeaderSecondaryBrush}" TextWrapping="Wrap"
+                               Style="{StaticResource BodyBaseTextBlockStyle}" />
+                  </utu:AutoLayout>
+                </utu:AutoLayout>
+              </Border>
+            </utu:AutoLayout>
+
+            <!-- Separator -->
+            <Rectangle Height="1" Fill="#d9d9d9" Margin="0,8" HorizontalAlignment="Stretch" />
+
+            <!-- Menu Section 2 -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="0">
+              <!-- Menu Item 4 -->
+              <Border Background="Transparent" CornerRadius="8" Padding="16,12">
+                <utu:AutoLayout Orientation="Horizontal" Spacing="12">
+                  <FontIcon Glyph="&#xE734;" FontSize="20" FontWeight="Black"
+                            Foreground="{StaticResource OnSurfaceBrush}"
+                            VerticalAlignment="Top" Margin="0,-28,0,0" />
+                  <utu:AutoLayout Orientation="Vertical" Spacing="4" utu:AutoLayout.PrimaryAlignment="Stretch">
+                    <Grid>
+                      <TextBlock Text="Menu Label" FontSize="16"
+                                 Foreground="{StaticResource OnSurfaceBrush}" HorizontalAlignment="Left"
+                                 Style="{StaticResource BodyBaseTextBlockStyle}" />
+                      <StackPanel Orientation="Horizontal" Spacing="2" HorizontalAlignment="Right">
+                        <FontIcon Glyph="&#xE74A;" FontSize="14" Foreground="{StaticResource OnSurfaceBrush}" />
+                        <TextBlock Text="A" FontSize="16" Foreground="{StaticResource OnSurfaceBrush}" />
+                      </StackPanel>
+                    </Grid>
+                    <TextBlock Text="Menu description." FontSize="14"
+                               Foreground="{StaticResource SDSMenuHeaderSecondaryBrush}" TextWrapping="Wrap"
+                               Style="{StaticResource BodyBaseTextBlockStyle}" />
+                  </utu:AutoLayout>
+                </utu:AutoLayout>
+              </Border>
+
+              <!-- Menu Item 5 -->
+              <Border Background="Transparent" CornerRadius="8" Padding="16,12">
+                <utu:AutoLayout Orientation="Horizontal" Spacing="12">
+                  <FontIcon Glyph="&#xE734;" FontSize="20" FontWeight="Black"
+                            Foreground="{StaticResource OnSurfaceBrush}"
+                            VerticalAlignment="Top" Margin="0,-28,0,0" />
+                  <utu:AutoLayout Orientation="Vertical" Spacing="4" utu:AutoLayout.PrimaryAlignment="Stretch">
+                    <Grid>
+                      <TextBlock Text="Menu Label" FontSize="16"
+                                 Foreground="{StaticResource OnSurfaceBrush}" HorizontalAlignment="Left"
+                                 Style="{StaticResource BodyBaseTextBlockStyle}" />
+                      <StackPanel Orientation="Horizontal" Spacing="2" HorizontalAlignment="Right">
+                        <FontIcon Glyph="&#xE74A;" FontSize="14" Foreground="{StaticResource OnSurfaceBrush}" />
+                        <TextBlock Text="A" FontSize="16" Foreground="{StaticResource OnSurfaceBrush}" />
+                      </StackPanel>
+                    </Grid>
+                    <TextBlock Text="Menu description." FontSize="14"
+                               Foreground="{StaticResource SDSMenuHeaderSecondaryBrush}" TextWrapping="Wrap"
+                               Style="{StaticResource BodyBaseTextBlockStyle}" />
+                  </utu:AutoLayout>
+                </utu:AutoLayout>
+              </Border>
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+        </Border>
+      </utu:AutoLayout>
+
+      <!-- 2. Menu Item -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Menu Item"
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <Grid ColumnSpacing="24" RowSpacing="24">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+          </Grid.ColumnDefinitions>
+
+          <!-- Row 1: Default -->
+          <Border Grid.Row="0" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1"
+                  CornerRadius="8"
+                  Padding="12,8"
+                  VerticalAlignment="Center">
+            <TextBlock Text="Default"
+                       FontSize="14"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                       Style="{StaticResource BodyStrongTextBlockStyle}" />
+          </Border>
+          <Border Grid.Row="0" Grid.Column="1" Background="Transparent"
+                  CornerRadius="8" Padding="16,12" Width="320" HorizontalAlignment="Left">
+            <utu:AutoLayout Orientation="Horizontal" Spacing="12">
+              <FontIcon Glyph="&#xE734;" FontSize="20" FontWeight="Bold"
+                        Foreground="{StaticResource OnSurfaceBrush}"
+                        VerticalAlignment="Top" Margin="0,-28,0,0" />
+              <utu:AutoLayout Orientation="Vertical" Spacing="4" utu:AutoLayout.PrimaryAlignment="Stretch">
+                <Grid Width="260">
+                  <TextBlock Text="Menu Label" FontSize="16"
+                             Foreground="{StaticResource OnSurfaceBrush}" HorizontalAlignment="Left"
+                             Style="{StaticResource BodyBaseTextBlockStyle}" />
+                  <StackPanel Orientation="Horizontal" Spacing="2" HorizontalAlignment="Right">
+                    <FontIcon Glyph="&#xE74A;" FontSize="14" Foreground="{StaticResource OnSurfaceBrush}" />
+                    <TextBlock Text="A" FontSize="16" Foreground="{StaticResource OnSurfaceBrush}" />
+                  </StackPanel>
+                </Grid>
+                <TextBlock Text="Menu description." FontSize="14"
+                           Foreground="{StaticResource SDSMenuHeaderSecondaryBrush}" TextWrapping="Wrap"
+                           Style="{StaticResource BodyBaseTextBlockStyle}" />
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+          </Border>
+
+          <!-- Row 2: Hover -->
+          <Border Grid.Row="1" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1"
+                  CornerRadius="8"
+                  Padding="12,8"
+                  VerticalAlignment="Center">
+            <TextBlock Text="Hover"
+                       FontSize="14"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                       Style="{StaticResource BodyStrongTextBlockStyle}" />
+          </Border>
+          <Border Grid.Row="1" Grid.Column="1" Background="{StaticResource SDSMenuItemHoverBackgroundBrush}"
+                  CornerRadius="8" Padding="16,12" Width="320" HorizontalAlignment="Left">
+            <utu:AutoLayout Orientation="Horizontal" Spacing="12">
+              <FontIcon Glyph="&#xE734;" FontSize="20" FontWeight="Bold"
+                        Foreground="{StaticResource SDSMenuItemHoverTextBrush}"
+                        VerticalAlignment="Top" Margin="0,-28,0,0" />
+              <utu:AutoLayout Orientation="Vertical" Spacing="4" utu:AutoLayout.PrimaryAlignment="Stretch">
+                <Grid Width="260">
+                  <TextBlock Text="Menu Label" FontSize="16"
+                             Foreground="{StaticResource SDSMenuItemHoverTextBrush}" HorizontalAlignment="Left"
+                             Style="{StaticResource BodyBaseTextBlockStyle}" />
+                  <StackPanel Orientation="Horizontal" Spacing="2" HorizontalAlignment="Right">
+                    <FontIcon Glyph="&#xE74A;" FontSize="14" Foreground="{StaticResource SDSMenuItemHoverTextBrush}" />
+                    <TextBlock Text="A" FontSize="16" Foreground="{StaticResource SDSMenuItemHoverTextBrush}" />
+                  </StackPanel>
+                </Grid>
+                <TextBlock Text="Menu description." FontSize="14"
+                           Foreground="{StaticResource SDSMenuItemHoverTextBrush}" TextWrapping="Wrap"
+                           Style="{StaticResource BodyBaseTextBlockStyle}" />
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+          </Border>
+
+          <!-- Row 3: Disabled -->
+          <Border Grid.Row="2" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1"
+                  CornerRadius="8"
+                  Padding="12,8"
+                  VerticalAlignment="Center">
+            <TextBlock Text="Disabled"
+                       FontSize="14"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                       Style="{StaticResource BodyStrongTextBlockStyle}" />
+          </Border>
+          <Border Grid.Row="2" Grid.Column="1" Background="Transparent"
+                  CornerRadius="8" Padding="16,12" Width="320" HorizontalAlignment="Left">
+            <utu:AutoLayout Orientation="Horizontal" Spacing="12">
+              <FontIcon Glyph="&#xE734;" FontSize="20" FontWeight="Bold"
+                        Foreground="{StaticResource SDSMenuItemDisabledBrush}"
+                        VerticalAlignment="Top" Margin="0,-28,0,0" />
+              <utu:AutoLayout Orientation="Vertical" Spacing="4" utu:AutoLayout.PrimaryAlignment="Stretch">
+                <Grid Width="260">
+                  <TextBlock Text="Menu Label" FontSize="16"
+                             Foreground="{StaticResource SDSMenuItemDisabledBrush}" HorizontalAlignment="Left"
+                             Style="{StaticResource BodyBaseTextBlockStyle}" />
+                  <StackPanel Orientation="Horizontal" Spacing="2" HorizontalAlignment="Right">
+                    <FontIcon Glyph="&#xE74A;" FontSize="14" Foreground="{StaticResource SDSMenuItemDisabledBrush}" />
+                    <TextBlock Text="A" FontSize="16" Foreground="{StaticResource SDSMenuItemDisabledBrush}" />
+                  </StackPanel>
+                </Grid>
+                <TextBlock Text="Menu description." FontSize="14"
+                           Foreground="{StaticResource SDSMenuItemDisabledBrush}" TextWrapping="Wrap"
+                           Style="{StaticResource BodyBaseTextBlockStyle}" />
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+          </Border>
+        </Grid>
+      </utu:AutoLayout>
+
+      <!-- 3. Menu Header -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Menu Header"
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <utu:AutoLayout Orientation="Vertical" Spacing="0"
+                        Padding="16,8,16,4" Width="256">
+          <TextBlock Text="Heading" FontSize="14"
+                     Foreground="{StaticResource SDSMenuHeaderSecondaryBrush}"
+                     Style="{StaticResource BodyBaseTextBlockStyle}" />
+          <TextBlock Text="Heading" FontSize="16" FontWeight="SemiBold"
+                     Foreground="{StaticResource OnSurfaceBrush}"
+                     Style="{StaticResource BodyBaseTextBlockStyle}" />
+        </utu:AutoLayout>
+      </utu:AutoLayout>
+
+      <!-- 4. Menu Heading -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Menu Heading"
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <utu:AutoLayout Orientation="Vertical" Spacing="0"
+                        Padding="16,8,16,4" Width="284">
+          <TextBlock Text="Heading" FontSize="16" FontWeight="SemiBold"
+                     Foreground="{StaticResource SDSMenuHeaderSecondaryBrush}"
+                     Style="{StaticResource BodyBaseTextBlockStyle}" />
+        </utu:AutoLayout>
+      </utu:AutoLayout>
+
+      <!-- 5. Menu Separator -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Menu Separator"
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <Rectangle Height="1" 
+                   Width="284"
+                   Fill="{StaticResource SDSMenuSeparatorBrush}"
+                   HorizontalAlignment="Left" />
+      </utu:AutoLayout>
+
+      <!-- 6. Menu Shortcut -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
+        <TextBlock Text="Menu Shortcut"
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <StackPanel Orientation="Horizontal" Spacing="2">
+          <FontIcon Glyph="&#xE74A;" FontSize="14" Foreground="{StaticResource OnSurfaceBrush}" />
+          <TextBlock Text="A" FontSize="16" Foreground="{StaticResource OnSurfaceBrush}" />
+        </StackPanel>
+      </utu:AutoLayout>
+
+      <!-- Source Code Viewer -->
+      <controls:SourceCodeViewer 
+          PageXamlPath="ms-appx:///Presentation/MenuPage.xaml"
+          StyleXamlPath="" />
+
+    </utu:AutoLayout>
+  </ScrollViewer>
+
+</Page>

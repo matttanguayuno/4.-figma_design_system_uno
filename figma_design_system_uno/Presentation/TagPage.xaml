@@ -37,7 +37,7 @@
       </utu:NavigationBar>
 
       <!-- Tag Grid Section -->
-      <TextBlock Text="All States Comparison" Style="{StaticResource HeadingTextBlockStyle}" />
+      <TextBlock Text="All States Comparison" FontWeight="Bold" Style="{StaticResource HeadingTextBlockStyle}" />
       <Border Background="{StaticResource DefaultSecondaryBackgroundBrush}"
               Padding="{StaticResource Spacing600}"
               CornerRadius="{StaticResource Radius200}">
@@ -102,7 +102,7 @@
 
       <!-- Uno.Toolkit.UI Chip Comparison Section -->
       <utu:AutoLayout Orientation="Vertical" Spacing="24" Margin="0,48,0,0">
-        <TextBlock Text="Uno.Toolkit.UI Chip Comparison" Style="{StaticResource HeadingTextBlockStyle}" />
+        <TextBlock Text="Uno.Toolkit.UI Chip Comparison" FontWeight="Bold" Style="{StaticResource HeadingTextBlockStyle}" />
         <Border Background="{StaticResource DefaultSecondaryBackgroundBrush}"
                 Padding="{StaticResource Spacing600}"
                 CornerRadius="{StaticResource Radius200}">

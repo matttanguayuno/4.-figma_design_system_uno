@@ -72,5 +72,60 @@
     <Color x:Key="SDSDangerPrimaryHoverColor">#7a0906</Color>
     <Color x:Key="SDSDangerSubtleTextColor">#900b09</Color>
     <Color x:Key="SDSDangerSubtleHoverBackgroundColor">#ffe6e5</Color>
+    
+    <!-- Menu & Component Colors (from Figma SDS) -->
+    <Color x:Key="SDSMenuBackgroundColor">#ffffff</Color>
+    <Color x:Key="SDSMenuBorderColor">#d9d9d9</Color>
+    <Color x:Key="SDSMenuItemHoverBackgroundColor">#2c2c2c</Color>
+    <Color x:Key="SDSMenuItemHoverTextColor">#f5f5f5</Color>
+    <Color x:Key="SDSMenuItemDisabledColor">#b3b3b3</Color>
+    <Color x:Key="SDSMenuHeaderSecondaryColor">#757575</Color>
+    <Color x:Key="SDSMenuSeparatorColor">#d9d9d9</Color>
+    
+    <!-- Slider Colors -->
+    <Color x:Key="SDSSliderTrackColor">#e6e6e6</Color>
+    <Color x:Key="SDSSliderFillColor">#2c2c2c</Color>
+    <Color x:Key="SDSSliderHandleColor">#1e1e1e</Color>
+    <Color x:Key="SDSSliderDisabledTrackColor">#e6e6e6</Color>
+    <Color x:Key="SDSSliderDisabledFillColor">#d9d9d9</Color>
+    <Color x:Key="SDSSliderDisabledHandleColor">#b3b3b3</Color>
+    
+    <!-- Input Field Colors -->
+    <Color x:Key="SDSInputBackgroundColor">#ffffff</Color>
+    <Color x:Key="SDSInputBorderColor">#d9d9d9</Color>
+    <Color x:Key="SDSInputDisabledBackgroundColor">#d9d9d9</Color>
+    <Color x:Key="SDSInputDisabledBorderColor">#b2b2b2</Color>
+    <Color x:Key="SDSInputDisabledTextColor">#b3b3b3</Color>
+    
+    <!-- RadioButton Colors -->
+    <Color x:Key="SDSRadioOuterRingDefaultColor">#e6e6e6</Color>
+    <Color x:Key="SDSRadioInnerDotColor">#000000</Color>
+    <Color x:Key="SDSRadioOuterRingStrokeColor">#000000</Color>
+    <Color x:Key="SDSRadioUncheckedOuterRingColor">#737373</Color>
+    <Color x:Key="SDSRadioDisabledOuterRingColor">#d9d9d9</Color>
+    <Color x:Key="SDSRadioDisabledStrokeColor">#b3b3b3</Color>
+    <Color x:Key="SDSRadioDisabledInnerDotColor">#b3b3b3</Color>
+    
+    <!-- Card Colors -->
+    <Color x:Key="SDSCardBorderColor">#dddddd</Color>
+    <Color x:Key="SDSCardBackgroundLightColor">#f5f5f5</Color>
+    
+    <!-- Dialog Colors -->
+    <Color x:Key="SDSDialogBorderColor">#d9d9d9</Color>
+    <Color x:Key="SDSDialogScrimColor">#CCffffff</Color>
+    <Color x:Key="SDSSecondaryButtonBackgroundColor">#e3e3e3</Color>
+    <Color x:Key="SDSSecondaryButtonBorderColor">#767676</Color>
+
+  <!-- Matrix Identifier Colors -->
+  <Color x:Key="SDSMatrixIdentifierTextColor">#303030</Color>
+  <Color x:Key="SDSMatrixIdentifierBackgroundColor">#CDCDCD</Color>
+  <Color x:Key="SDSMatrixIdentifierBorderColor">#B2B2B2</Color>
+
+  <!-- Navigation Colors -->
+  <Color x:Key="SDSNavSecondaryTextColor">#757575</Color>
+  <Color x:Key="SDSNavActiveTextColor">#2c2c2c</Color>
+  <Color x:Key="SDSNavHoverBackgroundColor">#f5f5f5</Color>
+  <Color x:Key="SDSNavPillActiveBackgroundColor">#f5f5f5</Color>
+  <Color x:Key="SDSNavPillActiveTextColor">#1e1e1e</Color>
 
 </ResourceDictionary>

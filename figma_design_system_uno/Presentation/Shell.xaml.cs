@@ -14,13 +14,9 @@ public sealed partial class Shell : UserControl, IContentControlProvider
         { "Cards", typeof(CardsPage) },
         { "Dialog", typeof(DialogPage) },
         { "InputFields", typeof(InputFieldsPage) },
-        { "RadioFields", typeof(RadioFieldPage) },
-        { "Search", typeof(SearchPage) },
-        { "SelectField", typeof(SelectFieldPage) },
-        { "SwitchFields", typeof(SwitchFieldPage) },
+        { "Menu", typeof(MenuPage) },
         { "Tag", typeof(TagPage) },
-        { "TagToggle", typeof(TagTogglePage) },
-        { "TextareaField", typeof(TextareaFieldPage) }
+        { "TagToggle", typeof(TagTogglePage) }
     };
 
     private string _currentPage = "Home";
@@ -31,8 +27,7 @@ public sealed partial class Shell : UserControl, IContentControlProvider
         this.InitializeComponent();
         this.Loaded += Shell_Loaded;
         
-        // Enable browser back button integration
-        ContentFrame.Navigated += ContentFrame_Navigated;
+        // Enable browser back button integration will be set up in Shell_Loaded
         
         // Enable browser navigation integration
         SystemNavigationManager.GetForCurrentView().BackRequested += Shell_BackRequested;
@@ -72,6 +67,9 @@ public sealed partial class Shell : UserControl, IContentControlProvider
 
     private void Shell_Loaded(object sender, RoutedEventArgs e)
     {
+        // Set up navigation events
+        ContentFrame.Navigated += ContentFrame_Navigated;
+        
         // Navigate to Home page by default
         ContentFrame.Navigate(typeof(HomePage));
         
@@ -106,13 +104,16 @@ public sealed partial class Shell : UserControl, IContentControlProvider
     {
         _currentPage = currentPageTag;
         
+        var selectedStyle = (Style)Application.Current.Resources["OutlinedButtonStyle"];
+        var unselectedStyle = (Style)Application.Current.Resources["TextButtonStyle"];
+        
         // Find all navigation buttons and update their visual state
         var buttons = FindNavigationButtons(this);
         foreach (var button in buttons)
         {
             if (button.Tag is string tag)
             {
-                button.FontWeight = tag == _currentPage ? Microsoft.UI.Text.FontWeights.SemiBold : Microsoft.UI.Text.FontWeights.Normal;
+                button.Style = tag == _currentPage ? selectedStyle : unselectedStyle;
             }
         }
     }

@@ -73,7 +73,60 @@
     <SolidColorBrush x:Key="SDSDangerPrimaryHoverBrush" Color="{StaticResource SDSDangerPrimaryHoverColor}" />
     <SolidColorBrush x:Key="SDSDangerSubtleTextBrush" Color="{StaticResource SDSDangerSubtleTextColor}" />
     <SolidColorBrush x:Key="SDSDangerSubtleHoverBackgroundBrush" Color="{StaticResource SDSDangerSubtleHoverBackgroundColor}" />
+    
+    <!-- Menu & Component Brushes -->
+    <SolidColorBrush x:Key="SDSMenuBackgroundBrush" Color="{StaticResource SDSMenuBackgroundColor}" />
+    <SolidColorBrush x:Key="SDSMenuBorderBrush" Color="{StaticResource SDSMenuBorderColor}" />
+    <SolidColorBrush x:Key="SDSMenuItemHoverBackgroundBrush" Color="{StaticResource SDSMenuItemHoverBackgroundColor}" />
+    <SolidColorBrush x:Key="SDSMenuItemHoverTextBrush" Color="{StaticResource SDSMenuItemHoverTextColor}" />
+    <SolidColorBrush x:Key="SDSMenuItemDisabledBrush" Color="{StaticResource SDSMenuItemDisabledColor}" />
+    <SolidColorBrush x:Key="SDSMenuHeaderSecondaryBrush" Color="{StaticResource SDSMenuHeaderSecondaryColor}" />
+    <SolidColorBrush x:Key="SDSMenuSeparatorBrush" Color="{StaticResource SDSMenuSeparatorColor}" />
+    
+    <!-- Slider Brushes -->
+    <SolidColorBrush x:Key="SDSSliderTrackBrush" Color="{StaticResource SDSSliderTrackColor}" />
+    <SolidColorBrush x:Key="SDSSliderFillBrush" Color="{StaticResource SDSSliderFillColor}" />
+    <SolidColorBrush x:Key="SDSSliderHandleBrush" Color="{StaticResource SDSSliderHandleColor}" />
+    <SolidColorBrush x:Key="SDSSliderDisabledTrackBrush" Color="{StaticResource SDSSliderDisabledTrackColor}" />
+    <SolidColorBrush x:Key="SDSSliderDisabledFillBrush" Color="{StaticResource SDSSliderDisabledFillColor}" />
+    <SolidColorBrush x:Key="SDSSliderDisabledHandleBrush" Color="{StaticResource SDSSliderDisabledHandleColor}" />
+    
+    <!-- Input Field Brushes -->
+    <SolidColorBrush x:Key="SDSInputBackgroundBrush" Color="{StaticResource SDSInputBackgroundColor}" />
+    <SolidColorBrush x:Key="SDSInputBorderBrush" Color="{StaticResource SDSInputBorderColor}" />
+    <SolidColorBrush x:Key="SDSInputDisabledBackgroundBrush" Color="{StaticResource SDSInputDisabledBackgroundColor}" />
+    <SolidColorBrush x:Key="SDSInputDisabledBorderBrush" Color="{StaticResource SDSInputDisabledBorderColor}" />
+    <SolidColorBrush x:Key="SDSInputDisabledTextBrush" Color="{StaticResource SDSInputDisabledTextColor}" />
+    
+    <!-- RadioButton Brushes -->
+    <SolidColorBrush x:Key="SDSRadioOuterRingDefaultBrush" Color="{StaticResource SDSRadioOuterRingDefaultColor}" />
+    <SolidColorBrush x:Key="SDSRadioInnerDotBrush" Color="{StaticResource SDSRadioInnerDotColor}" />
+    <SolidColorBrush x:Key="SDSRadioOuterRingStrokeBrush" Color="{StaticResource SDSRadioOuterRingStrokeColor}" />
+    <SolidColorBrush x:Key="SDSRadioUncheckedOuterRingBrush" Color="{StaticResource SDSRadioUncheckedOuterRingColor}" />
+    <SolidColorBrush x:Key="SDSRadioDisabledOuterRingBrush" Color="{StaticResource SDSRadioDisabledOuterRingColor}" />
+    <SolidColorBrush x:Key="SDSRadioDisabledStrokeBrush" Color="{StaticResource SDSRadioDisabledStrokeColor}" />
+    <SolidColorBrush x:Key="SDSRadioDisabledInnerDotBrush" Color="{StaticResource SDSRadioDisabledInnerDotColor}" />
+    
+    <!-- Card Brushes -->
+    <SolidColorBrush x:Key="SDSCardBorderBrush" Color="{StaticResource SDSCardBorderColor}" />
+    <SolidColorBrush x:Key="SDSCardBackgroundLightBrush" Color="{StaticResource SDSCardBackgroundLightColor}" />
+    
+    <!-- Dialog Brushes -->
+    <SolidColorBrush x:Key="SDSDialogBorderBrush" Color="{StaticResource SDSDialogBorderColor}" />
+    <SolidColorBrush x:Key="SDSDialogScrimBrush" Color="{StaticResource SDSDialogScrimColor}" />
+    <SolidColorBrush x:Key="SDSSecondaryButtonBackgroundBrush" Color="{StaticResource SDSSecondaryButtonBackgroundColor}" />
+    <SolidColorBrush x:Key="SDSSecondaryButtonBorderBrush" Color="{StaticResource SDSSecondaryButtonBorderColor}" />
+  <!-- Matrix Identifier Brushes -->
+  <SolidColorBrush x:Key="SDSMatrixIdentifierTextBrush" Color="{StaticResource SDSMatrixIdentifierTextColor}" />
+  <SolidColorBrush x:Key="SDSMatrixIdentifierBackgroundBrush" Color="{StaticResource SDSMatrixIdentifierBackgroundColor}" />
+  <SolidColorBrush x:Key="SDSMatrixIdentifierBorderBrush" Color="{StaticResource SDSMatrixIdentifierBorderColor}" />
 
+  <!-- Navigation Brushes -->
+  <SolidColorBrush x:Key="SDSNavSecondaryTextBrush" Color="{StaticResource SDSNavSecondaryTextColor}" />
+  <SolidColorBrush x:Key="SDSNavActiveTextBrush" Color="{StaticResource SDSNavActiveTextColor}" />
+  <SolidColorBrush x:Key="SDSNavHoverBackgroundBrush" Color="{StaticResource SDSNavHoverBackgroundColor}" />
+  <SolidColorBrush x:Key="SDSNavPillActiveBackgroundBrush" Color="{StaticResource SDSNavPillActiveBackgroundColor}" />
+  <SolidColorBrush x:Key="SDSNavPillActiveTextBrush" Color="{StaticResource SDSNavPillActiveTextColor}" />
     <!-- Convenience Aliases (backward compatibility / common usage) -->
     <SolidColorBrush x:Key="DefaultBackgroundBrush" Color="{StaticResource BackgroundColor}" />
     <SolidColorBrush x:Key="ContentBackgroundBrush" Color="{StaticResource BackgroundColor}" />

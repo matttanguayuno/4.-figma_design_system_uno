@@ -55,10 +55,10 @@
                       HorizontalAlignment="Stretch"
                       Translation="0,0,16">
                 <Border.BorderBrush>
-                  <SolidColorBrush Color="#DDDDDD" />
+                  <SolidColorBrush Color="{StaticResource SDSCardBorderColor}" />
                 </Border.BorderBrush>
                 <Border.Background>
-                  <SolidColorBrush Color="#F5F5F5" />
+                  <SolidColorBrush Color="{StaticResource SDSCardBackgroundLightColor}" />
                 </Border.Background>
                 <Border.Shadow>
                   <ThemeShadow />
@@ -91,8 +91,8 @@
 
                   <!-- Navigation Button -->
                   <Button Content="View"
-                          Background="#2c2c2c"
-                          Foreground="White"
+                          Background="{StaticResource PrimaryBrush}"
+                          Foreground="{StaticResource OnPrimaryBrush}"
                           BorderThickness="0"
                           CornerRadius="4"
                           Padding="16,8"
@@ -112,7 +112,7 @@
                               <VisualState x:Name="Normal" />
                               <VisualState x:Name="PointerOver">
                                 <VisualState.Setters>
-                                  <Setter Target="RootGrid.Background" Value="#1e1e1e" />
+                                  <Setter Target="RootGrid.Background" Value="{StaticResource PrimaryVariantDarkBrush}" />
                                 </VisualState.Setters>
                               </VisualState>
                               <VisualState x:Name="Pressed">
@@ -143,3 +143,4 @@
   </ScrollViewer>
 
 </Page>
+

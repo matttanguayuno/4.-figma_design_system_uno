@@ -31,6 +31,7 @@
       <!-- Accordion Item Section -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
         <TextBlock Text="Accordion Item"
+                   FontWeight="Bold"
                    Style="{StaticResource HeadingTextBlockStyle}" />
 
         <!-- Matrix Layout with Row Labels -->
@@ -94,6 +95,7 @@
       <!-- Accordion Section -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
         <TextBlock Text="Accordion"
+                   FontWeight="Bold"
                    Style="{StaticResource HeadingTextBlockStyle}" />
 
         <!-- Accordion Items -->
@@ -198,3 +200,4 @@
   </ScrollViewer>
 
 </Page>
+

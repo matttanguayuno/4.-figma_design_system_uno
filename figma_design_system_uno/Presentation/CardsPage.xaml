@@ -39,6 +39,7 @@
       <!-- Card Section - All 8 Variants -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
         <TextBlock Text="Card"
+                   FontWeight="Bold"
                    Style="{StaticResource HeadingTextBlockStyle}" />
 
         <!-- Horizontal Section -->
@@ -368,6 +369,7 @@
       <!-- Pricing Card Section -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
         <TextBlock Text="Pricing Card"
+                   FontWeight="Bold"
                    Style="{StaticResource HeadingTextBlockStyle}" />
 
         <!-- 2x2 Grid -->
@@ -423,6 +425,7 @@
       <!-- Product Info Card Section -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
         <TextBlock Text="Product Info Card"
+                   FontWeight="Bold"
                    Style="{StaticResource HeadingTextBlockStyle}" />
 
         <!-- Product Info Card -->
@@ -434,6 +437,7 @@
       <!-- Review Card Section -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
         <TextBlock Text="Review Card"
+                   FontWeight="Bold"
                    Style="{StaticResource HeadingTextBlockStyle}" />
 
         <!-- Review Card -->
@@ -448,6 +452,7 @@
       <!-- Stats Card Section -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
         <TextBlock Text="Stats Card"
+                   FontWeight="Bold"
                    Style="{StaticResource HeadingTextBlockStyle}" />
 
         <!-- Stats Card -->
@@ -459,6 +464,7 @@
       <!-- Testimonial Card Section -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
         <TextBlock Text="Testimonial Card"
+                   FontWeight="Bold"
                    Style="{StaticResource HeadingTextBlockStyle}" />
 
         <!-- Testimonial Card -->
@@ -479,6 +485,7 @@
   </ScrollViewer>
 
 </Page>
+
 
 
 

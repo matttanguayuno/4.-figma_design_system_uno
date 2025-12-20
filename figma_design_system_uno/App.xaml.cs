@@ -111,13 +111,9 @@ public partial class App : Application
             new ViewMap<CardsPage, CardsModel>(),
             new ViewMap<DialogPage, DialogModel>(),
             new ViewMap<InputFieldsPage, InputFieldsModel>(),
-            new ViewMap<RadioFieldPage, RadioFieldModel>(),
-            new ViewMap<SearchPage, SearchModel>(),
-            new ViewMap<SelectFieldPage, SelectFieldModel>(),
-            new ViewMap<SwitchFieldPage, SwitchFieldModel>(),
+            new ViewMap<MenuPage, MenuModel>(),
             new ViewMap<TagPage, TagModel>(),
-            new ViewMap<TagTogglePage, TagToggleModel>(),
-            new ViewMap<TextareaFieldPage, TextareaFieldModel>()
+            new ViewMap<TagTogglePage, TagToggleModel>()
         );
 
         routes.Register(
@@ -131,13 +127,9 @@ public partial class App : Application
                     new ("Cards", View: views.FindByViewModel<CardsModel>()),
                     new ("Dialog", View: views.FindByViewModel<DialogModel>()),
                     new ("InputFields", View: views.FindByViewModel<InputFieldsModel>()),
-                    new ("RadioFields", View: views.FindByViewModel<RadioFieldModel>()),
-                    new ("Search", View: views.FindByViewModel<SearchModel>()),
-                    new ("SelectField", View: views.FindByViewModel<SelectFieldModel>()),
-                    new ("SwitchFields", View: views.FindByViewModel<SwitchFieldModel>()),
+                    new ("Menu", View: views.FindByViewModel<MenuModel>()),
                     new ("Tag", View: views.FindByViewModel<TagModel>()),
-                    new ("TagToggle", View: views.FindByViewModel<TagToggleModel>()),
-                    new ("TextareaField", View: views.FindByViewModel<TextareaFieldModel>())
+                    new ("TagToggle", View: views.FindByViewModel<TagToggleModel>())
                 ]
             )
         );

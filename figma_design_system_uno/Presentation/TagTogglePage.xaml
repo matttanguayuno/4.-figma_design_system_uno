@@ -33,7 +33,7 @@
             </utu:NavigationBar>
 
             <!-- Tag Toggle States -->
-            <TextBlock Text="States" Style="{StaticResource HeadingTextBlockStyle}" />
+            <TextBlock Text="States" FontWeight="Bold" Style="{StaticResource HeadingTextBlockStyle}" />
             <utu:AutoLayout Orientation="Vertical" Spacing="16">
                 <!-- Active Row -->
                 <utu:AutoLayout Orientation="Horizontal" Spacing="16" VerticalAlignment="Center">

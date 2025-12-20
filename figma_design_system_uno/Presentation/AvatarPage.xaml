@@ -31,6 +31,7 @@
       <!-- LEVEL 1: Avatar Section -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
         <TextBlock Text="Avatar"
+                   FontWeight="Bold"
                    Style="{StaticResource HeadingTextBlockStyle}" />
 
         <!-- Matrix Layout with Row/Column Labels -->
@@ -129,7 +130,7 @@
       <!-- LEVEL 1: Avatar Group Section -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
         <TextBlock Text="Avatar Group"
-                   Style="{StaticResource HeadingTextBlockStyle}" />
+Style="{StaticResource HeadingTextBlockStyle}" />
 
         <!-- Avatar Group Variants -->
         <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
@@ -207,3 +208,4 @@
     </utu:AutoLayout>
   </ScrollViewer>
 </Page>
+
