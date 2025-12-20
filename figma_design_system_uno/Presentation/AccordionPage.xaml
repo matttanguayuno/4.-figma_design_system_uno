@@ -46,8 +46,15 @@
           </Grid.RowDefinitions>
 
           <!-- Row 1: Closed -->
-          <TextBlock Grid.Row="0" Grid.Column="0" Text="Closed" 
-                     FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,16,0"/>
+          <Border Grid.Row="0" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Center" Margin="0,0,16,0">
+            <TextBlock Text="Closed" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
           <Border Grid.Row="0" Grid.Column="1"
                   Background="{StaticResource AccordionCollapsedBackgroundBrush}"
                   BorderBrush="{StaticResource AccordionBorderBrush}"
@@ -65,8 +72,15 @@
           </Border>
 
           <!-- Row 2: Open -->
-          <TextBlock Grid.Row="1" Grid.Column="0" Text="Open" 
-                     FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,16,0"/>
+          <Border Grid.Row="1" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Center" Margin="0,0,16,0">
+            <TextBlock Text="Open" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
           <Border Grid.Row="1" Grid.Column="1"
                   Background="{StaticResource AccordionExpandedBackgroundBrush}"
                   BorderBrush="{StaticResource AccordionBorderBrush}"

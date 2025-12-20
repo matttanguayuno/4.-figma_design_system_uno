@@ -60,19 +60,35 @@
             </Grid.ColumnDefinitions>
 
             <!-- Column Headers -->
-            <TextBlock Grid.Row="0" Grid.Column="1" Text="Stroke"
-                       Style="{StaticResource BodyStrongTextBlockStyle}"
-                       Foreground="{StaticResource SecondaryTextBrush}"
-                       Margin="0,0,0,8" />
-            <TextBlock Grid.Row="0" Grid.Column="2" Text="Default"
-                       Style="{StaticResource BodyStrongTextBlockStyle}"
-                       Foreground="{StaticResource SecondaryTextBrush}"
-                       Margin="0,0,0,8" />
+            <Border Grid.Row="0" Grid.Column="1"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    Margin="0,0,0,8">
+              <TextBlock Text="Stroke"
+                         FontWeight="SemiBold"
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+            </Border>
+            <Border Grid.Row="0" Grid.Column="2"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    Margin="0,0,0,8">
+              <TextBlock Text="Default"
+                         FontWeight="SemiBold"
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+            </Border>
 
             <!-- Row 1: Icon -->
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="Icon"
-                       Style="{StaticResource BodyStrongTextBlockStyle}"
-                       VerticalAlignment="Center" />
+            <Border Grid.Row="1" Grid.Column="0"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center">
+              <TextBlock Text="Icon"
+                         FontWeight="SemiBold"
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+            </Border>
 
           <!-- Icon Horizontal Stroke -->
           <Border Grid.Row="1" Grid.Column="1"
@@ -133,9 +149,15 @@
           </ContentControl>
 
           <!-- Row 2: Image -->
-          <TextBlock Grid.Row="2" Grid.Column="0" Text="Image"
-                     Style="{StaticResource BodyStrongTextBlockStyle}"
-                     VerticalAlignment="Center" />
+          <Border Grid.Row="2" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Center">
+            <TextBlock Text="Image"
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
 
           <!-- Image Horizontal Stroke -->
           <Border Grid.Row="2" Grid.Column="1"
@@ -220,19 +242,35 @@
           </Grid.ColumnDefinitions>
 
           <!-- Column Headers -->
-          <TextBlock Grid.Row="0" Grid.Column="1" Text="Stroke"
-                     Style="{StaticResource BodyStrongTextBlockStyle}"
-                     Foreground="{StaticResource SecondaryTextBrush}"
-                     Margin="0,0,0,8" />
-          <TextBlock Grid.Row="0" Grid.Column="2" Text="Default"
-                     Style="{StaticResource BodyStrongTextBlockStyle}"
-                     Foreground="{StaticResource SecondaryTextBrush}"
-                     Margin="0,0,0,8" />
+          <Border Grid.Row="0" Grid.Column="1"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  Margin="0,0,0,8">
+            <TextBlock Text="Stroke"
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
+          <Border Grid.Row="0" Grid.Column="2"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  Margin="0,0,0,8">
+            <TextBlock Text="Default"
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
 
           <!-- Row 1: Icon -->
-          <TextBlock Grid.Row="1" Grid.Column="0" Text="Icon"
-                     Style="{StaticResource BodyStrongTextBlockStyle}"
-                     VerticalAlignment="Center" />
+          <Border Grid.Row="1" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Center">
+            <TextBlock Text="Icon"
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
 
           <!-- Icon Vertical Stroke -->
           <Border Grid.Row="1" Grid.Column="1"
@@ -293,9 +331,15 @@
           </ContentControl>
 
           <!-- Row 2: Image -->
-          <TextBlock Grid.Row="2" Grid.Column="0" Text="Image"
-                     Style="{StaticResource BodyStrongTextBlockStyle}"
-                     VerticalAlignment="Center" />
+          <Border Grid.Row="2" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Center">
+            <TextBlock Text="Image"
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
 
           <!-- Image Vertical Stroke -->
           <Border Grid.Row="2" Grid.Column="1"

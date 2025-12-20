@@ -24,6 +24,7 @@ public partial record HomeModel
             new ComponentCard("\uE70F", "Input", "Input field components including text inputs, checkboxes, radio buttons, select fields, search, sliders, textareas, and switches.", new AsyncRelayCommand(GoToInputFields)),
             new ComponentCard("\uE734", "Menu", "Menu components with headers, items, separators, headings, and keyboard shortcuts for contextual navigation.", new AsyncRelayCommand(GoToMenu)),
             new ComponentCard("\uE700", "Navigation", "Navigation button and pill components with column/row layouts, default, hover, and active states for app navigation.", new AsyncRelayCommand(GoToNavigation)),
+            new ComponentCard("\uE7E7", "Notification", "Message and alert notification components with icons, titles, body text, action buttons, and dismissible close functionality.", new AsyncRelayCommand(GoToNotification)),
             new ComponentCard("\uE8EC", "Tag", "Label tags for categorization with close/dismiss functionality.", new AsyncRelayCommand(GoToTag)),
             new ComponentCard("\uE8A6", "Tag Toggle", "Selectable tags that toggle between selected and unselected states for filtering or multi-selection.", new AsyncRelayCommand(GoToTagToggle)),
         };
@@ -37,6 +38,7 @@ public partial record HomeModel
     public async Task GoToInputFields() { _frame.Navigate(typeof(InputFieldsPage)); await Task.CompletedTask; }
     public async Task GoToMenu() { _frame.Navigate(typeof(MenuPage)); await Task.CompletedTask; }
     public async Task GoToNavigation() { _frame.Navigate(typeof(NavigationPage)); await Task.CompletedTask; }
+    public async Task GoToNotification() { _frame.Navigate(typeof(NotificationPage)); await Task.CompletedTask; }
     public async Task GoToTag() { _frame.Navigate(typeof(TagPage)); await Task.CompletedTask; }
     public async Task GoToTagToggle() { _frame.Navigate(typeof(TagTogglePage)); await Task.CompletedTask; }
 }

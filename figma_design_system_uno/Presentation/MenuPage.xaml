@@ -211,8 +211,8 @@
                   VerticalAlignment="Center">
             <TextBlock Text="Default"
                        FontSize="14"
-                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
-                       Style="{StaticResource BodyStrongTextBlockStyle}" />
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
           </Border>
           <Border Grid.Row="0" Grid.Column="1" Background="Transparent"
                   CornerRadius="8" Padding="16,12" Width="320" HorizontalAlignment="Left">
@@ -247,8 +247,8 @@
                   VerticalAlignment="Center">
             <TextBlock Text="Hover"
                        FontSize="14"
-                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
-                       Style="{StaticResource BodyStrongTextBlockStyle}" />
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
           </Border>
           <Border Grid.Row="1" Grid.Column="1" Background="{StaticResource SDSMenuItemHoverBackgroundBrush}"
                   CornerRadius="8" Padding="16,12" Width="320" HorizontalAlignment="Left">
@@ -283,8 +283,8 @@
                   VerticalAlignment="Center">
             <TextBlock Text="Disabled"
                        FontSize="14"
-                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
-                       Style="{StaticResource BodyStrongTextBlockStyle}" />
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
           </Border>
           <Border Grid.Row="2" Grid.Column="1" Background="Transparent"
                   CornerRadius="8" Padding="16,12" Width="320" HorizontalAlignment="Left">

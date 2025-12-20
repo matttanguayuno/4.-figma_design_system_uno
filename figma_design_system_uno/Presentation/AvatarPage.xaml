@@ -49,16 +49,35 @@
           </Grid.RowDefinitions>
 
           <!-- Column Headers -->
-          <TextBlock Grid.Row="0" Grid.Column="1" Text="Circle" FontSize="12" 
-                     Foreground="{StaticResource SecondaryTextBrush}" 
-                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,8"/>
-          <TextBlock Grid.Row="0" Grid.Column="2" Text="Square" FontSize="12" 
-                     Foreground="{StaticResource SecondaryTextBrush}" 
-                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,8"/>
+          <Border Grid.Row="0" Grid.Column="1"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,8">
+            <TextBlock Text="Circle" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
+          <Border Grid.Row="0" Grid.Column="2"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,8">
+            <TextBlock Text="Square" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
 
           <!-- Row 1: Large -->
-          <TextBlock Grid.Row="1" Grid.Column="0" Text="Large" 
-                     FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,24,0"/>
+          <Border Grid.Row="1" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Center" Margin="0,0,24,0">
+            <TextBlock Text="Large" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
           
           <utu:AutoLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Spacing="16" HorizontalAlignment="Center">
             <PersonPicture ProfilePicture="https://picsum.photos/40/40?random=1"
@@ -80,8 +99,15 @@
           </utu:AutoLayout>
 
           <!-- Row 2: Medium -->
-          <TextBlock Grid.Row="2" Grid.Column="0" Text="Medium" 
-                     FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,24,0"/>
+          <Border Grid.Row="2" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Center" Margin="0,0,24,0">
+            <TextBlock Text="Medium" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
           
           <utu:AutoLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Spacing="16" HorizontalAlignment="Center">
             <PersonPicture ProfilePicture="https://picsum.photos/32/32?random=3"
@@ -103,8 +129,15 @@
           </utu:AutoLayout>
 
           <!-- Row 3: Small -->
-          <TextBlock Grid.Row="3" Grid.Column="0" Text="Small" 
-                     FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,24,0"/>
+          <Border Grid.Row="3" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Center" Margin="0,0,24,0">
+            <TextBlock Text="Small" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
           
           <utu:AutoLayout Grid.Row="3" Grid.Column="1" Orientation="Horizontal" Spacing="16" HorizontalAlignment="Center">
             <PersonPicture ProfilePicture="https://picsum.photos/24/24?random=5"
@@ -130,74 +163,94 @@
       <!-- LEVEL 1: Avatar Group Section -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
         <TextBlock Text="Avatar Group"
-Style="{StaticResource HeadingTextBlockStyle}" />
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
 
-        <!-- Avatar Group Variants -->
-        <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
-          
-          <!-- Spaced Group -->
-          <utu:AutoLayout Orientation="Vertical" Spacing="12">
-            <TextBlock Text="Spaced"
-                       FontWeight="SemiBold" />
-            <Grid Width="150" Height="32">
-              <PersonPicture ProfilePicture="https://picsum.photos/32/32?random=7"
-                             DisplayName="User 1"
-                             Width="32" Height="32"
-                             HorizontalAlignment="Left" />
-              <PersonPicture ProfilePicture="https://picsum.photos/32/32?random=8"
-                             DisplayName="User 2"
-                             Width="32" Height="32"
-                             Margin="40,0,0,0"
-                             HorizontalAlignment="Left" />
-              <PersonPicture ProfilePicture="https://picsum.photos/32/32?random=9"
-                             DisplayName="User 3"
-                             Width="32" Height="32"
-                             Margin="80,0,0,0"
-                             HorizontalAlignment="Left" />
-              <TextBlock Text="+1"
-                         FontSize="14"
-                         FontWeight="SemiBold"
-                         Foreground="{StaticResource DefaultTextBrush}"
-                         VerticalAlignment="Center"
-                         Margin="124,0,0,0"
-                         HorizontalAlignment="Left" />
-            </Grid>
-          </utu:AutoLayout>
+        <!-- Matrix Layout with Row Labels -->
+        <Grid ColumnSpacing="24" RowSpacing="16">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
 
-          <!-- Overlap Group -->
-          <utu:AutoLayout Orientation="Vertical" Spacing="12">
-            <TextBlock Text="Overlap"
-                       FontWeight="SemiBold" />
-            <Grid Width="150" Height="32">
-              <PersonPicture ProfilePicture="https://picsum.photos/32/32?random=10"
-                             DisplayName="User 1"
-                             Width="32" Height="32"
-                             Canvas.Left="0"
-                             Canvas.ZIndex="3"
-                             HorizontalAlignment="Left" />
-              <PersonPicture ProfilePicture="https://picsum.photos/32/32?random=11"
-                             DisplayName="User 2"
-                             Width="32" Height="32"
-                             Margin="20,0,0,0"
-                             Canvas.ZIndex="2"
-                             HorizontalAlignment="Left" />
-              <PersonPicture ProfilePicture="https://picsum.photos/32/32?random=12"
-                             DisplayName="User 3"
-                             Width="32" Height="32"
-                             Margin="40,0,0,0"
-                             Canvas.ZIndex="1"
-                             HorizontalAlignment="Left" />
-              <TextBlock Text="+1"
-                         FontSize="14"
-                         FontWeight="SemiBold"
-                         Foreground="{StaticResource DefaultTextBrush}"
-                         VerticalAlignment="Center"
-                         Margin="84,0,0,0"
-                         HorizontalAlignment="Left" />
-            </Grid>
-          </utu:AutoLayout>
+          <!-- Row 1: Spaced -->
+          <Border Grid.Row="0" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Center" Margin="0,0,24,0">
+            <TextBlock Text="Spaced" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
 
-        </utu:AutoLayout>
+          <Grid Grid.Row="0" Grid.Column="1" Width="150" Height="32">
+            <PersonPicture ProfilePicture="https://picsum.photos/32/32?random=7"
+                           DisplayName="User 1"
+                           Width="32" Height="32"
+                           HorizontalAlignment="Left" />
+            <PersonPicture ProfilePicture="https://picsum.photos/32/32?random=8"
+                           DisplayName="User 2"
+                           Width="32" Height="32"
+                           Margin="40,0,0,0"
+                           HorizontalAlignment="Left" />
+            <PersonPicture ProfilePicture="https://picsum.photos/32/32?random=9"
+                           DisplayName="User 3"
+                           Width="32" Height="32"
+                           Margin="80,0,0,0"
+                           HorizontalAlignment="Left" />
+            <TextBlock Text="+1"
+                       FontSize="14"
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource DefaultTextBrush}"
+                       VerticalAlignment="Center"
+                       Margin="124,0,0,0"
+                       HorizontalAlignment="Left" />
+          </Grid>
+
+          <!-- Row 2: Overlap -->
+          <Border Grid.Row="1" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Center" Margin="0,0,24,0">
+            <TextBlock Text="Overlap" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
+
+          <Grid Grid.Row="1" Grid.Column="1" Width="150" Height="32">
+            <PersonPicture ProfilePicture="https://picsum.photos/32/32?random=10"
+                           DisplayName="User 1"
+                           Width="32" Height="32"
+                           Canvas.Left="0"
+                           Canvas.ZIndex="3"
+                           HorizontalAlignment="Left" />
+            <PersonPicture ProfilePicture="https://picsum.photos/32/32?random=11"
+                           DisplayName="User 2"
+                           Width="32" Height="32"
+                           Margin="20,0,0,0"
+                           Canvas.ZIndex="2"
+                           HorizontalAlignment="Left" />
+            <PersonPicture ProfilePicture="https://picsum.photos/32/32?random=12"
+                           DisplayName="User 3"
+                           Width="32" Height="32"
+                           Margin="40,0,0,0"
+                           Canvas.ZIndex="1"
+                           HorizontalAlignment="Left" />
+            <TextBlock Text="+1"
+                       FontSize="14"
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource DefaultTextBrush}"
+                       VerticalAlignment="Center"
+                       Margin="84,0,0,0"
+                       HorizontalAlignment="Left" />
+          </Grid>
+        </Grid>
       </utu:AutoLayout>
 
       <!-- Source Code Viewer -->

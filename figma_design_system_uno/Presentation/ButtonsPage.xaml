@@ -60,19 +60,44 @@
             </Grid.RowDefinitions>
 
             <!-- Column Headers -->
-            <TextBlock Grid.Row="0" Grid.Column="1" Text="Default" FontSize="12" 
-                       Foreground="{StaticResource SecondaryTextBrush}" 
-                       HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
-            <TextBlock Grid.Row="0" Grid.Column="2" Text="Hover" FontSize="12" 
-                       Foreground="{StaticResource SecondaryTextBrush}" 
-                       HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
-            <TextBlock Grid.Row="0" Grid.Column="3" Text="Disabled" FontSize="12" 
-                       Foreground="{StaticResource SecondaryTextBrush}" 
-                       HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
+            <Border Grid.Row="0" Grid.Column="1"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
+              <TextBlock Text="Default" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
+            <Border Grid.Row="0" Grid.Column="2"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
+              <TextBlock Text="Hover" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
+            <Border Grid.Row="0" Grid.Column="3"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
+              <TextBlock Text="Disabled" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
 
             <!-- Row 1: Primary -->
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="Primary" 
-                       FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,16,0"/>
+            <Border Grid.Row="1" Grid.Column="0" 
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center" Margin="0,0,16,0">
+              <TextBlock Text="Primary" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold"/>
+            </Border>
             <Button Grid.Row="1" Grid.Column="1" Content="Button" Style="{StaticResource PrimaryButtonStyle}" 
                     HorizontalAlignment="Stretch" IsHitTestVisible="False" />
             <Button Grid.Row="1" Grid.Column="2" Content="Button" Style="{StaticResource PrimaryButtonStyle}" 
@@ -82,8 +107,15 @@
                     HorizontalAlignment="Stretch" IsEnabled="False" IsHitTestVisible="False" />
 
             <!-- Row 2: Neutral -->
-            <TextBlock Grid.Row="2" Grid.Column="0" Text="Neutral" 
-                       FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,16,0"/>
+            <Border Grid.Row="2" Grid.Column="0" 
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center" Margin="0,0,16,0">
+              <TextBlock Text="Neutral" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold"/>
+            </Border>
             <Button Grid.Row="2" Grid.Column="1" Content="Button" Style="{StaticResource NeutralButtonStyle}" 
                     HorizontalAlignment="Stretch" IsHitTestVisible="False" />
             <Button Grid.Row="2" Grid.Column="2" Content="Button" Style="{StaticResource NeutralButtonStyle}" 
@@ -93,8 +125,15 @@
                     HorizontalAlignment="Stretch" IsEnabled="False" IsHitTestVisible="False" />
 
             <!-- Row 3: Subtle -->
-            <TextBlock Grid.Row="3" Grid.Column="0" Text="Subtle" 
-                       FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,16,0"/>
+            <Border Grid.Row="3" Grid.Column="0" 
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center" Margin="0,0,16,0">
+              <TextBlock Text="Subtle" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold"/>
+            </Border>
             <Button Grid.Row="3" Grid.Column="1" Content="Button" Style="{StaticResource SubtleButtonStyle}" 
                     HorizontalAlignment="Stretch" IsHitTestVisible="False" />
             <Button Grid.Row="3" Grid.Column="2" Content="Button" Style="{StaticResource SubtleButtonStyle}" 
@@ -127,19 +166,44 @@
             </Grid.RowDefinitions>
 
             <!-- Column Headers -->
-            <TextBlock Grid.Row="0" Grid.Column="1" Text="Default" FontSize="12" 
-                       Foreground="{StaticResource SecondaryTextBrush}" 
-                       HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
-            <TextBlock Grid.Row="0" Grid.Column="2" Text="Hover" FontSize="12" 
-                       Foreground="{StaticResource SecondaryTextBrush}" 
-                       HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
-            <TextBlock Grid.Row="0" Grid.Column="3" Text="Disabled" FontSize="12" 
-                       Foreground="{StaticResource SecondaryTextBrush}" 
-                       HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
+            <Border Grid.Row="0" Grid.Column="1"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
+              <TextBlock Text="Default" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
+            <Border Grid.Row="0" Grid.Column="2"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
+              <TextBlock Text="Hover" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
+            <Border Grid.Row="0" Grid.Column="3"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
+              <TextBlock Text="Disabled" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
 
             <!-- Row 1: Primary -->
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="Primary" 
-                       FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,16,0"/>
+            <Border Grid.Row="1" Grid.Column="0" 
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center" Margin="0,0,16,0">
+              <TextBlock Text="Primary" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold"/>
+            </Border>
             <Button Grid.Row="1" Grid.Column="1" Content="Button" Style="{StaticResource PrimarySmallButtonStyle}" 
                     HorizontalAlignment="Stretch" IsHitTestVisible="False" />
             <Button Grid.Row="1" Grid.Column="2" Content="Button" Style="{StaticResource PrimarySmallButtonStyle}" 
@@ -149,8 +213,15 @@
                     HorizontalAlignment="Stretch" IsEnabled="False" IsHitTestVisible="False" />
 
             <!-- Row 2: Neutral -->
-            <TextBlock Grid.Row="2" Grid.Column="0" Text="Neutral" 
-                       FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,16,0"/>
+            <Border Grid.Row="2" Grid.Column="0" 
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center" Margin="0,0,16,0">
+              <TextBlock Text="Neutral" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold"/>
+            </Border>
             <Button Grid.Row="2" Grid.Column="1" Content="Button" Style="{StaticResource NeutralSmallButtonStyle}" 
                     HorizontalAlignment="Stretch" IsHitTestVisible="False" />
             <Button Grid.Row="2" Grid.Column="2" Content="Button" Style="{StaticResource NeutralSmallButtonStyle}" 
@@ -160,8 +231,15 @@
                     HorizontalAlignment="Stretch" IsEnabled="False" IsHitTestVisible="False" />
 
             <!-- Row 3: Subtle -->
-            <TextBlock Grid.Row="3" Grid.Column="0" Text="Subtle" 
-                       FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,16,0"/>
+            <Border Grid.Row="3" Grid.Column="0" 
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center" Margin="0,0,16,0">
+              <TextBlock Text="Subtle" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold"/>
+            </Border>
             <Button Grid.Row="3" Grid.Column="1" Content="Button" Style="{StaticResource SubtleSmallButtonStyle}" 
                     HorizontalAlignment="Stretch" IsHitTestVisible="False" />
             <Button Grid.Row="3" Grid.Column="2" Content="Button" Style="{StaticResource SubtleSmallButtonStyle}" 
@@ -200,19 +278,44 @@
             </Grid.RowDefinitions>
 
             <!-- Column Headers -->
-            <TextBlock Grid.Row="0" Grid.Column="1" Text="Default" FontSize="12" 
-                       Foreground="{StaticResource SecondaryTextBrush}" 
-                       HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
-            <TextBlock Grid.Row="0" Grid.Column="2" Text="Hover" FontSize="12" 
-                       Foreground="{StaticResource SecondaryTextBrush}" 
-                       HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
-            <TextBlock Grid.Row="0" Grid.Column="3" Text="Disabled" FontSize="12" 
-                       Foreground="{StaticResource SecondaryTextBrush}" 
-                       HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
+            <Border Grid.Row="0" Grid.Column="1"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
+              <TextBlock Text="Default" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
+            <Border Grid.Row="0" Grid.Column="2"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
+              <TextBlock Text="Hover" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
+            <Border Grid.Row="0" Grid.Column="3"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
+              <TextBlock Text="Disabled" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
 
             <!-- Row 1: Primary -->
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="Primary" 
-                       FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,16,0"/>
+            <Border Grid.Row="1" Grid.Column="0" 
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center" Margin="0,0,16,0">
+              <TextBlock Text="Primary" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold"/>
+            </Border>
             <Button Grid.Row="1" Grid.Column="1" Content="Button" Style="{StaticResource FilledErrorButtonStyle}" 
                     HorizontalAlignment="Stretch" IsHitTestVisible="False" />
             <Button Grid.Row="1" Grid.Column="2" Content="Button" Style="{StaticResource FilledErrorButtonStyle}" 
@@ -223,8 +326,15 @@
                     Background="#D9D9D9" BorderBrush="#B3B3B3" BorderThickness="1" Foreground="#B3B3B3" />
 
             <!-- Row 2: Subtle -->
-            <TextBlock Grid.Row="2" Grid.Column="0" Text="Subtle" 
-                       FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,16,0"/>
+            <Border Grid.Row="2" Grid.Column="0" 
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center" Margin="0,0,16,0">
+              <TextBlock Text="Subtle" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold"/>
+            </Border>
             <Button Grid.Row="2" Grid.Column="1" Content="Button" Style="{StaticResource TextErrorButtonStyle}" 
                     HorizontalAlignment="Stretch" IsHitTestVisible="False" />
             <Button Grid.Row="2" Grid.Column="2" Content="Button" Style="{StaticResource TextErrorButtonStyle}" 
@@ -258,19 +368,44 @@
             </Grid.RowDefinitions>
 
             <!-- Column Headers -->
-            <TextBlock Grid.Row="0" Grid.Column="1" Text="Default" FontSize="12" 
-                       Foreground="{StaticResource SecondaryTextBrush}" 
-                       HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
-            <TextBlock Grid.Row="0" Grid.Column="2" Text="Hover" FontSize="12" 
-                       Foreground="{StaticResource SecondaryTextBrush}" 
-                       HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
-            <TextBlock Grid.Row="0" Grid.Column="3" Text="Disabled" FontSize="12" 
-                       Foreground="{StaticResource SecondaryTextBrush}" 
-                       HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
+            <Border Grid.Row="0" Grid.Column="1"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
+              <TextBlock Text="Default" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
+            <Border Grid.Row="0" Grid.Column="2"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
+              <TextBlock Text="Hover" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
+            <Border Grid.Row="0" Grid.Column="3"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
+              <TextBlock Text="Disabled" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
 
             <!-- Row 1: Primary -->
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="Primary" 
-                       FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,16,0"/>
+            <Border Grid.Row="1" Grid.Column="0" 
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center" Margin="0,0,16,0">
+              <TextBlock Text="Primary" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold"/>
+            </Border>
             <Button Grid.Row="1" Grid.Column="1" Content="Button" Style="{StaticResource FilledErrorButtonSmallStyle}" 
                     HorizontalAlignment="Stretch" IsHitTestVisible="False" />
             <Button Grid.Row="1" Grid.Column="2" Content="Button" Style="{StaticResource FilledErrorButtonSmallStyle}" 
@@ -281,8 +416,15 @@
                     Background="#D9D9D9" BorderBrush="#B3B3B3" BorderThickness="1" Foreground="#B3B3B3" />
 
             <!-- Row 2: Subtle -->
-            <TextBlock Grid.Row="2" Grid.Column="0" Text="Subtle" 
-                       FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,16,0"/>
+            <Border Grid.Row="2" Grid.Column="0" 
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center" Margin="0,0,16,0">
+              <TextBlock Text="Subtle" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold"/>
+            </Border>
             <Button Grid.Row="2" Grid.Column="1" Content="Button" Style="{StaticResource TextErrorButtonSmallStyle}" 
                     HorizontalAlignment="Stretch" IsHitTestVisible="False" />
             <Button Grid.Row="2" Grid.Column="2" Content="Button" Style="{StaticResource TextErrorButtonSmallStyle}" 
@@ -323,12 +465,44 @@
             </Grid.ColumnDefinitions>
 
             <!-- Header Row -->
-            <TextBlock Grid.Row="0" Grid.Column="1" Text="Default" FontSize="12" Foreground="{StaticResource SecondaryTextBrush}" HorizontalAlignment="Center" />
-            <TextBlock Grid.Row="0" Grid.Column="2" Text="Hover" FontSize="12" Foreground="{StaticResource SecondaryTextBrush}" HorizontalAlignment="Center" />
-            <TextBlock Grid.Row="0" Grid.Column="3" Text="Disabled" FontSize="12" Foreground="{StaticResource SecondaryTextBrush}" HorizontalAlignment="Center" />
+            <Border Grid.Row="0" Grid.Column="1"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center">
+              <TextBlock Text="Default" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
+            <Border Grid.Row="0" Grid.Column="2"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center">
+              <TextBlock Text="Hover" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
+            <Border Grid.Row="0" Grid.Column="3"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center">
+              <TextBlock Text="Disabled" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
 
             <!-- Primary Row -->
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="Primary" Style="{StaticResource BodyStrongTextBlockStyle}" VerticalAlignment="Center" />
+            <Border Grid.Row="1" Grid.Column="0"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center">
+              <TextBlock Text="Primary" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
             <Button Grid.Row="1" Grid.Column="1" Width="40" Height="40" IsHitTestVisible="False"
                     Background="{StaticResource BrandDefaultBrush}" 
                     CornerRadius="9999" Padding="8" HorizontalAlignment="Center">
@@ -352,7 +526,15 @@
             </Button>
 
             <!-- Neutral Row -->
-            <TextBlock Grid.Row="2" Grid.Column="0" Text="Neutral" Style="{StaticResource BodyStrongTextBlockStyle}" VerticalAlignment="Center" />
+            <Border Grid.Row="2" Grid.Column="0"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center">
+              <TextBlock Text="Neutral" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
             <Button Grid.Row="2" Grid.Column="1" Width="40" Height="40" IsHitTestVisible="False"
                     Background="#F5F5F5" 
                     BorderBrush="#D9D9D9"
@@ -380,7 +562,15 @@
             </Button>
 
             <!-- Subtle Row -->
-            <TextBlock Grid.Row="3" Grid.Column="0" Text="Subtle" Style="{StaticResource BodyStrongTextBlockStyle}" VerticalAlignment="Center" />
+            <Border Grid.Row="3" Grid.Column="0"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center">
+              <TextBlock Text="Subtle" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
             <Button Grid.Row="3" Grid.Column="1" Width="40" Height="40" IsHitTestVisible="False"
                     Background="Transparent" 
                     BorderBrush="Transparent"
@@ -428,12 +618,44 @@
             </Grid.ColumnDefinitions>
 
             <!-- Header Row -->
-            <TextBlock Grid.Row="0" Grid.Column="1" Text="Default" FontSize="12" Foreground="{StaticResource SecondaryTextBrush}" HorizontalAlignment="Center" />
-            <TextBlock Grid.Row="0" Grid.Column="2" Text="Hover" FontSize="12" Foreground="{StaticResource SecondaryTextBrush}" HorizontalAlignment="Center" />
-            <TextBlock Grid.Row="0" Grid.Column="3" Text="Disabled" FontSize="12" Foreground="{StaticResource SecondaryTextBrush}" HorizontalAlignment="Center" />
+            <Border Grid.Row="0" Grid.Column="1"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center">
+              <TextBlock Text="Default" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
+            <Border Grid.Row="0" Grid.Column="2"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center">
+              <TextBlock Text="Hover" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
+            <Border Grid.Row="0" Grid.Column="3"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    HorizontalAlignment="Center">
+              <TextBlock Text="Disabled" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
 
             <!-- Primary Row -->
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="Primary" Style="{StaticResource BodyStrongTextBlockStyle}" VerticalAlignment="Center" />
+            <Border Grid.Row="1" Grid.Column="0"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center">
+              <TextBlock Text="Primary" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
             <Button Grid.Row="1" Grid.Column="1" Width="32" Height="32" IsHitTestVisible="False"
                     Background="{StaticResource BrandDefaultBrush}" 
                     CornerRadius="9999" Padding="6" HorizontalAlignment="Center">
@@ -457,7 +679,15 @@
             </Button>
 
             <!-- Neutral Row -->
-            <TextBlock Grid.Row="2" Grid.Column="0" Text="Neutral" Style="{StaticResource BodyStrongTextBlockStyle}" VerticalAlignment="Center" />
+            <Border Grid.Row="2" Grid.Column="0"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center">
+              <TextBlock Text="Neutral" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
             <Button Grid.Row="2" Grid.Column="1" Width="32" Height="32" IsHitTestVisible="False"
                     Background="#F5F5F5" 
                     BorderBrush="#D9D9D9"
@@ -485,7 +715,15 @@
             </Button>
 
             <!-- Subtle Row -->
-            <TextBlock Grid.Row="3" Grid.Column="0" Text="Subtle" Style="{StaticResource BodyStrongTextBlockStyle}" VerticalAlignment="Center" />
+            <Border Grid.Row="3" Grid.Column="0"
+                    Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                    VerticalAlignment="Center">
+              <TextBlock Text="Subtle" 
+                         Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
+                         FontWeight="SemiBold" />
+            </Border>
             <Button Grid.Row="3" Grid.Column="1" Width="32" Height="32" IsHitTestVisible="False"
                     Background="Transparent" 
                     BorderBrush="Transparent"
@@ -516,7 +754,8 @@
       <!-- LEVEL 1: Button Group Section -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
         <TextBlock Text="Button Group"
-Style="{StaticResource HeadingTextBlockStyle}" />
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
 
         <Grid RowSpacing="24" ColumnSpacing="32">
           <Grid.RowDefinitions>
@@ -532,9 +771,15 @@ Style="{StaticResource HeadingTextBlockStyle}" />
           </Grid.ColumnDefinitions>
 
           <!-- Justify -->
-          <TextBlock Grid.Row="0" Grid.Column="0" Text="Justify" 
-                     Style="{StaticResource BodyStrongTextBlockStyle}" 
-                     VerticalAlignment="Center" />
+          <Border Grid.Row="0" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Center" Margin="0,0,24,0">
+            <TextBlock Text="Justify" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
           <Grid Grid.Row="0" Grid.Column="1" ColumnDefinitions="*,*" ColumnSpacing="16">
             <Button Content="Button" Grid.Column="0" HorizontalAlignment="Stretch" 
                     Background="Transparent" BorderThickness="0" Foreground="{StaticResource OnSurfaceBrush}" />
@@ -543,9 +788,15 @@ Style="{StaticResource HeadingTextBlockStyle}" />
           </Grid>
 
           <!-- Start -->
-          <TextBlock Grid.Row="1" Grid.Column="0" Text="Start" 
-                     Style="{StaticResource BodyStrongTextBlockStyle}" 
-                     VerticalAlignment="Center" />
+          <Border Grid.Row="1" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Center" Margin="0,0,24,0">
+            <TextBlock Text="Start" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
           <utu:AutoLayout Grid.Row="1" Grid.Column="1" 
                           Orientation="Horizontal" Spacing="16" PrimaryAxisAlignment="Start">
             <Button Content="Button" Background="Transparent" BorderThickness="0" Foreground="{StaticResource OnSurfaceBrush}" />
@@ -553,9 +804,15 @@ Style="{StaticResource HeadingTextBlockStyle}" />
           </utu:AutoLayout>
 
           <!-- End -->
-          <TextBlock Grid.Row="2" Grid.Column="0" Text="End" 
-                     Style="{StaticResource BodyStrongTextBlockStyle}" 
-                     VerticalAlignment="Center" />
+          <Border Grid.Row="2" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Center" Margin="0,0,24,0">
+            <TextBlock Text="End" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
           <utu:AutoLayout Grid.Row="2" Grid.Column="1" 
                           Orientation="Horizontal" Spacing="16" PrimaryAxisAlignment="End">
             <Button Content="Button" Background="Transparent" BorderThickness="0" Foreground="{StaticResource OnSurfaceBrush}" />
@@ -563,9 +820,15 @@ Style="{StaticResource HeadingTextBlockStyle}" />
           </utu:AutoLayout>
 
           <!-- Center -->
-          <TextBlock Grid.Row="3" Grid.Column="0" Text="Center" 
-                     Style="{StaticResource BodyStrongTextBlockStyle}" 
-                     VerticalAlignment="Center" />
+          <Border Grid.Row="3" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Center" Margin="0,0,24,0">
+            <TextBlock Text="Center" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
           <utu:AutoLayout Grid.Row="3" Grid.Column="1" 
                           Orientation="Horizontal" Spacing="16" PrimaryAxisAlignment="Center">
             <Button Content="Button" Background="Transparent" BorderThickness="0" Foreground="{StaticResource OnSurfaceBrush}" />
@@ -573,9 +836,15 @@ Style="{StaticResource HeadingTextBlockStyle}" />
           </utu:AutoLayout>
 
           <!-- Stack -->
-          <TextBlock Grid.Row="4" Grid.Column="0" Text="Stack" 
-                     Style="{StaticResource BodyStrongTextBlockStyle}" 
-                     VerticalAlignment="Center" />
+          <Border Grid.Row="4" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Center" Margin="0,0,24,0">
+            <TextBlock Text="Stack" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
           <utu:AutoLayout Grid.Row="4" Grid.Column="1" 
                           Orientation="Vertical" Spacing="16">
             <Button Content="Button" HorizontalAlignment="Stretch" 

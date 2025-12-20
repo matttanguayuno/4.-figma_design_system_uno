@@ -60,11 +60,15 @@
           </Grid.RowDefinitions>
 
           <!-- Row 1: Overlay (Card variant) -->
-          <TextBlock Grid.Row="0" Grid.Column="0"
-                     Text="Overlay"
-                     Style="{StaticResource BodyStrongTextBlockStyle}"
-                     VerticalAlignment="Top"
-                     Margin="0,0,16,0"/>
+          <Border Grid.Row="0" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Top" Margin="0,0,16,0">
+            <TextBlock Text="Overlay"
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
           
           <Border Grid.Row="0" Grid.Column="1"
                   Background="{StaticResource DialogBackgroundBrush}"
@@ -146,11 +150,15 @@
           </Border>
 
           <!-- Row 2: Bottom Sheet -->
-          <TextBlock Grid.Row="1" Grid.Column="0"
-                     Text="Bottom Sheet"
-                     Style="{StaticResource BodyStrongTextBlockStyle}"
-                     VerticalAlignment="Top"
-                     Margin="0,0,16,0"/>
+          <Border Grid.Row="1" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Top" Margin="0,0,16,0">
+            <TextBlock Text="Bottom Sheet"
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
           
           <Border Grid.Row="1" Grid.Column="1"
                   Background="{StaticResource DialogBackgroundBrush}"

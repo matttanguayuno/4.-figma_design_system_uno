@@ -1,0 +1,220 @@
+<Page x:Class="figma_design_system_uno.Presentation.NotificationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:figma_design_system_uno.Presentation"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+      Background="Transparent">
+
+  <ScrollViewer>
+    <utu:AutoLayout Orientation="Vertical"
+                    Padding="{StaticResource Spacing800}"
+                    Spacing="{StaticResource Space1200}">
+
+      <!-- Page Header -->
+      <utu:NavigationBar Content="Notification Component"
+                         HorizontalContentAlignment="Left"
+                         VerticalAlignment="Bottom">
+        <utu:NavigationBar.MainCommand>
+          <AppBarButton Icon="Back" Click="OnBackClick" />
+        </utu:NavigationBar.MainCommand>
+        <utu:NavigationBar.ContentTemplate>
+          <DataTemplate>
+            <TextBlock Text="{Binding}"
+                       FontSize="48"
+                       FontWeight="Bold"
+                       VerticalAlignment="Bottom" />
+          </DataTemplate>
+        </utu:NavigationBar.ContentTemplate>
+      </utu:NavigationBar>
+
+      <!-- Notification Section -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
+        <TextBlock Text="Notification"
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <!-- Matrix Layout with Row Labels -->
+        <Grid ColumnSpacing="24" RowSpacing="16">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+
+          <!-- Row 1: Message -->
+          <Border Grid.Row="0" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Top" Margin="0,0,24,0">
+            <TextBlock Text="Message" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
+
+          <!-- Message Notification -->
+          <Border Grid.Row="0" Grid.Column="1"
+                  Background="White"
+                  BorderBrush="#757575"
+                  BorderThickness="1"
+                  CornerRadius="8"
+                  Padding="16"
+                  MinWidth="340"
+                  MaxWidth="450"
+                  Translation="0, 0, 8">
+            <Border.Shadow>
+              <ThemeShadow />
+            </Border.Shadow>
+            
+            <Grid ColumnSpacing="12">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+              </Grid.ColumnDefinitions>
+
+              <!-- Info Icon -->
+              <Viewbox Grid.Column="0" Width="20" Height="20" VerticalAlignment="Top">
+                <Canvas Width="20" Height="20">
+                  <Ellipse Width="20" Height="20" 
+                           Stroke="#1E1E1E" StrokeThickness="1.5" Fill="Transparent" />
+                  <Ellipse Canvas.Left="9" Canvas.Top="4.5" Width="2" Height="2" Fill="#1E1E1E" />
+                  <Rectangle Canvas.Left="9" Canvas.Top="8.5" Width="2" Height="7" Fill="#1E1E1E" />
+                </Canvas>
+              </Viewbox>
+
+              <!-- Content -->
+              <utu:AutoLayout Grid.Column="1" Orientation="Vertical" Spacing="12">
+                <utu:AutoLayout Orientation="Vertical" Spacing="4">
+                  <TextBlock Text="Title" 
+                             FontSize="16" FontWeight="SemiBold" 
+                             Foreground="#1E1E1E" />
+                  <TextBlock Text="Body text." 
+                             FontSize="14" 
+                             Foreground="#1E1E1E" 
+                             TextWrapping="Wrap" />
+                </utu:AutoLayout>
+                <Button Content="Button"
+                        Background="#2C2C2C"
+                        BorderBrush="#2C2C2C"
+                        BorderThickness="1"
+                        Foreground="#F5F5F5"
+                        CornerRadius="4"
+                        Padding="12,8"
+                        FontSize="14"
+                        FontWeight="Medium"
+                        MinWidth="0"
+                        HorizontalAlignment="Left"
+                        utu:AutoLayout.CounterAlignment="Start" />
+              </utu:AutoLayout>
+
+              <!-- Close Button -->
+              <Button Grid.Column="2" 
+                      Background="Transparent"
+                      BorderThickness="0"
+                      Padding="0"
+                      Width="20"
+                      Height="20"
+                      VerticalAlignment="Top">
+                <Path Data="M 4 4 L 16 16 M 16 4 L 4 16" 
+                      Stroke="#1E1E1E" 
+                      StrokeThickness="1.5" />
+              </Button>
+            </Grid>
+          </Border>
+
+          <!-- Row 2: Alert -->
+          <Border Grid.Row="1" Grid.Column="0"
+                  Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  VerticalAlignment="Top" Margin="0,0,24,0">
+            <TextBlock Text="Alert" 
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
+          </Border>
+
+          <!-- Alert Notification -->
+          <Border Grid.Row="1" Grid.Column="1"
+                  Background="#FEE9E7"
+                  BorderBrush="#EC221F"
+                  BorderThickness="1"
+                  CornerRadius="8"
+                  Padding="16"
+                  MinWidth="340"
+                  MaxWidth="450"
+                  Translation="0, 0, 8">
+            <Border.Shadow>
+              <ThemeShadow />
+            </Border.Shadow>
+            
+            <Grid ColumnSpacing="12">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+              </Grid.ColumnDefinitions>
+
+              <!-- Alert Icon -->
+              <Viewbox Grid.Column="0" Width="20" Height="20" VerticalAlignment="Top">
+                <Canvas Width="20" Height="20">
+                  <Ellipse Width="20" Height="20" 
+                           Stroke="#900B09" StrokeThickness="1.5" Fill="Transparent" />
+                  <Ellipse Canvas.Left="9" Canvas.Top="4.5" Width="2" Height="2" Fill="#900B09" />
+                  <Rectangle Canvas.Left="9" Canvas.Top="8.5" Width="2" Height="7" Fill="#900B09" />
+                </Canvas>
+              </Viewbox>
+
+              <!-- Content -->
+              <utu:AutoLayout Grid.Column="1" Orientation="Vertical" Spacing="12">
+                <utu:AutoLayout Orientation="Vertical" Spacing="4">
+                  <TextBlock Text="Title" 
+                             FontSize="16" FontWeight="SemiBold" 
+                             Foreground="#900B09" />
+                  <TextBlock Text="Body text." 
+                             FontSize="14" 
+                             Foreground="#900B09" 
+                             TextWrapping="Wrap" />
+                </utu:AutoLayout>
+                <Button Content="Button"
+                        Background="#EC221F"
+                        BorderBrush="#C00F0C"
+                        BorderThickness="1"
+                        Foreground="#FEE9E7"
+                        CornerRadius="4"
+                        Padding="12,8"
+                        FontSize="14"
+                        FontWeight="Medium"
+                        MinWidth="0"
+                        HorizontalAlignment="Left"
+                        utu:AutoLayout.CounterAlignment="Start" />
+              </utu:AutoLayout>
+
+              <!-- Close Button -->
+              <Button Grid.Column="2" 
+                      Background="Transparent"
+                      BorderThickness="0"
+                      Padding="0"
+                      Width="20"
+                      Height="20"
+                      VerticalAlignment="Top">
+                <Path Data="M 4 4 L 16 16 M 16 4 L 4 16" 
+                      Stroke="#900B09" 
+                      StrokeThickness="1.5" />
+              </Button>
+            </Grid>
+          </Border>
+        </Grid>
+      </utu:AutoLayout>
+
+      <!-- Source Code Viewer -->
+      <controls:SourceCodeViewer 
+        PageXamlPath="ms-appx:///Presentation/NotificationPage.xaml" />
+
+    </utu:AutoLayout>
+  </ScrollViewer>
+</Page>

@@ -182,6 +182,31 @@ Path.Fill shows #F5F5F5 (OnPrimaryColor) instead of #B3B3B3 when using ThemeReso
 - Update all matrix layouts to use the new identifier style
 - Ensure consistent spacing and alignment with new design
 
+### Rounded Dotted Rectangles Around Matrix Examples
+**Location:** All pages with matrix layouts (NavigationPage, MenuPage, ButtonsPage, CardsPage, InputFieldsPage, AccordionPage, AvatarPage, etc.)
+
+**Issue:** Dotted rectangles around matrix examples should have rounded corners to match the design system's aesthetic. Currently using Rectangle with StrokeDashArray but no corner radius support.
+
+**Current State:** ButtonsPage has dotted rectangles with sharp corners. Other pages may need similar visual separation between identifying labels and actual control examples.
+
+**Investigation Needed:**
+- WinUI Rectangle does not support CornerRadius property
+- May need to use Border with dashed BorderBrush (if supported) or Path element to create rounded dotted rectangles
+- Apply rounded dotted rectangles to all matrix layouts across all pages
+- Ensure consistent corner radius matching other design system elements
+
+### Row Identifier Label Alignment
+**Location:** All pages with matrix layouts (NavigationPage, MenuPage, ButtonsPage, CardsPage, InputFieldsPage, AccordionPage, AvatarPage, DialogPage, NotificationPage, etc.)
+
+**Issue:** Row identifier label rectangles need to be right-aligned within their grid column for proper visual alignment with the matrix content.
+
+**Current State:** Row identifier labels are currently not consistently aligned, which can make the matrix layouts look misaligned.
+
+**Investigation Needed:**
+- Add HorizontalAlignment="Right" to all row identifier Border elements
+- Ensure consistent alignment across all matrix layouts
+- Review column spacing and margins after alignment changes
+
 *(Additional issues to be added)*
 
 ---

@@ -15,6 +15,8 @@ public sealed partial class Shell : UserControl, IContentControlProvider
         { "Dialog", typeof(DialogPage) },
         { "InputFields", typeof(InputFieldsPage) },
         { "Menu", typeof(MenuPage) },
+        { "Navigation", typeof(NavigationPage) },
+        { "Notification", typeof(NotificationPage) },
         { "Tag", typeof(TagPage) },
         { "TagToggle", typeof(TagTogglePage) }
     };

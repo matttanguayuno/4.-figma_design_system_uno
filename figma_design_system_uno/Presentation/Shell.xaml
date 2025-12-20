@@ -100,6 +100,13 @@
                   HorizontalAlignment="Stretch"
                   HorizontalContentAlignment="Left" />
 
+          <Button Content="Notification" 
+                  Click="Navigate_Click"
+                  Tag="Notification"
+                  Style="{StaticResource TextButtonStyle}"
+                  HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Left" />
+
           <Button Content="Tag" 
                   Click="Navigate_Click"
                   Tag="Tag"
