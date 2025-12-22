@@ -79,6 +79,13 @@
                   HorizontalAlignment="Stretch"
                   HorizontalContentAlignment="Left" />
 
+          <Button Content="Forms" 
+                  Click="Navigate_Click"
+                  Tag="Forms"
+                  Style="{StaticResource TextButtonStyle}"
+                  HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Left" />
+
           <Button Content="Inputs" 
                   Click="Navigate_Click"
                   Tag="InputFields"
@@ -107,6 +114,20 @@
                   HorizontalAlignment="Stretch"
                   HorizontalContentAlignment="Left" />
 
+          <Button Content="Pagination" 
+                  Click="Navigate_Click"
+                  Tag="Pagination"
+                  Style="{StaticResource TextButtonStyle}"
+                  HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Left" />
+
+          <Button Content="Tabs" 
+                  Click="Navigate_Click"
+                  Tag="Tabs"
+                  Style="{StaticResource TextButtonStyle}"
+                  HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Left" />
+
           <Button Content="Tag" 
                   Click="Navigate_Click"
                   Tag="Tag"
@@ -114,9 +135,9 @@
                   HorizontalAlignment="Stretch"
                   HorizontalContentAlignment="Left" />
 
-          <Button Content="Tag Toggle" 
+          <Button Content="Tooltip" 
                   Click="Navigate_Click"
-                  Tag="TagToggle"
+                  Tag="Tooltip"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
                   HorizontalContentAlignment="Left" />
@@ -126,7 +147,8 @@
     </Border>
 
     <!-- Main Content Area -->
-    <Frame x:Name="ContentFrame" 
+    <Frame x:Name="ContentFrame"
+           x:FieldModifier="public"
            Grid.Column="1"
            Background="{StaticResource ContentBackgroundBrush}" />
   </Grid>

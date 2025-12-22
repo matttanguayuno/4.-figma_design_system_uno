@@ -1,3 +1,4 @@
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Uno.Extensions.Navigation;
 using Microsoft.Extensions.DependencyInjection;

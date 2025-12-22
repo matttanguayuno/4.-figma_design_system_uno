@@ -128,4 +128,17 @@
   <Color x:Key="SDSNavPillActiveBackgroundColor">#f5f5f5</Color>
   <Color x:Key="SDSNavPillActiveTextColor">#1e1e1e</Color>
 
+  <!-- Notification Colors -->
+  <Color x:Key="SDSNotificationAlertBackgroundColor">#FEE9E7</Color>
+  <Color x:Key="SDSNotificationAlertBorderColor">#EC221F</Color>
+  <Color x:Key="SDSNotificationAlertButtonColor">#EC221F</Color>
+
+  <!-- Pagination Colors -->
+  <Color x:Key="SDSPaginationDefaultBackgroundColor">#f5f5f5</Color>
+  <Color x:Key="SDSPaginationHoverBackgroundColor">#e6e6e6</Color>
+  <Color x:Key="SDSPaginationCurrentBackgroundColor">#2c2c2c</Color>
+  <Color x:Key="SDSPaginationCurrentHoverBackgroundColor">#1e1e1e</Color>
+  <Color x:Key="SDSPaginationCurrentTextColor">#ffffff</Color>
+  <Color x:Key="SDSPaginationDisabledTextColor">#757575</Color>
+
 </ResourceDictionary>

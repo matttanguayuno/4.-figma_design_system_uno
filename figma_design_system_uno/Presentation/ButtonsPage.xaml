@@ -16,7 +16,7 @@
                     Spacing="{StaticResource Space1200}">
 
       <!-- Page Header -->
-      <utu:NavigationBar Content="Buttons Component"
+      <utu:NavigationBar Content="Buttons"
                          HorizontalContentAlignment="Left"
                          VerticalAlignment="Bottom">
         <utu:NavigationBar.MainCommand>
@@ -62,8 +62,8 @@
             <!-- Column Headers -->
             <Border Grid.Row="0" Grid.Column="1"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
               <TextBlock Text="Default" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -71,8 +71,8 @@
             </Border>
             <Border Grid.Row="0" Grid.Column="2"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
               <TextBlock Text="Hover" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -80,8 +80,8 @@
             </Border>
             <Border Grid.Row="0" Grid.Column="3"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
               <TextBlock Text="Disabled" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -91,8 +91,8 @@
             <!-- Row 1: Primary -->
             <Border Grid.Row="1" Grid.Column="0" 
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center" Margin="0,0,16,0">
               <TextBlock Text="Primary" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -109,8 +109,8 @@
             <!-- Row 2: Neutral -->
             <Border Grid.Row="2" Grid.Column="0" 
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center" Margin="0,0,16,0">
               <TextBlock Text="Neutral" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -127,8 +127,8 @@
             <!-- Row 3: Subtle -->
             <Border Grid.Row="3" Grid.Column="0" 
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center" Margin="0,0,16,0">
               <TextBlock Text="Subtle" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -168,8 +168,8 @@
             <!-- Column Headers -->
             <Border Grid.Row="0" Grid.Column="1"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
               <TextBlock Text="Default" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -177,8 +177,8 @@
             </Border>
             <Border Grid.Row="0" Grid.Column="2"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
               <TextBlock Text="Hover" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -186,8 +186,8 @@
             </Border>
             <Border Grid.Row="0" Grid.Column="3"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
               <TextBlock Text="Disabled" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -197,8 +197,8 @@
             <!-- Row 1: Primary -->
             <Border Grid.Row="1" Grid.Column="0" 
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center" Margin="0,0,16,0">
               <TextBlock Text="Primary" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -215,8 +215,8 @@
             <!-- Row 2: Neutral -->
             <Border Grid.Row="2" Grid.Column="0" 
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center" Margin="0,0,16,0">
               <TextBlock Text="Neutral" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -233,8 +233,8 @@
             <!-- Row 3: Subtle -->
             <Border Grid.Row="3" Grid.Column="0" 
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center" Margin="0,0,16,0">
               <TextBlock Text="Subtle" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -280,8 +280,8 @@
             <!-- Column Headers -->
             <Border Grid.Row="0" Grid.Column="1"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
               <TextBlock Text="Default" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -289,8 +289,8 @@
             </Border>
             <Border Grid.Row="0" Grid.Column="2"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
               <TextBlock Text="Hover" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -298,8 +298,8 @@
             </Border>
             <Border Grid.Row="0" Grid.Column="3"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
               <TextBlock Text="Disabled" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -309,8 +309,8 @@
             <!-- Row 1: Primary -->
             <Border Grid.Row="1" Grid.Column="0" 
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center" Margin="0,0,16,0">
               <TextBlock Text="Primary" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -328,8 +328,8 @@
             <!-- Row 2: Subtle -->
             <Border Grid.Row="2" Grid.Column="0" 
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center" Margin="0,0,16,0">
               <TextBlock Text="Subtle" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -370,8 +370,8 @@
             <!-- Column Headers -->
             <Border Grid.Row="0" Grid.Column="1"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
               <TextBlock Text="Default" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -379,8 +379,8 @@
             </Border>
             <Border Grid.Row="0" Grid.Column="2"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
               <TextBlock Text="Hover" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -388,8 +388,8 @@
             </Border>
             <Border Grid.Row="0" Grid.Column="3"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4">
               <TextBlock Text="Disabled" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -399,8 +399,8 @@
             <!-- Row 1: Primary -->
             <Border Grid.Row="1" Grid.Column="0" 
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center" Margin="0,0,16,0">
               <TextBlock Text="Primary" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -418,8 +418,8 @@
             <!-- Row 2: Subtle -->
             <Border Grid.Row="2" Grid.Column="0" 
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center" Margin="0,0,16,0">
               <TextBlock Text="Subtle" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -467,8 +467,8 @@
             <!-- Header Row -->
             <Border Grid.Row="0" Grid.Column="1"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center">
               <TextBlock Text="Default" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -476,8 +476,8 @@
             </Border>
             <Border Grid.Row="0" Grid.Column="2"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center">
               <TextBlock Text="Hover" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -485,8 +485,8 @@
             </Border>
             <Border Grid.Row="0" Grid.Column="3"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center">
               <TextBlock Text="Disabled" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -496,8 +496,8 @@
             <!-- Primary Row -->
             <Border Grid.Row="1" Grid.Column="0"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center">
               <TextBlock Text="Primary" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -528,8 +528,8 @@
             <!-- Neutral Row -->
             <Border Grid.Row="2" Grid.Column="0"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center">
               <TextBlock Text="Neutral" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -564,8 +564,8 @@
             <!-- Subtle Row -->
             <Border Grid.Row="3" Grid.Column="0"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center">
               <TextBlock Text="Subtle" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -620,8 +620,8 @@
             <!-- Header Row -->
             <Border Grid.Row="0" Grid.Column="1"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center">
               <TextBlock Text="Default" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -629,8 +629,8 @@
             </Border>
             <Border Grid.Row="0" Grid.Column="2"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center">
               <TextBlock Text="Hover" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -638,8 +638,8 @@
             </Border>
             <Border Grid.Row="0" Grid.Column="3"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     HorizontalAlignment="Center">
               <TextBlock Text="Disabled" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -649,8 +649,8 @@
             <!-- Primary Row -->
             <Border Grid.Row="1" Grid.Column="0"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center">
               <TextBlock Text="Primary" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -681,8 +681,8 @@
             <!-- Neutral Row -->
             <Border Grid.Row="2" Grid.Column="0"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center">
               <TextBlock Text="Neutral" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -717,8 +717,8 @@
             <!-- Subtle Row -->
             <Border Grid.Row="3" Grid.Column="0"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center">
               <TextBlock Text="Subtle" 
                          Foreground="{StaticResource SDSMatrixIdentifierTextBrush}"
@@ -774,7 +774,7 @@
           <Border Grid.Row="0" Grid.Column="0"
                   Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
                   BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                   VerticalAlignment="Center" Margin="0,0,24,0">
             <TextBlock Text="Justify" 
                        FontWeight="SemiBold"
@@ -791,7 +791,7 @@
           <Border Grid.Row="1" Grid.Column="0"
                   Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
                   BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                   VerticalAlignment="Center" Margin="0,0,24,0">
             <TextBlock Text="Start" 
                        FontWeight="SemiBold"
@@ -807,7 +807,7 @@
           <Border Grid.Row="2" Grid.Column="0"
                   Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
                   BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                   VerticalAlignment="Center" Margin="0,0,24,0">
             <TextBlock Text="End" 
                        FontWeight="SemiBold"
@@ -823,7 +823,7 @@
           <Border Grid.Row="3" Grid.Column="0"
                   Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
                   BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                   VerticalAlignment="Center" Margin="0,0,24,0">
             <TextBlock Text="Center" 
                        FontWeight="SemiBold"
@@ -839,7 +839,7 @@
           <Border Grid.Row="4" Grid.Column="0"
                   Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
                   BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                   VerticalAlignment="Center" Margin="0,0,24,0">
             <TextBlock Text="Stack" 
                        FontWeight="SemiBold"

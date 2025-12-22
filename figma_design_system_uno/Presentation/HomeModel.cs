@@ -21,12 +21,15 @@ public partial record HomeModel
             new ComponentCard("\uE8A1", "Buttons", "Primary, neutral, subtle button variants with medium (40px) and small (32px) sizes. Includes danger buttons and icon-only buttons.", new AsyncRelayCommand(GoToButtons)),
             new ComponentCard("\uE8D4", "Cards", "Basic card components with title, description, actions, and visual content support.", new AsyncRelayCommand(GoToCards)),
             new ComponentCard("\uE8A7", "Dialog", "Modal dialog components with card and sheet variants, including heading, body text, action buttons, and dismissible close icon.", new AsyncRelayCommand(GoToDialog)),
+            new ComponentCard("\uE8A2", "Forms", "Form layouts including shipping, contact, newsletter, login, register, and forgot password forms with proper field validation patterns.", new AsyncRelayCommand(GoToForms)),
             new ComponentCard("\uE70F", "Input", "Input field components including text inputs, checkboxes, radio buttons, select fields, search, sliders, textareas, and switches.", new AsyncRelayCommand(GoToInputFields)),
             new ComponentCard("\uE734", "Menu", "Menu components with headers, items, separators, headings, and keyboard shortcuts for contextual navigation.", new AsyncRelayCommand(GoToMenu)),
             new ComponentCard("\uE700", "Navigation", "Navigation button and pill components with column/row layouts, default, hover, and active states for app navigation.", new AsyncRelayCommand(GoToNavigation)),
             new ComponentCard("\uE7E7", "Notification", "Message and alert notification components with icons, titles, body text, action buttons, and dismissible close functionality.", new AsyncRelayCommand(GoToNotification)),
+            new ComponentCard("\uE8B1", "Pagination", "Pagination components with page numbers, previous/next buttons, and current page indicators for navigating through content.", new AsyncRelayCommand(GoToPagination)),
+            new ComponentCard("\uE8A6", "Tabs", "Tab navigation components with default, hover, active, and inactive states for organizing content into sections.", new AsyncRelayCommand(GoToTabs)),
             new ComponentCard("\uE8EC", "Tag", "Label tags for categorization with close/dismiss functionality.", new AsyncRelayCommand(GoToTag)),
-            new ComponentCard("\uE8A6", "Tag Toggle", "Selectable tags that toggle between selected and unselected states for filtering or multi-selection.", new AsyncRelayCommand(GoToTagToggle)),
+            new ComponentCard("\uE946", "Tooltip", "Contextual information popups with arrow indicators positioned at top, bottom, left, or right relative to target elements.", new AsyncRelayCommand(GoToTooltip)),
         };
     }
 
@@ -35,10 +38,13 @@ public partial record HomeModel
     public async Task GoToButtons() { _frame.Navigate(typeof(ButtonsPage)); await Task.CompletedTask; }
     public async Task GoToCards() { _frame.Navigate(typeof(CardsPage)); await Task.CompletedTask; }
     public async Task GoToDialog() { _frame.Navigate(typeof(DialogPage)); await Task.CompletedTask; }
+    public async Task GoToForms() { _frame.Navigate(typeof(FormsPage)); await Task.CompletedTask; }
     public async Task GoToInputFields() { _frame.Navigate(typeof(InputFieldsPage)); await Task.CompletedTask; }
     public async Task GoToMenu() { _frame.Navigate(typeof(MenuPage)); await Task.CompletedTask; }
     public async Task GoToNavigation() { _frame.Navigate(typeof(NavigationPage)); await Task.CompletedTask; }
     public async Task GoToNotification() { _frame.Navigate(typeof(NotificationPage)); await Task.CompletedTask; }
+    public async Task GoToPagination() { _frame.Navigate(typeof(PaginationPage)); await Task.CompletedTask; }
+    public async Task GoToTabs() { _frame.Navigate(typeof(TabsPage)); await Task.CompletedTask; }
     public async Task GoToTag() { _frame.Navigate(typeof(TagPage)); await Task.CompletedTask; }
-    public async Task GoToTagToggle() { _frame.Navigate(typeof(TagTogglePage)); await Task.CompletedTask; }
+    public async Task GoToTooltip() { _frame.Navigate(typeof(TooltipPage)); await Task.CompletedTask; }
 }

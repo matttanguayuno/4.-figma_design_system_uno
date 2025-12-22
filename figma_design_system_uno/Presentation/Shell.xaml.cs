@@ -1,7 +1,9 @@
-﻿namespace figma_design_system_uno.Presentation;
-
+﻿using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Navigation;
 using Windows.UI.Core;
+
+namespace figma_design_system_uno.Presentation;
 
 public sealed partial class Shell : UserControl, IContentControlProvider
 {
@@ -13,12 +15,15 @@ public sealed partial class Shell : UserControl, IContentControlProvider
         { "Buttons", typeof(ButtonsPage) },
         { "Cards", typeof(CardsPage) },
         { "Dialog", typeof(DialogPage) },
+        { "Forms", typeof(FormsPage) },
         { "InputFields", typeof(InputFieldsPage) },
         { "Menu", typeof(MenuPage) },
         { "Navigation", typeof(NavigationPage) },
         { "Notification", typeof(NotificationPage) },
+        { "Pagination", typeof(PaginationPage) },
+        { "Tabs", typeof(TabsPage) },
         { "Tag", typeof(TagPage) },
-        { "TagToggle", typeof(TagTogglePage) }
+        { "Tooltip", typeof(TooltipPage) }
     };
 
     private string _currentPage = "Home";
@@ -35,7 +40,7 @@ public sealed partial class Shell : UserControl, IContentControlProvider
         SystemNavigationManager.GetForCurrentView().BackRequested += Shell_BackRequested;
     }
     
-    private void Shell_BackRequested(object sender, BackRequestedEventArgs e)
+    private void Shell_BackRequested(object? sender, BackRequestedEventArgs e)
     {
         if (ContentFrame.CanGoBack)
         {

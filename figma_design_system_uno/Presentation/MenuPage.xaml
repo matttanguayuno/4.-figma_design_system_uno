@@ -13,7 +13,7 @@
 
       <!-- Page Header -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space600}">
-        <utu:NavigationBar Content="Menu Component"
+        <utu:NavigationBar Content="Menu"
                            HorizontalContentAlignment="Left"
                            VerticalAlignment="Bottom">
           <utu:NavigationBar.MainCommand>

@@ -73,4 +73,13 @@
     <Setter Property="Foreground" Value="{StaticResource MaterialOnSurfaceVariantBrush}" />
   </Style>
 
+  <!-- Label Styles (for small labels, identifiers) -->
+  <Style x:Key="LabelTextBlockStyle" TargetType="TextBlock">
+    <Setter Property="FontFamily" Value="{StaticResource InterFontFamily}" />
+    <Setter Property="FontSize" Value="12" />
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="LineHeight" Value="16" />
+    <Setter Property="Foreground" Value="{StaticResource OnSurfaceBrush}" />
+  </Style>
+
 </ResourceDictionary>

@@ -113,7 +113,7 @@ public partial class App : Application
             new ViewMap<InputFieldsPage, InputFieldsModel>(),
             new ViewMap<MenuPage, MenuModel>(),
             new ViewMap<TagPage, TagModel>(),
-            new ViewMap<TagTogglePage, TagToggleModel>()
+            new ViewMap<TooltipPage, TooltipModel>()
         );
 
         routes.Register(
@@ -129,7 +129,7 @@ public partial class App : Application
                     new ("InputFields", View: views.FindByViewModel<InputFieldsModel>()),
                     new ("Menu", View: views.FindByViewModel<MenuModel>()),
                     new ("Tag", View: views.FindByViewModel<TagModel>()),
-                    new ("TagToggle", View: views.FindByViewModel<TagToggleModel>())
+                    new ("Tooltip", View: views.FindByViewModel<TooltipModel>())
                 ]
             )
         );

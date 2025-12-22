@@ -18,6 +18,7 @@ public sealed partial class CardsPage : Page
     public CardsPage()
     {
         this.InitializeComponent();
+        this.DataContext = this;
     }
 
     private async void OnBackClick(object sender, RoutedEventArgs e)

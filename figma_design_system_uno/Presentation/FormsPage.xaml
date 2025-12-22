@@ -1,0 +1,339 @@
+<Page x:Class="figma_design_system_uno.Presentation.FormsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      Background="{StaticResource BackgroundBrush}">
+
+  <Page.Resources>
+    <!-- Input wrapper style matching InputFieldsPage -->
+    <Style x:Key="InputContainerStyle" TargetType="Border">
+      <Setter Property="Background" Value="{StaticResource SurfaceBrush}" />
+      <Setter Property="BorderBrush" Value="{StaticResource OutlineBrush}" />
+      <Setter Property="BorderThickness" Value="1" />
+      <Setter Property="CornerRadius" Value="8" />
+      <Setter Property="Padding" Value="16,8" />
+    </Style>
+  </Page.Resources>
+
+  <ScrollViewer>
+    <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space1600}"
+                    Padding="{StaticResource Space1600}">
+
+      <!-- Page Header -->
+      <utu:NavigationBar Content="Forms"
+                         HorizontalContentAlignment="Left"
+                         VerticalAlignment="Bottom">
+        <utu:NavigationBar.MainCommand>
+          <AppBarButton Icon="Back" Click="OnBackClick" />
+        </utu:NavigationBar.MainCommand>
+        <utu:NavigationBar.ContentTemplate>
+          <DataTemplate>
+            <TextBlock Text="{Binding}"
+                       Style="{StaticResource TitlePageTextBlockStyle}" />
+          </DataTemplate>
+        </utu:NavigationBar.ContentTemplate>
+      </utu:NavigationBar>
+
+      <!-- Form Shipping Section -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
+        <TextBlock Text="Form Shipping"
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <Border Background="{StaticResource SurfaceBrush}"
+                BorderBrush="{StaticResource OutlineBrush}"
+                BorderThickness="1"
+                CornerRadius="8"
+                Padding="24"
+                MinWidth="320"
+                MaxWidth="350"
+                HorizontalAlignment="Left">
+          <utu:AutoLayout Orientation="Vertical" Spacing="24">
+            
+            <!-- Legend -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="4">
+              <TextBlock Text="Shipping information"
+                         Style="{StaticResource HeadingTextBlockStyle}"
+                         FontSize="24" />
+              <TextBlock Text="We ship within 2 working days"
+                         Foreground="{StaticResource SecondaryTextBrush}" />
+            </utu:AutoLayout>
+
+            <!-- Full Name Input -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Full Name" />
+              <Border Style="{StaticResource InputContainerStyle}">
+                <TextBox Text="" PlaceholderText="Value" 
+                         BorderThickness="0" Background="Transparent"
+                         Style="{StaticResource InputFieldTextBoxStyle}" />
+              </Border>
+            </utu:AutoLayout>
+
+            <!-- Location Select -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Location" />
+              <ComboBox SelectedIndex="0" 
+                        Style="{StaticResource SelectFieldComboBoxStyle}"
+                        HorizontalAlignment="Stretch">
+                <ComboBoxItem Content="Value" />
+                <ComboBoxItem Content="Location 2" />
+                <ComboBoxItem Content="Location 3" />
+              </ComboBox>
+            </utu:AutoLayout>
+
+            <!-- Delivery Note Textarea -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Delivery note" />
+              <TextBox Text="" PlaceholderText="Value"
+                       Style="{StaticResource TextareaFieldTextBoxStyle}"
+                       Height="80" />
+            </utu:AutoLayout>
+
+            <!-- Terms Checkbox -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="0">
+              <CheckBox IsChecked="True" VerticalContentAlignment="Top" Padding="0" Margin="0,0,0,0">
+                <TextBlock Text="I accept the terms" VerticalAlignment="Center" Margin="10,7,0,0" />
+              </CheckBox>
+              <utu:AutoLayout Orientation="Horizontal" Spacing="12" Margin="28,4,0,0">
+                <HyperlinkButton Content="Read our T&amp;Cs"
+                                 Foreground="{StaticResource SecondaryTextBrush}"
+                                 Padding="0" />
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+
+            <!-- Submit Button -->
+            <Button Content="Save shipping information"
+                    Style="{StaticResource SDSFilledButtonStyle}"
+                    HorizontalAlignment="Stretch" />
+
+          </utu:AutoLayout>
+        </Border>
+      </utu:AutoLayout>
+
+      <!-- Form Contact Section -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
+        <TextBlock Text="Form Contact"
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <Border Background="{StaticResource SurfaceBrush}"
+                BorderBrush="{StaticResource OutlineBrush}"
+                BorderThickness="1"
+                CornerRadius="8"
+                Padding="24"
+                MinWidth="320"
+                MaxWidth="350"
+                HorizontalAlignment="Left">
+          <utu:AutoLayout Orientation="Vertical" Spacing="24">
+
+            <!-- Name Input -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Name" />
+              <Border Style="{StaticResource InputContainerStyle}">
+                <TextBox Text="" PlaceholderText="Value" 
+                         BorderThickness="0" Background="Transparent"
+                         Style="{StaticResource InputFieldTextBoxStyle}" />
+              </Border>
+            </utu:AutoLayout>
+
+            <!-- Surname Input -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Surname" />
+              <Border Style="{StaticResource InputContainerStyle}">
+                <TextBox Text="" PlaceholderText="Value" 
+                         BorderThickness="0" Background="Transparent"
+                         Style="{StaticResource InputFieldTextBoxStyle}" />
+              </Border>
+            </utu:AutoLayout>
+
+            <!-- Email Input -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Email" />
+              <Border Style="{StaticResource InputContainerStyle}">
+                <TextBox Text="" PlaceholderText="Value" 
+                         BorderThickness="0" Background="Transparent"
+                         Style="{StaticResource InputFieldTextBoxStyle}" />
+              </Border>
+            </utu:AutoLayout>
+
+            <!-- Message Textarea -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Message" />
+              <TextBox Text="" PlaceholderText="Value"
+                       Style="{StaticResource TextareaFieldTextBoxStyle}"
+                       Height="80" />
+            </utu:AutoLayout>
+
+            <!-- Submit Button -->
+            <Button Content="Submit"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    HorizontalAlignment="Stretch" />
+          </utu:AutoLayout>
+        </Border>
+      </utu:AutoLayout>
+
+      <!-- Form Newsletter Section -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
+        <TextBlock Text="Form Newsletter"
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <utu:AutoLayout Orientation="Horizontal" Spacing="12" MaxWidth="350" HorizontalAlignment="Left">
+          <Border Style="{StaticResource InputContainerStyle}" MinWidth="240">
+            <TextBox Text="" PlaceholderText="you@example.com" 
+                     BorderThickness="0" Background="Transparent"
+                     Style="{StaticResource InputFieldTextBoxStyle}" />
+          </Border>
+          <Button Content="Submit"
+                  Style="{StaticResource PrimaryButtonStyle}" />
+        </utu:AutoLayout>
+      </utu:AutoLayout>
+
+      <!-- Form Log In Section -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
+        <TextBlock Text="Form Log In"
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <Border Background="{StaticResource SurfaceBrush}"
+                BorderBrush="{StaticResource OutlineBrush}"
+                BorderThickness="1"
+                CornerRadius="8"
+                Padding="24"
+                MinWidth="320"
+                MaxWidth="350"
+                HorizontalAlignment="Left">
+          <utu:AutoLayout Orientation="Vertical" Spacing="24">
+
+            <!-- Email Input -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Email" />
+              <Border Style="{StaticResource InputContainerStyle}">
+                <TextBox Text="" PlaceholderText="Value" 
+                         BorderThickness="0" Background="Transparent"
+                         Style="{StaticResource InputFieldTextBoxStyle}" />
+              </Border>
+            </utu:AutoLayout>
+
+            <!-- Password Input -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Password" />
+              <Border Style="{StaticResource InputContainerStyle}">
+                <PasswordBox PlaceholderText="Value"
+                             BorderThickness="0" Background="Transparent" />
+              </Border>
+            </utu:AutoLayout>
+
+            <!-- Sign In Button -->
+            <Button Content="Sign In"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    HorizontalAlignment="Stretch" />
+
+            <!-- Forgot Password Link -->
+            <HyperlinkButton Content="Forgot password?"
+                             Foreground="{StaticResource OnSurfaceBrush}"
+                             HorizontalAlignment="Left"
+                             Padding="0" />
+
+          </utu:AutoLayout>
+        </Border>
+      </utu:AutoLayout>
+
+      <!-- Form Register Section -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
+        <TextBlock Text="Form Register"
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <Border Background="{StaticResource SurfaceBrush}"
+                BorderBrush="{StaticResource OutlineBrush}"
+                BorderThickness="1"
+                CornerRadius="8"
+                Padding="24"
+                MinWidth="320"
+                MaxWidth="350"
+                HorizontalAlignment="Left">
+          <utu:AutoLayout Orientation="Vertical" Spacing="24">
+
+            <!-- Email Input -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Email" />
+              <Border Style="{StaticResource InputContainerStyle}">
+                <TextBox Text="" PlaceholderText="Value" 
+                         BorderThickness="0" Background="Transparent"
+                         Style="{StaticResource InputFieldTextBoxStyle}" />
+              </Border>
+            </utu:AutoLayout>
+
+            <!-- Password Input -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Password" />
+              <Border Style="{StaticResource InputContainerStyle}">
+                <PasswordBox PlaceholderText="Value"
+                             BorderThickness="0" Background="Transparent" />
+              </Border>
+            </utu:AutoLayout>
+
+            <!-- Checkbox with Description -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="0">
+              <CheckBox IsChecked="False" VerticalContentAlignment="Top" Padding="0" Margin="0,0,0,0">
+                <TextBlock Text="Label" VerticalAlignment="Center" Margin="10,7,0,0" />
+              </CheckBox>
+              <utu:AutoLayout Orientation="Horizontal" Spacing="12" Margin="28,4,0,0">
+                <TextBlock Text="Description"
+                           Foreground="{StaticResource SecondaryTextBrush}" />
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+
+            <!-- Register Button -->
+            <Button Content="Register"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    HorizontalAlignment="Stretch" />
+
+          </utu:AutoLayout>
+        </Border>
+      </utu:AutoLayout>
+
+      <!-- Form Forgot Password Section -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
+        <TextBlock Text="Form Forgot Password"
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <Border Background="{StaticResource SurfaceBrush}"
+                BorderBrush="{StaticResource OutlineBrush}"
+                BorderThickness="1"
+                CornerRadius="8"
+                Padding="24"
+                MinWidth="320"
+                MaxWidth="350"
+                HorizontalAlignment="Left">
+          <utu:AutoLayout Orientation="Vertical" Spacing="24">
+
+            <!-- Email Input -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Email" />
+              <Border Style="{StaticResource InputContainerStyle}">
+                <TextBox Text="" PlaceholderText="Value" 
+                         BorderThickness="0" Background="Transparent"
+                         Style="{StaticResource InputFieldTextBoxStyle}" />
+              </Border>
+            </utu:AutoLayout>
+
+            <!-- Button Group -->
+            <Grid HorizontalAlignment="Stretch">
+              <StackPanel Orientation="Horizontal" Spacing="16" HorizontalAlignment="Center">
+                <Button Content="Cancel"
+                        Style="{StaticResource NeutralButtonStyle}" />
+                <Button Content="Reset Password"
+                        Style="{StaticResource PrimaryButtonStyle}" />
+              </StackPanel>
+            </Grid>
+
+          </utu:AutoLayout>
+        </Border>
+      </utu:AutoLayout>
+
+    </utu:AutoLayout>
+  </ScrollViewer>
+</Page>

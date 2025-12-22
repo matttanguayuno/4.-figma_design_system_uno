@@ -26,7 +26,7 @@
                     Padding="{StaticResource Spacing800}">
 
       <!-- Page Header -->
-      <utu:NavigationBar Content="Dialog Component"
+      <utu:NavigationBar Content="Dialog"
                          HorizontalContentAlignment="Left"
                          VerticalAlignment="Bottom">
         <utu:NavigationBar.MainCommand>
@@ -63,7 +63,7 @@
           <Border Grid.Row="0" Grid.Column="0"
                   Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
                   BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                   VerticalAlignment="Top" Margin="0,0,16,0">
             <TextBlock Text="Overlay"
                        FontWeight="SemiBold"
@@ -153,7 +153,7 @@
           <Border Grid.Row="1" Grid.Column="0"
                   Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
                   BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                   VerticalAlignment="Top" Margin="0,0,16,0">
             <TextBlock Text="Bottom Sheet"
                        FontWeight="SemiBold"

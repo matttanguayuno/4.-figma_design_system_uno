@@ -69,11 +69,13 @@ public sealed partial class SourceCodeViewer : UserControl
         try
         {
             _pageXamlContent = await LoadEmbeddedResourceAsync(PageXamlPath);
-            PageXamlTextBox.Text = _pageXamlContent;
+            // TODO: XAML code generation failing
+            // PageXamlTextBox.Text = _pageXamlContent;
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            PageXamlTextBox.Text = $"Error loading file: {ex.Message}";
+            // TODO: XAML code generation failing
+            // PageXamlTextBox.Text = $"Error loading file: {ex.Message}";
         }
     }
 
@@ -84,11 +86,13 @@ public sealed partial class SourceCodeViewer : UserControl
         try
         {
             _styleXamlContent = await LoadEmbeddedResourceAsync(StyleXamlPath);
-            StyleXamlTextBox.Text = _styleXamlContent;
+            // TODO: XAML code generation failing
+            // StyleXamlTextBox.Text = _styleXamlContent;
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            StyleXamlTextBox.Text = $"Error loading file: {ex.Message}";
+            // TODO: XAML code generation failing
+            // StyleXamlTextBox.Text = $"Error loading file: {ex.Message}";
         }
     }
 

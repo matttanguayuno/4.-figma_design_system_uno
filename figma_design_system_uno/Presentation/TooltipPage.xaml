@@ -1,0 +1,144 @@
+<Page x:Class="figma_design_system_uno.Presentation.TooltipPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      Background="{StaticResource BackgroundBrush}">
+
+  <Grid>
+    <!-- Hidden TeachingTips (they must be in visual tree to generate fields) -->
+    <TeachingTip x:Name="TopTeachingTip"
+                 Target="{Binding ElementName=TopTarget}"
+                 Title="Title"
+                 Subtitle="Body text"
+                 PreferredPlacement="Top"
+                 IsLightDismissEnabled="False"
+                 MinWidth="0"
+                 MaxWidth="150" />
+
+    <TeachingTip x:Name="BottomTeachingTip"
+                 Target="{Binding ElementName=BottomTarget}"
+                 Title="Title"
+                 Subtitle="Body text"
+                 PreferredPlacement="Bottom"
+                 IsLightDismissEnabled="False"
+                 MinWidth="0"
+                 MaxWidth="150" />
+
+    <TeachingTip x:Name="LeftTeachingTip"
+                 Target="{Binding ElementName=LeftTarget}"
+                 Title="Title"
+                 Subtitle="Body text"
+                 PreferredPlacement="Left"
+                 IsLightDismissEnabled="False"
+                 MinWidth="0"
+                 MaxWidth="150" />
+
+    <TeachingTip x:Name="RightTeachingTip"
+                 Target="{Binding ElementName=RightTarget}"
+                 Title="Title"
+                 Subtitle="Body text"
+                 PreferredPlacement="Right"
+                 IsLightDismissEnabled="False"
+                 MinWidth="0"
+                 MaxWidth="150" />
+
+  <ScrollViewer>
+    <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space1600}"
+                    Padding="{StaticResource Space1600}">
+
+      <!-- Page Header -->
+      <utu:NavigationBar Content="Tooltip"
+                         HorizontalContentAlignment="Left"
+                         VerticalAlignment="Bottom">
+        <utu:NavigationBar.MainCommand>
+          <AppBarButton Icon="Back" Click="OnBackClick" />
+        </utu:NavigationBar.MainCommand>
+        <utu:NavigationBar.ContentTemplate>
+          <DataTemplate>
+            <TextBlock Text="{Binding}"
+                       Style="{StaticResource TitlePageTextBlockStyle}" />
+          </DataTemplate>
+        </utu:NavigationBar.ContentTemplate>
+      </utu:NavigationBar>
+
+      <!-- Tooltip Section -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
+        <TextBlock Text="Tooltip"
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+
+        <!-- Vertical Layout with Labels -->
+        <Grid ColumnSpacing="{StaticResource Space1200}" 
+              RowSpacing="{StaticResource Space2400}" 
+              Margin="0,100,0,0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+
+          <!-- Row 1: Top -->
+          <Border Grid.Row="0" Grid.Column="0"
+                  Style="{StaticResource MatrixIdentifierBorderStyle}">
+            <TextBlock Text="Top"
+                       Style="{StaticResource LabelTextBlockStyle}" />
+          </Border>
+
+          <Button x:Name="TopTarget" Grid.Row="0" Grid.Column="1"
+                  Content="Target"
+                  Margin="300,0,0,0"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Center" />
+
+          <!-- Row 2: Bottom -->
+          <Border Grid.Row="1" Grid.Column="0"
+                  Style="{StaticResource MatrixIdentifierBorderStyle}">
+            <TextBlock Text="Bottom"
+                       Style="{StaticResource LabelTextBlockStyle}" />
+          </Border>
+
+          <Button x:Name="BottomTarget" Grid.Row="1" Grid.Column="1"
+                  Content="Target"
+                  Margin="300,0,0,0"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Center" />
+
+          <!-- Row 3: Left -->
+          <Border Grid.Row="2" Grid.Column="0"
+                  Style="{StaticResource MatrixIdentifierBorderStyle}">
+            <TextBlock Text="Left"
+                       Style="{StaticResource LabelTextBlockStyle}" />
+          </Border>
+
+          <Button x:Name="LeftTarget" Grid.Row="2" Grid.Column="1"
+                  Content="Target"
+                  Margin="300,0,0,0"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Center" />
+
+          <!-- Row 4: Right -->
+          <Border Grid.Row="3" Grid.Column="0"
+                  Style="{StaticResource MatrixIdentifierBorderStyle}">
+            <TextBlock Text="Right"
+                       Style="{StaticResource LabelTextBlockStyle}" />
+          </Border>
+
+          <Button x:Name="RightTarget" Grid.Row="3" Grid.Column="1"
+                  Content="Target"
+                  Margin="300,0,0,0"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Center" />
+
+        </Grid>
+
+      </utu:AutoLayout>
+
+    </utu:AutoLayout>
+  </ScrollViewer>
+  </Grid>
+</Page>

@@ -16,7 +16,7 @@
                         Spacing="{StaticResource Space1200}">
 
             <!-- Page Header -->
-            <utu:NavigationBar Content="Tag Toggle Component"
+            <utu:NavigationBar Content="Tag Toggle"
                                HorizontalContentAlignment="Left"
                                VerticalAlignment="Bottom">
               <utu:NavigationBar.MainCommand>

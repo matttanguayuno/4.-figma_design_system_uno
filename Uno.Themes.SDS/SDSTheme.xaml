@@ -33,6 +33,7 @@
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/Card.xaml" />
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/CheckBox.xaml" />
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/ComboBox.xaml" />
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/MatrixIdentifier.xaml" />
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/RadioButton.xaml" />
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/Search.xaml" />
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/Tag.xaml" />

@@ -127,6 +127,20 @@
   <SolidColorBrush x:Key="SDSNavHoverBackgroundBrush" Color="{StaticResource SDSNavHoverBackgroundColor}" />
   <SolidColorBrush x:Key="SDSNavPillActiveBackgroundBrush" Color="{StaticResource SDSNavPillActiveBackgroundColor}" />
   <SolidColorBrush x:Key="SDSNavPillActiveTextBrush" Color="{StaticResource SDSNavPillActiveTextColor}" />
+
+  <!-- Notification Brushes -->
+  <SolidColorBrush x:Key="SDSNotificationAlertBackgroundBrush" Color="{StaticResource SDSNotificationAlertBackgroundColor}" />
+  <SolidColorBrush x:Key="SDSNotificationAlertBorderBrush" Color="{StaticResource SDSNotificationAlertBorderColor}" />
+  <SolidColorBrush x:Key="SDSNotificationAlertButtonBrush" Color="{StaticResource SDSNotificationAlertButtonColor}" />
+
+  <!-- Pagination Brushes -->
+  <SolidColorBrush x:Key="SDSPaginationDefaultBackgroundBrush" Color="{StaticResource SDSPaginationDefaultBackgroundColor}" />
+  <SolidColorBrush x:Key="SDSPaginationHoverBackgroundBrush" Color="{StaticResource SDSPaginationHoverBackgroundColor}" />
+  <SolidColorBrush x:Key="SDSPaginationCurrentBackgroundBrush" Color="{StaticResource SDSPaginationCurrentBackgroundColor}" />
+  <SolidColorBrush x:Key="SDSPaginationCurrentHoverBackgroundBrush" Color="{StaticResource SDSPaginationCurrentHoverBackgroundColor}" />
+  <SolidColorBrush x:Key="SDSPaginationCurrentTextBrush" Color="{StaticResource SDSPaginationCurrentTextColor}" />
+  <SolidColorBrush x:Key="SDSPaginationDisabledTextBrush" Color="{StaticResource SDSPaginationDisabledTextColor}" />
+
     <!-- Convenience Aliases (backward compatibility / common usage) -->
     <SolidColorBrush x:Key="DefaultBackgroundBrush" Color="{StaticResource BackgroundColor}" />
     <SolidColorBrush x:Key="ContentBackgroundBrush" Color="{StaticResource BackgroundColor}" />

@@ -34,6 +34,15 @@ This document tracks known issues and bugs that need to be fixed.
 
 ## 🔴 High Priority
 
+### Add Interactive Control for State Demonstrations
+**Location:** All component pages (Buttons, Tags, etc.)
+
+**Issue:** Component showcase pages currently display all states (default, hover, active, disabled) as static examples. There's no way for users to interact with a control to see the state changes happen in real-time.
+
+**Expected Behavior:** Add interactive demo controls that allow users to hover over or click components to see live state transitions and animations, making it easier to understand how components behave in actual use.
+
+**Proposed Solution:** Create interactive demo sections in addition to the static state matrices, where users can interact with buttons, tags, and other controls to see hover effects, click feedback, and state transitions.
+
 ### Menu Page - Wrong Up Arrow in Chrome (WebAssembly)
 **Location:** `figma_design_system_uno/Presentation/MenuPage.xaml` - Menu section
 
@@ -195,12 +204,23 @@ Path.Fill shows #F5F5F5 (OnPrimaryColor) instead of #B3B3B3 when using ThemeReso
 - Apply rounded dotted rectangles to all matrix layouts across all pages
 - Ensure consistent corner radius matching other design system elements
 
-### Row Identifier Label Alignment
-**Location:** All pages with matrix layouts (NavigationPage, MenuPage, ButtonsPage, CardsPage, InputFieldsPage, AccordionPage, AvatarPage, DialogPage, NotificationPage, etc.)
+### Tooltip Page - Cannot Resize Tooltips
+**Location:** `figma_design_system_uno/Presentation/TooltipPage.xaml`
 
-**Issue:** Row identifier label rectangles need to be right-aligned within their grid column for proper visual alignment with the matrix content.
+**Issue:** TeachingTip control has a hardcoded minimum width of 320px in its implementation (`s_defaultTipHeightAndWidth = 320` constant in source code). Attempts to control width through:
+- Direct properties: Width, MinWidth, MaxWidth
+- Style setters: MinWidth, MaxWidth, HorizontalAlignment
+- Resource overrides: TeachingTipMinWidth, TeachingTipMaxWidth
 
-**Current State:** Row identifier labels are currently not consistently aligned, which can make the matrix layouts look misaligned.
+All approaches are ignored by the control's internal layout logic.
+
+**Current State:** Layout changed to vertical (one per row) to avoid overlap issues, but tooltips remain wider than desired.
+
+**Investigation Needed:**
+- Determine if ControlTemplate override is necessary to access internal Grid/Border sizing
+- Consider custom tooltip implementation if TeachingTip cannot be resized
+- Evaluate if 320px minimum is acceptable as design constraint
+
 
 **Investigation Needed:**
 - Add HorizontalAlignment="Right" to all row identifier Border elements

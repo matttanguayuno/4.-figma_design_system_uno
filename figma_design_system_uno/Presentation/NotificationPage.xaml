@@ -12,7 +12,7 @@
                     Spacing="{StaticResource Space1200}">
 
       <!-- Page Header -->
-      <utu:NavigationBar Content="Notification Component"
+      <utu:NavigationBar Content="Notification"
                          HorizontalContentAlignment="Left"
                          VerticalAlignment="Bottom">
         <utu:NavigationBar.MainCommand>
@@ -49,7 +49,7 @@
           <Border Grid.Row="0" Grid.Column="0"
                   Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
                   BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                   VerticalAlignment="Top" Margin="0,0,24,0">
             <TextBlock Text="Message" 
                        FontWeight="SemiBold"
@@ -58,8 +58,8 @@
 
           <!-- Message Notification -->
           <Border Grid.Row="0" Grid.Column="1"
-                  Background="White"
-                  BorderBrush="#757575"
+                  Background="{StaticResource SurfaceBrush}"
+                  BorderBrush="{StaticResource OnSurfaceMediumBrush}"
                   BorderThickness="1"
                   CornerRadius="8"
                   Padding="16"
@@ -81,9 +81,9 @@
               <Viewbox Grid.Column="0" Width="20" Height="20" VerticalAlignment="Top">
                 <Canvas Width="20" Height="20">
                   <Ellipse Width="20" Height="20" 
-                           Stroke="#1E1E1E" StrokeThickness="1.5" Fill="Transparent" />
-                  <Ellipse Canvas.Left="9" Canvas.Top="4.5" Width="2" Height="2" Fill="#1E1E1E" />
-                  <Rectangle Canvas.Left="9" Canvas.Top="8.5" Width="2" Height="7" Fill="#1E1E1E" />
+                           Stroke="{StaticResource OnSurfaceColor}" StrokeThickness="1.5" Fill="Transparent" />
+                  <Ellipse Canvas.Left="9" Canvas.Top="4.5" Width="2" Height="2" Fill="{StaticResource OnSurfaceColor}" />
+                  <Rectangle Canvas.Left="9" Canvas.Top="8.5" Width="2" Height="7" Fill="{StaticResource OnSurfaceColor}" />
                 </Canvas>
               </Viewbox>
 
@@ -91,22 +91,21 @@
               <utu:AutoLayout Grid.Column="1" Orientation="Vertical" Spacing="12">
                 <utu:AutoLayout Orientation="Vertical" Spacing="4">
                   <TextBlock Text="Title" 
-                             FontSize="16" FontWeight="SemiBold" 
-                             Foreground="#1E1E1E" />
+                             Style="{StaticResource SubtitleTextBlockStyle}"
+                             Foreground="{StaticResource OnSurfaceBrush}" />
                   <TextBlock Text="Body text." 
-                             FontSize="14" 
-                             Foreground="#1E1E1E" 
+                             Style="{StaticResource BodyTextBlockStyle}"
+                             Foreground="{StaticResource OnSurfaceBrush}" 
                              TextWrapping="Wrap" />
                 </utu:AutoLayout>
                 <Button Content="Button"
-                        Background="#2C2C2C"
-                        BorderBrush="#2C2C2C"
+                        Background="{StaticResource PrimaryBrush}"
+                        BorderBrush="{StaticResource PrimaryBrush}"
                         BorderThickness="1"
-                        Foreground="#F5F5F5"
+                        Foreground="{StaticResource OnPrimaryBrush}"
                         CornerRadius="4"
                         Padding="12,8"
-                        FontSize="14"
-                        FontWeight="Medium"
+                        Style="{StaticResource BodyTextBlockStyle}"
                         MinWidth="0"
                         HorizontalAlignment="Left"
                         utu:AutoLayout.CounterAlignment="Start" />
@@ -121,7 +120,7 @@
                       Height="20"
                       VerticalAlignment="Top">
                 <Path Data="M 4 4 L 16 16 M 16 4 L 4 16" 
-                      Stroke="#1E1E1E" 
+                      Stroke="{StaticResource OnSurfaceColor}" 
                       StrokeThickness="1.5" />
               </Button>
             </Grid>
@@ -131,7 +130,7 @@
           <Border Grid.Row="1" Grid.Column="0"
                   Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
                   BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                   VerticalAlignment="Top" Margin="0,0,24,0">
             <TextBlock Text="Alert" 
                        FontWeight="SemiBold"
@@ -140,8 +139,8 @@
 
           <!-- Alert Notification -->
           <Border Grid.Row="1" Grid.Column="1"
-                  Background="#FEE9E7"
-                  BorderBrush="#EC221F"
+                  Background="{StaticResource SDSNotificationAlertBackgroundBrush}"
+                  BorderBrush="{StaticResource SDSNotificationAlertBorderBrush}"
                   BorderThickness="1"
                   CornerRadius="8"
                   Padding="16"
@@ -163,9 +162,9 @@
               <Viewbox Grid.Column="0" Width="20" Height="20" VerticalAlignment="Top">
                 <Canvas Width="20" Height="20">
                   <Ellipse Width="20" Height="20" 
-                           Stroke="#900B09" StrokeThickness="1.5" Fill="Transparent" />
-                  <Ellipse Canvas.Left="9" Canvas.Top="4.5" Width="2" Height="2" Fill="#900B09" />
-                  <Rectangle Canvas.Left="9" Canvas.Top="8.5" Width="2" Height="7" Fill="#900B09" />
+                           Stroke="{StaticResource ErrorColor}" StrokeThickness="1.5" Fill="Transparent" />
+                  <Ellipse Canvas.Left="9" Canvas.Top="4.5" Width="2" Height="2" Fill="{StaticResource ErrorColor}" />
+                  <Rectangle Canvas.Left="9" Canvas.Top="8.5" Width="2" Height="7" Fill="{StaticResource ErrorColor}" />
                 </Canvas>
               </Viewbox>
 
@@ -173,22 +172,21 @@
               <utu:AutoLayout Grid.Column="1" Orientation="Vertical" Spacing="12">
                 <utu:AutoLayout Orientation="Vertical" Spacing="4">
                   <TextBlock Text="Title" 
-                             FontSize="16" FontWeight="SemiBold" 
-                             Foreground="#900B09" />
+                             Style="{StaticResource SubtitleTextBlockStyle}"
+                             Foreground="{StaticResource ErrorBrush}" />
                   <TextBlock Text="Body text." 
-                             FontSize="14" 
-                             Foreground="#900B09" 
+                             Style="{StaticResource BodyTextBlockStyle}"
+                             Foreground="{StaticResource ErrorBrush}" 
                              TextWrapping="Wrap" />
                 </utu:AutoLayout>
                 <Button Content="Button"
-                        Background="#EC221F"
-                        BorderBrush="#C00F0C"
+                        Background="{StaticResource SDSNotificationAlertButtonBrush}"
+                        BorderBrush="{StaticResource SDSDangerPrimaryHoverBrush}"
                         BorderThickness="1"
-                        Foreground="#FEE9E7"
+                        Foreground="{StaticResource SDSNotificationAlertBackgroundBrush}"
                         CornerRadius="4"
                         Padding="12,8"
-                        FontSize="14"
-                        FontWeight="Medium"
+                        Style="{StaticResource BodyTextBlockStyle}"
                         MinWidth="0"
                         HorizontalAlignment="Left"
                         utu:AutoLayout.CounterAlignment="Start" />
@@ -203,7 +201,7 @@
                       Height="20"
                       VerticalAlignment="Top">
                 <Path Data="M 4 4 L 16 16 M 16 4 L 4 16" 
-                      Stroke="#900B09" 
+                      Stroke="{StaticResource ErrorColor}" 
                       StrokeThickness="1.5" />
               </Button>
             </Grid>

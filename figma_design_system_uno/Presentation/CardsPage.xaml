@@ -20,7 +20,7 @@
                     HorizontalAlignment="Left">
 
       <!-- Page Header -->
-      <utu:NavigationBar Content="Cards Component"
+      <utu:NavigationBar Content="Cards"
                          HorizontalContentAlignment="Left"
                          VerticalAlignment="Bottom">
         <utu:NavigationBar.MainCommand>
@@ -62,8 +62,8 @@
             <!-- Column Headers -->
             <Border Grid.Row="0" Grid.Column="1"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     Margin="0,0,0,8">
               <TextBlock Text="Stroke"
                          FontWeight="SemiBold"
@@ -71,8 +71,8 @@
             </Border>
             <Border Grid.Row="0" Grid.Column="2"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     Margin="0,0,0,8">
               <TextBlock Text="Default"
                          FontWeight="SemiBold"
@@ -82,8 +82,8 @@
             <!-- Row 1: Icon -->
             <Border Grid.Row="1" Grid.Column="0"
                     Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
-                    BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                    BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                     VerticalAlignment="Center">
               <TextBlock Text="Icon"
                          FontWeight="SemiBold"
@@ -152,7 +152,7 @@
           <Border Grid.Row="2" Grid.Column="0"
                   Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
                   BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                   VerticalAlignment="Center">
             <TextBlock Text="Image"
                        FontWeight="SemiBold"
@@ -245,7 +245,7 @@
           <Border Grid.Row="0" Grid.Column="1"
                   Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
                   BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                   Margin="0,0,0,8">
             <TextBlock Text="Stroke"
                        FontWeight="SemiBold"
@@ -254,7 +254,7 @@
           <Border Grid.Row="0" Grid.Column="2"
                   Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
                   BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                   Margin="0,0,0,8">
             <TextBlock Text="Default"
                        FontWeight="SemiBold"
@@ -265,7 +265,7 @@
           <Border Grid.Row="1" Grid.Column="0"
                   Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
                   BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                   VerticalAlignment="Center">
             <TextBlock Text="Icon"
                        FontWeight="SemiBold"
@@ -334,7 +334,7 @@
           <Border Grid.Row="2" Grid.Column="0"
                   Background="{StaticResource SDSMatrixIdentifierBackgroundBrush}"
                   BorderBrush="{StaticResource SDSMatrixIdentifierBorderBrush}"
-                  BorderThickness="1" CornerRadius="8" Padding="12,8"
+                  BorderThickness="1" CornerRadius="12" Padding="12,8"
                   VerticalAlignment="Center">
             <TextBlock Text="Image"
                        FontWeight="SemiBold"
@@ -432,7 +432,7 @@
                            Title="Title"
                            Price="50"
                            Period=" / mo"
-                           Features="{x:Bind PricingFeatures}"
+                           Features="{Binding PricingFeatures}"
                            ButtonText="Button"
                            Style="{StaticResource LightDesktopPricingCardStyle}" />
 
@@ -441,7 +441,7 @@
                            Title="Title"
                            Price="50"
                            Period=" / mo"
-                           Features="{x:Bind PricingFeatures}"
+                           Features="{Binding PricingFeatures}"
                            ButtonText="Button"
                            Style="{StaticResource BrandedDesktopPricingCardStyle}" />
 
@@ -450,7 +450,7 @@
                            Title="Title"
                            Price="50"
                            Period=" / mo"
-                           Features="{x:Bind PricingFeatures}"
+                           Features="{Binding PricingFeatures}"
                            ButtonText="Button"
                            Style="{StaticResource LightMobilePricingCardStyle}" />
 
@@ -459,7 +459,7 @@
                            Title="Title"
                            Price="50"
                            Period=" / mo"
-                           Features="{x:Bind PricingFeatures}"
+                           Features="{Binding PricingFeatures}"
                            ButtonText="Button"
                            Style="{StaticResource BrandedMobilePricingCardStyle}" />
 

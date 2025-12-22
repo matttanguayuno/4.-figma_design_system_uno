@@ -1,0 +1,16 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <!-- 
+  Matrix Identifier Label Style
+  Used for row/column identifiers in component showcase matrices
+  -->
+
+  <Style x:Key="MatrixIdentifierBorderStyle" TargetType="Border">
+    <Setter Property="Background" Value="{StaticResource SDSMatrixIdentifierBackgroundBrush}" />
+    <Setter Property="CornerRadius" Value="{StaticResource Radius100}" />
+    <Setter Property="Padding" Value="{StaticResource Spacing200}" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+  </Style>
+
+</ResourceDictionary>
