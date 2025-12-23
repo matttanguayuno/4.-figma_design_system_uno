@@ -32,9 +32,135 @@
         </utu:NavigationBar.ContentTemplate>
       </utu:NavigationBar>
 
+      <!-- LEVEL 1: Interactive Button Examples -->
+      <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
+        <TextBlock Text="Interactive Button Examples"
+                   FontWeight="Bold"
+                   Style="{StaticResource HeadingTextBlockStyle}" />
+        
+        <TextBlock Text="Hover over these buttons to see the visual states in action"
+                   Style="{StaticResource BodyLargeTextBlockStyle}"
+                   Opacity="0.7" />
+
+        <utu:AutoLayout Orientation="Vertical" Spacing="24">
+          <!-- Default Buttons -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="12">
+            <TextBlock Text="Default"
+                       FontWeight="SemiBold"
+                       Style="{StaticResource BodyLargeTextBlockStyle}" />
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Small" FontSize="12" Opacity="0.6" />
+              <utu:AutoLayout Orientation="Horizontal" Spacing="16" PrimaryAxisAlignment="Start">
+                <Button Content="Primary" Style="{StaticResource FilledButtonSmallStyle}" />
+                <Button Content="Neutral" Style="{StaticResource OutlinedButtonSmallStyle}" />
+                <Button Content="Subtle" Style="{StaticResource TextButtonSmallStyle}" />
+                <Button Content="Disabled" Style="{StaticResource FilledButtonSmallStyle}" IsEnabled="False" />
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Medium" FontSize="12" Opacity="0.6" />
+              <utu:AutoLayout Orientation="Horizontal" Spacing="16" PrimaryAxisAlignment="Start">
+                <Button Content="Primary" Style="{StaticResource FilledButtonStyle}" />
+                <Button Content="Neutral" Style="{StaticResource OutlinedButtonStyle}" />
+                <Button Content="Subtle" Style="{StaticResource TextButtonStyle}" />
+                <Button Content="Disabled" Style="{StaticResource FilledButtonStyle}" IsEnabled="False" />
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+
+          <!-- Danger Buttons -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="12">
+            <TextBlock Text="Danger"
+                       FontWeight="SemiBold"
+                       Style="{StaticResource BodyLargeTextBlockStyle}" />
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Small" FontSize="12" Opacity="0.6" />
+              <utu:AutoLayout Orientation="Horizontal" Spacing="16" PrimaryAxisAlignment="Start">
+                <Button Content="Primary" Style="{StaticResource FilledErrorButtonSmallStyle}" />
+                <Button Content="Subtle" Style="{StaticResource TextErrorButtonSmallStyle}" />
+                <Button Content="Disabled" Style="{StaticResource FilledErrorButtonSmallStyle}" IsEnabled="False" />
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Medium" FontSize="12" Opacity="0.6" />
+              <utu:AutoLayout Orientation="Horizontal" Spacing="16" PrimaryAxisAlignment="Start">
+                <Button Content="Primary" Style="{StaticResource FilledErrorButtonStyle}" />
+                <Button Content="Subtle" Style="{StaticResource TextErrorButtonStyle}" />
+                <Button Content="Disabled" Style="{StaticResource FilledErrorButtonStyle}" IsEnabled="False" />
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+
+          <!-- Icon Buttons -->
+          <utu:AutoLayout Orientation="Vertical" Spacing="12">
+            <TextBlock Text="Icon"
+                       FontWeight="SemiBold"
+                       Style="{StaticResource BodyLargeTextBlockStyle}" />
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Small" FontSize="12" Opacity="0.6" />
+              <utu:AutoLayout Orientation="Horizontal" Spacing="16" PrimaryAxisAlignment="Start">
+                <Button Width="32" Height="32" Style="{StaticResource FilledButtonSmallStyle}" 
+                        Padding="6" CornerRadius="9999">
+                  <Path Data="M7.66667 1L9.72667 5.17333L14.3333 5.84667L11 9.09333L11.7867 13.68L7.66667 11.5133L3.54667 13.68L4.33333 9.09333L1 5.84667L5.60667 5.17333L7.66667 1Z" 
+                        Stroke="{StaticResource OnPrimaryBrush}" StrokeThickness="1.6" Fill="Transparent" 
+                        Width="16" Height="16" Stretch="Uniform" />
+                </Button>
+                <Button Width="32" Height="32" Style="{StaticResource OutlinedButtonSmallStyle}" 
+                        Padding="6" CornerRadius="9999">
+                  <Path Data="M7.66667 1L9.72667 5.17333L14.3333 5.84667L11 9.09333L11.7867 13.68L7.66667 11.5133L3.54667 13.68L4.33333 9.09333L1 5.84667L5.60667 5.17333L7.66667 1Z" 
+                        Stroke="{StaticResource OnSurfaceBrush}" StrokeThickness="1.6" Fill="Transparent" 
+                        Width="16" Height="16" Stretch="Uniform" />
+                </Button>
+                <Button Width="32" Height="32" Style="{StaticResource TextButtonSmallStyle}" 
+                        Padding="6" CornerRadius="9999">
+                  <Path Data="M7.66667 1L9.72667 5.17333L14.3333 5.84667L11 9.09333L11.7867 13.68L7.66667 11.5133L3.54667 13.68L4.33333 9.09333L1 5.84667L5.60667 5.17333L7.66667 1Z" 
+                        Stroke="{StaticResource PrimaryBrush}" StrokeThickness="1.6" Fill="Transparent" 
+                        Width="16" Height="16" Stretch="Uniform" />
+                </Button>
+                <Button Width="32" Height="32" Style="{StaticResource FilledButtonSmallStyle}" 
+                        IsEnabled="False" Padding="6" CornerRadius="9999">
+                  <Path Data="M7.66667 1L9.72667 5.17333L14.3333 5.84667L11 9.09333L11.7867 13.68L7.66667 11.5133L3.54667 13.68L4.33333 9.09333L1 5.84667L5.60667 5.17333L7.66667 1Z" 
+                        Stroke="{StaticResource OnPrimaryBrush}" StrokeThickness="1.6" Fill="Transparent" 
+                        Width="16" Height="16" Stretch="Uniform" />
+                </Button>
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+              <TextBlock Text="Medium" FontSize="12" Opacity="0.6" />
+              <utu:AutoLayout Orientation="Horizontal" Spacing="16" PrimaryAxisAlignment="Start">
+                <Button Width="40" Height="40" Style="{StaticResource FilledButtonStyle}" 
+                        Padding="8" CornerRadius="9999">
+                  <Path Data="M7.66667 1L9.72667 5.17333L14.3333 5.84667L11 9.09333L11.7867 13.68L7.66667 11.5133L3.54667 13.68L4.33333 9.09333L1 5.84667L5.60667 5.17333L7.66667 1Z" 
+                        Stroke="{StaticResource OnPrimaryBrush}" StrokeThickness="1.6" Fill="Transparent" 
+                        Width="16" Height="16" Stretch="Uniform" />
+                </Button>
+                <Button Width="40" Height="40" Style="{StaticResource OutlinedButtonStyle}" 
+                        Padding="8" CornerRadius="9999">
+                  <Path Data="M7.66667 1L9.72667 5.17333L14.3333 5.84667L11 9.09333L11.7867 13.68L7.66667 11.5133L3.54667 13.68L4.33333 9.09333L1 5.84667L5.60667 5.17333L7.66667 1Z" 
+                        Stroke="{StaticResource OnSurfaceBrush}" StrokeThickness="1.6" Fill="Transparent" 
+                        Width="16" Height="16" Stretch="Uniform" />
+                </Button>
+                <Button Width="40" Height="40" Style="{StaticResource TextButtonStyle}" 
+                        Padding="8" CornerRadius="9999">
+                  <Path Data="M7.66667 1L9.72667 5.17333L14.3333 5.84667L11 9.09333L11.7867 13.68L7.66667 11.5133L3.54667 13.68L4.33333 9.09333L1 5.84667L5.60667 5.17333L7.66667 1Z" 
+                        Stroke="{StaticResource PrimaryBrush}" StrokeThickness="1.6" Fill="Transparent" 
+                        Width="16" Height="16" Stretch="Uniform" />
+                </Button>
+                <Button Width="40" Height="40" Style="{StaticResource FilledButtonStyle}" 
+                        IsEnabled="False" Padding="8" CornerRadius="9999">
+                  <Path Data="M7.66667 1L9.72667 5.17333L14.3333 5.84667L11 9.09333L11.7867 13.68L7.66667 11.5133L3.54667 13.68L4.33333 9.09333L1 5.84667L5.60667 5.17333L7.66667 1Z" 
+                        Stroke="{StaticResource OnPrimaryBrush}" StrokeThickness="1.6" Fill="Transparent" 
+                        Width="16" Height="16" Stretch="Uniform" />
+                </Button>
+              </utu:AutoLayout>
+            </utu:AutoLayout>
+          </utu:AutoLayout>
+        </utu:AutoLayout>
+      </utu:AutoLayout>
+
       <!-- LEVEL 1: Button Section -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
-        <TextBlock Text="Button"
+        <TextBlock Text="Button States (Static Reference)"
                    FontWeight="Bold"
                    Style="{StaticResource HeadingTextBlockStyle}" />
 
@@ -753,7 +879,7 @@
 
       <!-- LEVEL 1: Button Group Section -->
       <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space800}">
-        <TextBlock Text="Button Group"
+        <TextBlock Text="Button Group (Layout Examples)"
                    FontWeight="Bold"
                    Style="{StaticResource HeadingTextBlockStyle}" />
 
@@ -781,9 +907,9 @@
                        Foreground="{StaticResource SDSMatrixIdentifierTextBrush}" />
           </Border>
           <Grid Grid.Row="0" Grid.Column="1" ColumnDefinitions="*,*" ColumnSpacing="16">
-            <Button Content="Button" Grid.Column="0" HorizontalAlignment="Stretch" 
+            <Button Content="Button" Grid.Column="0" HorizontalAlignment="Stretch" IsHitTestVisible="False"
                     Background="Transparent" BorderThickness="0" Foreground="{StaticResource OnSurfaceBrush}" />
-            <Button Content="Button" Grid.Column="1" HorizontalAlignment="Stretch" 
+            <Button Content="Button" Grid.Column="1" HorizontalAlignment="Stretch" IsHitTestVisible="False"
                     Style="{StaticResource PrimaryButtonStyle}" />
           </Grid>
 
@@ -799,8 +925,10 @@
           </Border>
           <utu:AutoLayout Grid.Row="1" Grid.Column="1" 
                           Orientation="Horizontal" Spacing="16" PrimaryAxisAlignment="Start">
-            <Button Content="Button" Background="Transparent" BorderThickness="0" Foreground="{StaticResource OnSurfaceBrush}" />
-            <Button Content="Button" Style="{StaticResource PrimaryButtonStyle}" />
+            <Button Content="Button" IsHitTestVisible="False"
+                    Background="Transparent" BorderThickness="0" Foreground="{StaticResource OnSurfaceBrush}" />
+            <Button Content="Button" IsHitTestVisible="False"
+                    Style="{StaticResource PrimaryButtonStyle}" />
           </utu:AutoLayout>
 
           <!-- End -->
@@ -815,8 +943,10 @@
           </Border>
           <utu:AutoLayout Grid.Row="2" Grid.Column="1" 
                           Orientation="Horizontal" Spacing="16" PrimaryAxisAlignment="End">
-            <Button Content="Button" Background="Transparent" BorderThickness="0" Foreground="{StaticResource OnSurfaceBrush}" />
-            <Button Content="Button" Style="{StaticResource PrimaryButtonStyle}" />
+            <Button Content="Button" IsHitTestVisible="False"
+                    Background="Transparent" BorderThickness="0" Foreground="{StaticResource OnSurfaceBrush}" />
+            <Button Content="Button" IsHitTestVisible="False"
+                    Style="{StaticResource PrimaryButtonStyle}" />
           </utu:AutoLayout>
 
           <!-- Center -->
@@ -831,8 +961,10 @@
           </Border>
           <utu:AutoLayout Grid.Row="3" Grid.Column="1" 
                           Orientation="Horizontal" Spacing="16" PrimaryAxisAlignment="Center">
-            <Button Content="Button" Background="Transparent" BorderThickness="0" Foreground="{StaticResource OnSurfaceBrush}" />
-            <Button Content="Button" Style="{StaticResource PrimaryButtonStyle}" />
+            <Button Content="Button" IsHitTestVisible="False"
+                    Background="Transparent" BorderThickness="0" Foreground="{StaticResource OnSurfaceBrush}" />
+            <Button Content="Button" IsHitTestVisible="False"
+                    Style="{StaticResource PrimaryButtonStyle}" />
           </utu:AutoLayout>
 
           <!-- Stack -->
@@ -847,9 +979,9 @@
           </Border>
           <utu:AutoLayout Grid.Row="4" Grid.Column="1" 
                           Orientation="Vertical" Spacing="16">
-            <Button Content="Button" HorizontalAlignment="Stretch" 
+            <Button Content="Button" HorizontalAlignment="Stretch" IsHitTestVisible="False"
                     Background="Transparent" BorderThickness="0" Foreground="{StaticResource OnSurfaceBrush}" />
-            <Button Content="Button" HorizontalAlignment="Stretch" 
+            <Button Content="Button" HorizontalAlignment="Stretch" IsHitTestVisible="False"
                     Style="{StaticResource PrimaryButtonStyle}" />
           </utu:AutoLayout>
         </Grid>
