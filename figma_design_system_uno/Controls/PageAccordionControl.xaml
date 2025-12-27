@@ -1,0 +1,257 @@
+<UserControl x:Class="figma_design_system_uno.Controls.PageAccordionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:utu="using:Uno.Toolkit.UI">
+
+    <Grid>
+        <!-- Desktop View -->
+        <utu:AutoLayout Orientation="Vertical"
+                        Spacing="48"
+                        Padding="64"
+                        HorizontalAlignment="Center"
+                        Visibility="{Binding IsMobile, Converter={StaticResource InverseBoolToVisibilityConverter}}">
+            
+            <!-- Heading Section -->
+            <utu:AutoLayout Orientation="Vertical"
+                            Spacing="8"
+                            HorizontalAlignment="Center">
+                <TextBlock Text="Heading"
+                           Style="{StaticResource HeadingTextBlockStyle}"
+                           TextAlignment="Center"
+                           HorizontalAlignment="Center" />
+                <TextBlock Text="Subheading"
+                           Style="{StaticResource SubheadingTextBlockStyle}"
+                           TextAlignment="Center"
+                           HorizontalAlignment="Center" />
+            </utu:AutoLayout>
+
+            <!-- Accordion Container -->
+            <utu:AutoLayout Orientation="Vertical"
+                            Spacing="16"
+                            MaxWidth="640"
+                            HorizontalAlignment="Center">
+                
+                <!-- Accordion Item 1 - Expanded -->
+                <Border Background="{StaticResource AccordionExpandedBackgroundBrush}"
+                        BorderBrush="{StaticResource AccordionBorderBrush}"
+                        BorderThickness="{StaticResource AccordionBorderThickness}"
+                        CornerRadius="{StaticResource AccordionCornerRadius}"
+                        Padding="{StaticResource AccordionPadding}">
+                    <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space200}">
+                        <!-- Title Row -->
+                        <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space200}">
+                            <TextBlock Text="Title"
+                                       Style="{StaticResource BodyStrongTextBlockStyle}"
+                                       VerticalAlignment="Center"
+                                       utu:AutoLayout.PrimaryAlignment="Stretch" />
+                            <FontIcon Glyph="&#xE70E;"
+                                      FontSize="20"
+                                      Foreground="{StaticResource AccordionIconBrush}" />
+                        </utu:AutoLayout>
+                        
+                        <!-- Content -->
+                        <TextBlock Text="Answer the frequently asked question in a simple sentence, a longish paragraph, or even in a list."
+                                   Style="{StaticResource BodyBaseTextBlockStyle}"
+                                   TextWrapping="Wrap" />
+                    </utu:AutoLayout>
+                </Border>
+
+                <!-- Accordion Item 2 - Collapsed -->
+                <Border Background="{StaticResource AccordionCollapsedBackgroundBrush}"
+                        BorderBrush="{StaticResource AccordionBorderBrush}"
+                        BorderThickness="{StaticResource AccordionBorderThickness}"
+                        CornerRadius="{StaticResource AccordionCornerRadius}"
+                        Padding="{StaticResource AccordionPadding}">
+                    <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space200}">
+                        <TextBlock Text="Title"
+                                   Style="{StaticResource BodyStrongTextBlockStyle}"
+                                   VerticalAlignment="Center"
+                                   utu:AutoLayout.PrimaryAlignment="Stretch" />
+                        <FontIcon Glyph="&#xE70D;"
+                                  FontSize="20"
+                                  Foreground="{StaticResource AccordionIconBrush}" />
+                    </utu:AutoLayout>
+                </Border>
+
+                <!-- Accordion Item 3 - Collapsed -->
+                <Border Background="{StaticResource AccordionCollapsedBackgroundBrush}"
+                        BorderBrush="{StaticResource AccordionBorderBrush}"
+                        BorderThickness="{StaticResource AccordionBorderThickness}"
+                        CornerRadius="{StaticResource AccordionCornerRadius}"
+                        Padding="{StaticResource AccordionPadding}">
+                    <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space200}">
+                        <TextBlock Text="Title"
+                                   Style="{StaticResource BodyStrongTextBlockStyle}"
+                                   VerticalAlignment="Center"
+                                   utu:AutoLayout.PrimaryAlignment="Stretch" />
+                        <FontIcon Glyph="&#xE70D;"
+                                  FontSize="20"
+                                  Foreground="{StaticResource AccordionIconBrush}" />
+                    </utu:AutoLayout>
+                </Border>
+
+                <!-- Accordion Item 4 - Collapsed -->
+                <Border Background="{StaticResource AccordionCollapsedBackgroundBrush}"
+                        BorderBrush="{StaticResource AccordionBorderBrush}"
+                        BorderThickness="{StaticResource AccordionBorderThickness}"
+                        CornerRadius="{StaticResource AccordionCornerRadius}"
+                        Padding="{StaticResource AccordionPadding}">
+                    <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space200}">
+                        <TextBlock Text="Title"
+                                   Style="{StaticResource BodyStrongTextBlockStyle}"
+                                   VerticalAlignment="Center"
+                                   utu:AutoLayout.PrimaryAlignment="Stretch" />
+                        <FontIcon Glyph="&#xE70D;"
+                                  FontSize="20"
+                                  Foreground="{StaticResource AccordionIconBrush}" />
+                    </utu:AutoLayout>
+                </Border>
+
+                <!-- Accordion Item 5 - Collapsed -->
+                <Border Background="{StaticResource AccordionCollapsedBackgroundBrush}"
+                        BorderBrush="{StaticResource AccordionBorderBrush}"
+                        BorderThickness="{StaticResource AccordionBorderThickness}"
+                        CornerRadius="{StaticResource AccordionCornerRadius}"
+                        Padding="{StaticResource AccordionPadding}">
+                    <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space200}">
+                        <TextBlock Text="Title"
+                                   Style="{StaticResource BodyStrongTextBlockStyle}"
+                                   VerticalAlignment="Center"
+                                   utu:AutoLayout.PrimaryAlignment="Stretch" />
+                        <FontIcon Glyph="&#xE70D;"
+                                  FontSize="20"
+                                  Foreground="{StaticResource AccordionIconBrush}" />
+                    </utu:AutoLayout>
+                </Border>
+
+            </utu:AutoLayout>
+        </utu:AutoLayout>
+
+        <!-- Mobile View -->
+        <utu:AutoLayout Orientation="Vertical"
+                        Spacing="24"
+                        Padding="24"
+                        HorizontalAlignment="Stretch"
+                        Visibility="{Binding IsMobile, Converter={StaticResource BoolToVisibilityConverter}}">
+            
+            <!-- Heading Section -->
+            <utu:AutoLayout Orientation="Vertical"
+                            Spacing="8"
+                            HorizontalAlignment="Center">
+                <TextBlock Text="Heading"
+                           Style="{StaticResource HeadingTextBlockStyle}"
+                           TextAlignment="Center"
+                           HorizontalAlignment="Center" />
+                <TextBlock Text="Subheading"
+                           Style="{StaticResource SubheadingTextBlockStyle}"
+                           TextAlignment="Center"
+                           HorizontalAlignment="Center" />
+            </utu:AutoLayout>
+
+            <!-- Accordion Container -->
+            <utu:AutoLayout Orientation="Vertical"
+                            Spacing="16"
+                            HorizontalAlignment="Stretch">
+                
+                <!-- Accordion Item 1 - Expanded -->
+                <Border Background="{StaticResource AccordionExpandedBackgroundBrush}"
+                        BorderBrush="{StaticResource AccordionBorderBrush}"
+                        BorderThickness="{StaticResource AccordionBorderThickness}"
+                        CornerRadius="{StaticResource AccordionCornerRadius}"
+                        Padding="{StaticResource AccordionPadding}"
+                        HorizontalAlignment="Stretch">
+                    <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space200}">
+                        <!-- Title Row -->
+                        <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space200}">
+                            <TextBlock Text="Title"
+                                       Style="{StaticResource BodyStrongTextBlockStyle}"
+                                       VerticalAlignment="Center"
+                                       utu:AutoLayout.PrimaryAlignment="Stretch" />
+                            <FontIcon Glyph="&#xE70E;"
+                                      FontSize="20"
+                                      Foreground="{StaticResource AccordionIconBrush}" />
+                        </utu:AutoLayout>
+                        
+                        <!-- Content -->
+                        <TextBlock Text="Answer the frequently asked question in a simple sentence, a longish paragraph, or even in a list."
+                                   Style="{StaticResource BodyBaseTextBlockStyle}"
+                                   TextWrapping="Wrap" />
+                    </utu:AutoLayout>
+                </Border>
+
+                <!-- Accordion Item 2 - Collapsed -->
+                <Border Background="{StaticResource AccordionCollapsedBackgroundBrush}"
+                        BorderBrush="{StaticResource AccordionBorderBrush}"
+                        BorderThickness="{StaticResource AccordionBorderThickness}"
+                        CornerRadius="{StaticResource AccordionCornerRadius}"
+                        Padding="{StaticResource AccordionPadding}"
+                        HorizontalAlignment="Stretch">
+                    <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space200}">
+                        <TextBlock Text="Title"
+                                   Style="{StaticResource BodyStrongTextBlockStyle}"
+                                   VerticalAlignment="Center"
+                                   utu:AutoLayout.PrimaryAlignment="Stretch" />
+                        <FontIcon Glyph="&#xE70D;"
+                                  FontSize="20"
+                                  Foreground="{StaticResource AccordionIconBrush}" />
+                    </utu:AutoLayout>
+                </Border>
+
+                <!-- Accordion Item 3 - Collapsed -->
+                <Border Background="{StaticResource AccordionCollapsedBackgroundBrush}"
+                        BorderBrush="{StaticResource AccordionBorderBrush}"
+                        BorderThickness="{StaticResource AccordionBorderThickness}"
+                        CornerRadius="{StaticResource AccordionCornerRadius}"
+                        Padding="{StaticResource AccordionPadding}"
+                        HorizontalAlignment="Stretch">
+                    <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space200}">
+                        <TextBlock Text="Title"
+                                   Style="{StaticResource BodyStrongTextBlockStyle}"
+                                   VerticalAlignment="Center"
+                                   utu:AutoLayout.PrimaryAlignment="Stretch" />
+                        <FontIcon Glyph="&#xE70D;"
+                                  FontSize="20"
+                                  Foreground="{StaticResource AccordionIconBrush}" />
+                    </utu:AutoLayout>
+                </Border>
+
+                <!-- Accordion Item 4 - Collapsed -->
+                <Border Background="{StaticResource AccordionCollapsedBackgroundBrush}"
+                        BorderBrush="{StaticResource AccordionBorderBrush}"
+                        BorderThickness="{StaticResource AccordionBorderThickness}"
+                        CornerRadius="{StaticResource AccordionCornerRadius}"
+                        Padding="{StaticResource AccordionPadding}"
+                        HorizontalAlignment="Stretch">
+                    <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space200}">
+                        <TextBlock Text="Title"
+                                   Style="{StaticResource BodyStrongTextBlockStyle}"
+                                   VerticalAlignment="Center"
+                                   utu:AutoLayout.PrimaryAlignment="Stretch" />
+                        <FontIcon Glyph="&#xE70D;"
+                                  FontSize="20"
+                                  Foreground="{StaticResource AccordionIconBrush}" />
+                    </utu:AutoLayout>
+                </Border>
+
+                <!-- Accordion Item 5 - Collapsed -->
+                <Border Background="{StaticResource AccordionCollapsedBackgroundBrush}"
+                        BorderBrush="{StaticResource AccordionBorderBrush}"
+                        BorderThickness="{StaticResource AccordionBorderThickness}"
+                        CornerRadius="{StaticResource AccordionCornerRadius}"
+                        Padding="{StaticResource AccordionPadding}"
+                        HorizontalAlignment="Stretch">
+                    <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space200}">
+                        <TextBlock Text="Title"
+                                   Style="{StaticResource BodyStrongTextBlockStyle}"
+                                   VerticalAlignment="Center"
+                                   utu:AutoLayout.PrimaryAlignment="Stretch" />
+                        <FontIcon Glyph="&#xE70D;"
+                                  FontSize="20"
+                                  Foreground="{StaticResource AccordionIconBrush}" />
+                    </utu:AutoLayout>
+                </Border>
+
+            </utu:AutoLayout>
+        </utu:AutoLayout>
+    </Grid>
+</UserControl>

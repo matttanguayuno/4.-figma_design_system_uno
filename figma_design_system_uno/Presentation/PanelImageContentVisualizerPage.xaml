@@ -1,0 +1,12 @@
+<Page x:Class="figma_design_system_uno.Presentation.PanelImageContentVisualizerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+      Background="{StaticResource DefaultBackgroundBrush}">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid SizeChanged="OnPageSizeChanged">
+            <controls:PanelImageContentControl x:Name="PanelImageContentControlElement"/>
+        </Grid>
+    </ScrollViewer>
+</Page>

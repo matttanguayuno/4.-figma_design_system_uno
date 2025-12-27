@@ -53,6 +53,12 @@
     <EmbeddedResource Include="Presentation\**\*.xaml" />
     <EmbeddedResource Include="Styles\**\*.xaml" />
     
+    <!-- Include social media icon assets -->
+    <Content Include="Assets\icon_x.png" />
+    <Content Include="Assets\icon_instagram.png" />
+    <Content Include="Assets\icon_youtube.png" />
+    <Content Include="Assets\icon_linkedin.png" />
+    
     <!-- Reference the SDS theme library -->
     <ProjectReference Include="..\Uno.Themes.SDS\Uno.Themes.SDS.csproj" />
   </ItemGroup>

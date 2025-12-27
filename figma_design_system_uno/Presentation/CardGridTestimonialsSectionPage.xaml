@@ -1,0 +1,48 @@
+<Page x:Class="figma_design_system_uno.Presentation.CardGridTestimonialsSectionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+      xmlns:utu="using:Uno.Toolkit.UI">
+
+    <Grid Background="{ThemeResource BackgroundBrush}">
+        <ScrollViewer>
+            <utu:AutoLayout Orientation="Vertical"
+                            Spacing="24"
+                            Padding="24">
+
+                <!-- Navigation Bar -->
+                <utu:NavigationBar Content="Card Grid Testimonials"
+                                   Background="{ThemeResource BackgroundBrush}"
+                                   MainCommand="{Binding GoBackCommand}"
+                                   MainCommandStyle="{StaticResource BackIconButtonStyle}" />
+
+                <!-- Device Toggle -->
+                <StackPanel Orientation="Horizontal" Spacing="16">
+                    <TextBlock Text="Device:"
+                               VerticalAlignment="Center"
+                               Style="{StaticResource BodyBaseTextBlockStyle}" />
+                    <RadioButtons SelectedIndex="{Binding DeviceMode, Mode=TwoWay}">
+                        <RadioButton Content="Desktop" />
+                        <RadioButton Content="Mobile" />
+                    </RadioButtons>
+                </StackPanel>
+
+                <!-- Preview Container -->
+                <Border Background="#F5F5F5"
+                        BorderBrush="{StaticResource OutlineBrush}"
+                        BorderThickness="1"
+                        CornerRadius="{StaticResource Radius200}"
+                        Padding="24"
+                        HorizontalAlignment="Center">
+                    
+                    <Border Background="{StaticResource BackgroundBrush}"
+                            Width="{Binding DeviceWidth}"
+                            HorizontalAlignment="Center">
+                        <controls:CardGridTestimonialsControl IsMobile="{Binding IsMobile}" />
+                    </Border>
+                </Border>
+
+            </utu:AutoLayout>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -83,9 +83,10 @@ public partial class App : Application
         #if DEBUG
         MainWindow.UseStudio();
 #endif
-                MainWindow.SetWindowIcon();
+        MainWindow.SetWindowIcon();
 
-        // Set window to maximized (full screen) on desktop
+        // Maximize window BEFORE any content is loaded
+#if !__WASM__ && !__IOS__ && !__ANDROID__
         var appWindow = MainWindow.AppWindow;
         if (appWindow is not null)
         {
@@ -95,6 +96,120 @@ public partial class App : Application
                 presenter.Maximize();
             }
         }
+#endif
+
+        // Check if this is a visualizer page request (no Shell needed)
+#if __WASM__
+        var currentUrl = Uno.Foundation.WebAssemblyRuntime.InvokeJS("window.location.pathname");
+        if (currentUrl.Contains("HeaderVisualizer"))
+        {
+            MainWindow.Content = new Presentation.HeaderVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("FooterVisualizer"))
+        {
+            MainWindow.Content = new Presentation.FooterVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("HeroBasicVisualizer"))
+        {
+            MainWindow.Content = new Presentation.HeroBasicVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("HeroActionsVisualizer"))
+        {
+            MainWindow.Content = new Presentation.HeroActionsVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("HeroNewsletterVisualizer"))
+        {
+            MainWindow.Content = new Presentation.HeroNewsletterVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("HeroFormVisualizer"))
+        {
+            MainWindow.Content = new Presentation.HeroFormVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("HeroImageVisualizer"))
+        {
+            MainWindow.Content = new Presentation.HeroImageVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("PanelImageContentVisualizer"))
+        {
+            MainWindow.Content = new Presentation.PanelImageContentVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("PanelImageContentReverseVisualizer"))
+        {
+            MainWindow.Content = new Presentation.PanelImageContentReverseVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("PanelImageVisualizer"))
+        {
+            MainWindow.Content = new Presentation.PanelImageVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("PanelImageDoubleVisualizer"))
+        {
+            MainWindow.Content = new Presentation.PanelImageDoubleVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("CardGridPricingVisualizer"))
+        {
+            MainWindow.Content = new Presentation.CardGridPricingVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("CardGridIconVisualizer"))
+        {
+            MainWindow.Content = new Presentation.CardGridIconVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("CardGridImageVisualizer"))
+        {
+            MainWindow.Content = new Presentation.CardGridImageVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("CardGridContentListVisualizer"))
+        {
+            MainWindow.Content = new Presentation.CardGridContentListVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("CardGridTestimonialsVisualizer"))
+        {
+            MainWindow.Content = new Presentation.CardGridTestimonialsVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("CardGridReviewsVisualizer"))
+        {
+            MainWindow.Content = new Presentation.CardGridReviewsVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("PageAccordionVisualizer"))
+        {
+            MainWindow.Content = new Presentation.PageAccordionVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+#endif
 
         Host = await builder.NavigateAsync<Shell>();
     }

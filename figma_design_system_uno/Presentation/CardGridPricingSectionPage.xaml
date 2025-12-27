@@ -1,0 +1,49 @@
+<Page x:Class="figma_design_system_uno.Presentation.CardGridPricingSectionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      Background="{ThemeResource SurfaceDefaultBrush}">
+
+    <ScrollViewer>
+        <utu:AutoLayout Orientation="Vertical"
+                        Padding="32"
+                        Spacing="32"
+                        HorizontalAlignment="Center">
+            <!-- Title and Description -->
+            <utu:AutoLayout Orientation="Vertical"
+                            Spacing="8">
+                <TextBlock Text="Card Grid Pricing Section"
+                           Style="{StaticResource TitleLargeTextBlockStyle}" />
+                <TextBlock Text="Three pricing cards in a responsive grid. Desktop displays 3 columns with 64px gap, mobile stacks vertically with 24px gap. Uses existing PricingCard control with Row1Style (centered title/price). Features navigation pills above cards for Monthly/Yearly/Link selection."
+                           Style="{StaticResource BodyMediumTextBlockStyle}"
+                           Foreground="{ThemeResource TextSecondaryBrush}"
+                           TextWrapping="Wrap"
+                           MaxWidth="800" />
+            </utu:AutoLayout>
+
+            <!-- Device Toggle -->
+            <utu:AutoLayout Orientation="Horizontal"
+                            Spacing="16">
+                <TextBlock Text="Device:"
+                           Style="{StaticResource BodyMediumTextBlockStyle}"
+                           VerticalAlignment="Center" />
+                <RadioButton Content="Desktop"
+                             IsChecked="{x:Bind ViewModel.DeviceMode, Mode=TwoWay, Converter={StaticResource EqualToConverter}, ConverterParameter=Desktop}"
+                             GroupName="Device" />
+                <RadioButton Content="Mobile"
+                             IsChecked="{x:Bind ViewModel.DeviceMode, Mode=TwoWay, Converter={StaticResource EqualToConverter}, ConverterParameter=Mobile}"
+                             GroupName="Device" />
+            </utu:AutoLayout>
+
+            <!-- Preview Frame -->
+            <Border Background="{ThemeResource SurfaceDefaultBrush}"
+                    BorderBrush="{ThemeResource BorderDefaultBrush}"
+                    BorderThickness="1"
+                    CornerRadius="8"
+                    Padding="16">
+                <controls:CardGridPricingControl IsMobile="{x:Bind ViewModel.IsMobile, Mode=OneWay}" />
+            </Border>
+        </utu:AutoLayout>
+    </ScrollViewer>
+</Page>

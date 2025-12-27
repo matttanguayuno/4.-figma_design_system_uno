@@ -1,0 +1,13 @@
+<Page x:Class="figma_design_system_uno.Presentation.PanelImageVisualizerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:controls="using:figma_design_system_uno.Controls">
+
+  <ScrollViewer>
+    <Grid Loaded="OnGridLoaded"
+          SizeChanged="OnPageSizeChanged">
+      <controls:PanelImageControl x:Name="PanelImageControlElement" />
+    </Grid>
+  </ScrollViewer>
+
+</Page>

@@ -9,6 +9,7 @@ public partial record HomeModel
     private readonly Frame _frame;
     
     public ComponentCard[] ComponentCards { get; init; }
+    public ComponentCard[] PageCards { get; init; }
 
     public HomeModel(Frame frame)
     {
@@ -21,7 +22,6 @@ public partial record HomeModel
             new ComponentCard("\uE8A1", "Buttons", "Primary, neutral, subtle button variants with medium (40px) and small (32px) sizes. Includes danger buttons and icon-only buttons.", new AsyncRelayCommand(GoToButtons)),
             new ComponentCard("\uE8D4", "Cards", "Basic card components with title, description, actions, and visual content support.", new AsyncRelayCommand(GoToCards)),
             new ComponentCard("\uE8A7", "Dialog", "Modal dialog components with card and sheet variants, including heading, body text, action buttons, and dismissible close icon.", new AsyncRelayCommand(GoToDialog)),
-            new ComponentCard("\uE8A2", "Forms", "Form layouts including shipping, contact, newsletter, login, register, and forgot password forms with proper field validation patterns.", new AsyncRelayCommand(GoToForms)),
             new ComponentCard("\uE70F", "Input", "Input field components including text inputs, checkboxes, radio buttons, select fields, search, sliders, textareas, and switches.", new AsyncRelayCommand(GoToInputFields)),
             new ComponentCard("\uE734", "Menu", "Menu components with headers, items, separators, headings, and keyboard shortcuts for contextual navigation.", new AsyncRelayCommand(GoToMenu)),
             new ComponentCard("\uE700", "Navigation", "Navigation button and pill components with column/row layouts, default, hover, and active states for app navigation.", new AsyncRelayCommand(GoToNavigation)),
@@ -30,6 +30,12 @@ public partial record HomeModel
             new ComponentCard("\uE8A6", "Tabs", "Tab navigation components with default, hover, active, and inactive states for organizing content into sections.", new AsyncRelayCommand(GoToTabs)),
             new ComponentCard("\uE8EC", "Tag", "Label tags for categorization with close/dismiss functionality.", new AsyncRelayCommand(GoToTag)),
             new ComponentCard("\uE946", "Tooltip", "Contextual information popups with arrow indicators positioned at top, bottom, left, or right relative to target elements.", new AsyncRelayCommand(GoToTooltip)),
+        };
+
+        PageCards = new[]
+        {
+            new ComponentCard("\uE8A2", "Forms", "Form layouts including shipping, contact, newsletter, login, register, and forgot password forms with proper field validation patterns.", new AsyncRelayCommand(GoToForms)),
+            new ComponentCard("\uE8BC", "Sections", "Full-width responsive sections like headers, footers, and hero sections that adapt to desktop and mobile viewports.", new AsyncRelayCommand(GoToSections)),
         };
     }
 
@@ -47,4 +53,5 @@ public partial record HomeModel
     public async Task GoToTabs() { _frame.Navigate(typeof(TabsPage)); await Task.CompletedTask; }
     public async Task GoToTag() { _frame.Navigate(typeof(TagPage)); await Task.CompletedTask; }
     public async Task GoToTooltip() { _frame.Navigate(typeof(TooltipPage)); await Task.CompletedTask; }
+    public async Task GoToSections() { _frame.Navigate(typeof(SectionsPage)); await Task.CompletedTask; }
 }

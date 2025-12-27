@@ -1,0 +1,119 @@
+<UserControl x:Class="figma_design_system_uno.Controls.HeroActionsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:utu="using:Uno.Toolkit.UI">
+
+  <Grid Background="{StaticResource SurfaceSecondaryBrush}">
+    <!-- Desktop Hero -->
+    <Grid x:Name="DesktopHero"
+          Visibility="{x:Bind IsMobile, Mode=OneWay, Converter={StaticResource InverseBoolToVisibilityConverter}}"
+          Width="1200"
+          HorizontalAlignment="Center"
+          VerticalAlignment="Top"
+          Padding="24,160">
+      <utu:AutoLayout Orientation="Vertical"
+                      Spacing="32"
+                      HorizontalAlignment="Center">
+        <!-- Title & Subtitle -->
+        <utu:AutoLayout Orientation="Vertical"
+                        Spacing="8"
+                        HorizontalAlignment="Center">
+          <!-- Title -->
+          <TextBlock Text="Title"
+                     FontSize="72"
+                     FontWeight="Bold"
+                     Foreground="{StaticResource DefaultTextBrush}"
+                     TextAlignment="Center"
+                     TextWrapping="Wrap"
+                     HorizontalAlignment="Center" />
+          
+          <!-- Subtitle -->
+          <TextBlock Text="Subtitle"
+                     FontSize="32"
+                     FontWeight="Normal"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     TextAlignment="Center"
+                     TextWrapping="Wrap"
+                     HorizontalAlignment="Center" />
+        </utu:AutoLayout>
+
+        <!-- Button Group -->
+        <StackPanel Orientation="Horizontal"
+                    Spacing="16"
+                    HorizontalAlignment="Center">
+          <!-- Secondary Button -->
+          <Button Content="Button"
+                  Style="{StaticResource ButtonSecondaryStyle}"
+                  Width="112"
+                  Height="40"
+                  Padding="12"
+                  FontSize="16" />
+          
+          <!-- Primary Button -->
+          <Button Content="Button"
+                  Style="{StaticResource ButtonPrimaryStyle}"
+                  Width="112"
+                  Height="40"
+                  Padding="12"
+                  FontSize="16" />
+        </StackPanel>
+      </utu:AutoLayout>
+    </Grid>
+
+    <!-- Mobile Hero -->
+    <Grid x:Name="MobileHero"
+          Visibility="{x:Bind IsMobile, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}"
+          Width="375"
+          HorizontalAlignment="Center"
+          VerticalAlignment="Top"
+          Padding="16,160">
+      <utu:AutoLayout Orientation="Vertical"
+                      Spacing="32"
+                      HorizontalAlignment="Center">
+        <!-- Title & Subtitle -->
+        <utu:AutoLayout Orientation="Vertical"
+                        Spacing="8"
+                        HorizontalAlignment="Center">
+          <!-- Title -->
+          <TextBlock Text="Title"
+                     FontSize="48"
+                     FontWeight="Bold"
+                     Foreground="{StaticResource DefaultTextBrush}"
+                     TextAlignment="Center"
+                     TextWrapping="Wrap"
+                     HorizontalAlignment="Center" />
+          
+          <!-- Subtitle -->
+          <TextBlock Text="Subtitle"
+                     FontSize="32"
+                     FontWeight="Normal"
+                     Foreground="{StaticResource SecondaryTextBrush}"
+                     TextAlignment="Center"
+                     TextWrapping="Wrap"
+                     HorizontalAlignment="Center" />
+        </utu:AutoLayout>
+
+        <!-- Button Group -->
+        <StackPanel Orientation="Horizontal"
+                    Spacing="16"
+                    HorizontalAlignment="Center">
+          <!-- Secondary Button -->
+          <Button Content="Button"
+                  Style="{StaticResource ButtonSecondaryStyle}"
+                  Width="112"
+                  Height="40"
+                  Padding="12"
+                  FontSize="16" />
+          
+          <!-- Primary Button -->
+          <Button Content="Button"
+                  Style="{StaticResource ButtonPrimaryStyle}"
+                  Width="112"
+                  Height="40"
+                  Padding="12"
+                  FontSize="16" />
+        </StackPanel>
+      </utu:AutoLayout>
+    </Grid>
+  </Grid>
+</UserControl>

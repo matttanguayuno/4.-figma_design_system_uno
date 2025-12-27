@@ -18,16 +18,15 @@
             BorderBrush="{StaticResource NeutralTertiaryHoverBrush}"
             BorderThickness="0,0,1,0">
       <ScrollViewer>
-        <utu:AutoLayout Orientation="Vertical" 
-                        Padding="16"
-                        Spacing="8">
+        <StackPanel Orientation="Vertical" 
+                    Padding="16">
           
           <!-- Header -->
           <utu:AutoLayout Orientation="Vertical" Spacing="4" Padding="8">
             <TextBlock Text="Uno SDS"
                        FontSize="18"
                        FontWeight="SemiBold"
-                       Foreground="{StaticResource MaterialPrimaryBrush}" />
+                       Foreground="{StaticResource PrimaryBrush}" />
           </utu:AutoLayout>
 
           <!-- Navigation Items -->
@@ -36,113 +35,139 @@
                   Tag="Home"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Left" />
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
 
-          <TextBlock Text="COMPONENTS"
-                     FontSize="11"
-                     FontWeight="SemiBold"
-                     Foreground="{StaticResource SecondaryTextBrush}"
-                     Margin="8,16,0,8" />
+          <!-- Separator -->
+          <Rectangle Height="1"
+                     Fill="{StaticResource NeutralTertiaryBrush}"
+                     Margin="0,8" />
 
           <Button Content="Accordion" 
                   Click="Navigate_Click"
                   Tag="Accordion"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Left" />
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
 
           <Button Content="Avatar" 
                   Click="Navigate_Click"
                   Tag="Avatar"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Left" />
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
 
           <Button Content="Buttons" 
                   Click="Navigate_Click"
                   Tag="Buttons"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Left" />
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
 
           <Button Content="Cards" 
                   Click="Navigate_Click"
                   Tag="Cards"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Left" />
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
 
           <Button Content="Dialog" 
                   Click="Navigate_Click"
                   Tag="Dialog"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Left" />
-
-          <Button Content="Forms" 
-                  Click="Navigate_Click"
-                  Tag="Forms"
-                  Style="{StaticResource TextButtonStyle}"
-                  HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Left" />
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
 
           <Button Content="Inputs" 
                   Click="Navigate_Click"
                   Tag="InputFields"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Left" />
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
 
           <Button Content="Menu" 
                   Click="Navigate_Click"
                   Tag="Menu"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Left" />
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
 
           <Button Content="Navigation" 
                   Click="Navigate_Click"
                   Tag="Navigation"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Left" />
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
 
           <Button Content="Notification" 
                   Click="Navigate_Click"
                   Tag="Notification"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Left" />
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
 
           <Button Content="Pagination" 
                   Click="Navigate_Click"
                   Tag="Pagination"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Left" />
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
 
           <Button Content="Tabs" 
                   Click="Navigate_Click"
                   Tag="Tabs"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Left" />
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
 
           <Button Content="Tag" 
                   Click="Navigate_Click"
                   Tag="Tag"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Left" />
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
 
           <Button Content="Tooltip" 
                   Click="Navigate_Click"
                   Tag="Tooltip"
                   Style="{StaticResource TextButtonStyle}"
                   HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
+
+          <!-- Separator -->
+          <Rectangle Height="1"
+                     Fill="{StaticResource NeutralTertiaryBrush}"
+                     Margin="0,8" />
+
+          <Button Content="Forms" 
+                  Click="Navigate_Click"
+                  Tag="Forms"
+                  Style="{StaticResource TextButtonStyle}"
+                  HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
+
+          <Button Content="Sections" 
+                  Click="Navigate_Click"
+                  Tag="Sections"
+                  Style="{StaticResource TextButtonStyle}"
+                  HorizontalAlignment="Stretch"
                   HorizontalContentAlignment="Left" />
 
-        </utu:AutoLayout>
+        </StackPanel>
       </ScrollViewer>
     </Border>
 

@@ -7,40 +7,38 @@
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Application/Thickness.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <!--
-    ==================================================================================
-    SDS (Simple Design System) Button Styles with Material-compatible Naming Facade
-    ==================================================================================
+  <!--
+    ============================================================================================
+    SDS (Simple Design System) Button Styles - Compatible with Uno.Themes API
+    ============================================================================================
     
-    This file implements button styles following Material-compatible naming conventions
-    while using Figma Simple Design System (SDS) visual appearance.
-    
-    ARCHITECTURE PATTERN:
-    - Material-compatible naming = The interface/facade (FilledButton, OutlinedButton, TextButton)
-    - SDS visual style = The implementation (corner radii, colors, states from Figma SDS)
-    
-    This allows Uno users to switch between Material, Fluent, or SDS themes while
-    maintaining consistent naming across theme systems.
-    
-    MATERIAL BUTTON TYPES (mapped to SDS visual styles):
-    ────────────────────────────────────────────────────────────
-    FilledButton         → High emphasis, solid bg (SDS Primary)
-    OutlinedButton       → Medium emphasis, border (SDS Neutral)
-    TextButton           → Low emphasis, text only (SDS Subtle)
-    
-    SIZE VARIANTS: Default/Medium (40px), Small (32px), Large (48px)
-    ERROR VARIANTS: FilledErrorButton, TextErrorButton
-    
-    SDS VISUAL PROPERTIES:
-    - Corner Radius: 8px  |  Border: 1px  |  Font: Inter 16px
-    - Colors: SDS palette mapped to Material resource names
-    ==================================================================================
-    -->
+    This file implements button styles following standard Uno Platform naming conventions,
+    making it a drop-in replacement for other Uno themes.
 
-    <!-- 
-    Button Styles following Material-compatible naming conventions
-    Implementation based on Figma Simple Design System (SDS)
-    -->
+    NAMING STRUCTURE:
+    - Standard style names = The interface/facade (FilledButton, OutlinedButton, TextButton)
+    - SDS visual implementation = The underlying design from Figma SDS
+
+    This allows Uno users to switch between different themes while
+    keeping their XAML markup unchanged.
+
+    BUTTON TYPES (mapped to SDS visual styles):
+    1. FilledButtonStyle    → SDS Primary Button (filled background)
+    2. OutlinedButtonStyle  → SDS Neutral Button (outlined border)
+    3. TextButtonStyle      → SDS Subtle Button (no border, transparent background)
+    4. FilledErrorButton    → SDS Danger Filled (red background)
+    5. TextErrorButton      → SDS Danger Subtle (red text)
+
+    KEY DESIGN DECISIONS:
+    - Border radius: 4px (Figma SDS spec)
+    - Heights: Small=32px, Medium=40px (default), Large=48px
+    - Colors: SDS palette mapped to standard resource names
+    - Typography: Inter font family
+
+    ============================================================================================
+    Button Styles following standard Uno Platform naming conventions
+    ============================================================================================
+  -->
 
     <!-- FilledButtonStyle - Primary/Filled variant (like SDS Primary) -->
     <Style x:Key="FilledButtonStyle" TargetType="Button">
@@ -110,6 +108,74 @@
         </Setter>
     </Style>
 
+    <!-- LightButtonStyle - For buttons on dark backgrounds (like branded pricing cards) -->
+    <Style x:Key="LightButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource BackgroundTertiaryBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource OnSurfaceBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource OutlineVariantBrush}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonBorderThickness}" />
+        <Setter Property="CornerRadius" Value="{StaticResource ButtonCornerRadius}" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Height" Value="{StaticResource ButtonHeight}" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="UseSystemFocusVisuals" Value="True" />
+        <Setter Property="FocusVisualMargin" Value="-3" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid x:Name="RootGrid"
+                          Background="{TemplateBinding Background}"
+                          BorderBrush="{TemplateBinding BorderBrush}"
+                          BorderThickness="{TemplateBinding BorderThickness}"
+                          CornerRadius="{TemplateBinding CornerRadius}">
+                        
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                
+                                <VisualState x:Name="PointerOver">
+                                    <VisualState.Setters>
+                                        <Setter Target="RootGrid.Background" Value="{StaticResource SurfaceBrush}" />
+                                        <Setter Target="RootGrid.BorderBrush" Value="{StaticResource OutlineBrush}" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Target="RootGrid.Background" Value="{StaticResource SurfaceBrush}" />
+                                        <Setter Target="RootGrid.BorderBrush" Value="{StaticResource OutlineBrush}" />
+                                        <Setter Target="RootGrid.Opacity" Value="0.9" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                
+                                <VisualState x:Name="Disabled">
+                                    <VisualState.Setters>
+                                        <Setter Target="RootGrid.Background" Value="#D9D9D9" />
+                                        <Setter Target="RootGrid.BorderBrush" Value="#B3B3B3" />
+                                        <Setter Target="ContentPresenter.Foreground" Value="#B3B3B3" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        
+                        <ContentPresenter x:Name="ContentPresenter"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          Padding="{TemplateBinding Padding}"
+                                          HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          AutomationProperties.AccessibilityView="Raw" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <!-- OutlinedButtonStyle - Neutral variant (like SDS Neutral) -->
     <Style x:Key="OutlinedButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="{StaticResource BackgroundTertiaryBrush}" />
@@ -123,6 +189,7 @@
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontFamily" Value="{StaticResource InterFontFamily}" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="FontWeight" Value="Normal" />
         <Setter Property="UseSystemFocusVisuals" Value="True" />
@@ -274,7 +341,7 @@
         <Setter Property="Height" Value="{StaticResource ButtonHeightLarge}" />
     </Style>
 
-    <!-- Error/Danger Button Styles (Material-compatible naming with SDS error colors) -->
+    <!-- Error/Danger Button Styles (SDS error colors) -->
     <Style x:Key="FilledErrorButtonStyle" TargetType="Button" BasedOn="{StaticResource FilledButtonStyle}">
         <Setter Property="Background" Value="{StaticResource SDSDangerPrimaryBrush}" />
         <Setter Property="Foreground" Value="White" />
@@ -531,7 +598,7 @@
         </Setter>
     </Style>
 
-    <!-- Default Button Style - All buttons use Filled style by default (Material-compatible convention) -->
+    <!-- Default Button Style - All buttons use Filled style by default -->
     <Style TargetType="Button" BasedOn="{StaticResource FilledButtonStyle}" />
 
 </ResourceDictionary>

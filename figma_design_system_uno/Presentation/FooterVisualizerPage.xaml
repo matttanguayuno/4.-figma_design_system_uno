@@ -1,0 +1,16 @@
+<Page x:Class="figma_design_system_uno.Presentation.FooterVisualizerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:figma_design_system_uno.Presentation"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+      Background="{StaticResource DefaultBackgroundBrush}"
+      SizeChanged="OnPageSizeChanged">
+
+  <ScrollViewer VerticalScrollBarVisibility="Auto">
+    <Grid x:Name="RootGrid"
+          VerticalAlignment="Bottom">
+      <controls:FooterControl x:Name="FooterControlElement"
+                          IsMobile="False" />
+    </Grid>
+  </ScrollViewer>
+</Page>

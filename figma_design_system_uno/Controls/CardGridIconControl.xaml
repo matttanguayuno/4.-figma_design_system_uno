@@ -1,0 +1,155 @@
+<UserControl x:Class="figma_design_system_uno.Controls.CardGridIconControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:utu="using:Uno.Toolkit.UI">
+
+    <Grid>
+        <!-- Desktop View -->
+        <utu:AutoLayout Orientation="Vertical"
+                        Spacing="48"
+                        Padding="64"
+                        HorizontalAlignment="Center"
+                        Visibility="{Binding IsMobile, Converter={StaticResource InverseBoolToVisibilityConverter}}">
+            
+            <!-- Heading Section -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+                <TextBlock Text="Heading"
+                           Style="{StaticResource HeadingTextBlockStyle}" />
+                <TextBlock Text="Subheading"
+                           Style="{StaticResource SubheadingTextBlockStyle}"
+                           Foreground="{ThemeResource TextSecondaryBrush}" />
+            </utu:AutoLayout>
+
+            <!-- Cards Grid using ItemsRepeater with UniformGridLayout -->
+            <ItemsRepeater ItemsSource="{Binding IconCards}">
+                <ItemsRepeater.Layout>
+                    <UniformGridLayout MinItemWidth="240"
+                                       ItemsStretch="None"
+                                       MinColumnSpacing="64"
+                                       MinRowSpacing="64" />
+                </ItemsRepeater.Layout>
+                <ItemsRepeater.ItemTemplate>
+                    <DataTemplate>
+                        <utu:AutoLayout Orientation="Horizontal" Spacing="24" Width="301">
+                            <FontIcon Glyph="&#xE946;" FontSize="24" Width="32" Height="32"
+                                      Foreground="{ThemeResource DefaultTextBrush}"
+                                      VerticalAlignment="Top" />
+                            <utu:AutoLayout Orientation="Vertical" Spacing="8" utu:AutoLayout.PrimaryAlignment="Stretch">
+                                <TextBlock Text="Title"
+                                           Style="{StaticResource CardHeadingTextBlockStyle}" />
+                                <TextBlock Text="Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+                                           Style="{StaticResource CardBodyTextBlockStyle}"
+                                           TextWrapping="Wrap" />
+                            </utu:AutoLayout>
+                        </utu:AutoLayout>
+                    </DataTemplate>
+                </ItemsRepeater.ItemTemplate>
+            </ItemsRepeater>
+        </utu:AutoLayout>
+
+        <!-- Mobile View -->
+        <utu:AutoLayout Orientation="Vertical"
+                        Spacing="24"
+                        Padding="24"
+                        HorizontalAlignment="Stretch"
+                        Visibility="{Binding IsMobile, Converter={StaticResource BoolToVisibilityConverter}}">
+            
+            <!-- Heading Section -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="8">
+                <TextBlock Text="Heading"
+                           Style="{StaticResource HeadingTextBlockStyle}" />
+                <TextBlock Text="Subheading"
+                           Style="{StaticResource SubheadingTextBlockStyle}"
+                           Foreground="{ThemeResource TextSecondaryBrush}" />
+            </utu:AutoLayout>
+
+            <!-- Cards Stacked -->
+            <utu:AutoLayout Orientation="Vertical" Spacing="24">
+                
+                <!-- Card 1 -->
+                <utu:AutoLayout Orientation="Horizontal" Spacing="16">
+                    <FontIcon Glyph="&#xE946;" FontSize="24" Width="32" Height="32"
+                              Foreground="{ThemeResource DefaultTextBrush}"
+                              VerticalAlignment="Top" />
+                    <utu:AutoLayout Orientation="Vertical" Spacing="8" utu:AutoLayout.PrimaryAlignment="Stretch">
+                        <TextBlock Text="Title"
+                                   Style="{StaticResource CardHeadingTextBlockStyle}" />
+                        <TextBlock Text="Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+                                   Style="{StaticResource CardBodyTextBlockStyle}"
+                                   TextWrapping="Wrap" />
+                    </utu:AutoLayout>
+                </utu:AutoLayout>
+
+                <!-- Card 2 -->
+                <utu:AutoLayout Orientation="Horizontal" Spacing="16">
+                    <FontIcon Glyph="&#xE946;" FontSize="24" Width="32" Height="32"
+                              Foreground="{ThemeResource DefaultTextBrush}"
+                              VerticalAlignment="Top" />
+                    <utu:AutoLayout Orientation="Vertical" Spacing="8" utu:AutoLayout.PrimaryAlignment="Stretch">
+                        <TextBlock Text="Title"
+                                   Style="{StaticResource CardHeadingTextBlockStyle}" />
+                        <TextBlock Text="Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+                                   Style="{StaticResource CardBodyTextBlockStyle}"
+                                   TextWrapping="Wrap" />
+                    </utu:AutoLayout>
+                </utu:AutoLayout>
+
+                <!-- Card 3 -->
+                <utu:AutoLayout Orientation="Horizontal" Spacing="16">
+                    <FontIcon Glyph="&#xE946;" FontSize="24" Width="32" Height="32"
+                              Foreground="{ThemeResource DefaultTextBrush}"
+                              VerticalAlignment="Top" />
+                    <utu:AutoLayout Orientation="Vertical" Spacing="8" utu:AutoLayout.PrimaryAlignment="Stretch">
+                        <TextBlock Text="Title"
+                                   Style="{StaticResource CardHeadingTextBlockStyle}" />
+                        <TextBlock Text="Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+                                   Style="{StaticResource CardBodyTextBlockStyle}"
+                                   TextWrapping="Wrap" />
+                    </utu:AutoLayout>
+                </utu:AutoLayout>
+
+                <!-- Card 4 -->
+                <utu:AutoLayout Orientation="Horizontal" Spacing="16">
+                    <FontIcon Glyph="&#xE946;" FontSize="24" Width="32" Height="32"
+                              Foreground="{ThemeResource DefaultTextBrush}"
+                              VerticalAlignment="Top" />
+                    <utu:AutoLayout Orientation="Vertical" Spacing="8" utu:AutoLayout.PrimaryAlignment="Stretch">
+                        <TextBlock Text="Title"
+                                   Style="{StaticResource CardHeadingTextBlockStyle}" />
+                        <TextBlock Text="Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+                                   Style="{StaticResource CardBodyTextBlockStyle}"
+                                   TextWrapping="Wrap" />
+                    </utu:AutoLayout>
+                </utu:AutoLayout>
+
+                <!-- Card 5 -->
+                <utu:AutoLayout Orientation="Horizontal" Spacing="16">
+                    <FontIcon Glyph="&#xE946;" FontSize="24" Width="32" Height="32"
+                              Foreground="{ThemeResource DefaultTextBrush}"
+                              VerticalAlignment="Top" />
+                    <utu:AutoLayout Orientation="Vertical" Spacing="8" utu:AutoLayout.PrimaryAlignment="Stretch">
+                        <TextBlock Text="Title"
+                                   Style="{StaticResource CardHeadingTextBlockStyle}" />
+                        <TextBlock Text="Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+                                   Style="{StaticResource CardBodyTextBlockStyle}"
+                                   TextWrapping="Wrap" />
+                    </utu:AutoLayout>
+                </utu:AutoLayout>
+
+                <!-- Card 6 -->
+                <utu:AutoLayout Orientation="Horizontal" Spacing="16">
+                    <FontIcon Glyph="&#xE946;" FontSize="24" Width="32" Height="32"
+                              Foreground="{ThemeResource DefaultTextBrush}"
+                              VerticalAlignment="Top" />
+                    <utu:AutoLayout Orientation="Vertical" Spacing="8" utu:AutoLayout.PrimaryAlignment="Stretch">
+                        <TextBlock Text="Title"
+                                   Style="{StaticResource CardHeadingTextBlockStyle}" />
+                        <TextBlock Text="Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+                                   Style="{StaticResource CardBodyTextBlockStyle}"
+                                   TextWrapping="Wrap" />
+                    </utu:AutoLayout>
+                </utu:AutoLayout>
+            </utu:AutoLayout>
+        </utu:AutoLayout>
+    </Grid>
+</UserControl>

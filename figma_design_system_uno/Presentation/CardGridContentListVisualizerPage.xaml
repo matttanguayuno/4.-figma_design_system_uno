@@ -1,0 +1,12 @@
+<Page x:Class="figma_design_system_uno.Presentation.CardGridContentListVisualizerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+      Background="{StaticResource SurfaceDefaultBrush}">
+
+  <ScrollViewer>
+    <Grid Loaded="OnGridLoaded" SizeChanged="OnPageSizeChanged">
+      <controls:CardGridContentListControl x:Name="CardGridContentListControl" />
+    </Grid>
+  </ScrollViewer>
+</Page>

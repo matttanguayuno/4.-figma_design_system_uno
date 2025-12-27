@@ -1,0 +1,39 @@
+<Page x:Class="figma_design_system_uno.Presentation.PanelImageSectionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+      xmlns:utu="using:Uno.Toolkit.UI">
+
+
+
+  <ScrollViewer>
+    <utu:AutoLayout Orientation="Vertical"
+                    Spacing="24"
+                    Padding="32">
+      <TextBlock Text="Panel Image Section"
+                 Style="{StaticResource TitleLargeTextBlockStyle}" />
+      
+      <TextBlock Text="Simple panel with full-width image. Desktop and mobile show same image at 349px height."
+                 Style="{StaticResource BodyTextBlockStyle}"
+                 Foreground="{ThemeResource SecondaryTextBrush}"
+                 TextWrapping="Wrap" />
+
+      <!-- Device Toggle -->
+      <utu:AutoLayout Orientation="Horizontal"
+                      Spacing="12">
+        <RadioButton Content="Desktop"
+                     IsChecked="{x:Bind ViewModel.DeviceMode, Mode=TwoWay, Converter={StaticResource EqualsConverter}, ConverterParameter=Desktop}" />
+        <RadioButton Content="Mobile"
+                     IsChecked="{x:Bind ViewModel.DeviceMode, Mode=TwoWay, Converter={StaticResource EqualsConverter}, ConverterParameter=Mobile}" />
+      </utu:AutoLayout>
+
+      <!-- Preview Frame -->
+      <Border BorderBrush="{ThemeResource BorderBrush}"
+              BorderThickness="2"
+              CornerRadius="8">
+        <controls:PanelImageControl IsMobile="{x:Bind ViewModel.IsMobile, Mode=OneWay}" />
+      </Border>
+    </utu:AutoLayout>
+  </ScrollViewer>
+
+</Page>

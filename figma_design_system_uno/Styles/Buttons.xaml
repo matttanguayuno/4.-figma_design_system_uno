@@ -1,8 +1,38 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-  <!-- Base Button Style -->
-  <Style x:Key="BaseButtonStyle" TargetType="Button">
+  <!-- 
+    Demo-Specific Button Style Aliases
+    These are semantic aliases that map to the library's standard button styles.
+    This allows demo pages to use descriptive names while the library provides the actual implementation.
+  -->
+
+  <!-- Alias: PrimaryButtonStyle -> FilledButtonStyle from library -->
+  <StaticResource x:Key="PrimaryButtonStyle" ResourceKey="FilledButtonStyle" />
+  <StaticResource x:Key="PrimaryMediumButtonStyle" ResourceKey="FilledButtonStyle" />
+  <StaticResource x:Key="PrimarySmallButtonStyle" ResourceKey="FilledButtonStyle" />
+  
+  <!-- Alias: NeutralButtonStyle -> OutlinedButtonStyle from library -->
+  <StaticResource x:Key="NeutralButtonStyle" ResourceKey="OutlinedButtonStyle" />
+  
+  <!-- Alias: SubtleButtonStyle -> TextButtonStyle from library -->
+  <StaticResource x:Key="SubtleButtonStyle" ResourceKey="TextButtonStyle" />
+  
+  <!-- Alias: DangerPrimaryButtonStyle -> FilledErrorButtonStyle from library -->
+  <StaticResource x:Key="DangerPrimaryButtonStyle" ResourceKey="FilledErrorButtonStyle" />
+  
+  <!-- Alias: DangerSubtleButtonStyle -> TextErrorButtonStyle from library -->
+  <StaticResource x:Key="DangerSubtleButtonStyle" ResourceKey="TextErrorButtonStyle" />
+  
+  <!-- Icon button aliases -->
+  <StaticResource x:Key="PrimaryIconButtonStyle" ResourceKey="FilledButtonStyle" />
+  <StaticResource x:Key="NeutralIconButtonStyle" ResourceKey="OutlinedButtonStyle" />
+  <StaticResource x:Key="SubtleIconButtonStyle" ResourceKey="TextButtonStyle" />
+  
+  <!-- Base style alias (if needed) -->
+  <StaticResource x:Key="BaseButtonStyle" ResourceKey="FilledButtonStyle" />
+
+</ResourceDictionary>
     <Setter Property="FontFamily" Value="{StaticResource InterFontFamily}" />
     <Setter Property="FontSize" Value="16" />
     <Setter Property="FontWeight" Value="Normal" />

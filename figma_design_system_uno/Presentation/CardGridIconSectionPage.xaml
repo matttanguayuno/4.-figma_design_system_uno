@@ -1,0 +1,55 @@
+<Page x:Class="figma_design_system_uno.Presentation.CardGridIconSectionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+      xmlns:models="using:figma_design_system_uno.Models"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      Background="{ThemeResource SurfaceDefaultBrush}">
+
+    <Page.DataContext>
+        <models:CardGridIconSectionModel />
+    </Page.DataContext>
+
+    <ScrollViewer>
+        <utu:AutoLayout Orientation="Vertical"
+                        Padding="{StaticResource Spacing800}"
+                        Spacing="{StaticResource Space1200}"
+                        MaxWidth="1400"
+                        HorizontalAlignment="Left">
+
+            <!-- Page Header -->
+            <utu:NavigationBar Content="Card Grid Icon Section"
+                               HorizontalContentAlignment="Left"
+                               VerticalAlignment="Bottom">
+                <utu:NavigationBar.MainCommand>
+                    <AppBarButton Icon="Back" Click="OnBackClick" />
+                </utu:NavigationBar.MainCommand>
+            </utu:NavigationBar>
+
+            <!-- Description -->
+            <TextBlock Text="Grid of icon cards in responsive layout. Desktop displays 3 columns with 64px gap, mobile stacks vertically with 24px gap. Each card has an info icon, title, and body text."
+                       TextWrapping="Wrap"
+                       Style="{StaticResource BodyTextBlockStyle}" />
+
+            <!-- Device Toggle -->
+            <utu:AutoLayout Orientation="Horizontal" Spacing="16">
+                <RadioButton Content="Desktop"
+                             IsChecked="{Binding DeviceMode, Mode=TwoWay, Converter={StaticResource StringToBooleanConverter}, ConverterParameter=Desktop}"
+                             GroupName="DeviceMode" />
+                <RadioButton Content="Mobile"
+                             IsChecked="{Binding DeviceMode, Mode=TwoWay, Converter={StaticResource StringToBooleanConverter}, ConverterParameter=Mobile}"
+                             GroupName="DeviceMode" />
+            </utu:AutoLayout>
+
+            <!-- Preview Frame -->
+            <Border Background="{ThemeResource SurfaceDefaultBrush}"
+                    BorderBrush="{ThemeResource OutlineBrush}"
+                    BorderThickness="1"
+                    CornerRadius="{StaticResource Radius200}">
+                <controls:CardGridIconControl IsMobile="{Binding IsMobile}"
+                                              Width="{Binding DeviceWidth}"
+                                              HorizontalAlignment="Left" />
+            </Border>
+        </utu:AutoLayout>
+    </ScrollViewer>
+</Page>

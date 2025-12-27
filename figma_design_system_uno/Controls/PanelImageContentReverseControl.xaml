@@ -1,0 +1,125 @@
+<UserControl x:Class="figma_design_system_uno.Controls.PanelImageContentReverseControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:utu="using:Uno.Toolkit.UI"
+             xmlns:converters="using:figma_design_system_uno.Converters">
+
+    <Grid>
+        <!-- Desktop Panel (Reversed: Text Left, Image Right) -->
+        <Grid x:Name="DesktopPanel" 
+              Width="1200" 
+              Background="{StaticResource DefaultBackgroundBrush}"
+              Padding="64"
+              VerticalAlignment="Top"
+              Opacity="0.8"
+              Visibility="{x:Bind IsMobile, Mode=OneWay, Converter={StaticResource InverseBoolToVisibilityConverter}}">
+            
+            <utu:AutoLayout Orientation="Horizontal" 
+                          Spacing="48"
+                          HorizontalAlignment="Stretch">
+                
+                <!-- Text Content (First on Desktop) -->
+                <utu:AutoLayout Orientation="Vertical" 
+                              Spacing="24"
+                              Width="484"
+                              MinWidth="300">
+                    
+                    <!-- Heading & Subheading -->
+                    <utu:AutoLayout Orientation="Vertical" 
+                                  Spacing="8">
+                        <TextBlock Text="Heading"
+                                 FontSize="24"
+                                 FontWeight="SemiBold"
+                                 Foreground="{StaticResource DefaultTextBrush}"/>
+                        
+                        <TextBlock Text="Subheading"
+                                 FontSize="20"
+                                 Foreground="{StaticResource SecondaryTextBrush}"/>
+                    </utu:AutoLayout>
+
+                    <!-- Body Text 1 -->
+                    <TextBlock Text="Body text for your whole article or post. We'll put in some lorem ipsum to show how a filled-out page might look:"
+                             FontSize="16"
+                             Foreground="{StaticResource DefaultTextBrush}"
+                             TextWrapping="Wrap"/>
+
+                    <!-- Body Text 2 -->
+                    <TextBlock FontSize="16"
+                             Foreground="{StaticResource DefaultTextBrush}"
+                             TextWrapping="Wrap">
+                        <Run Text="Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation exquisite perfect nostrud nisi intricate Content. Qui international first-class nulla ut. Punctual adipisicing, essential lovely queen tempor eiusmod irure. Exclusive izakaya charming Scandinavian impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki excepteur Basset hound. Zürich sleepy perfect consectetur."/>
+                    </TextBlock>
+                </utu:AutoLayout>
+
+                <!-- Image (Second on Desktop) -->
+                <Border Width="484" 
+                       Height="350"
+                       Background="#E3E3E3">
+                    <Image Source="https://picsum.photos/484/350" 
+                           Stretch="Uniform"
+                           Opacity="0.2"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+                </Border>
+            </utu:AutoLayout>
+        </Grid>
+
+        <!-- Mobile Panel (Same as regular: Text then Image) -->
+        <Grid x:Name="MobilePanel" 
+              Width="375" 
+              Background="{StaticResource DefaultBackgroundBrush}"
+              Padding="24"
+              VerticalAlignment="Top"
+              Opacity="0.8"
+              Visibility="{x:Bind IsMobile, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}">
+            
+            <utu:AutoLayout Orientation="Vertical" 
+                          Spacing="24"
+                          HorizontalAlignment="Stretch">
+                
+                <!-- Text Content (First on Mobile) -->
+                <utu:AutoLayout Orientation="Vertical" 
+                              Spacing="24"
+                              MinWidth="300">
+                    
+                    <!-- Heading & Subheading -->
+                    <utu:AutoLayout Orientation="Vertical" 
+                                  Spacing="8">
+                        <TextBlock Text="Heading"
+                                 FontSize="24"
+                                 FontWeight="SemiBold"
+                                 Foreground="{StaticResource DefaultTextBrush}"/>
+                        
+                        <TextBlock Text="Subheading"
+                                 FontSize="20"
+                                 Foreground="{StaticResource SecondaryTextBrush}"/>
+                    </utu:AutoLayout>
+
+                    <!-- Body Text 1 -->
+                    <TextBlock Text="Body text for your whole article or post. We'll put in some lorem ipsum to show how a filled-out page might look:"
+                             FontSize="16"
+                             Foreground="{StaticResource DefaultTextBrush}"
+                             TextWrapping="Wrap"/>
+
+                    <!-- Body Text 2 -->
+                    <TextBlock FontSize="16"
+                             Foreground="{StaticResource DefaultTextBrush}"
+                             TextWrapping="Wrap">
+                        <Run Text="Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation exquisite perfect nostrud nisi intricate Content. Qui international first-class nulla ut. Punctual adipisicing, essential lovely queen tempor eiusmod irure. Exclusive izakaya charming Scandinavian impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki excepteur Basset hound. Zürich sleepy perfect consectetur."/>
+                    </TextBlock>
+                </utu:AutoLayout>
+
+                <!-- Image (Second on Mobile) -->
+                <Border Height="350"
+                       HorizontalAlignment="Stretch"
+                       Background="#E3E3E3">
+                    <Image Source="https://picsum.photos/327/350" 
+                           Stretch="Uniform"
+                           Opacity="0.2"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+                </Border>
+            </utu:AutoLayout>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -150,4 +150,10 @@
     <SolidColorBrush x:Key="BrandTertiaryBrush" Color="{StaticResource PrimaryVariantLightColor}" />
     <SolidColorBrush x:Key="NeutralTertiaryBrush" Color="{StaticResource SDSNeutralTertiaryColor}" />
 
+    <!-- Uno.Themes.Material API Compatibility Aliases -->
+    <StaticResource x:Key="MaterialPrimaryBrush" ResourceKey="PrimaryBrush" />
+    <StaticResource x:Key="MaterialOnPrimaryBrush" ResourceKey="OnPrimaryBrush" />
+    <StaticResource x:Key="MaterialBackgroundBrush" ResourceKey="BackgroundBrush" />
+    <StaticResource x:Key="MaterialSurfaceBrush" ResourceKey="SurfaceBrush" />
+
 </ResourceDictionary>

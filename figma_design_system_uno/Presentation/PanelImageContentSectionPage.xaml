@@ -1,0 +1,51 @@
+<Page x:Class="figma_design_system_uno.Presentation.PanelImageContentSectionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+      xmlns:models="using:figma_design_system_uno.Models"
+      Background="{StaticResource DefaultBackgroundBrush}">
+
+    <Page.Resources>
+        <models:PanelImageContentSectionModel x:Key="ViewModel"/>
+    </Page.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <utu:AutoLayout Orientation="Vertical"
+                      Spacing="48"
+                      Padding="32"
+                      DataContext="{StaticResource ViewModel}">
+            
+            <!-- Controls Section -->
+            <utu:AutoLayout Orientation="Vertical"
+                          Spacing="24">
+                <TextBlock Text="Panel Image Content Section"
+                         Style="{StaticResource TitlePageStyle}"/>
+                
+                <TextBlock Text="Panel with image and text content. Desktop shows image on left, mobile shows image on top."
+                         Foreground="{StaticResource SecondaryTextBrush}"
+                         TextWrapping="Wrap"
+                         MaxWidth="600"/>
+                
+                <!-- Device Mode Selection -->
+                <StackPanel Orientation="Horizontal" Spacing="16">
+                    <RadioButton Content="Desktop (1200px)"
+                               GroupName="DeviceMode"
+                               IsChecked="{Binding DeviceMode, Mode=TwoWay, Converter={StaticResource EqualsConverter}, ConverterParameter=Desktop}"/>
+                    <RadioButton Content="Mobile (375px)"
+                               GroupName="DeviceMode"
+                               IsChecked="{Binding DeviceMode, Mode=TwoWay, Converter={StaticResource EqualsConverter}, ConverterParameter=Mobile}"/>
+                </StackPanel>
+            </utu:AutoLayout>
+
+            <!-- Device Frame -->
+            <Border BorderBrush="{StaticResource BorderBrush}"
+                    BorderThickness="2"
+                    CornerRadius="8"
+                    Width="{Binding DeviceWidth, Mode=OneWay}"
+                    HorizontalAlignment="Left">
+                <controls:PanelImageContentControl IsMobile="{Binding IsMobile, Mode=OneWay}"/>
+            </Border>
+        </utu:AutoLayout>
+    </ScrollViewer>
+</Page>

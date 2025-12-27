@@ -1,7 +1,7 @@
 <Application x:Class="figma_design_system_uno.App"
        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-       xmlns:utum="using:Uno.Toolkit.UI.Material"
+       xmlns:local="using:figma_design_system_uno.Presentation"
        RequestedTheme="Light">
 
   <Application.Resources>
@@ -10,17 +10,23 @@
         <!-- Load WinUI resources -->
         <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
         
-        <!-- SDS Theme Library (standalone, Material-compatible naming) -->
+        <!-- SDS Theme Library - Compatible with Uno.Themes.Material API -->
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/SDSTheme.xaml" />
         
-        <!-- Component-specific styles -->
-        <ResourceDictionary Source="ms-appx:///Styles/Buttons.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/Accordion.xaml" />
-        <ResourceDictionary Source="ms-appx:///Styles/Cards.xaml" />
+        <!-- Demo App Interface Styles (not component library styles) -->
+        <ResourceDictionary Source="ms-appx:///Styles/Buttons.xaml" />   <!-- Semantic aliases to library styles -->
+        <ResourceDictionary Source="ms-appx:///Styles/Accordion.xaml" /> <!-- Demo accordion resource aliases -->
+        <ResourceDictionary Source="ms-appx:///Styles/Cards.xaml" />     <!-- Demo card layout styles -->
         
         <!-- Demo-specific resources -->
         <ResourceDictionary Source="ms-appx:///Themes/TagDemoTag.xaml" />
       </ResourceDictionary.MergedDictionaries>
+
+      <!-- Converters -->
+      <local:BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+      <local:EqualsConverter x:Key="EqualsConverter" />
+      <local:EqualsToVisibilityConverter x:Key="EqualsToVisibilityConverter" />
+      <local:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibilityConverter" />
     </ResourceDictionary>
   </Application.Resources>
 

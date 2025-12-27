@@ -34,6 +34,26 @@ This document tracks known issues and bugs that need to be fixed.
 
 ## 🔴 High Priority
 
+### Font Styles Don't Match Figma Designs
+**Location:** Card Grid Content List and other components
+
+**Issue:** Some component text styles (titles, body text) don't match the exact typography specifications from Figma designs. For example, Card Grid Content List cards may use incorrect font sizes, weights, or colors compared to the design system.
+
+**Expected Behavior:** All text styles should precisely match Figma design tokens:
+- Title: Inter 24px SemiBold (600) #1E1E1E
+- Body: Inter 16px Normal (400) #757575
+
+**Impact:** Inconsistent visual appearance across the application that doesn't match the intended design system.
+
+### Loading Screen for Visualizers Shows in Dark Mode
+**Location:** All visualizer pages (HeaderVisualizer, FooterVisualizer, etc.)
+
+**Issue:** When opening a visualizer in a new window, the loading screen appears in dark mode (dark background) even though the app is configured for light mode only. This creates a jarring visual experience during page load.
+
+**Expected Behavior:** Loading screen should be forced to use light mode theme to match the rest of the application.
+
+**Proposed Solution:** Override the loading screen's RequestedTheme or add CSS/styles to force light mode for the initial loading phase.
+
 ### Add Interactive Control for State Demonstrations
 **Location:** All component pages (Buttons, Tags, etc.)
 

@@ -3,11 +3,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
   <!-- 
-    Accordion styles using Uno Material-compatible brush names
-    Maps Figma SDS colors to Uno Material theme resources
+    Accordion styles for Figma SDS demo app
+    Uses SDS theme resources from Uno.Themes.SDS library
   -->
 
-  <!-- Accordion Colors (using Uno Material brush references) -->
+  <!-- Accordion Colors (using SDS brush references) -->
   <StaticResource x:Key="AccordionExpandedBackgroundBrush" ResourceKey="SurfaceBrush" />
   <StaticResource x:Key="AccordionCollapsedBackgroundBrush" ResourceKey="SurfaceVariantBrush" />
   <StaticResource x:Key="AccordionBorderBrush" ResourceKey="OutlineBrush" />
