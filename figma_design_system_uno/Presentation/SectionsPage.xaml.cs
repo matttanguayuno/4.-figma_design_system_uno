@@ -737,4 +737,124 @@ public sealed partial class SectionsPage : Page
             System.Diagnostics.Debug.WriteLine($"Stack trace: {ex.StackTrace}");
         }
     }
+
+    private void OnOpenPageProductClick(object sender, RoutedEventArgs e)
+    {
+        try
+        {
+            System.Diagnostics.Debug.WriteLine("OnOpenPageProductClick called");
+            
+#if __WASM__
+            // For WASM, open in new browser tab using JavaScript
+            var script = "window.open('/PageProductVisualizer', '_blank');";
+            Uno.Foundation.WebAssemblyRuntime.InvokeJS(script);
+            System.Diagnostics.Debug.WriteLine("Opened new tab with JavaScript");
+#else
+            // For desktop, create new window with just PageProductVisualizerPage (no Shell)
+            var productPage = new PageProductVisualizerPage();
+            var newWindow = new Microsoft.UI.Xaml.Window();
+            newWindow.Content = productPage;
+            
+            // Maximize the new window
+            var appWindow = newWindow.AppWindow;
+            if (appWindow is not null)
+            {
+                var presenter = appWindow.Presenter as Microsoft.UI.Windowing.OverlappedPresenter;
+                if (presenter is not null)
+                {
+                    presenter.Maximize();
+                }
+            }
+            
+            newWindow.Activate();
+            System.Diagnostics.Debug.WriteLine("Window created and activated");
+#endif
+        }
+        catch (System.Exception ex)
+        {
+            // Log error for debugging
+            System.Diagnostics.Debug.WriteLine($"Error opening Page Product section: {ex.Message}");
+            System.Diagnostics.Debug.WriteLine($"Stack trace: {ex.StackTrace}");
+        }
+    }
+
+    private void OnOpenPageProductResultsClick(object sender, RoutedEventArgs e)
+    {
+        try
+        {
+            System.Diagnostics.Debug.WriteLine("OnOpenPageProductResultsClick called");
+            
+#if __WASM__
+            // For WASM, open in new browser tab using JavaScript
+            var script = "window.open('/PageProductResultsVisualizer', '_blank');";
+            Uno.Foundation.WebAssemblyRuntime.InvokeJS(script);
+            System.Diagnostics.Debug.WriteLine("Opened new tab with JavaScript");
+#else
+            // For desktop, create new window with just PageProductResultsVisualizerPage (no Shell)
+            var productResultsPage = new PageProductResultsVisualizerPage();
+            var newWindow = new Microsoft.UI.Xaml.Window();
+            newWindow.Content = productResultsPage;
+            
+            // Maximize the new window
+            var appWindow = newWindow.AppWindow;
+            if (appWindow is not null)
+            {
+                var presenter = appWindow.Presenter as Microsoft.UI.Windowing.OverlappedPresenter;
+                if (presenter is not null)
+                {
+                    presenter.Maximize();
+                }
+            }
+            
+            newWindow.Activate();
+            System.Diagnostics.Debug.WriteLine("Window created and activated");
+#endif
+        }
+        catch (System.Exception ex)
+        {
+            // Log error for debugging
+            System.Diagnostics.Debug.WriteLine($"Error opening Page Product Results section: {ex.Message}");
+            System.Diagnostics.Debug.WriteLine($"Stack trace: {ex.StackTrace}");
+        }
+    }
+
+    private void OnOpenPageNewsletterClick(object sender, RoutedEventArgs e)
+    {
+        try
+        {
+            System.Diagnostics.Debug.WriteLine("OnOpenPageNewsletterClick called");
+            
+#if __WASM__
+            // For WASM, open in new browser tab using JavaScript
+            var script = "window.open('/PageNewsletterVisualizer', '_blank');";
+            Uno.Foundation.WebAssemblyRuntime.InvokeJS(script);
+            System.Diagnostics.Debug.WriteLine("Opened new tab with JavaScript");
+#else
+            // For desktop, create new window with just PageNewsletterVisualizerPage (no Shell)
+            var newsletterPage = new PageNewsletterVisualizerPage();
+            var newWindow = new Microsoft.UI.Xaml.Window();
+            newWindow.Content = newsletterPage;
+            
+            // Maximize the new window
+            var appWindow = newWindow.AppWindow;
+            if (appWindow is not null)
+            {
+                var presenter = appWindow.Presenter as Microsoft.UI.Windowing.OverlappedPresenter;
+                if (presenter is not null)
+                {
+                    presenter.Maximize();
+                }
+            }
+            
+            newWindow.Activate();
+            System.Diagnostics.Debug.WriteLine("Window created and activated");
+#endif
+        }
+        catch (System.Exception ex)
+        {
+            // Log error for debugging
+            System.Diagnostics.Debug.WriteLine($"Error opening Page Newsletter section: {ex.Message}");
+            System.Diagnostics.Debug.WriteLine($"Stack trace: {ex.StackTrace}");
+        }
+    }
 }

@@ -5,30 +5,30 @@
   <ResourceDictionary.ThemeDictionaries>
     <ResourceDictionary x:Key="Light">
       <!-- Default state -->
-      <SolidColorBrush x:Key="ComboBoxBackground" Color="#ffffff" />
-      <SolidColorBrush x:Key="ComboBoxBorderBrush" Color="#d9d9d9" />
-      <SolidColorBrush x:Key="ComboBoxForeground" Color="#000000" />
+      <SolidColorBrush x:Key="ComboBoxBackground" Color="{StaticResource SurfaceColor}" />
+      <SolidColorBrush x:Key="ComboBoxBorderBrush" Color="{StaticResource DisabledColor}" />
+      <SolidColorBrush x:Key="ComboBoxForeground" Color="{StaticResource OnSurfaceColor}" />
       
       <!-- Disabled state -->
-      <SolidColorBrush x:Key="ComboBoxBackgroundDisabled" Color="#d9d9d9" />
-      <SolidColorBrush x:Key="ComboBoxBorderBrushDisabled" Color="#b2b2b2" />
-      <SolidColorBrush x:Key="ComboBoxForegroundDisabled" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="ComboBoxBackgroundDisabled" Color="{StaticResource DisabledColor}" />
+      <SolidColorBrush x:Key="ComboBoxBorderBrushDisabled" Color="{StaticResource SDSInputDisabledBorderColor}" />
+      <SolidColorBrush x:Key="ComboBoxForegroundDisabled" Color="{StaticResource OnSurfaceLowColor}" />
       
       <!-- Error state (custom) -->
-      <SolidColorBrush x:Key="ComboBoxErrorBorderBrush" Color="#900b09" />
+      <SolidColorBrush x:Key="ComboBoxErrorBorderBrush" Color="{StaticResource ErrorColor}" />
     </ResourceDictionary>
     
     <ResourceDictionary x:Key="Dark">
       <!-- Same for dark theme -->
-      <SolidColorBrush x:Key="ComboBoxBackground" Color="#ffffff" />
-      <SolidColorBrush x:Key="ComboBoxBorderBrush" Color="#d9d9d9" />
-      <SolidColorBrush x:Key="ComboBoxForeground" Color="#000000" />
+      <SolidColorBrush x:Key="ComboBoxBackground" Color="{StaticResource SurfaceColor}" />
+      <SolidColorBrush x:Key="ComboBoxBorderBrush" Color="{StaticResource DisabledColor}" />
+      <SolidColorBrush x:Key="ComboBoxForeground" Color="{StaticResource OnSurfaceColor}" />
       
-      <SolidColorBrush x:Key="ComboBoxBackgroundDisabled" Color="#d9d9d9" />
-      <SolidColorBrush x:Key="ComboBoxBorderBrushDisabled" Color="#b2b2b2" />
-      <SolidColorBrush x:Key="ComboBoxForegroundDisabled" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="ComboBoxBackgroundDisabled" Color="{StaticResource DisabledColor}" />
+      <SolidColorBrush x:Key="ComboBoxBorderBrushDisabled" Color="{StaticResource SDSInputDisabledBorderColor}" />
+      <SolidColorBrush x:Key="ComboBoxForegroundDisabled" Color="{StaticResource OnSurfaceLowColor}" />
       
-      <SolidColorBrush x:Key="ComboBoxErrorBorderBrush" Color="#900b09" />
+      <SolidColorBrush x:Key="ComboBoxErrorBorderBrush" Color="{StaticResource ErrorColor}" />
     </ResourceDictionary>
   </ResourceDictionary.ThemeDictionaries>
 

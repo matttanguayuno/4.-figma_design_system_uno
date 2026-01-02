@@ -1,0 +1,59 @@
+<Page
+    x:Class="figma_design_system_uno.Presentation.PageProductSectionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:figma_design_system_uno.Presentation"
+    xmlns:controls="using:figma_design_system_uno.Controls"
+    xmlns:utu="using:Uno.Toolkit.UI"
+    Background="{StaticResource BackgroundBrush}">
+
+    <Page.DataContext>
+        <local:PageProductSectionModel />
+    </Page.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Navigation Bar -->
+        <utu:NavigationBar Grid.Row="0"
+                           Content="Page Product"
+                           Style="{StaticResource CustomNavigationBarStyle}" />
+
+        <!-- Content -->
+        <ScrollViewer Grid.Row="1"
+                      HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto">
+            <StackPanel Spacing="24"
+                        Padding="24">
+
+                <!-- Device Toggle -->
+                <StackPanel Orientation="Horizontal"
+                            Spacing="16"
+                            HorizontalAlignment="Center">
+                    <RadioButton Content="Desktop"
+                                 IsChecked="{Binding DeviceMode, Mode=TwoWay, Converter={StaticResource EqualsConverter}, ConverterParameter=0}"
+                                 GroupName="DeviceMode" />
+                    <RadioButton Content="Mobile"
+                                 IsChecked="{Binding DeviceMode, Mode=TwoWay, Converter={StaticResource EqualsConverter}, ConverterParameter=1}"
+                                 GroupName="DeviceMode" />
+                </StackPanel>
+
+                <!-- Preview Container -->
+                <Border Background="#F5F5F5"
+                        Padding="24"
+                        CornerRadius="8"
+                        HorizontalAlignment="Center">
+                    <Border Background="White"
+                            CornerRadius="8"
+                            Width="{Binding DeviceWidth}">
+                        <controls:PageProductControl IsMobile="{Binding IsMobile}" />
+                    </Border>
+                </Border>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

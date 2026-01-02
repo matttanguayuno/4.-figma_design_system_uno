@@ -321,8 +321,8 @@
                 </utu:AutoLayout>
                 <Button Content="Button"
                         FontSize="14"
-                        Background="#E3E3E3" Foreground="#1E1E1E"
-                        BorderBrush="#767676" BorderThickness="1"
+                        Background="{StaticResource BackgroundTertiaryBrush}" Foreground="{StaticResource PrimaryTextBrush}"
+                        BorderBrush="{StaticResource OutlineVariantBrush}" BorderThickness="1"
                         CornerRadius="{StaticResource Radius200}"
                         Padding="{StaticResource Spacing300}"
                         utu:AutoLayout.CounterAlignment="Start" />

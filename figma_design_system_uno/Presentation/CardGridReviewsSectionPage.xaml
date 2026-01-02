@@ -28,7 +28,7 @@
                 </StackPanel>
 
                 <!-- Preview Container -->
-                <Border Background="#F5F5F5"
+                <Border Background="{StaticResource BackgroundSecondaryBrush}"
                         BorderBrush="{StaticResource OutlineBrush}"
                         BorderThickness="1"
                         CornerRadius="{StaticResource Radius200}"

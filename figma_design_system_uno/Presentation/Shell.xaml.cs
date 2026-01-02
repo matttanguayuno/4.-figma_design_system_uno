@@ -60,7 +60,11 @@ public sealed partial class Shell : UserControl, IContentControlProvider
         { "CardGridReviewsSection", typeof(CardGridReviewsSectionPage) },
         { "CardGridReviewsVisualizer", typeof(CardGridReviewsVisualizerPage) },
         { "PageAccordionSection", typeof(PageAccordionSectionPage) },
-        { "PageAccordionVisualizer", typeof(PageAccordionVisualizerPage) }
+        { "PageAccordionVisualizer", typeof(PageAccordionVisualizerPage) },
+        { "PageProductSection", typeof(PageProductSectionPage) },
+        { "PageProductVisualizer", typeof(PageProductVisualizerPage) },
+        { "PageProductResultsSection", typeof(PageProductResultsSectionPage) },
+        { "PageProductResultsVisualizer", typeof(PageProductResultsVisualizerPage) }
     };
 
     private string _currentPage = "Home";

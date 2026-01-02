@@ -391,6 +391,12 @@
                 <MenuFlyout>
                   <MenuFlyoutItem Text="Page Accordion"
                                   Click="OnOpenPageAccordionClick" />
+                  <MenuFlyoutItem Text="Page Product"
+                                  Click="OnOpenPageProductClick" />
+                  <MenuFlyoutItem Text="Page Product Results"
+                                  Click="OnOpenPageProductResultsClick" />
+                  <MenuFlyoutItem Text="Page Newsletter"
+                                  Click="OnOpenPageNewsletterClick" />
                 </MenuFlyout>
               </Button.Flyout>
             </Button>

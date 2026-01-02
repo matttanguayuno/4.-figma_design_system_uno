@@ -8,13 +8,13 @@
       Background="Transparent">
 
   <Page.Resources>
-    <SolidColorBrush x:Key="ErrorTextBrush" Color="#900b09" />
-    <SolidColorBrush x:Key="ErrorBorderBrush" Color="#900b09" />
-    <SolidColorBrush x:Key="InputBackgroundBrush" Color="#ffffff" />
-    <SolidColorBrush x:Key="InputBorderBrush" Color="#d9d9d9" />
-    <SolidColorBrush x:Key="InputDisabledBackgroundBrush" Color="#d9d9d9" />
-    <SolidColorBrush x:Key="InputDisabledBorderBrush" Color="#b2b2b2" />
-    <SolidColorBrush x:Key="InputDisabledTextBrush" Color="#b3b3b3" />
+    <SolidColorBrush x:Key="ErrorTextBrush" Color="{StaticResource ErrorColor}" />
+    <SolidColorBrush x:Key="ErrorBorderBrush" Color="{StaticResource ErrorColor}" />
+    <SolidColorBrush x:Key="InputBackgroundBrush" Color="{StaticResource SurfaceColor}" />
+    <SolidColorBrush x:Key="InputBorderBrush" Color="{StaticResource DisabledColor}" />
+    <SolidColorBrush x:Key="InputDisabledBackgroundBrush" Color="{StaticResource DisabledColor}" />
+    <SolidColorBrush x:Key="InputDisabledBorderBrush" Color="{StaticResource SDSInputDisabledBorderColor}" />
+    <SolidColorBrush x:Key="InputDisabledTextBrush" Color="{StaticResource OnSurfaceLowColor}" />
   </Page.Resources>
 
   <ScrollViewer>
@@ -151,7 +151,7 @@
                                  Stroke="{ThemeResource CheckBoxCheckBackgroundStrokeCheckedDisabled}" 
                                  StrokeThickness="1" RadiusX="2" RadiusY="2" />
                       <Path Data="{StaticResource CheckBoxCheckGlyphPathData}"
-                            Fill="#B3B3B3" Stretch="Uniform" Width="12" Height="12" />
+                            Fill="{StaticResource OnSurfaceLowBrush}" Stretch="Uniform" Width="12" Height="12" />
                     </Grid>
                     <ContentPresenter Content="{TemplateBinding Content}" Margin="8,0,0,0" VerticalAlignment="Center" />
                   </StackPanel>
@@ -190,7 +190,7 @@
                                  Stroke="{ThemeResource CheckBoxCheckBackgroundStrokeIndeterminateDisabled}" 
                                  StrokeThickness="1" RadiusX="2" RadiusY="2" />
                       <Path Data="{StaticResource CheckBoxHyphenGlyphPathData}"
-                            Fill="#B3B3B3" Stretch="Uniform" Width="10" Height="10" />
+                            Fill="{StaticResource OnSurfaceLowBrush}" Stretch="Uniform" Width="10" Height="10" />
                     </Grid>
                     <ContentPresenter Content="{TemplateBinding Content}" Margin="8,0,0,0" VerticalAlignment="Center" />
                   </StackPanel>
@@ -268,8 +268,8 @@
                 <ControlTemplate TargetType="RadioButton">
                   <StackPanel Orientation="Horizontal">
                     <Grid Width="16" Height="16" VerticalAlignment="Center">
-                      <Ellipse Fill="#e6e6e6" Stroke="#000000" StrokeThickness="1" />
-                      <Ellipse Fill="#000000" Width="10" Height="10" />
+                      <Ellipse Fill="{StaticResource SDSSliderTrackBrush}" Stroke="{StaticResource OnSurfaceBrush}" StrokeThickness="1" />
+                      <Ellipse Fill="{StaticResource OnSurfaceBrush}" Width="10" Height="10" />
                     </Grid>
                     <ContentPresenter Content="{TemplateBinding Content}" Margin="8,0,0,0" VerticalAlignment="Center" />
                   </StackPanel>
@@ -313,8 +313,8 @@
                 <ControlTemplate TargetType="RadioButton">
                   <StackPanel Orientation="Horizontal">
                     <Grid Width="16" Height="16" VerticalAlignment="Center">
-                      <Ellipse Fill="#d9d9d9" Stroke="#b3b3b3" StrokeThickness="1" />
-                      <Ellipse Fill="#b3b3b3" Width="10" Height="10" />
+                      <Ellipse Fill="{StaticResource OutlineBrush}" Stroke="{StaticResource OnSurfaceLowBrush}" StrokeThickness="1" />
+                      <Ellipse Fill="{StaticResource OnSurfaceLowBrush}" Width="10" Height="10" />
                     </Grid>
                     <ContentPresenter Content="{TemplateBinding Content}" Margin="8,0,0,0" VerticalAlignment="Center" />
                   </StackPanel>
@@ -322,7 +322,7 @@
               </RadioButton.Template>
             </RadioButton>
             <utu:AutoLayout Orientation="Vertical" Spacing="0" utu:AutoLayout.CounterAlignment="Start" Margin="-95,5,0,0">
-              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" Foreground="#B3B3B3" />
+              <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}" Foreground="{StaticResource OnSurfaceLowBrush}" />
               <TextBlock Text="Description" Style="{StaticResource BodyBaseTextBlockStyle}"
                          Foreground="{StaticResource SecondaryTextBrush}" Opacity="0.5" />
             </utu:AutoLayout>
@@ -336,7 +336,7 @@
                 <ControlTemplate TargetType="RadioButton">
                   <StackPanel Orientation="Horizontal">
                     <Grid Width="16" Height="16" VerticalAlignment="Center">
-                      <Ellipse Fill="#d9d9d9" Stroke="#b3b3b3" StrokeThickness="1" />
+                      <Ellipse Fill="{StaticResource OutlineBrush}" Stroke="{StaticResource OnSurfaceLowBrush}" StrokeThickness="1" />
                     </Grid>
                     <ContentPresenter Content="{TemplateBinding Content}" Margin="8,0,0,0" VerticalAlignment="Center" />
                   </StackPanel>
@@ -726,7 +726,7 @@
                       CornerRadius="{StaticResource Radius200}" MinWidth="240">
               <ComboBoxItem Content="Value" />
             </ComboBox>
-            <TextBlock Text="Error" Foreground="#900B09" Style="{StaticResource BodyBaseTextBlockStyle}" />
+            <TextBlock Text="Error" Foreground="{StaticResource ErrorBrush}" Style="{StaticResource BodyBaseTextBlockStyle}" />
           </utu:AutoLayout>
 
           <utu:AutoLayout Grid.Row="3" Grid.Column="2" Orientation="Vertical"
@@ -737,7 +737,7 @@
                       CornerRadius="{StaticResource Radius200}" MinWidth="240">
               <ComboBoxItem Content="Value" />
             </ComboBox>
-            <TextBlock Text="Error" Foreground="#900B09" Style="{StaticResource BodyBaseTextBlockStyle}" />
+            <TextBlock Text="Error" Foreground="{StaticResource ErrorBrush}" Style="{StaticResource BodyBaseTextBlockStyle}" />
           </utu:AutoLayout>
         </Grid>
       </utu:AutoLayout>
@@ -797,7 +797,7 @@
           </Border>
 
           <Border Grid.Row="1" Grid.Column="1"
-                  Background="#ffffff" BorderBrush="#d9d9d9" BorderThickness="1"
+                  Background="{StaticResource SurfaceBrush}" BorderBrush="{StaticResource OutlineBrush}" BorderThickness="1"
                   CornerRadius="20" Width="240" Height="40" Margin="0,0,0,24">
             <Grid Padding="16,12,12,12">
               <Grid.ColumnDefinitions>
@@ -812,14 +812,14 @@
           </Border>
 
           <Border Grid.Row="1" Grid.Column="2"
-                  Background="#ffffff" BorderBrush="#d9d9d9" BorderThickness="1"
+                  Background="{StaticResource SurfaceBrush}" BorderBrush="{StaticResource OutlineBrush}" BorderThickness="1"
                   CornerRadius="20" Width="240" Height="40" Margin="0,0,0,24">
             <Grid Padding="16,12,12,12">
               <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
               </Grid.ColumnDefinitions>
-              <TextBlock Text="Value" Grid.Column="0" Foreground="#b3b3b3"
+              <TextBlock Text="Value" Grid.Column="0" Foreground="{StaticResource OnSurfaceLowBrush}"
                          FontSize="16" VerticalAlignment="Center" />
               <FontIcon Grid.Column="1" Glyph="&#xE721;" FontSize="16"
                         Foreground="#1e1e1e" VerticalAlignment="Center" />
@@ -834,10 +834,10 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
               </Grid.ColumnDefinitions>
-              <TextBlock Text="Value" Grid.Column="0" Foreground="#b3b3b3"
+              <TextBlock Text="Value" Grid.Column="0" Foreground="{StaticResource OnSurfaceLowBrush}"
                          FontSize="16" VerticalAlignment="Center" />
               <FontIcon Grid.Column="1" Glyph="&#xE711;" FontSize="12"
-                        Foreground="#b3b3b3" VerticalAlignment="Center" />
+                        Foreground="{StaticResource OnSurfaceLowBrush}" VerticalAlignment="Center" />
             </Grid>
           </Border>
 
@@ -849,10 +849,10 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
               </Grid.ColumnDefinitions>
-              <TextBlock Text="Value" Grid.Column="0" Foreground="#b3b3b3"
+              <TextBlock Text="Value" Grid.Column="0" Foreground="{StaticResource OnSurfaceLowBrush}"
                          FontSize="16" VerticalAlignment="Center" />
               <FontIcon Grid.Column="1" Glyph="&#xE721;" FontSize="16"
-                        Foreground="#b3b3b3" VerticalAlignment="Center" />
+                        Foreground="{StaticResource OnSurfaceLowBrush}" VerticalAlignment="Center" />
             </Grid>
           </Border>
         </Grid>
@@ -941,10 +941,10 @@
                       CornerRadius="2" HorizontalAlignment="Left"
                       Width="120" Margin="40,0,0,0" />
               <!-- Left Handle (Disabled) -->
-              <Ellipse Width="16" Height="16" Fill="#B3B3B3"
+              <Ellipse Width="16" Height="16" Fill="{StaticResource OnSurfaceLowBrush}"
                        HorizontalAlignment="Left" Margin="32,0,0,0" />
               <!-- Right Handle (Disabled) -->
-              <Ellipse Width="16" Height="16" Fill="#B3B3B3"
+              <Ellipse Width="16" Height="16" Fill="{StaticResource OnSurfaceLowBrush}"
                        HorizontalAlignment="Left" Margin="152,0,0,0" />
             </Grid>
             <TextBlock Text="Description" Style="{StaticResource BodyBaseTextBlockStyle}"
@@ -1036,9 +1036,9 @@
           <utu:AutoLayout Grid.Row="2" Grid.Column="1" Orientation="Vertical"
                           Spacing="{StaticResource Space200}" Margin="0,0,0,24">
             <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
-                       Foreground="#B3B3B3" />
+                       Foreground="{StaticResource OnSurfaceLowBrush}" />
             <TextBox Text="Value" IsEnabled="False" Style="{StaticResource TextareaFieldTextBoxStyle}"
-                     Background="#D9D9D9" BorderBrush="#B2B2B2" Foreground="#B3B3B3"
+                     Background="#D9D9D9" BorderBrush="#B2B2B2" Foreground="{StaticResource OnSurfaceLowBrush}"
                      AcceptsReturn="True" TextWrapping="Wrap"
                      CornerRadius="{StaticResource Radius200}" MinWidth="240" Height="80" />
           </utu:AutoLayout>
@@ -1046,10 +1046,10 @@
           <utu:AutoLayout Grid.Row="2" Grid.Column="2" Orientation="Vertical"
                           Spacing="{StaticResource Space200}" Margin="0,0,0,24">
             <TextBlock Text="Label" Style="{StaticResource BodyBaseTextBlockStyle}"
-                       Foreground="#B3B3B3" />
+                       Foreground="{StaticResource OnSurfaceLowBrush}" />
             <TextBox Text="Value" IsEnabled="False"
                      Style="{StaticResource TextareaFieldTextBoxStyle}"
-                     Background="#D9D9D9" BorderBrush="#B2B2B2" Foreground="#B3B3B3"
+                     Background="#D9D9D9" BorderBrush="#B2B2B2" Foreground="{StaticResource OnSurfaceLowBrush}"
                      AcceptsReturn="True" TextWrapping="Wrap"
                      CornerRadius="{StaticResource Radius200}" MinWidth="240" Height="80" />
           </utu:AutoLayout>
@@ -1131,8 +1131,8 @@
                 <ControlTemplate TargetType="RadioButton">
                   <StackPanel Orientation="Horizontal">
                     <Grid Width="16" Height="16" VerticalAlignment="Center">
-                      <Ellipse Fill="#e6e6e6" Stroke="#000000" StrokeThickness="1" />
-                      <Ellipse Fill="#000000" Width="10" Height="10" />
+                      <Ellipse Fill="{StaticResource SDSSliderTrackBrush}" Stroke="{StaticResource OnSurfaceBrush}" StrokeThickness="1" />
+                      <Ellipse Fill="{StaticResource OnSurfaceBrush}" Width="10" Height="10" />
                     </Grid>
                     <ContentPresenter Content="{TemplateBinding Content}" Margin="8,0,0,0" VerticalAlignment="Center" />
                   </StackPanel>

@@ -34,6 +34,28 @@ This document tracks known issues and bugs that need to be fixed.
 
 ## 🔴 High Priority
 
+### Tooltip Page Scrolling Issue
+**Location:** Tooltip page
+
+**Issue:** Scrolling the page doesn't move the tooltips along with their parent elements. The tooltips remain fixed in their original position while the page content scrolls.
+
+**Expected Behavior:** Tooltips should move with their parent elements when the page is scrolled, maintaining their relative position to the trigger element.
+
+**Impact:** Poor user experience, tooltips appear detached from their associated elements during scrolling.
+
+**Status:** 🔴 OPEN
+
+### PageProductResultsVisualizer Price Range Handles Difficult to Move
+**Location:** PageProductResultsVisualizer - RangeSlider control
+
+**Issue:** The price range slider handles require very precise clicking to grab and drag. Users need to click exactly on the small thumb to interact with it, making it difficult to use.
+
+**Expected Behavior:** Clicking near a thumb (within a reasonable distance) should grab that thumb and allow dragging. The interaction should be forgiving and responsive.
+
+**Impact:** Poor user experience, frustrating interaction with the price filter.
+
+**Status:** ✅ FIXED - Added 30px hit zone around each thumb for easier interaction
+
 ### Font Styles Don't Match Figma Designs
 **Location:** Card Grid Content List and other components
 

@@ -14,7 +14,7 @@
             HorizontalAlignment="Center">
       <Border Width="1072"
               Height="349"
-              Background="#E3E3E3">
+              Background="{StaticResource BackgroundTertiaryBrush}">
         <Image Source="https://picsum.photos/1072/349"
                Stretch="UniformToFill"
                Opacity="0.2"
@@ -33,7 +33,7 @@
             HorizontalAlignment="Center">
       <Border Width="327"
               Height="349"
-              Background="#E3E3E3">
+              Background="{StaticResource BackgroundTertiaryBrush}">
         <Image Source="https://picsum.photos/327/349"
                Stretch="UniformToFill"
                Opacity="0.2"

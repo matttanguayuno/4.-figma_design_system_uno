@@ -31,7 +31,7 @@
                         Padding="24">
                     <utu:AutoLayout Orientation="Horizontal" Spacing="24">
                         <!-- Image -->
-                        <Border Background="#E3E3E3"
+                        <Border Background="{StaticResource BackgroundTertiaryBrush}"
                                 CornerRadius="{StaticResource Radius200}"
                                 Width="160"
                                 Height="160">
@@ -70,7 +70,7 @@
                         CornerRadius="{StaticResource Radius200}"
                         Padding="24">
                     <utu:AutoLayout Orientation="Horizontal" Spacing="24">
-                        <Border Background="#E3E3E3"
+                        <Border Background="{StaticResource BackgroundTertiaryBrush}"
                                 CornerRadius="{StaticResource Radius200}"
                                 Width="160"
                                 Height="160">
@@ -106,7 +106,7 @@
                         CornerRadius="{StaticResource Radius200}"
                         Padding="24">
                     <utu:AutoLayout Orientation="Horizontal" Spacing="24">
-                        <Border Background="#E3E3E3"
+                        <Border Background="{StaticResource BackgroundTertiaryBrush}"
                                 CornerRadius="{StaticResource Radius200}"
                                 Width="160"
                                 Height="160">
@@ -158,7 +158,7 @@
                 
                 <!-- Card 1 -->
                 <utu:AutoLayout Orientation="Vertical" Spacing="16">
-                    <Border Background="#E3E3E3"
+                    <Border Background="{StaticResource BackgroundTertiaryBrush}"
                             CornerRadius="{StaticResource Radius200}"
                             Width="160"
                             Height="160"
@@ -184,7 +184,7 @@
 
                 <!-- Card 2 -->
                 <utu:AutoLayout Orientation="Vertical" Spacing="16">
-                    <Border Background="#E3E3E3"
+                    <Border Background="{StaticResource BackgroundTertiaryBrush}"
                             CornerRadius="{StaticResource Radius200}"
                             Width="160"
                             Height="160"
@@ -210,7 +210,7 @@
 
                 <!-- Card 3 -->
                 <utu:AutoLayout Orientation="Vertical" Spacing="16">
-                    <Border Background="#E3E3E3"
+                    <Border Background="{StaticResource BackgroundTertiaryBrush}"
                             CornerRadius="{StaticResource Radius200}"
                             Width="160"
                             Height="160"

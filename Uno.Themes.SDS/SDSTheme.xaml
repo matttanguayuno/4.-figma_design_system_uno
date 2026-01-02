@@ -43,6 +43,7 @@
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Styles/Controls/ToggleSwitch.xaml" />
 
         <!-- Card Components -->
+        <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Controls/RangeSlider.xaml" />
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Controls/PricingCard.xaml" />
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Controls/ProductInfoCard.xaml" />
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/Controls/ReviewCard.xaml" />

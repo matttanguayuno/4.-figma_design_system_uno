@@ -48,8 +48,8 @@
                 Background="Transparent"
                 CornerRadius="8">
           <Button.Resources>
-            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#F5F5F5" />
-            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#F5F5F5" />
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource BackgroundSecondaryColor}" />
+            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource BackgroundSecondaryColor}" />
           </Button.Resources>
           <TextBlock Text="Solutions"
                      Foreground="{StaticResource DefaultTextBrush}" />
@@ -62,8 +62,8 @@
                 Background="Transparent"
                 CornerRadius="8">
           <Button.Resources>
-            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#F5F5F5" />
-            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#F5F5F5" />
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource BackgroundSecondaryColor}" />
+            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource BackgroundSecondaryColor}" />
           </Button.Resources>
           <TextBlock Text="Community"
                      Foreground="{StaticResource DefaultTextBrush}" />
@@ -76,8 +76,8 @@
                 Background="Transparent"
                 CornerRadius="8">
           <Button.Resources>
-            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#F5F5F5" />
-            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#F5F5F5" />
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource BackgroundSecondaryColor}" />
+            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource BackgroundSecondaryColor}" />
           </Button.Resources>
           <TextBlock Text="Resources"
                      Foreground="{StaticResource DefaultTextBrush}" />
@@ -90,8 +90,8 @@
                 Background="Transparent"
                 CornerRadius="8">
           <Button.Resources>
-            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#F5F5F5" />
-            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#F5F5F5" />
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource BackgroundSecondaryColor}" />
+            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource BackgroundSecondaryColor}" />
           </Button.Resources>
           <TextBlock Text="Pricing"
                      Foreground="{StaticResource DefaultTextBrush}" />
@@ -104,8 +104,8 @@
                 Background="Transparent"
                 CornerRadius="8">
           <Button.Resources>
-            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#F5F5F5" />
-            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#F5F5F5" />
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource BackgroundSecondaryColor}" />
+            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource BackgroundSecondaryColor}" />
           </Button.Resources>
           <TextBlock Text="Contact"
                      Foreground="{StaticResource DefaultTextBrush}" />
@@ -118,8 +118,8 @@
                 Background="Transparent"
                 CornerRadius="8">
           <Button.Resources>
-            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#F5F5F5" />
-            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#F5F5F5" />
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource BackgroundSecondaryColor}" />
+            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource BackgroundSecondaryColor}" />
           </Button.Resources>
           <TextBlock Text="Link"
                      Foreground="{StaticResource DefaultTextBrush}" />

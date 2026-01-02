@@ -1,0 +1,53 @@
+<Page x:Class="figma_design_system_uno.Presentation.PageNewsletterSectionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:uen="using:Uno.Extensions.Navigation.UI"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      xmlns:controls="using:figma_design_system_uno.Controls"
+      Background="{StaticResource BackgroundBrush}">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <!-- Navigation Bar -->
+        <utu:NavigationBar Grid.Row="0"
+                           Content="Page Newsletter"
+                           Style="{StaticResource NavigationBarStyle}" />
+        
+        <!-- Content -->
+        <ScrollViewer Grid.Row="1">
+            <utu:AutoLayout Orientation="Vertical"
+                            Spacing="24"
+                            Padding="24">
+                
+                <!-- Device Toggle -->
+                <utu:AutoLayout Orientation="Horizontal"
+                                Spacing="16"
+                                PrimaryAxisAlignment="Center">
+                    <RadioButton Content="Desktop"
+                                 IsChecked="{Binding DeviceMode, Mode=TwoWay, Converter={StaticResource EqualsConverter}, ConverterParameter=0}"
+                                 GroupName="Device" />
+                    <RadioButton Content="Mobile"
+                                 IsChecked="{Binding DeviceMode, Mode=TwoWay, Converter={StaticResource EqualsConverter}, ConverterParameter=1}"
+                                 GroupName="Device" />
+                </utu:AutoLayout>
+                
+                <!-- Preview Container -->
+                <Border Background="{StaticResource BackgroundSecondaryBrush}"
+                        Padding="48"
+                        CornerRadius="8"
+                        HorizontalAlignment="Center">
+                    <Border Background="{StaticResource BackgroundBrush}"
+                            Width="{Binding DeviceWidth}"
+                            CornerRadius="8">
+                        <controls:PageNewsletterControl />
+                    </Border>
+                </Border>
+                
+            </utu:AutoLayout>
+        </ScrollViewer>
+    </Grid>
+</Page>

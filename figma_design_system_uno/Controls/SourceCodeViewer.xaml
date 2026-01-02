@@ -18,7 +18,7 @@
                 Opacity="0.5" />
         
         <!-- Section Container with different background -->
-        <Border Background="#FAFAFA"
+        <Border Background="{StaticResource SurfaceVariantBrush}"
                 BorderBrush="{StaticResource DividerBrush}"
                 BorderThickness="1"
                 CornerRadius="8"
@@ -42,7 +42,7 @@
                   HorizontalAlignment="Stretch"
                   HorizontalContentAlignment="Stretch">
             <Expander.Header>
-                <TextBlock Text="Page XAML" Foreground="#1A1A1A" FontWeight="SemiBold" />
+                <TextBlock Text="Page XAML" Foreground="{StaticResource PrimaryTextBrush}" FontWeight="SemiBold" />
             </Expander.Header>
             <utu:AutoLayout Orientation="Vertical" Spacing="12" Padding="12">
                 <utu:AutoLayout Orientation="Horizontal" Spacing="12">
@@ -60,7 +60,7 @@
                 <ScrollViewer MaxHeight="400" 
                               HorizontalScrollBarVisibility="Auto"
                               VerticalScrollBarVisibility="Auto">
-                    <Border Background="#F5F5F5"
+                    <Border Background="{StaticResource BackgroundSecondaryBrush}"
                             BorderThickness="1"
                             BorderBrush="{StaticResource DividerBrush}"
                             Padding="12">
@@ -68,7 +68,7 @@
                                    TextWrapping="NoWrap"
                                    FontFamily="Consolas, Courier New, monospace"
                                    FontSize="12"
-                                   Foreground="#1A1A1A"
+                                   Foreground="{StaticResource PrimaryTextBrush}"
                                    IsTextSelectionEnabled="True" />
                     </Border>
                 </ScrollViewer>
@@ -80,7 +80,7 @@
                   HorizontalAlignment="Stretch"
                   HorizontalContentAlignment="Stretch">
             <Expander.Header>
-                <TextBlock Text="Style XAML" Foreground="#1A1A1A" FontWeight="SemiBold" />
+                <TextBlock Text="Style XAML" Foreground="{StaticResource PrimaryTextBrush}" FontWeight="SemiBold" />
             </Expander.Header>
             <utu:AutoLayout Orientation="Vertical" Spacing="12" Padding="12">
                 <utu:AutoLayout Orientation="Horizontal" Spacing="12">
@@ -98,7 +98,7 @@
                 <ScrollViewer MaxHeight="400"
                               HorizontalScrollBarVisibility="Auto"
                               VerticalScrollBarVisibility="Auto">
-                    <Border Background="#F5F5F5"
+                    <Border Background="{StaticResource BackgroundSecondaryBrush}"
                             BorderThickness="1"
                             BorderBrush="{StaticResource DividerBrush}"
                             Padding="12">
@@ -106,7 +106,7 @@
                                    TextWrapping="NoWrap"
                                    FontFamily="Consolas, Courier New, monospace"
                                    FontSize="12"
-                                   Foreground="#1A1A1A"
+                                   Foreground="{StaticResource PrimaryTextBrush}"
                                    IsTextSelectionEnabled="True" />
                     </Border>
                 </ScrollViewer>

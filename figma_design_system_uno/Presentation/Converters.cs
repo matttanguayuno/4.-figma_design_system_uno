@@ -42,3 +42,28 @@ public class InverseBoolToVisibilityConverter : IValueConverter
         throw new NotImplementedException();
     }
 }
+
+public class RoundingConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, string language)
+    {
+        if (value is double d)
+        {
+            return Math.Round(d).ToString();
+        }
+        if (value is float f)
+        {
+            return Math.Round(f).ToString();
+        }
+        return value?.ToString() ?? "0";
+    }
+
+    public object ConvertBack(object value, Type targetType, object parameter, string language)
+    {
+        if (double.TryParse(value?.ToString(), out var d))
+        {
+            return d;
+        }
+        return 0.0;
+    }
+}

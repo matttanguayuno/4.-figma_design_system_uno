@@ -209,6 +209,24 @@ public partial class App : Application
             MainWindow.Activate();
             return;
         }
+        else if (currentUrl.Contains("PageProductVisualizer"))
+        {
+            MainWindow.Content = new Presentation.PageProductVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("PageProductResultsVisualizer"))
+        {
+            MainWindow.Content = new Presentation.PageProductResultsVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
+        else if (currentUrl.Contains("PageNewsletterVisualizer"))
+        {
+            MainWindow.Content = new Presentation.PageNewsletterVisualizerPage();
+            MainWindow.Activate();
+            return;
+        }
 #endif
 
         Host = await builder.NavigateAsync<Shell>();

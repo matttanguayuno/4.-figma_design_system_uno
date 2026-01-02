@@ -5,25 +5,25 @@
   <ResourceDictionary.ThemeDictionaries>
     <ResourceDictionary x:Key="Light">
       <!-- Placeholder text color - lighter gray for visibility on white background -->
-      <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="#757575" />
-      <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="#757575" />
-      <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="#757575" />
-      <SolidColorBrush x:Key="TextControlPlaceholderForegroundDisabled" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="{StaticResource OnSurfaceMediumColor}" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="{StaticResource OnSurfaceMediumColor}" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="{StaticResource OnSurfaceMediumColor}" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundDisabled" Color="{StaticResource OnSurfaceLowColor}" />
       
       <!-- Disabled background and border -->
-      <SolidColorBrush x:Key="TextControlBackgroundDisabled" Color="#d9d9d9" />
-      <SolidColorBrush x:Key="TextControlBorderBrushDisabled" Color="#b2b2b2" />
+      <SolidColorBrush x:Key="TextControlBackgroundDisabled" Color="{StaticResource DisabledColor}" />
+      <SolidColorBrush x:Key="TextControlBorderBrushDisabled" Color="{StaticResource SDSInputDisabledBorderColor}" />
     </ResourceDictionary>
     
     <ResourceDictionary x:Key="Dark">
       <!-- Same for dark theme -->
-      <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="#757575" />
-      <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="#757575" />
-      <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="#757575" />
-      <SolidColorBrush x:Key="TextControlPlaceholderForegroundDisabled" Color="#b3b3b3" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="{StaticResource OnSurfaceMediumColor}" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="{StaticResource OnSurfaceMediumColor}" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="{StaticResource OnSurfaceMediumColor}" />
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundDisabled" Color="{StaticResource OnSurfaceLowColor}" />
       
-      <SolidColorBrush x:Key="TextControlBackgroundDisabled" Color="#d9d9d9" />
-      <SolidColorBrush x:Key="TextControlBorderBrushDisabled" Color="#b2b2b2" />
+      <SolidColorBrush x:Key="TextControlBackgroundDisabled" Color="{StaticResource DisabledColor}" />
+      <SolidColorBrush x:Key="TextControlBorderBrushDisabled" Color="{StaticResource SDSInputDisabledBorderColor}" />
     </ResourceDictionary>
   </ResourceDictionary.ThemeDictionaries>
 

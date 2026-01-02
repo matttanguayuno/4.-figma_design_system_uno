@@ -1,0 +1,376 @@
+<UserControl
+    x:Class="figma_design_system_uno.Controls.PageProductControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:utu="using:Uno.Toolkit.UI"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <local:BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" xmlns:local="using:figma_design_system_uno.Presentation" />
+        <local:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibilityConverter" xmlns:local="using:figma_design_system_uno.Presentation" />
+    </UserControl.Resources>
+
+    <Grid Background="{StaticResource BackgroundBrush}">
+        
+        <!-- Desktop View -->
+        <utu:AutoLayout Orientation="Vertical"
+                        Spacing="0"
+                        Padding="64"
+                        HorizontalAlignment="Center"
+                        Visibility="{Binding IsMobile, Converter={StaticResource InverseBoolToVisibilityConverter}}">
+            
+            <utu:AutoLayout Orientation="Horizontal"
+                            Spacing="64"
+                            Width="1200"
+                            HorizontalAlignment="Center">
+                
+                <!-- Product Image with Heart Icon -->
+                <Grid Width="538"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch">
+                    <!-- Placeholder Image -->
+                    <Border Background="{StaticResource BackgroundTertiaryBrush}"
+                            CornerRadius="{StaticResource Radius200}">
+                        <Image Stretch="Uniform"
+                               Opacity="0.2"
+                               Source="https://www.figma.com/api/mcp/asset/b813b442-e495-44f0-91cd-278dd2b650f7" />
+                    </Border>
+                    
+                    <!-- Heart Icon Button (top-left) -->
+                    <Button Width="36"
+                            Height="36"
+                            Padding="4"
+                            Margin="10,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Background="{StaticResource PrimaryBrush}"
+                            BorderBrush="{StaticResource PrimaryBrush}"
+                            CornerRadius="18">
+                        <FontIcon Glyph="&#xEB51;"
+                                  FontSize="16"
+                                  Foreground="{StaticResource OnPrimaryBrush}" />
+                    </Button>
+                </Grid>
+                
+                <!-- Product Details Column -->
+                <utu:AutoLayout Orientation="Vertical"
+                                Spacing="24"
+                                Width="538"
+                                VerticalAlignment="Center">
+                    
+                    <!-- Body Section -->
+                    <utu:AutoLayout Orientation="Vertical"
+                                    Spacing="16">
+                        
+                        <!-- Title Section -->
+                        <utu:AutoLayout Orientation="Vertical"
+                                        Spacing="16"
+                                        PrimaryAxisAlignment="Start">
+                            
+                            <!-- Heading -->
+                            <TextBlock Text="Text Heading"
+                                       Style="{StaticResource HeadingTextBlockStyle}"
+                                       HorizontalAlignment="Stretch" />
+                            
+                            <!-- Tag and Price -->
+                            <utu:AutoLayout Orientation="Vertical"
+                                            Spacing="4"
+                                            PrimaryAxisAlignment="Start"
+                                            CounterAxisAlignment="Start">
+                                
+                                <!-- Tag -->
+                                <Border Background="{StaticResource SDSSuccessBadgeBackgroundBrush}"
+                                        Padding="8"
+                                        CornerRadius="{StaticResource Radius200}">
+                                    <TextBlock Text="Tag"
+                                               FontFamily="{StaticResource InterFontFamily}"
+                                               FontSize="16"
+                                               FontWeight="Normal"
+                                               Foreground="{StaticResource SDSSuccessBadgeTextBrush}" />
+                                </Border>
+                                
+                                <!-- Price -->
+                                <utu:AutoLayout Orientation="Horizontal"
+                                                Spacing="0"
+                                                HorizontalAlignment="Left">
+                                    <TextBlock Text="$"
+                                               FontFamily="{StaticResource InterFontFamily}"
+                                               FontSize="24"
+                                               FontWeight="Bold"
+                                               Foreground="{StaticResource TextBrush}"
+                                               VerticalAlignment="Top" />
+                                    <TextBlock Text="50"
+                                               FontFamily="{StaticResource InterFontFamily}"
+                                               FontSize="48"
+                                               FontWeight="Bold"
+                                               Foreground="{StaticResource TextBrush}" />
+                                </utu:AutoLayout>
+                            </utu:AutoLayout>
+                        </utu:AutoLayout>
+                        
+                        <!-- Description Text -->
+                        <TextBlock Text="Text"
+                                   Style="{StaticResource BodyBaseTextBlockStyle}"
+                                   Foreground="{StaticResource OnSurfaceMediumBrush}"
+                                   TextWrapping="Wrap"
+                                   HorizontalAlignment="Stretch" />
+                    </utu:AutoLayout>
+                    
+                    <!-- Select Fields -->
+                    <utu:AutoLayout Orientation="Horizontal"
+                                    Spacing="24"
+                                    HorizontalAlignment="Stretch">
+                        
+                        <!-- First Select Field -->
+                        <utu:AutoLayout Orientation="Vertical"
+                                        Spacing="8"
+                                        utu:AutoLayout.PrimaryAlignment="Stretch">
+                            <TextBlock Text="Label"
+                                       Style="{StaticResource BodyBaseTextBlockStyle}" />
+                            <ComboBox SelectedIndex="0"
+                                      MinWidth="240"
+                                      HorizontalAlignment="Stretch">
+                                <ComboBoxItem Content="Value" />
+                            </ComboBox>
+                        </utu:AutoLayout>
+                        
+                        <!-- Second Select Field -->
+                        <utu:AutoLayout Orientation="Vertical"
+                                        Spacing="8"
+                                        utu:AutoLayout.PrimaryAlignment="Stretch">
+                            <TextBlock Text="Label"
+                                       Style="{StaticResource BodyBaseTextBlockStyle}" />
+                            <ComboBox SelectedIndex="0"
+                                      MinWidth="240"
+                                      HorizontalAlignment="Stretch">
+                                <ComboBoxItem Content="Value" />
+                            </ComboBox>
+                        </utu:AutoLayout>
+                    </utu:AutoLayout>
+                    
+                    <!-- Add to Cart Button -->
+                    <Button Content="Button"
+                            HorizontalAlignment="Stretch"
+                            Background="{StaticResource PrimaryBrush}"
+                            Foreground="{StaticResource OnPrimaryBrush}"
+                            BorderBrush="{StaticResource PrimaryBrush}"
+                            Padding="12"
+                            CornerRadius="{StaticResource Radius200}" />
+                    
+                    <!-- Accordion -->
+                    <utu:AutoLayout Orientation="Vertical"
+                                    Spacing="16"
+                                    MaxWidth="640"
+                                    HorizontalAlignment="Stretch">
+                        
+                        <!-- Single Expanded Accordion Item -->
+                        <Border Background="{StaticResource AccordionExpandedBackgroundBrush}"
+                                BorderBrush="{StaticResource AccordionBorderBrush}"
+                                BorderThickness="{StaticResource AccordionBorderThickness}"
+                                CornerRadius="{StaticResource AccordionCornerRadius}"
+                                Padding="{StaticResource AccordionPadding}"
+                                HorizontalAlignment="Stretch">
+                            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space200}">
+                                <!-- Title Row -->
+                                <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space200}">
+                                    <TextBlock Text="Title"
+                                               Style="{StaticResource BodyStrongTextBlockStyle}"
+                                               VerticalAlignment="Center"
+                                               utu:AutoLayout.PrimaryAlignment="Stretch" />
+                                    <FontIcon Glyph="&#xE70E;"
+                                              FontSize="20"
+                                              Foreground="{StaticResource AccordionIconBrush}" />
+                                </utu:AutoLayout>
+                                
+                                <!-- Content -->
+                                <TextBlock Text="Answer the frequently asked question in a simple sentence, a longish paragraph, or even in a list."
+                                           Style="{StaticResource BodyBaseTextBlockStyle}"
+                                           TextWrapping="Wrap" />
+                            </utu:AutoLayout>
+                        </Border>
+                    </utu:AutoLayout>
+                    
+                </utu:AutoLayout>
+            </utu:AutoLayout>
+        </utu:AutoLayout>
+
+        <!-- Mobile View -->
+        <utu:AutoLayout Orientation="Vertical"
+                        Spacing="0"
+                        Padding="24"
+                        HorizontalAlignment="Center"
+                        Visibility="{Binding IsMobile, Converter={StaticResource BoolToVisibilityConverter}}">
+            
+            <utu:AutoLayout Orientation="Vertical"
+                            Spacing="64"
+                            Width="375"
+                            HorizontalAlignment="Stretch">
+                
+                <!-- Product Image with Heart Icon -->
+                <Grid Height="327"
+                      HorizontalAlignment="Stretch">
+                    <!-- Placeholder Image -->
+                    <Border Background="{StaticResource BackgroundTertiaryBrush}"
+                            CornerRadius="{StaticResource Radius200}">
+                        <Image Stretch="Uniform"
+                               Opacity="0.2"
+                               Source="https://www.figma.com/api/mcp/asset/b813b442-e495-44f0-91cd-278dd2b650f7" />
+                    </Border>
+                    
+                    <!-- Heart Icon Button (top-left) -->
+                    <Button Width="36"
+                            Height="36"
+                            Padding="4"
+                            Margin="10,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Background="{StaticResource PrimaryBrush}"
+                            BorderBrush="{StaticResource PrimaryBrush}"
+                            CornerRadius="18">
+                        <FontIcon Glyph="&#xEB51;"
+                                  FontSize="16"
+                                  Foreground="{StaticResource OnPrimaryBrush}" />
+                    </Button>
+                </Grid>
+                
+                <!-- Product Details Column -->
+                <utu:AutoLayout Orientation="Vertical"
+                                Spacing="24">
+                    
+                    <!-- Body Section -->
+                    <utu:AutoLayout Orientation="Vertical"
+                                    Spacing="16">
+                        
+                        <!-- Title Section -->
+                        <utu:AutoLayout Orientation="Vertical"
+                                        Spacing="16"
+                                        PrimaryAxisAlignment="Start">
+                            
+                            <!-- Heading -->
+                            <TextBlock Text="Text Heading"
+                                       Style="{StaticResource HeadingTextBlockStyle}"
+                                       HorizontalAlignment="Stretch" />
+                            
+                            <!-- Tag and Price -->
+                            <utu:AutoLayout Orientation="Vertical"
+                                            Spacing="4"
+                                            PrimaryAxisAlignment="Start"
+                                            CounterAxisAlignment="Start">
+                                
+                                <!-- Tag -->
+                                <Border Background="{StaticResource SDSSuccessBadgeBackgroundBrush}"
+                                        Padding="8"
+                                        CornerRadius="{StaticResource Radius200}">
+                                    <TextBlock Text="Tag"
+                                               FontFamily="{StaticResource InterFontFamily}"
+                                               FontSize="16"
+                                               FontWeight="Normal"
+                                               Foreground="{StaticResource SDSSuccessBadgeTextBrush}" />
+                                </Border>
+                                
+                                <!-- Price -->
+                                <utu:AutoLayout Orientation="Horizontal"
+                                                Spacing="0"
+                                                HorizontalAlignment="Left">
+                                    <TextBlock Text="$"
+                                               FontFamily="{StaticResource InterFontFamily}"
+                                               FontSize="24"
+                                               FontWeight="Bold"
+                                               Foreground="{StaticResource TextBrush}"
+                                               VerticalAlignment="Top" />
+                                    <TextBlock Text="50"
+                                               FontFamily="{StaticResource InterFontFamily}"
+                                               FontSize="48"
+                                               FontWeight="Bold"
+                                               Foreground="{StaticResource TextBrush}" />
+                                </utu:AutoLayout>
+                            </utu:AutoLayout>
+                        </utu:AutoLayout>
+                        
+                        <!-- Description Text -->
+                        <TextBlock Text="Text"
+                                   Style="{StaticResource BodyBaseTextBlockStyle}"
+                                   Foreground="{StaticResource OnSurfaceMediumBrush}"
+                                   TextWrapping="Wrap"
+                                   HorizontalAlignment="Stretch" />
+                    </utu:AutoLayout>
+                    
+                    <!-- Select Fields -->
+                    <utu:AutoLayout Orientation="Vertical"
+                                    Spacing="16"
+                                    HorizontalAlignment="Stretch">
+                        
+                        <!-- First Select Field -->
+                        <utu:AutoLayout Orientation="Vertical"
+                                        Spacing="8"
+                                        HorizontalAlignment="Stretch">
+                            <TextBlock Text="Label"
+                                       Style="{StaticResource BodyBaseTextBlockStyle}" />
+                            <ComboBox SelectedIndex="0"
+                                      HorizontalAlignment="Stretch">
+                                <ComboBoxItem Content="Value" />
+                            </ComboBox>
+                        </utu:AutoLayout>
+                        
+                        <!-- Second Select Field -->
+                        <utu:AutoLayout Orientation="Vertical"
+                                        Spacing="8"
+                                        HorizontalAlignment="Stretch">
+                            <TextBlock Text="Label"
+                                       Style="{StaticResource BodyBaseTextBlockStyle}" />
+                            <ComboBox SelectedIndex="0"
+                                      HorizontalAlignment="Stretch">
+                                <ComboBoxItem Content="Value" />
+                            </ComboBox>
+                        </utu:AutoLayout>
+                    </utu:AutoLayout>
+                    
+                    <!-- Add to Cart Button -->
+                    <Button Content="Button"
+                            HorizontalAlignment="Stretch"
+                            Background="{StaticResource PrimaryBrush}"
+                            Foreground="{StaticResource OnPrimaryBrush}"
+                            BorderBrush="{StaticResource PrimaryBrush}"
+                            Padding="12"
+                            CornerRadius="{StaticResource Radius200}" />
+                    
+                    <!-- Accordion -->
+                    <utu:AutoLayout Orientation="Vertical"
+                                    Spacing="16"
+                                    HorizontalAlignment="Stretch">
+                        
+                        <!-- Single Expanded Accordion Item -->
+                        <Border Background="{StaticResource AccordionExpandedBackgroundBrush}"
+                                BorderBrush="{StaticResource AccordionBorderBrush}"
+                                BorderThickness="{StaticResource AccordionBorderThickness}"
+                                CornerRadius="{StaticResource AccordionCornerRadius}"
+                                Padding="{StaticResource AccordionPadding}"
+                                HorizontalAlignment="Stretch">
+                            <utu:AutoLayout Orientation="Vertical" Spacing="{StaticResource Space200}">
+                                <!-- Title Row -->
+                                <utu:AutoLayout Orientation="Horizontal" Spacing="{StaticResource Space200}">
+                                    <TextBlock Text="Title"
+                                               Style="{StaticResource BodyStrongTextBlockStyle}"
+                                               VerticalAlignment="Center"
+                                               utu:AutoLayout.PrimaryAlignment="Stretch" />
+                                    <FontIcon Glyph="&#xE70E;"
+                                              FontSize="20"
+                                              Foreground="{StaticResource AccordionIconBrush}" />
+                                </utu:AutoLayout>
+                                
+                                <!-- Content -->
+                                <TextBlock Text="Answer the frequently asked question in a simple sentence, a longish paragraph, or even in a list."
+                                           Style="{StaticResource BodyBaseTextBlockStyle}"
+                                           TextWrapping="Wrap" />
+                            </utu:AutoLayout>
+                        </Border>
+                    </utu:AutoLayout>
+                    
+                </utu:AutoLayout>
+            </utu:AutoLayout>
+        </utu:AutoLayout>
+        
+    </Grid>
+</UserControl>

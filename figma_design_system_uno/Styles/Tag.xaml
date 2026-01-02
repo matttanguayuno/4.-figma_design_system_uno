@@ -4,44 +4,44 @@
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Light">
             <!-- Brand Scheme -->
-            <SolidColorBrush x:Key="TagBrandPrimaryBackground" Color="#2c2c2c" />
-            <SolidColorBrush x:Key="TagBrandPrimaryBackgroundHover" Color="#1e1e1e" />
-            <SolidColorBrush x:Key="TagBrandPrimaryForeground" Color="#f5f5f5" />
-            <SolidColorBrush x:Key="TagBrandSecondaryBackground" Color="#f5f5f5" />
-            <SolidColorBrush x:Key="TagBrandSecondaryBackgroundHover" Color="#e6e6e6" />
-            <SolidColorBrush x:Key="TagBrandSecondaryForeground" Color="#2c2c2c" />
+            <SolidColorBrush x:Key="TagBrandPrimaryBackground" Color="{StaticResource PrimaryColor}" />
+            <SolidColorBrush x:Key="TagBrandPrimaryBackgroundHover" Color="{StaticResource PrimaryVariantDarkColor}" />
+            <SolidColorBrush x:Key="TagBrandPrimaryForeground" Color="{StaticResource OnPrimaryColor}" />
+            <SolidColorBrush x:Key="TagBrandSecondaryBackground" Color="{StaticResource OnPrimaryColor}" />
+            <SolidColorBrush x:Key="TagBrandSecondaryBackgroundHover" Color="{StaticResource SDSSliderDisabledTrackColor}" />
+            <SolidColorBrush x:Key="TagBrandSecondaryForeground" Color="{StaticResource PrimaryColor}" />
             
             <!-- Neutral Scheme -->
-            <SolidColorBrush x:Key="TagNeutralPrimaryBackground" Color="#d9d9d9" />
-            <SolidColorBrush x:Key="TagNeutralPrimaryBackgroundHover" Color="#b3b3b3" />
-            <SolidColorBrush x:Key="TagNeutralPrimaryForeground" Color="#1e1e1e" />
-            <SolidColorBrush x:Key="TagNeutralSecondaryBackground" Color="#f5f5f5" />
-            <SolidColorBrush x:Key="TagNeutralSecondaryBackgroundHover" Color="#e6e6e6" />
-            <SolidColorBrush x:Key="TagNeutralSecondaryForeground" Color="#1e1e1e" />
+            <SolidColorBrush x:Key="TagNeutralPrimaryBackground" Color="{StaticResource SDSTagNeutralPrimaryBackgroundColor}" />
+            <SolidColorBrush x:Key="TagNeutralPrimaryBackgroundHover" Color="{StaticResource SDSTagNeutralPrimaryBackgroundHoverColor}" />
+            <SolidColorBrush x:Key="TagNeutralPrimaryForeground" Color="{StaticResource PrimaryVariantDarkColor}" />
+            <SolidColorBrush x:Key="TagNeutralSecondaryBackground" Color="{StaticResource OnPrimaryColor}" />
+            <SolidColorBrush x:Key="TagNeutralSecondaryBackgroundHover" Color="{StaticResource SDSSliderDisabledTrackColor}" />
+            <SolidColorBrush x:Key="TagNeutralSecondaryForeground" Color="{StaticResource PrimaryVariantDarkColor}" />
             
             <!-- Positive Scheme -->
-            <SolidColorBrush x:Key="TagPositivePrimaryBackground" Color="#14ae5c" />
-            <SolidColorBrush x:Key="TagPositivePrimaryBackgroundHover" Color="#009951" />
-            <SolidColorBrush x:Key="TagPositivePrimaryForeground" Color="#ebffee" />
-            <SolidColorBrush x:Key="TagPositiveSecondaryBackground" Color="#cff7d3" />
-            <SolidColorBrush x:Key="TagPositiveSecondaryBackgroundHover" Color="#aff4c6" />
-            <SolidColorBrush x:Key="TagPositiveSecondaryForeground" Color="#02542d" />
+            <SolidColorBrush x:Key="TagPositivePrimaryBackground" Color="{StaticResource SDSTagPositivePrimaryBackgroundColor}" />
+            <SolidColorBrush x:Key="TagPositivePrimaryBackgroundHover" Color="{StaticResource SDSTagPositivePrimaryBackgroundHoverColor}" />
+            <SolidColorBrush x:Key="TagPositivePrimaryForeground" Color="{StaticResource SDSTagPositivePrimaryForegroundColor}" />
+            <SolidColorBrush x:Key="TagPositiveSecondaryBackground" Color="{StaticResource SDSTagPositiveSecondaryBackgroundColor}" />
+            <SolidColorBrush x:Key="TagPositiveSecondaryBackgroundHover" Color="{StaticResource SDSTagPositiveSecondaryBackgroundHoverColor}" />
+            <SolidColorBrush x:Key="TagPositiveSecondaryForeground" Color="{StaticResource SDSTagPositiveSecondaryForegroundColor}" />
             
             <!-- Danger Scheme -->
-            <SolidColorBrush x:Key="TagDangerPrimaryBackground" Color="#ec221f" />
-            <SolidColorBrush x:Key="TagDangerPrimaryBackgroundHover" Color="#c00f0c" />
-            <SolidColorBrush x:Key="TagDangerPrimaryForeground" Color="#fee9e7" />
-            <SolidColorBrush x:Key="TagDangerSecondaryBackground" Color="#fdd3d0" />
-            <SolidColorBrush x:Key="TagDangerSecondaryBackgroundHover" Color="#fcb3ad" />
-            <SolidColorBrush x:Key="TagDangerSecondaryForeground" Color="#900b09" />
+            <SolidColorBrush x:Key="TagDangerPrimaryBackground" Color="{StaticResource SDSTagDangerPrimaryBackgroundColor}" />
+            <SolidColorBrush x:Key="TagDangerPrimaryBackgroundHover" Color="{StaticResource SDSTagDangerPrimaryBackgroundHoverColor}" />
+            <SolidColorBrush x:Key="TagDangerPrimaryForeground" Color="{StaticResource SDSTagDangerPrimaryForegroundColor}" />
+            <SolidColorBrush x:Key="TagDangerSecondaryBackground" Color="{StaticResource SDSTagDangerSecondaryBackgroundColor}" />
+            <SolidColorBrush x:Key="TagDangerSecondaryBackgroundHover" Color="{StaticResource SDSTagDangerSecondaryBackgroundHoverColor}" />
+            <SolidColorBrush x:Key="TagDangerSecondaryForeground" Color="{StaticResource SDSTagDangerSecondaryForegroundColor}" />
             
             <!-- Warning Scheme -->
-            <SolidColorBrush x:Key="TagWarningPrimaryBackground" Color="#e8b931" />
-            <SolidColorBrush x:Key="TagWarningPrimaryBackgroundHover" Color="#e5a000" />
-            <SolidColorBrush x:Key="TagWarningPrimaryForeground" Color="#401b01" />
-            <SolidColorBrush x:Key="TagWarningSecondaryBackground" Color="#e8b931" />
-            <SolidColorBrush x:Key="TagWarningSecondaryBackgroundHover" Color="#ffe8a3" />
-            <SolidColorBrush x:Key="TagWarningSecondaryForeground" Color="#401b01" />
+            <SolidColorBrush x:Key="TagWarningPrimaryBackground" Color="{StaticResource SDSTagWarningPrimaryBackgroundColor}" />
+            <SolidColorBrush x:Key="TagWarningPrimaryBackgroundHover" Color="{StaticResource SDSTagWarningPrimaryBackgroundHoverColor}" />
+            <SolidColorBrush x:Key="TagWarningPrimaryForeground" Color="{StaticResource SDSTagWarningPrimaryForegroundColor}" />
+            <SolidColorBrush x:Key="TagWarningSecondaryBackground" Color="{StaticResource SDSTagWarningPrimaryBackgroundColor}" />
+            <SolidColorBrush x:Key="TagWarningSecondaryBackgroundHover" Color="{StaticResource SDSTagWarningSecondaryBackgroundHoverColor}" />
+            <SolidColorBrush x:Key="TagWarningSecondaryForeground" Color="{StaticResource SDSTagWarningPrimaryForegroundColor}" />
         </ResourceDictionary>
     </ResourceDictionary.ThemeDictionaries>
 

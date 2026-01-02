@@ -12,12 +12,12 @@
     
     <!-- Dialog-specific brushes -->
     <SolidColorBrush x:Key="DialogBackgroundBrush" Color="White" />
-    <SolidColorBrush x:Key="DialogBorderBrush" Color="#d9d9d9" />
-    <SolidColorBrush x:Key="DialogScrimBrush" Color="#CCffffff" />
-    <SolidColorBrush x:Key="SecondaryButtonBackgroundBrush" Color="#e3e3e3" />
-    <SolidColorBrush x:Key="SecondaryButtonBorderBrush" Color="#767676" />
-    <SolidColorBrush x:Key="PrimaryButtonBackgroundBrush" Color="#2c2c2c" />
-    <SolidColorBrush x:Key="PrimaryButtonTextBrush" Color="#f5f5f5" />
+    <SolidColorBrush x:Key="DialogBorderBrush" Color="{StaticResource DisabledColor}" />
+    <SolidColorBrush x:Key="DialogScrimBrush" Color="{StaticResource SDSDialogScrimColor}" />
+    <SolidColorBrush x:Key="SecondaryButtonBackgroundBrush" Color="{StaticResource SDSSecondaryButtonBackgroundColor}" />
+    <SolidColorBrush x:Key="SecondaryButtonBorderBrush" Color="{StaticResource SDSSecondaryButtonBorderColor}" />
+    <SolidColorBrush x:Key="PrimaryButtonBackgroundBrush" Color="{StaticResource PrimaryColor}" />
+    <SolidColorBrush x:Key="PrimaryButtonTextBrush" Color="{StaticResource OnPrimaryColor}" />
   </Page.Resources>
 
   <ScrollViewer>

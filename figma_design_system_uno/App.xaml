@@ -10,7 +10,7 @@
         <!-- Load WinUI resources -->
         <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
         
-        <!-- SDS Theme Library - Compatible with Uno.Themes.Material API -->
+        <!-- SDS Theme Library - API-compatible design system -->
         <ResourceDictionary Source="ms-appx:///Uno.Themes.SDS/SDSTheme.xaml" />
         
         <!-- Demo App Interface Styles (not component library styles) -->
@@ -27,6 +27,7 @@
       <local:EqualsConverter x:Key="EqualsConverter" />
       <local:EqualsToVisibilityConverter x:Key="EqualsToVisibilityConverter" />
       <local:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibilityConverter" />
+      <local:RoundingConverter x:Key="RoundingConverter" />
     </ResourceDictionary>
   </Application.Resources>
 

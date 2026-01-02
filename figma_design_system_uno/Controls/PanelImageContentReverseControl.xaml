@@ -54,7 +54,7 @@
                 <!-- Image (Second on Desktop) -->
                 <Border Width="484" 
                        Height="350"
-                       Background="#E3E3E3">
+                       Background="{StaticResource BackgroundTertiaryBrush}">
                     <Image Source="https://picsum.photos/484/350" 
                            Stretch="Uniform"
                            Opacity="0.2"
@@ -112,7 +112,7 @@
                 <!-- Image (Second on Mobile) -->
                 <Border Height="350"
                        HorizontalAlignment="Stretch"
-                       Background="#E3E3E3">
+                       Background="{StaticResource BackgroundTertiaryBrush}">
                     <Image Source="https://picsum.photos/327/350" 
                            Stretch="Uniform"
                            Opacity="0.2"

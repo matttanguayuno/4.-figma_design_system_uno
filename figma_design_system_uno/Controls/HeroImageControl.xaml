@@ -19,7 +19,7 @@
                    HorizontalAlignment="Center"/>
             
             <!-- Scrim Overlay -->
-            <Border Background="#CCFFFFFF"
+            <Border Background="{StaticResource SurfaceBrush}"
                     Opacity="0.8"/>
             
             <!-- Content on top of image -->
@@ -34,13 +34,13 @@
                     <TextBlock Text="Title"
                              FontSize="72"
                              FontWeight="Bold"
-                             Foreground="#0c0c0d"
+                             Foreground="{StaticResource PrimaryTextBrush}"
                              TextAlignment="Center"
                              HorizontalAlignment="Center"/>
                     
                     <TextBlock Text="Subtitle"
                              FontSize="32"
-                             Foreground="#0c0c0d"
+                             Foreground="{StaticResource PrimaryTextBrush}"
                              TextAlignment="Center"
                              HorizontalAlignment="Center"/>
                 </utu:AutoLayout>
@@ -76,7 +76,7 @@
                    HorizontalAlignment="Center"/>
             
             <!-- Scrim Overlay -->
-            <Border Background="#CCFFFFFF"
+            <Border Background="{StaticResource SurfaceBrush}"
                     Opacity="0.8"/>
             
             <!-- Content on top of image -->
@@ -91,13 +91,13 @@
                     <TextBlock Text="Title"
                              FontSize="48"
                              FontWeight="Bold"
-                             Foreground="#0c0c0d"
+                             Foreground="{StaticResource PrimaryTextBrush}"
                              TextAlignment="Center"
                              HorizontalAlignment="Center"/>
                     
                     <TextBlock Text="Subtitle"
                              FontSize="32"
-                             Foreground="#0c0c0d"
+                             Foreground="{StaticResource PrimaryTextBrush}"
                              TextAlignment="Center"
                              HorizontalAlignment="Center"/>
                 </utu:AutoLayout>

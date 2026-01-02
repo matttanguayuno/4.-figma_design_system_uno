@@ -65,6 +65,15 @@ dotnet add reference path/to/Uno.Themes.SDS/Uno.Themes.SDS.csproj
 
 <!-- Text Button (Subtle in SDS) -->
 <Button Content="Learn More" Style="{StaticResource TextButtonStyle}" />
+
+<!-- Filter Buttons (for product filtering/search results) -->
+<Button Style="{StaticResource SelectedFilterButtonStyle}">
+    <StackPanel Orientation="Horizontal" Spacing="8">
+        <FontIcon Glyph="&#xE73E;"/>
+        <TextBlock Text="New"/>
+    </StackPanel>
+</Button>
+<Button Content="Price ascending" Style="{StaticResource UnselectedFilterButtonStyle}" />
 ```
 
 ### 3. Size Variants
@@ -145,9 +154,29 @@ xmlns:sds="using:Uno.Themes.SDS.Controls"
 - `TestimonialCard` - Customer testimonials with quote and author
   - Properties: `Quote`, `AuthorName`, `AuthorTitle`, `AuthorImage`
 
+#### RangeSlider
+- `RangeSlider` - Two-handle slider for selecting a range of values
+  - Properties: `Minimum`, `Maximum`, `RangeMin`, `RangeMax`, `Background`
+  - Features: Dark gray handles (#1E1E1E), light gray track, perfect for price range filters
+  
+```xaml
+<!-- Add namespace -->
+xmlns:sds="using:Uno.Themes.SDS.Controls"
+
+<!-- Price range slider -->
+<sds:RangeSlider Minimum="0" Maximum="100" 
+                 RangeMin="0" RangeMax="100"
+                 Background="#D9D9D9"/>
+```
+
 ### Button Styles
 - `FilledButtonStyle` - Filled background (Primary in SDS)
 - `OutlinedButtonStyle` - Outlined/border only (Neutral in SDS)
+- `TextButtonStyle` - Transparent background (Subtle in SDS)
+- `SelectedFilterButtonStyle` - Active filter state (#2C2C2C background, #F5F5F5 text)
+- `UnselectedFilterButtonStyle` - Inactive filter state (#F5F5F5 background, #757575 text)
+- `FilledErrorButtonStyle` - Error/danger filled button
+- `TextErrorButtonStyle` - Error/danger text button
 - `TextButtonStyle` - Text only (Subtle in SDS)
 - Size variants: `*SmallStyle`, `*LargeStyle`
 

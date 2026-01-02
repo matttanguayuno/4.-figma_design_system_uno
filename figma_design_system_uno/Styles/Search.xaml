@@ -3,13 +3,13 @@
 
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Light">
-            <SolidColorBrush x:Key="SearchBoxBackground" Color="#ffffff" />
-            <SolidColorBrush x:Key="SearchBoxBorderBrush" Color="#d9d9d9" />
-            <SolidColorBrush x:Key="SearchBoxForeground" Color="#1e1e1e" />
-            <SolidColorBrush x:Key="SearchBoxPlaceholderForeground" Color="#b3b3b3" />
-            <SolidColorBrush x:Key="SearchBoxBackgroundDisabled" Color="#d9d9d9" />
-            <SolidColorBrush x:Key="SearchBoxBorderBrushDisabled" Color="#b2b2b2" />
-            <SolidColorBrush x:Key="SearchBoxForegroundDisabled" Color="#b3b3b3" />
+            <SolidColorBrush x:Key="SearchBoxBackground" Color="{StaticResource SurfaceColor}" />
+            <SolidColorBrush x:Key="SearchBoxBorderBrush" Color="{StaticResource DisabledColor}" />
+            <SolidColorBrush x:Key="SearchBoxForeground" Color="{StaticResource OnSurfaceColor}" />
+            <SolidColorBrush x:Key="SearchBoxPlaceholderForeground" Color="{StaticResource OnSurfaceLowColor}" />
+            <SolidColorBrush x:Key="SearchBoxBackgroundDisabled" Color="{StaticResource DisabledColor}" />
+            <SolidColorBrush x:Key="SearchBoxBorderBrushDisabled" Color="{StaticResource SDSInputDisabledBorderColor}" />
+            <SolidColorBrush x:Key="SearchBoxForegroundDisabled" Color="{StaticResource OnSurfaceLowColor}" />
         </ResourceDictionary>
     </ResourceDictionary.ThemeDictionaries>
 

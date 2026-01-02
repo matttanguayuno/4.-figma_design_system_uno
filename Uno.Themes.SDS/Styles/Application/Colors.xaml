@@ -141,4 +141,30 @@
   <Color x:Key="SDSPaginationCurrentTextColor">#ffffff</Color>
   <Color x:Key="SDSPaginationDisabledTextColor">#757575</Color>
 
+  <!-- Badge Colors -->
+  <Color x:Key="SDSSuccessBadgeBackgroundColor">#cff7d3</Color>
+  <Color x:Key="SDSSuccessBadgeTextColor">#02542d</Color>
+
+  <!-- Tag Colors -->
+  <Color x:Key="SDSTagNeutralPrimaryBackgroundColor">#d9d9d9</Color>
+  <Color x:Key="SDSTagNeutralPrimaryBackgroundHoverColor">#b3b3b3</Color>
+  <Color x:Key="SDSTagPositivePrimaryBackgroundColor">#14ae5c</Color>
+  <Color x:Key="SDSTagPositivePrimaryBackgroundHoverColor">#009951</Color>
+  <Color x:Key="SDSTagPositivePrimaryForegroundColor">#ebffee</Color>
+  <Color x:Key="SDSTagPositiveSecondaryBackgroundColor">#cff7d3</Color>
+  <Color x:Key="SDSTagPositiveSecondaryBackgroundHoverColor">#aff4c6</Color>
+  <Color x:Key="SDSTagPositiveSecondaryForegroundColor">#02542d</Color>
+  <Color x:Key="SDSTagDangerPrimaryBackgroundColor">#ec221f</Color>
+  <Color x:Key="SDSTagDangerPrimaryBackgroundHoverColor">#c00f0c</Color>
+  <Color x:Key="SDSTagDangerPrimaryForegroundColor">#fee9e7</Color>
+  <Color x:Key="SDSTagDangerSecondaryBackgroundColor">#fdd3d0</Color>
+  <Color x:Key="SDSTagDangerSecondaryBackgroundHoverColor">#fcb3ad</Color>
+  <Color x:Key="SDSTagDangerSecondaryForegroundColor">#900b09</Color>
+  <Color x:Key="SDSTagWarningPrimaryBackgroundColor">#e8b931</Color>
+  <Color x:Key="SDSTagWarningPrimaryBackgroundHoverColor">#e5a000</Color>
+  <Color x:Key="SDSTagWarningPrimaryForegroundColor">#401b01</Color>
+  <Color x:Key="SDSTagWarningSecondaryBackgroundColor">#e8b931</Color>
+  <Color x:Key="SDSTagWarningSecondaryBackgroundHoverColor">#ffe8a3</Color>
+  <Color x:Key="SDSTagWarningSecondaryForegroundColor">#401b01</Color>
+
 </ResourceDictionary>

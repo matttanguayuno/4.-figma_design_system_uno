@@ -52,12 +52,12 @@
                                                FontFamily="{StaticResource InterFontFamily}"
                                                FontSize="16"
                                                FontWeight="SemiBold"
-                                               Foreground="#757575" />
+                                               Foreground="{StaticResource SecondaryTextBrush}" />
                                     <TextBlock Text="Description"
                                                FontFamily="{StaticResource InterFontFamily}"
                                                FontSize="16"
                                                FontWeight="Normal"
-                                               Foreground="#B3B3B3" />
+                                               Foreground="{StaticResource OnDisabledBrush}" />
                                 </utu:AutoLayout>
                             </utu:AutoLayout>
                         </utu:AutoLayout>
@@ -90,12 +90,12 @@
                                                FontFamily="{StaticResource InterFontFamily}"
                                                FontSize="16"
                                                FontWeight="SemiBold"
-                                               Foreground="#757575" />
+                                               Foreground="{StaticResource SecondaryTextBrush}" />
                                     <TextBlock Text="Description"
                                                FontFamily="{StaticResource InterFontFamily}"
                                                FontSize="16"
                                                FontWeight="Normal"
-                                               Foreground="#B3B3B3" />
+                                               Foreground="{StaticResource OnDisabledBrush}" />
                                 </utu:AutoLayout>
                             </utu:AutoLayout>
                         </utu:AutoLayout>
@@ -128,12 +128,12 @@
                                                FontFamily="{StaticResource InterFontFamily}"
                                                FontSize="16"
                                                FontWeight="SemiBold"
-                                               Foreground="#757575" />
+                                               Foreground="{StaticResource SecondaryTextBrush}" />
                                     <TextBlock Text="Description"
                                                FontFamily="{StaticResource InterFontFamily}"
                                                FontSize="16"
                                                FontWeight="Normal"
-                                               Foreground="#B3B3B3" />
+                                               Foreground="{StaticResource OnDisabledBrush}" />
                                 </utu:AutoLayout>
                             </utu:AutoLayout>
                         </utu:AutoLayout>
@@ -166,12 +166,12 @@
                                                FontFamily="{StaticResource InterFontFamily}"
                                                FontSize="16"
                                                FontWeight="SemiBold"
-                                               Foreground="#757575" />
+                                               Foreground="{StaticResource SecondaryTextBrush}" />
                                     <TextBlock Text="Description"
                                                FontFamily="{StaticResource InterFontFamily}"
                                                FontSize="16"
                                                FontWeight="Normal"
-                                               Foreground="#B3B3B3" />
+                                               Foreground="{StaticResource OnDisabledBrush}" />
                                 </utu:AutoLayout>
                             </utu:AutoLayout>
                         </utu:AutoLayout>
@@ -204,12 +204,12 @@
                                                FontFamily="{StaticResource InterFontFamily}"
                                                FontSize="16"
                                                FontWeight="SemiBold"
-                                               Foreground="#757575" />
+                                               Foreground="{StaticResource SecondaryTextBrush}" />
                                     <TextBlock Text="Description"
                                                FontFamily="{StaticResource InterFontFamily}"
                                                FontSize="16"
                                                FontWeight="Normal"
-                                               Foreground="#B3B3B3" />
+                                               Foreground="{StaticResource OnDisabledBrush}" />
                                 </utu:AutoLayout>
                             </utu:AutoLayout>
                         </utu:AutoLayout>
@@ -242,12 +242,12 @@
                                                FontFamily="{StaticResource InterFontFamily}"
                                                FontSize="16"
                                                FontWeight="SemiBold"
-                                               Foreground="#757575" />
+                                               Foreground="{StaticResource SecondaryTextBrush}" />
                                     <TextBlock Text="Description"
                                                FontFamily="{StaticResource InterFontFamily}"
                                                FontSize="16"
                                                FontWeight="Normal"
-                                               Foreground="#B3B3B3" />
+                                               Foreground="{StaticResource OnDisabledBrush}" />
                                 </utu:AutoLayout>
                             </utu:AutoLayout>
                         </utu:AutoLayout>
@@ -300,12 +300,12 @@
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="SemiBold"
-                                           Foreground="#757575" />
+                                           Foreground="{StaticResource SecondaryTextBrush}" />
                                 <TextBlock Text="Description"
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="Normal"
-                                           Foreground="#B3B3B3" />
+                                           Foreground="{StaticResource OnDisabledBrush}" />
                             </utu:AutoLayout>
                         </utu:AutoLayout>
                     </utu:AutoLayout>
@@ -338,12 +338,12 @@
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="SemiBold"
-                                           Foreground="#757575" />
+                                           Foreground="{StaticResource SecondaryTextBrush}" />
                                 <TextBlock Text="Description"
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="Normal"
-                                           Foreground="#B3B3B3" />
+                                           Foreground="{StaticResource OnDisabledBrush}" />
                             </utu:AutoLayout>
                         </utu:AutoLayout>
                     </utu:AutoLayout>
@@ -376,12 +376,12 @@
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="SemiBold"
-                                           Foreground="#757575" />
+                                           Foreground="{StaticResource SecondaryTextBrush}" />
                                 <TextBlock Text="Description"
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="Normal"
-                                           Foreground="#B3B3B3" />
+                                           Foreground="{StaticResource OnDisabledBrush}" />
                             </utu:AutoLayout>
                         </utu:AutoLayout>
                     </utu:AutoLayout>
@@ -414,12 +414,12 @@
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="SemiBold"
-                                           Foreground="#757575" />
+                                           Foreground="{StaticResource SecondaryTextBrush}" />
                                 <TextBlock Text="Description"
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="Normal"
-                                           Foreground="#B3B3B3" />
+                                           Foreground="{StaticResource OnDisabledBrush}" />
                             </utu:AutoLayout>
                         </utu:AutoLayout>
                     </utu:AutoLayout>
@@ -452,12 +452,12 @@
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="SemiBold"
-                                           Foreground="#757575" />
+                                           Foreground="{StaticResource SecondaryTextBrush}" />
                                 <TextBlock Text="Description"
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="Normal"
-                                           Foreground="#B3B3B3" />
+                                           Foreground="{StaticResource OnDisabledBrush}" />
                             </utu:AutoLayout>
                         </utu:AutoLayout>
                     </utu:AutoLayout>
@@ -490,12 +490,12 @@
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="SemiBold"
-                                           Foreground="#757575" />
+                                           Foreground="{StaticResource SecondaryTextBrush}" />
                                 <TextBlock Text="Description"
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="Normal"
-                                           Foreground="#B3B3B3" />
+                                           Foreground="{StaticResource OnDisabledBrush}" />
                             </utu:AutoLayout>
                         </utu:AutoLayout>
                     </utu:AutoLayout>
@@ -528,12 +528,12 @@
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="SemiBold"
-                                           Foreground="#757575" />
+                                           Foreground="{StaticResource SecondaryTextBrush}" />
                                 <TextBlock Text="Description"
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="Normal"
-                                           Foreground="#B3B3B3" />
+                                           Foreground="{StaticResource OnDisabledBrush}" />
                             </utu:AutoLayout>
                         </utu:AutoLayout>
                     </utu:AutoLayout>

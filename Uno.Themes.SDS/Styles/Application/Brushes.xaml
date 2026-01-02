@@ -141,6 +141,10 @@
   <SolidColorBrush x:Key="SDSPaginationCurrentTextBrush" Color="{StaticResource SDSPaginationCurrentTextColor}" />
   <SolidColorBrush x:Key="SDSPaginationDisabledTextBrush" Color="{StaticResource SDSPaginationDisabledTextColor}" />
 
+  <!-- Badge Brushes -->
+  <SolidColorBrush x:Key="SDSSuccessBadgeBackgroundBrush" Color="{StaticResource SDSSuccessBadgeBackgroundColor}" />
+  <SolidColorBrush x:Key="SDSSuccessBadgeTextBrush" Color="{StaticResource SDSSuccessBadgeTextColor}" />
+
     <!-- Convenience Aliases (backward compatibility / common usage) -->
     <SolidColorBrush x:Key="DefaultBackgroundBrush" Color="{StaticResource BackgroundColor}" />
     <SolidColorBrush x:Key="ContentBackgroundBrush" Color="{StaticResource BackgroundColor}" />

@@ -17,7 +17,7 @@
                       Height="400">
         <!-- Image 1 -->
         <Border Width="512"
-                Background="#E3E3E3">
+                Background="{StaticResource BackgroundTertiaryBrush}">
           <Image Source="https://picsum.photos/512/272"
                  Stretch="UniformToFill"
                  Opacity="0.2"
@@ -27,7 +27,7 @@
         
         <!-- Image 2 -->
         <Border Width="512"
-                Background="#E3E3E3">
+                Background="{StaticResource BackgroundTertiaryBrush}">
           <Image Source="https://picsum.photos/512/272"
                  Stretch="UniformToFill"
                  Opacity="0.2"
@@ -50,7 +50,7 @@
         <!-- Image 1 -->
         <Border Width="327"
                 Height="200"
-                Background="#E3E3E3">
+                Background="{StaticResource BackgroundTertiaryBrush}">
           <Image Source="https://picsum.photos/327/200"
                  Stretch="UniformToFill"
                  Opacity="0.2"
@@ -61,7 +61,7 @@
         <!-- Image 2 -->
         <Border Width="327"
                 Height="200"
-                Background="#E3E3E3">
+                Background="{StaticResource BackgroundTertiaryBrush}">
           <Image Source="https://picsum.photos/327/200"
                  Stretch="UniformToFill"
                  Opacity="0.2"

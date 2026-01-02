@@ -1,0 +1,114 @@
+<UserControl x:Class="figma_design_system_uno.Controls.PageNewsletterControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:utu="using:Uno.Toolkit.UI"
+             Background="{StaticResource BackgroundBrush}"
+             SizeChanged="OnSizeChanged">
+
+    <UserControl.Resources>
+        <!-- Custom TextBox Style for Newsletter Input -->
+        <Style x:Key="NewsletterInputStyle" TargetType="TextBox">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="FontFamily" Value="Inter"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Foreground" Value="{StaticResource PrimaryTextBrush}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid>
+                            <ScrollViewer x:Name="ContentElement"
+                                          HorizontalScrollMode="Auto"
+                                          HorizontalScrollBarVisibility="Hidden"
+                                          VerticalScrollMode="Disabled"
+                                          VerticalScrollBarVisibility="Disabled"
+                                          IsHorizontalRailEnabled="False"
+                                          IsVerticalRailEnabled="False"
+                                          ZoomMode="Disabled"
+                                          Margin="0"
+                                          Padding="0"/>
+                            <ContentControl x:Name="PlaceholderTextContentPresenter"
+                                            Content="{TemplateBinding PlaceholderText}"
+                                            Foreground="{StaticResource SecondaryTextBrush}"
+                                            IsHitTestVisible="False"
+                                            FontFamily="Inter"
+                                            FontSize="16"
+                                            FontWeight="Normal"
+                                            Margin="0"
+                                            Padding="0"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <utu:AutoLayout x:Name="RootLayout"
+                    Orientation="Vertical"
+                    Spacing="24"
+                    Padding="64"
+                    HorizontalAlignment="Center">
+        
+        <!-- Heading Section (Center Aligned) -->
+        <utu:AutoLayout Orientation="Vertical"
+                        Spacing="8"
+                        HorizontalAlignment="Center">
+            <TextBlock x:Name="HeadingText"
+                       Text="Follow the latest trends"
+                       Style="{StaticResource HeadingTextBlockStyle}"
+                       HorizontalAlignment="Center"
+                       TextAlignment="Center"
+                       TextWrapping="Wrap"/>
+            <TextBlock x:Name="SubheadingText"
+                       Text="With our daily newsletter"
+                       Style="{StaticResource SubheadingTextBlockStyle}"
+                       Foreground="{StaticResource SecondaryTextBrush}"
+                       HorizontalAlignment="Center"
+                       TextAlignment="Center"
+                       TextWrapping="Wrap"/>
+        </utu:AutoLayout>
+
+        <!-- Form Newsletter -->
+        <utu:AutoLayout x:Name="FormLayout"
+                        Orientation="Horizontal"
+                        Spacing="12"
+                        Width="338"
+                        HorizontalAlignment="Center">
+            
+            <!-- Input Field -->
+            <Border Background="{StaticResource SDSInputBackgroundBrush}"
+                    BorderBrush="{StaticResource SDSInputBorderBrush}"
+                    BorderThickness="1"
+                    CornerRadius="8"
+                    Padding="16,12"
+                    MinHeight="48"
+                    MinWidth="240"
+                    HorizontalAlignment="Stretch"
+                    utu:AutoLayout.CounterLength="1">
+                <TextBox x:Name="EmailInput"
+                         PlaceholderText="you@example.com"
+                         Style="{StaticResource NewsletterInputStyle}"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Stretch"
+                         VerticalContentAlignment="Center"
+                         Width="NaN"/>
+            </Border>
+
+            <!-- Submit Button -->
+            <Button Background="{StaticResource BrandBackgroundBrush}"
+                    BorderBrush="{StaticResource BrandBackgroundBrush}"
+                    BorderThickness="1"
+                    CornerRadius="8"
+                    Padding="12"
+                    MinHeight="48">
+                <TextBlock Text="Submit"
+                           FontFamily="Inter"
+                           FontSize="16"
+                           FontWeight="Normal"
+                           Foreground="{StaticResource OnBrandTextBrush}"/>
+            </Button>
+        </utu:AutoLayout>
+    </utu:AutoLayout>
+</UserControl>

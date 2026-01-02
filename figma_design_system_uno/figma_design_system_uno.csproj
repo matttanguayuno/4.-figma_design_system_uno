@@ -49,9 +49,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Embed XAML files for source code viewer -->
-    <EmbeddedResource Include="Presentation\**\*.xaml" />
-    <EmbeddedResource Include="Styles\**\*.xaml" />
+    <!-- Explicitly mark XAML files that were previously EmbeddedResource -->
+    <Page Include="Presentation\**\*.xaml" />
+    <Page Include="Controls\**\*.xaml" />
     
     <!-- Include social media icon assets -->
     <Content Include="Assets\icon_x.png" />

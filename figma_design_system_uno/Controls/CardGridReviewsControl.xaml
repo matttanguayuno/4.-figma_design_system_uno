@@ -30,11 +30,11 @@
                     <utu:AutoLayout Orientation="Vertical" Spacing="24">
                         <!-- Rating -->
                         <utu:AutoLayout Orientation="Horizontal" Spacing="4">
-                            <FontIcon Glyph="&#xE735;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE735;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE735;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE735;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE735;" FontSize="20" Foreground="#2C2C2C" />
+                            <FontIcon Glyph="&#xE735;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE735;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE735;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE735;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE735;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
                         </utu:AutoLayout>
                         
                         <!-- Review Body -->
@@ -65,12 +65,12 @@
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="SemiBold"
-                                           Foreground="#757575" />
+                                           Foreground="{StaticResource SecondaryTextBrush}" />
                                 <TextBlock Text="Date"
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="Normal"
-                                           Foreground="#B3B3B3" />
+                                           Foreground="{StaticResource OnDisabledBrush}" />
                             </utu:AutoLayout>
                         </utu:AutoLayout>
                     </utu:AutoLayout>
@@ -86,11 +86,11 @@
                     <utu:AutoLayout Orientation="Vertical" Spacing="24">
                         <!-- Rating -->
                         <utu:AutoLayout Orientation="Horizontal" Spacing="4">
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
                         </utu:AutoLayout>
                         
                         <!-- Review Body -->
@@ -122,12 +122,12 @@
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="SemiBold"
-                                           Foreground="#757575" />
+                                           Foreground="{StaticResource SecondaryTextBrush}" />
                                 <TextBlock Text="Date"
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="Normal"
-                                           Foreground="#B3B3B3" />
+                                           Foreground="{StaticResource OnDisabledBrush}" />
                             </utu:AutoLayout>
                         </utu:AutoLayout>
                     </utu:AutoLayout>
@@ -143,11 +143,11 @@
                     <utu:AutoLayout Orientation="Vertical" Spacing="24">
                         <!-- Rating -->
                         <utu:AutoLayout Orientation="Horizontal" Spacing="4">
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
                         </utu:AutoLayout>
                         
                         <!-- Review Body -->
@@ -179,12 +179,12 @@
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="SemiBold"
-                                           Foreground="#757575" />
+                                           Foreground="{StaticResource SecondaryTextBrush}" />
                                 <TextBlock Text="Date"
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="Normal"
-                                           Foreground="#B3B3B3" />
+                                           Foreground="{StaticResource OnDisabledBrush}" />
                             </utu:AutoLayout>
                         </utu:AutoLayout>
                     </utu:AutoLayout>
@@ -215,11 +215,11 @@
                     <utu:AutoLayout Orientation="Vertical" Spacing="24">
                         <!-- Rating -->
                         <utu:AutoLayout Orientation="Horizontal" Spacing="4">
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
                         </utu:AutoLayout>
                         
                         <!-- Review Body -->
@@ -251,12 +251,12 @@
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="SemiBold"
-                                           Foreground="#757575" />
+                                           Foreground="{StaticResource SecondaryTextBrush}" />
                                 <TextBlock Text="Date"
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="Normal"
-                                           Foreground="#B3B3B3" />
+                                           Foreground="{StaticResource OnDisabledBrush}" />
                             </utu:AutoLayout>
                         </utu:AutoLayout>
                     </utu:AutoLayout>
@@ -272,11 +272,11 @@
                     <utu:AutoLayout Orientation="Vertical" Spacing="24">
                         <!-- Rating -->
                         <utu:AutoLayout Orientation="Horizontal" Spacing="4">
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
                         </utu:AutoLayout>
                         
                         <!-- Review Body -->
@@ -308,12 +308,12 @@
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="SemiBold"
-                                           Foreground="#757575" />
+                                           Foreground="{StaticResource SecondaryTextBrush}" />
                                 <TextBlock Text="Date"
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="Normal"
-                                           Foreground="#B3B3B3" />
+                                           Foreground="{StaticResource OnDisabledBrush}" />
                             </utu:AutoLayout>
                         </utu:AutoLayout>
                     </utu:AutoLayout>
@@ -329,11 +329,11 @@
                     <utu:AutoLayout Orientation="Vertical" Spacing="24">
                         <!-- Rating -->
                         <utu:AutoLayout Orientation="Horizontal" Spacing="4">
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
-                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="#2C2C2C" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
+                            <FontIcon Glyph="&#xE734;" FontSize="20" Foreground="{StaticResource PrimaryBrush}" />
                         </utu:AutoLayout>
                         
                         <!-- Review Body -->
@@ -365,12 +365,12 @@
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="SemiBold"
-                                           Foreground="#757575" />
+                                           Foreground="{StaticResource SecondaryTextBrush}" />
                                 <TextBlock Text="Date"
                                            FontFamily="{StaticResource InterFontFamily}"
                                            FontSize="16"
                                            FontWeight="Normal"
-                                           Foreground="#B3B3B3" />
+                                           Foreground="{StaticResource OnDisabledBrush}" />
                             </utu:AutoLayout>
                         </utu:AutoLayout>
                     </utu:AutoLayout>
