@@ -1,0 +1,38 @@
+<Page x:Class="figma_design_system_uno.Presentation.KnownIssuesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      Background="{StaticResource DefaultBackgroundBrush}">
+
+    <ScrollViewer>
+        <utu:AutoLayout Orientation="Vertical"
+                        Spacing="8"
+                        Padding="64"
+                        MaxWidth="1200"
+                        HorizontalAlignment="Center">
+
+            <!-- Page Title -->
+            <TextBlock Text="Known Issues"
+                       Style="{StaticResource TitleLargeTextBlockStyle}"
+                       FontWeight="Bold"
+                       Margin="0,0,0,16" />
+
+            <TextBlock Text="• Tooltip Page Scrolling Issue" />
+            <TextBlock Text="• Font Styles Don't Match Figma Designs" />
+            <TextBlock Text="• Loading Screen for Visualizers Shows in Dark Mode" />
+            <TextBlock Text="• Add Interactive Control for State Demonstrations" />
+            <TextBlock Text="• Menu Page - Wrong Up Arrow in Chrome (WebAssembly)" />
+            <TextBlock Text="• Bold Text Not Bold Enough Across Pages" />
+            <TextBlock Text="• CheckBox Disabled Glyph Color - ThemeResource Not Working" />
+            <TextBlock Text="• PricingCard Button Colors Wrong" />
+            <TextBlock Text="• TextBox Placeholder Text Not Visible (White on White)" />
+            <TextBlock Text="• Menu Page - Missing Separator Lines" />
+            <TextBlock Text="• Button Hover Effects Not Visible (White on White)" />
+            <TextBlock Text="• Font Properties Should Use Variables" />
+            <TextBlock Text="• Bold Sections of All Pages" />
+            <TextBlock Text="• Matrix Identifier Styles" />
+            <TextBlock Text="• Rounded Dotted Rectangles Around Matrix Examples" />
+            <TextBlock Text="• Tooltip Page - Cannot Resize Tooltips" />
+        </utu:AutoLayout>
+    </ScrollViewer>
+</Page>

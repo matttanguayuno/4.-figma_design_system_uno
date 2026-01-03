@@ -10,6 +10,7 @@ public sealed partial class Shell : UserControl, IContentControlProvider
     private readonly Dictionary<string, Type> _pages = new()
     {
         { "Home", typeof(HomePage) },
+        { "KnownIssues", typeof(KnownIssuesPage) },
         { "Accordion", typeof(AccordionPage) },
         { "Avatar", typeof(AvatarPage) },
         { "Buttons", typeof(ButtonsPage) },

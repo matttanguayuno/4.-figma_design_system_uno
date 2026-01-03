@@ -38,6 +38,14 @@
                   HorizontalContentAlignment="Left"
                   Margin="0,0,0,8" />
 
+          <Button Content="Known Issues" 
+                  Click="Navigate_Click"
+                  Tag="KnownIssues"
+                  Style="{StaticResource TextButtonStyle}"
+                  HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Left"
+                  Margin="0,0,0,8" />
+
           <!-- Separator -->
           <Rectangle Height="1"
                      Fill="{StaticResource NeutralTertiaryBrush}"
